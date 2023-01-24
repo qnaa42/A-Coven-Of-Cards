@@ -10,8 +10,14 @@ namespace Assets.Scripts.Character_Controller_Layer.Base.Data
         
         //Movement
         public float movementSpeed;
+        public float castingMovementSpeed;
         public float stableMovementSharpness;
         public float orientationSharpness;
+        
+        //Light Attack
+        public float lightAttackDuration;
+        public float lightAttackMovementSpeedMultiplier;
+        public float lightAttackCooldown;
         
         //Charging
         public float chargeSpeed;
@@ -25,6 +31,5 @@ namespace Assets.Scripts.Character_Controller_Layer.Base.Data
         
         public int score;
         public int health;
-        public int clones;
     }
 }

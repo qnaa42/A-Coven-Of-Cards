@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using Assets.Scripts.Core_Layer;
 using UnityEngine;
@@ -6,6 +7,9 @@ namespace Assets.Scripts.Character_Controller_Layer
 {
     public class PlayerManager : MonoBehaviour
     {
+        public GameObject Athame;
+        public GameObject Wand;
+        
         // Start is called before the first frame update
         public CharacterCamera OrbitCamera;
         public Transform CameraFollowPoint;
@@ -14,7 +18,7 @@ namespace Assets.Scripts.Character_Controller_Layer
         private const string HorizontalInput = "Horizontal";
         private const string VerticalInput = "Vertical";
 
-        void Start()
+        private void Start()
         {
             Cursor.lockState = CursorLockMode.Locked;
         
@@ -31,6 +35,28 @@ namespace Assets.Scripts.Character_Controller_Layer
                 Cursor.lockState = CursorLockMode.Locked;
             }
             
+            switch (Character.CurrentCharacterState)
+            {
+                case CharacterState.MeleeStance:
+                case CharacterState.LightMeleeAttack:
+                case CharacterState.HeavyMeleeAttack:
+                case CharacterState.Charging:
+                    Athame.SetActive(true);
+                    Wand.SetActive(false);
+                    break;
+                case CharacterState.CastingStance:
+                case CharacterState.CastingSpell:
+                case CharacterState.CastingCombo:
+                    Athame.SetActive(false);
+                    Wand.SetActive(true);
+                    break;
+                case CharacterState.InteractingWithObject:
+                    Athame.SetActive(false);
+                    Wand.SetActive(false);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
 
             HandleCharacterInput();
         }

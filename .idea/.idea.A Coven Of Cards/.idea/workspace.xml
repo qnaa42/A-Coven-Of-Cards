@@ -2,25 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1e62ff1-8c95-4f34-b705-2d1bd115eabc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.plastic/plastic.changes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.A Coven Of Cards/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.A Coven Of Cards/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.plastic/plastic.wktree" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.wktree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/Character Controller Layer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/Character Controller Layer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/Manager Layer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/Manager Layer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Prefabs/Character Controller Layer/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Prefabs/Character Controller Layer/Character.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/Base/BaseUserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/Base/BaseUserManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/Base/Data/UserData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/Base/Data/UserData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/CharacterCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/CharacterCamera.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/CharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/CharacterController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/PlayerManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/UserStatsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/UserStatsManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Core Layer/Base/BaseGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Core Layer/Base/BaseGameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Core Layer/Base/Data/GameStatsDefs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Core Layer/Base/Data/GameStatsDefs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Core Layer/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Core Layer/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Debug/OnTriggerEnterStatReduce.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Debug/OnTriggerEnterStatReduce.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/WhoteRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WhoteRoom.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WhoteRoom.unity.private.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WhoteRoom.unity.private.0.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +90,7 @@
       <updated>1674474890244</updated>
       <workItem from="1674474897743" duration="139000" />
       <workItem from="1674475069911" duration="13905000" />
-      <workItem from="1674559717438" duration="19062000" />
+      <workItem from="1674559717438" duration="26008000" />
     </task>
     <servers />
   </component>

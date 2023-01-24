@@ -1,3 +1,4 @@
+using System;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
@@ -106,6 +107,9 @@ namespace Assets.Scripts.Core_Layer.Base
                 
                 case Game.State.restarting:
                     break;
+                
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
             currentGameState = targetGameState;
         }
@@ -142,6 +146,9 @@ namespace Assets.Scripts.Core_Layer.Base
 
                 case Game.State.restarting:
                     break;
+                
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
         }
 

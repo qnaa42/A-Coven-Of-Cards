@@ -12,7 +12,7 @@ public class OnTriggerEnterStatReduce : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                GameManager.instance.userManager.SubtractMovementSpeed(movementSpeedChange);
+                GameManager.instance.userManager.SubtractMeleeMovementSpeed(movementSpeedChange);
                 GameManager.instance.playerManager.Character.StatsUpdate();
             }
         }
@@ -21,7 +21,7 @@ public class OnTriggerEnterStatReduce : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                GameManager.instance.userManager.AddMovementSpeed(movementSpeedChange);
+                GameManager.instance.userManager.AddMeleeMovementSpeed(movementSpeedChange);
                 GameManager.instance.playerManager.Character.StatsUpdate();
             }
         }

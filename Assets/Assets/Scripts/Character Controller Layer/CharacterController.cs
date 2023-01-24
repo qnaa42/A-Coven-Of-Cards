@@ -4,6 +4,7 @@ using UnityEngine;
 using KinematicCharacterController;
 using System;
 using Assets.Scripts.Core_Layer;
+using UnityEngine.Serialization;
 
 namespace Assets.Scripts.Character_Controller_Layer
 {
@@ -56,10 +57,15 @@ namespace Assets.Scripts.Character_Controller_Layer
         public KinematicCharacterMotor Motor;
         [Header("Debug Mode")] public bool DebugMode = true;
 
-        [Header("Stable Movement")] public float MaxStableMoveSpeed = 10f;
+        [Header("Stable Movement")] public float MaxStableMeleeMoveSpeed = 10f;
+        public float MaxStableSpellcastingMoveSpeed = 10f;
         public float StableMovementSharpness = 15f;
         public float OrientationSharpness = 10f;
         public OrientationMethod OrientationMethod = OrientationMethod.TowardsCamera;
+        
+        [Header("Light Melee Attack")] public float LightMeleeAttackDuration = 0.5f;
+        public float LightMeleeAttackStableMoveSpeedMultiplier = 0.5f;
+        public float LightMeleeAttackCooldown = 0.5f;
 
         [Header("Charging")] public float ChargeSpeed = 15f;
         public float MaxChargeTime = 1.5f;
@@ -79,7 +85,7 @@ namespace Assets.Scripts.Character_Controller_Layer
         public Transform MeshRoot;
         public Transform CameraFollowPoint;
 
-        private CharacterState CurrentCharacterState { get; set; }
+        public CharacterState CurrentCharacterState { get; private set; }
 
         private Collider[] _probedColliders = new Collider[8];
         private RaycastHit[] _probedHits = new RaycastHit[8];
@@ -90,6 +96,10 @@ namespace Assets.Scripts.Character_Controller_Layer
         private Vector3 lastInnerNormal = Vector3.zero;
         private Vector3 lastOuterNormal = Vector3.zero;
 
+        //Light Melee Attack Privates
+        private float _timeSinceStartedLightMeleeAttack = 0f;
+        private float _timeSinceLastLightMeleeAttack = 0f;
+        
         //Charge Privates
         private Vector3 _currentChargeVelocity;
         private bool _isStopped;
@@ -134,12 +144,21 @@ namespace Assets.Scripts.Character_Controller_Layer
                 //Melee Stance
                 case CharacterState.MeleeStance:
                 {
-                    _timeSinceLastCharge = 0f;
+                    switch (fromState)
+                    {
+                        case CharacterState.Charging:
+                            _timeSinceLastCharge = 0f;
+                            break;
+                        case CharacterState.LightMeleeAttack:
+                            _timeSinceLastLightMeleeAttack = 0f;
+                            break;
+                    }
                     break;
                 }
 
                 case CharacterState.LightMeleeAttack:
                 {
+                    _timeSinceStartedLightMeleeAttack = 0f;
                     break;
                 }
 
@@ -189,14 +208,49 @@ namespace Assets.Scripts.Character_Controller_Layer
         {
             switch (state)
             {
+                //Melee Stance
                 case CharacterState.MeleeStance:
                 {
                     break;
                 }
+                
+                case CharacterState.LightMeleeAttack:
+                {
+                    break;
+                }
+                
+                case CharacterState.HeavyMeleeAttack:
+                {
+                    break;
+                }
+                
                 case CharacterState.Charging:
                 {
                     break;
                 }
+                
+                //Casting Stance
+                case CharacterState.CastingStance:
+                {
+                    break;
+                }
+                
+                case CharacterState.CastingSpell:
+                {
+                    break;
+                }
+                
+                case CharacterState.CastingCombo:
+                {
+                    break;
+                }
+                
+                //No Movement States
+                case CharacterState.InteractingWithObject:
+                {
+                    break;
+                }
+                
             }
         }
 
@@ -205,6 +259,19 @@ namespace Assets.Scripts.Character_Controller_Layer
         /// </summary>
         public void SetInputs(ref PlayerCharacterInputs inputs)
         {
+            if (inputs.SpaceInput)
+            {
+                switch (CurrentCharacterState)
+                {
+                    case CharacterState.MeleeStance:
+                        TransitionToState(CharacterState.CastingStance);
+                        break;
+                    case CharacterState.CastingStance:
+                        TransitionToState(CharacterState.MeleeStance);
+                        break;
+                }
+            }
+            
             //Handle state transition from Input
             if (inputs.DownArrowInput && CurrentCharacterState is CharacterState.MeleeStance or CharacterState.Charging)
             {
@@ -226,6 +293,11 @@ namespace Assets.Scripts.Character_Controller_Layer
 
             }
 
+            if (inputs.RightArrowInput && CurrentCharacterState is CharacterState.MeleeStance && (_timeSinceLastLightMeleeAttack > LightMeleeAttackCooldown))
+            {
+                TransitionToState(CharacterState.LightMeleeAttack);
+            }
+
 
 
             // Clamp input
@@ -245,38 +317,123 @@ namespace Assets.Scripts.Character_Controller_Layer
 
             switch (CurrentCharacterState)
             {
+                //Melee Stance
                 case CharacterState.MeleeStance:
                 {
                     // Move and look inputs
                     _moveInputVector = cameraPlanarRotation * moveInputVector;
 
-                    switch (OrientationMethod)
+                    _lookInputVector = OrientationMethod switch
                     {
-                        case OrientationMethod.TowardsCamera:
-                            _lookInputVector = cameraPlanarDirection;
-                            break;
-                        case OrientationMethod.TowardsMovement:
-                            _lookInputVector = _moveInputVector.normalized;
-                            break;
-                    }
+                        OrientationMethod.TowardsCamera => cameraPlanarDirection,
+                        OrientationMethod.TowardsMovement => _moveInputVector.normalized,
+                        _ => _lookInputVector
+                    };
+                    break;
+                }
+
+                case CharacterState.LightMeleeAttack:
+                {
+                    // Move and look inputs
+                    _moveInputVector = cameraPlanarRotation * moveInputVector;
+
+                    _lookInputVector = OrientationMethod switch
+                    {
+                        OrientationMethod.TowardsCamera => cameraPlanarDirection,
+                        OrientationMethod.TowardsMovement => _moveInputVector.normalized,
+                        _ => _lookInputVector
+                    };
+                    break;
+                }
+
+                case CharacterState.HeavyMeleeAttack:
+                {
+                    // Move and look inputs
+                    _moveInputVector = cameraPlanarRotation * moveInputVector;
+
+                    _lookInputVector = OrientationMethod switch
+                    {
+                        OrientationMethod.TowardsCamera => cameraPlanarDirection,
+                        OrientationMethod.TowardsMovement => _moveInputVector.normalized,
+                        _ => _lookInputVector
+                    };
+                    break;
+                }
+
+                case CharacterState.Charging:
+                {
+                    // Move and look inputs
+                    _moveInputVector = cameraPlanarRotation * moveInputVector;
+                    _lookInputVector = OrientationMethod switch
+                    {
+                        OrientationMethod.TowardsCamera => cameraPlanarDirection,
+                        OrientationMethod.TowardsMovement => _moveInputVector.normalized,
+                        _ => _lookInputVector
+                    };
 
                     break;
                 }
-                case CharacterState.Charging:
+                
+                //Casting Stance
+                case CharacterState.CastingStance:
+                {
                     // Move and look inputs
                     _moveInputVector = cameraPlanarRotation * moveInputVector;
-                    switch (OrientationMethod)
+
+                    _lookInputVector = OrientationMethod switch
                     {
-
-                        case OrientationMethod.TowardsCamera:
-                            _lookInputVector = cameraPlanarDirection;
-                            break;
-                        case OrientationMethod.TowardsMovement:
-                            _lookInputVector = _moveInputVector.normalized;
-                            break;
-                    }
-
+                        OrientationMethod.TowardsCamera => cameraPlanarDirection,
+                        OrientationMethod.TowardsMovement => _moveInputVector.normalized,
+                        _ => _lookInputVector
+                    };
                     break;
+                }
+
+                case CharacterState.CastingSpell:
+                {
+                    // Move and look inputs
+                    _moveInputVector = cameraPlanarRotation * moveInputVector;
+
+                    _lookInputVector = OrientationMethod switch
+                    {
+                        OrientationMethod.TowardsCamera => cameraPlanarDirection,
+                        OrientationMethod.TowardsMovement => _moveInputVector.normalized,
+                        _ => _lookInputVector
+                    };
+                    break;
+                }
+
+                case CharacterState.CastingCombo:
+                {
+                    // Move and look inputs
+                    _moveInputVector = cameraPlanarRotation * moveInputVector;
+
+                    _lookInputVector = OrientationMethod switch
+                    {
+                        OrientationMethod.TowardsCamera => cameraPlanarDirection,
+                        OrientationMethod.TowardsMovement => _moveInputVector.normalized,
+                        _ => _lookInputVector
+                    };
+                    break;
+                }
+                
+                //No Movement States
+                case CharacterState.InteractingWithObject:
+                {
+                    // Move and look inputs
+                    _moveInputVector = cameraPlanarRotation * moveInputVector;
+
+                    _lookInputVector = OrientationMethod switch
+                    {
+                        OrientationMethod.TowardsCamera => cameraPlanarDirection,
+                        OrientationMethod.TowardsMovement => _moveInputVector.normalized,
+                        _ => _lookInputVector
+                    };
+                    break;
+                }
+                
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
         }
 
@@ -299,10 +456,23 @@ namespace Assets.Scripts.Character_Controller_Layer
         {
             switch (CurrentCharacterState)
             {
+                //Melee Stance
                 case CharacterState.MeleeStance:
                 {
                     break;
                 }
+                
+                case CharacterState.LightMeleeAttack:
+                {
+                    _timeSinceStartedLightMeleeAttack += deltaTime;
+                    break;
+                }
+                
+                case CharacterState.HeavyMeleeAttack:
+                {
+                    break;
+                }
+                
                 case CharacterState.Charging:
                 {
                     _timeSinceStartedCharge += deltaTime;
@@ -310,7 +480,29 @@ namespace Assets.Scripts.Character_Controller_Layer
                     {
                         _timeSinceStopped += deltaTime;
                     }
-
+                    break;
+                }
+                
+                //Casting Stance
+                case CharacterState.CastingStance:
+                {
+                    break;
+                }
+                
+                case CharacterState.CastingSpell:
+                {
+                    break;
+                }
+                
+                case CharacterState.CastingCombo:
+                {
+                    break;
+                }
+                
+                //No Movement States
+                
+                case CharacterState.InteractingWithObject:
+                {
                     break;
                 }
             }
@@ -325,66 +517,13 @@ namespace Assets.Scripts.Character_Controller_Layer
         {
             switch (CurrentCharacterState)
             {
+                //Melee Stance
                 case CharacterState.MeleeStance:
                 {
                     if (_lookInputVector.sqrMagnitude > 0f && OrientationSharpness > 0f)
                     {
                         // Smoothly interpolate from current to target look direction
                         var smoothedLookInputDirection = Vector3.Slerp(Motor.CharacterForward, _lookInputVector,
-                            1 - Mathf.Exp(-OrientationSharpness * deltaTime)).normalized;
-
-                        // Set the current rotation (which will be used by the KinematicCharacterMotor)
-                        currentRotation = Quaternion.LookRotation(smoothedLookInputDirection, Motor.CharacterUp);
-                    }
-
-                    var currentUp = (currentRotation * Vector3.up);
-                    if (BonusOrientationMethod == BonusOrientationMethod.TowardsGravity)
-                    {
-                        // Rotate from current up to invert gravity
-                        var smoothedGravityDir = Vector3.Slerp(currentUp, -Gravity.normalized,
-                            1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
-                        currentRotation = Quaternion.FromToRotation(currentUp, smoothedGravityDir) * currentRotation;
-                    }
-                    else if (BonusOrientationMethod == BonusOrientationMethod.TowardsGroundSlopeAndGravity)
-                    {
-                        if (Motor.GroundingStatus.IsStableOnGround)
-                        {
-                            var initialCharacterBottomHemCenter =
-                                Motor.TransientPosition + (currentUp * Motor.Capsule.radius);
-
-                            var smoothedGroundNormal = Vector3.Slerp(Motor.CharacterUp,
-                                Motor.GroundingStatus.GroundNormal,
-                                1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
-                            currentRotation = Quaternion.FromToRotation(currentUp, smoothedGroundNormal) *
-                                              currentRotation;
-
-                            // Move the position to create a rotation around the bottom hem center instead of around the pivot
-                            Motor.SetTransientPosition(initialCharacterBottomHemCenter +
-                                                       (currentRotation * Vector3.down * Motor.Capsule.radius));
-                        }
-                        else
-                        {
-                            var smoothedGravityDir = Vector3.Slerp(currentUp, -Gravity.normalized,
-                                1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
-                            currentRotation = Quaternion.FromToRotation(currentUp, smoothedGravityDir) *
-                                              currentRotation;
-                        }
-                    }
-                    else
-                    {
-                        var smoothedGravityDir = Vector3.Slerp(currentUp, Vector3.up,
-                            1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
-                        currentRotation = Quaternion.FromToRotation(currentUp, smoothedGravityDir) * currentRotation;
-                    }
-
-                    break;
-                }
-                case CharacterState.Charging:
-                {
-                    if (_lookInputVector.sqrMagnitude > 0f && OrientationSharpness > 0f)
-                    {
-                        // Smoothly interpolate from current to target look direction
-                        Vector3 smoothedLookInputDirection = Vector3.Slerp(Motor.CharacterForward, _lookInputVector,
                             1 - Mathf.Exp(-OrientationSharpness * deltaTime)).normalized;
 
                         // Set the current rotation (which will be used by the KinematicCharacterMotor)
@@ -437,6 +576,149 @@ namespace Assets.Scripts.Character_Controller_Layer
 
                     break;
                 }
+                
+                case CharacterState.LightMeleeAttack:
+                {
+                    break;
+                }
+                
+                case CharacterState.HeavyMeleeAttack:
+                {
+                    break;
+                }
+                
+                case CharacterState.Charging:
+                {
+                    if (_lookInputVector.sqrMagnitude > 0f && OrientationSharpness > 0f)
+                    {
+                        // Smoothly interpolate from current to target look direction
+                        var smoothedLookInputDirection = Vector3.Slerp(Motor.CharacterForward, _lookInputVector,
+                            1 - Mathf.Exp(-OrientationSharpness * deltaTime)).normalized;
+
+                        // Set the current rotation (which will be used by the KinematicCharacterMotor)
+                        currentRotation = Quaternion.LookRotation(smoothedLookInputDirection, Motor.CharacterUp);
+                    }
+
+                    var currentUp = (currentRotation * Vector3.up);
+                    switch (BonusOrientationMethod)
+                    {
+                        case BonusOrientationMethod.TowardsGravity:
+                        {
+                            // Rotate from current up to invert gravity
+                            var smoothedGravityDir = Vector3.Slerp(currentUp, -Gravity.normalized,
+                                1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
+                            currentRotation = Quaternion.FromToRotation(currentUp, smoothedGravityDir) * currentRotation;
+                            break;
+                        }
+                        case BonusOrientationMethod.TowardsGroundSlopeAndGravity when Motor.GroundingStatus.IsStableOnGround:
+                        {
+                            var initialCharacterBottomHemCenter =
+                                Motor.TransientPosition + (currentUp * Motor.Capsule.radius);
+
+                            var smoothedGroundNormal = Vector3.Slerp(Motor.CharacterUp,
+                                Motor.GroundingStatus.GroundNormal,
+                                1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
+                            currentRotation = Quaternion.FromToRotation(currentUp, smoothedGroundNormal) *
+                                              currentRotation;
+
+                            // Move the position to create a rotation around the bottom hem center instead of around the pivot
+                            Motor.SetTransientPosition(initialCharacterBottomHemCenter +
+                                                       (currentRotation * Vector3.down * Motor.Capsule.radius));
+                            break;
+                        }
+                        case BonusOrientationMethod.TowardsGroundSlopeAndGravity:
+                        {
+                            var smoothedGravityDir = Vector3.Slerp(currentUp, -Gravity.normalized,
+                                1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
+                            currentRotation = Quaternion.FromToRotation(currentUp, smoothedGravityDir) *
+                                              currentRotation;
+                            break;
+                        }
+                        default:
+                        {
+                            var smoothedGravityDir = Vector3.Slerp(currentUp, Vector3.up,
+                                1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
+                            currentRotation = Quaternion.FromToRotation(currentUp, smoothedGravityDir) * currentRotation;
+                            break;
+                        }
+                    }
+                    break;
+                }
+
+                //Casting Stance
+                case CharacterState.CastingStance:
+                {
+                    if (_lookInputVector.sqrMagnitude > 0f && OrientationSharpness > 0f)
+                    {
+                        // Smoothly interpolate from current to target look direction
+                        var smoothedLookInputDirection = Vector3.Slerp(Motor.CharacterForward, _lookInputVector,
+                            1 - Mathf.Exp(-OrientationSharpness * deltaTime)).normalized;
+
+                        // Set the current rotation (which will be used by the KinematicCharacterMotor)
+                        currentRotation = Quaternion.LookRotation(smoothedLookInputDirection, Motor.CharacterUp);
+                    }
+
+                    var currentUp = (currentRotation * Vector3.up);
+                    switch (BonusOrientationMethod)
+                    {
+                        case BonusOrientationMethod.TowardsGravity:
+                        {
+                            // Rotate from current up to invert gravity
+                            var smoothedGravityDir = Vector3.Slerp(currentUp, -Gravity.normalized,
+                                1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
+                            currentRotation = Quaternion.FromToRotation(currentUp, smoothedGravityDir) * currentRotation;
+                            break;
+                        }
+                        case BonusOrientationMethod.TowardsGroundSlopeAndGravity when Motor.GroundingStatus.IsStableOnGround:
+                        {
+                            var initialCharacterBottomHemCenter =
+                                Motor.TransientPosition + (currentUp * Motor.Capsule.radius);
+
+                            var smoothedGroundNormal = Vector3.Slerp(Motor.CharacterUp,
+                                Motor.GroundingStatus.GroundNormal,
+                                1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
+                            currentRotation = Quaternion.FromToRotation(currentUp, smoothedGroundNormal) *
+                                              currentRotation;
+
+                            // Move the position to create a rotation around the bottom hem center instead of around the pivot
+                            Motor.SetTransientPosition(initialCharacterBottomHemCenter +
+                                                       (currentRotation * Vector3.down * Motor.Capsule.radius));
+                            break;
+                        }
+                        case BonusOrientationMethod.TowardsGroundSlopeAndGravity:
+                        {
+                            var smoothedGravityDir = Vector3.Slerp(currentUp, -Gravity.normalized,
+                                1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
+                            currentRotation = Quaternion.FromToRotation(currentUp, smoothedGravityDir) *
+                                              currentRotation;
+                            break;
+                        }
+                        default:
+                        {
+                            var smoothedGravityDir = Vector3.Slerp(currentUp, Vector3.up,
+                                1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
+                            currentRotation = Quaternion.FromToRotation(currentUp, smoothedGravityDir) * currentRotation;
+                            break;
+                        }
+                    }
+                    break;
+                }
+                
+                case CharacterState.CastingSpell:
+                {
+                    break;
+                }
+                
+                case CharacterState.CastingCombo:
+                {
+                    break;
+                }
+                
+                //No Movement Stance
+                case CharacterState.InteractingWithObject:
+                {
+                    break;
+                }
             }
         }
 
@@ -449,6 +731,7 @@ namespace Assets.Scripts.Character_Controller_Layer
         {
             switch (CurrentCharacterState)
             {
+                //Melee Stance
                 case CharacterState.MeleeStance:
                 {
                     // Ground movement
@@ -473,7 +756,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                         var inputRight = Vector3.Cross(_moveInputVector, Motor.CharacterUp);
                         var reorientedInput = Vector3.Cross(effectiveGroundNormal, inputRight).normalized *
                                               _moveInputVector.magnitude;
-                        var targetMovementVelocity = reorientedInput * MaxStableMoveSpeed;
+                        var targetMovementVelocity = reorientedInput * MaxStableMeleeMoveSpeed;
 
                         // Smooth movement Velocity
                         currentVelocity = Vector3.Lerp(currentVelocity, targetMovementVelocity,
@@ -540,6 +823,103 @@ namespace Assets.Scripts.Character_Controller_Layer
 
                     break;
                 }
+                
+                case CharacterState.LightMeleeAttack:
+                {
+                    // Ground movement
+                    if (Motor.GroundingStatus.IsStableOnGround)
+                    {
+                        var currentVelocityMagnitude = currentVelocity.magnitude;
+
+                        var effectiveGroundNormal = Motor.GroundingStatus.GroundNormal;
+                        if (currentVelocityMagnitude > 0f && Motor.GroundingStatus.SnappingPrevented)
+                        {
+                            // Take the normal from where we're coming from
+                            var groundPointToCharacter =
+                                Motor.TransientPosition - Motor.GroundingStatus.GroundPoint;
+                            effectiveGroundNormal = Vector3.Dot(currentVelocity, groundPointToCharacter) >= 0f ? Motor.GroundingStatus.OuterGroundNormal : Motor.GroundingStatus.InnerGroundNormal;
+                        }
+
+                        // Reorient velocity on slope
+                        currentVelocity = Motor.GetDirectionTangentToSurface(currentVelocity, effectiveGroundNormal) *
+                                          currentVelocityMagnitude;
+
+                        // Calculate target velocity
+                        var inputRight = Vector3.Cross(_moveInputVector, Motor.CharacterUp);
+                        var reorientedInput = Vector3.Cross(effectiveGroundNormal, inputRight).normalized *
+                                              _moveInputVector.magnitude;
+                        var targetMovementVelocity = reorientedInput * (MaxStableMeleeMoveSpeed * LightMeleeAttackStableMoveSpeedMultiplier);
+
+                        // Smooth movement Velocity
+                        currentVelocity = Vector3.Lerp(currentVelocity, targetMovementVelocity,
+                            1f - Mathf.Exp(-StableMovementSharpness * deltaTime));
+                    }
+                    // Air movement
+                    else
+                    {
+                        // Add move input
+                        if (_moveInputVector.sqrMagnitude > 0f)
+                        {
+                            var addedVelocity = _moveInputVector * (AirAccelerationSpeed * deltaTime);
+
+                            var currentVelocityOnInputsPlane = Vector3.ProjectOnPlane(currentVelocity, Motor.CharacterUp);
+
+                            // Limit air velocity from inputs
+                            if (currentVelocityOnInputsPlane.magnitude < MaxAirMoveSpeed)
+                            {
+                                // clamp addedVel to make total vel not exceed max vel on inputs plane
+                                var newTotal = Vector3.ClampMagnitude(currentVelocityOnInputsPlane + addedVelocity,
+                                    MaxAirMoveSpeed);
+                                addedVelocity = newTotal - currentVelocityOnInputsPlane;
+                            }
+                            else
+                            {
+                                // Make sure added vel doesn't go in the direction of the already-exceeding velocity
+                                if (Vector3.Dot(currentVelocityOnInputsPlane, addedVelocity) > 0f)
+                                {
+                                    addedVelocity = Vector3.ProjectOnPlane(addedVelocity,
+                                        currentVelocityOnInputsPlane.normalized);
+                                }
+                            }
+
+                            // Prevent air-climbing sloped walls
+                            if (Motor.GroundingStatus.FoundAnyGround)
+                            {
+                                if (Vector3.Dot(currentVelocity + addedVelocity, addedVelocity) > 0f)
+                                {
+                                    var perpendicularObstructionNormal = Vector3
+                                        .Cross(Vector3.Cross(Motor.CharacterUp, Motor.GroundingStatus.GroundNormal),
+                                            Motor.CharacterUp).normalized;
+                                    addedVelocity = Vector3.ProjectOnPlane(addedVelocity, perpendicularObstructionNormal);
+                                }
+                            }
+
+                            // Apply added velocity
+                            currentVelocity += addedVelocity;
+                        }
+
+                        // Gravity
+                        currentVelocity += Gravity * deltaTime;
+
+                        // Drag
+                        currentVelocity *= (1f / (1f + (Drag * deltaTime)));
+                    }
+
+
+                    // Take into account additive velocity
+                    if (_internalVelocityAdd.sqrMagnitude > 0f)
+                    {
+                        currentVelocity += _internalVelocityAdd;
+                        _internalVelocityAdd = Vector3.zero;
+                    }
+                    break;
+                }
+                
+                case CharacterState.HeavyMeleeAttack:
+                {
+                    break;
+                }
+                
                 case CharacterState.Charging:
                 {
                     // If we have stopped and need to cancel velocity, do it here
@@ -565,6 +945,119 @@ namespace Assets.Scripts.Character_Controller_Layer
 
                     break;
                 }
+                
+                //Casting Stance
+                case CharacterState.CastingStance:
+                {
+                    // Ground movement
+                    if (Motor.GroundingStatus.IsStableOnGround)
+                    {
+                        var currentVelocityMagnitude = currentVelocity.magnitude;
+
+                        var effectiveGroundNormal = Motor.GroundingStatus.GroundNormal;
+                        if (currentVelocityMagnitude > 0f && Motor.GroundingStatus.SnappingPrevented)
+                        {
+                            // Take the normal from where we're coming from
+                            var groundPointToCharacter =
+                                Motor.TransientPosition - Motor.GroundingStatus.GroundPoint;
+                            effectiveGroundNormal = Vector3.Dot(currentVelocity, groundPointToCharacter) >= 0f ? Motor.GroundingStatus.OuterGroundNormal : Motor.GroundingStatus.InnerGroundNormal;
+                        }
+
+                        // Reorient velocity on slope
+                        currentVelocity = Motor.GetDirectionTangentToSurface(currentVelocity, effectiveGroundNormal) *
+                                          currentVelocityMagnitude;
+
+                        // Calculate target velocity
+                        var inputRight = Vector3.Cross(_moveInputVector, Motor.CharacterUp);
+                        var reorientedInput = Vector3.Cross(effectiveGroundNormal, inputRight).normalized *
+                                              _moveInputVector.magnitude;
+                        var targetMovementVelocity = reorientedInput * MaxStableSpellcastingMoveSpeed;
+
+                        // Smooth movement Velocity
+                        currentVelocity = Vector3.Lerp(currentVelocity, targetMovementVelocity,
+                            1f - Mathf.Exp(-StableMovementSharpness * deltaTime));
+                    }
+                    // Air movement
+                    else
+                    {
+                        // Add move input
+                        if (_moveInputVector.sqrMagnitude > 0f)
+                        {
+                            var addedVelocity = _moveInputVector * (AirAccelerationSpeed * deltaTime);
+
+                            var currentVelocityOnInputsPlane = Vector3.ProjectOnPlane(currentVelocity, Motor.CharacterUp);
+
+                            // Limit air velocity from inputs
+                            if (currentVelocityOnInputsPlane.magnitude < MaxAirMoveSpeed)
+                            {
+                                // clamp addedVel to make total vel not exceed max vel on inputs plane
+                                var newTotal = Vector3.ClampMagnitude(currentVelocityOnInputsPlane + addedVelocity,
+                                    MaxAirMoveSpeed);
+                                addedVelocity = newTotal - currentVelocityOnInputsPlane;
+                            }
+                            else
+                            {
+                                // Make sure added vel doesn't go in the direction of the already-exceeding velocity
+                                if (Vector3.Dot(currentVelocityOnInputsPlane, addedVelocity) > 0f)
+                                {
+                                    addedVelocity = Vector3.ProjectOnPlane(addedVelocity,
+                                        currentVelocityOnInputsPlane.normalized);
+                                }
+                            }
+
+                            // Prevent air-climbing sloped walls
+                            if (Motor.GroundingStatus.FoundAnyGround)
+                            {
+                                if (Vector3.Dot(currentVelocity + addedVelocity, addedVelocity) > 0f)
+                                {
+                                    var perpendicularObstructionNormal = Vector3
+                                        .Cross(Vector3.Cross(Motor.CharacterUp, Motor.GroundingStatus.GroundNormal),
+                                            Motor.CharacterUp).normalized;
+                                    addedVelocity = Vector3.ProjectOnPlane(addedVelocity, perpendicularObstructionNormal);
+                                }
+                            }
+
+                            // Apply added velocity
+                            currentVelocity += addedVelocity;
+                        }
+
+                        // Gravity
+                        currentVelocity += Gravity * deltaTime;
+
+                        // Drag
+                        currentVelocity *= (1f / (1f + (Drag * deltaTime)));
+                    }
+
+
+                    // Take into account additive velocity
+                    if (_internalVelocityAdd.sqrMagnitude > 0f)
+                    {
+                        currentVelocity += _internalVelocityAdd;
+                        _internalVelocityAdd = Vector3.zero;
+                    }
+                    break;
+                }
+                
+                case CharacterState.CastingSpell:
+                {
+                    break;
+                }
+                
+                case CharacterState.CastingCombo:
+                {
+                    break;
+                }
+                
+                //No Movement Stance
+                case CharacterState.InteractingWithObject:
+                {
+                    break;
+                }
+
+                default:
+                {
+                    throw new ArgumentOutOfRangeException();
+                }
             }
         }
 
@@ -576,11 +1069,26 @@ namespace Assets.Scripts.Character_Controller_Layer
         {
             switch (CurrentCharacterState)
             {
+                //Melee Stance
                 case CharacterState.MeleeStance:
                 {
                     _timeSinceLastCharge += deltaTime;
+                    _timeSinceLastLightMeleeAttack += deltaTime;
                     break;
                 }
+                
+                case CharacterState.LightMeleeAttack:
+                {
+                    if(_timeSinceStartedLightMeleeAttack > LightMeleeAttackDuration)
+                        TransitionToState(CharacterState.MeleeStance);
+                    break;
+                }
+                
+                case CharacterState.HeavyMeleeAttack:
+                {
+                    break;
+                }
+                
                 case CharacterState.Charging:
                 {
                     // Detect being stopped by elapsed time
@@ -597,6 +1105,33 @@ namespace Assets.Scripts.Character_Controller_Layer
                     }
 
                     break;
+                }
+                
+                //Casting Stance
+                case CharacterState.CastingStance:
+                {
+                    break;
+                }
+                
+                case CharacterState.CastingSpell:
+                {
+                    break;
+                }
+                
+                case CharacterState.CastingCombo:
+                {
+                    break;
+                }
+                
+                //No Movement Stance
+                case CharacterState.InteractingWithObject:
+                {
+                    break;
+                }
+
+                default:
+                {
+                    throw new ArgumentOutOfRangeException();
                 }
             }
         }
@@ -622,12 +1157,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                 return true;
             }
 
-            if (IgnoredColliders.Contains(coll))
-            {
-                return false;
-            }
-
-            return true;
+            return !IgnoredColliders.Contains(coll);
         }
 
         public void OnGroundHit(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint,
@@ -644,9 +1174,14 @@ namespace Assets.Scripts.Character_Controller_Layer
         {
             // Update the character's stats
             //Update Movement Stats
-            MaxStableMoveSpeed = GameManager.instance.userManager.GetMovementSpeed();
+            MaxStableMeleeMoveSpeed = GameManager.instance.userManager.GetMeleeMovementSpeed();
+            MaxStableSpellcastingMoveSpeed = GameManager.instance.userManager.GetCastingMovementSpeed();
             StableMovementSharpness = GameManager.instance.userManager.GetStableMovementSharpness();
             OrientationSharpness = GameManager.instance.userManager.GetOrientationSharpness();
+            //Update Light Melee Attack Stats
+            LightMeleeAttackDuration = GameManager.instance.userManager.GetLightAttackDuration();
+            LightMeleeAttackStableMoveSpeedMultiplier = GameManager.instance.userManager.GetLightAttackMovementSpeedMultiplier();
+            LightMeleeAttackCooldown = GameManager.instance.userManager.GetLightAttackCooldown();
             //Update Charge Stats
             ChargeSpeed = GameManager.instance.userManager.GetChargeSpeed();
             MaxChargeTime = GameManager.instance.userManager.GetMaxChargeTime();
@@ -664,6 +1199,22 @@ namespace Assets.Scripts.Character_Controller_Layer
                     _internalVelocityAdd += velocity;
                     break;
                 }
+                case CharacterState.LightMeleeAttack:
+                    break;
+                case CharacterState.HeavyMeleeAttack:
+                    break;
+                case CharacterState.Charging:
+                    break;
+                case CharacterState.CastingStance:
+                    break;
+                case CharacterState.CastingSpell:
+                    break;
+                case CharacterState.CastingCombo:
+                    break;
+                case CharacterState.InteractingWithObject:
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
         }
 

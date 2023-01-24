@@ -41,6 +41,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 8990815841795631351}
     m_Modifications:
+    - target: {fileID: 818317592445530425, guid: 7974ca75c07c4b2408d3e13925399383, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2646047321519450079, guid: 7974ca75c07c4b2408d3e13925399383, type: 3}
       propertyPath: DebugMode
       value: 1
@@ -55,11 +59,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2646047321519450079, guid: 7974ca75c07c4b2408d3e13925399383, type: 3}
       propertyPath: MaxChargeTime
-      value: 0.3
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 2646047321519450079, guid: 7974ca75c07c4b2408d3e13925399383, type: 3}
       propertyPath: CanDoubleCharge
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2646047321519450079, guid: 7974ca75c07c4b2408d3e13925399383, type: 3}
+      propertyPath: OrientationSharpness
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2646047321519450079, guid: 7974ca75c07c4b2408d3e13925399383, type: 3}
+      propertyPath: LightMeleeAttackCooldown
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2646047321519450079, guid: 7974ca75c07c4b2408d3e13925399383, type: 3}
+      propertyPath: MaxStableSpellcastingMoveSpeed
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2646047321519450079, guid: 7974ca75c07c4b2408d3e13925399383, type: 3}
+      propertyPath: LightMeleeAttackStableMoveSpeedMultiplier
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2678334744460379437, guid: 7974ca75c07c4b2408d3e13925399383, type: 3}
       propertyPath: m_Name
@@ -111,6 +131,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2683798343001065791, guid: 7974ca75c07c4b2408d3e13925399383, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702301065555692532, guid: 7974ca75c07c4b2408d3e13925399383, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

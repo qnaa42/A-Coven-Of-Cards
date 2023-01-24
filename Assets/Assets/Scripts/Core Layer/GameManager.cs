@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts.Character_Controller_Layer;
@@ -106,6 +107,9 @@ namespace Assets.Scripts.Core_Layer
                 case Game.State.restarting:
                     Restarting();
                     break;
+                
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
 
             currentGameState = targetGameState;

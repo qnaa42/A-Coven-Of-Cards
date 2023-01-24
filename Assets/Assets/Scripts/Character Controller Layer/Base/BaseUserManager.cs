@@ -47,8 +47,13 @@ namespace Assets.Scripts.Character_Controller_Layer
                 playerName = "Default",
                 //Movement
                 movementSpeed = 7.5f,
+                castingMovementSpeed = 5.0f,
                 stableMovementSharpness = 50,
                 orientationSharpness = 50,
+                //Light Attack
+                lightAttackDuration = 0.5f,
+                lightAttackMovementSpeedMultiplier = 0.1f,
+                lightAttackCooldown = 0.15f,
                 //Charging
                 chargeSpeed = 50,
                 maxChargeTime = 0.3f,
@@ -56,8 +61,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                 chargeCooldown = 1.5f,
                 canDoubleCharge = false,
                 score = 0,
-                health = 100,
-                clones = 6
+                health = 100
             };
 
             global_UserDatas.Add(newUser);
@@ -84,7 +88,7 @@ namespace Assets.Scripts.Character_Controller_Layer
         
         //Movement
         //Movement Speed
-        public float GetMovementSpeed(int id)
+        public float GetMeleeMovementSpeed(int id)
         {
             if (!didInit)
                 Init();
@@ -92,15 +96,15 @@ namespace Assets.Scripts.Character_Controller_Layer
             return global_UserDatas[id].movementSpeed;
         }
         
-        public void SetMovementSpeed(int id, float aMovementSpeed)
+        public void SetMeleeMovementSpeed(int id, float anAmount)
         {
             if (!didInit)
                 Init();
 
-            global_UserDatas[id].movementSpeed = aMovementSpeed;
+            global_UserDatas[id].movementSpeed = anAmount;
         }
         
-        public void AddMovementSpeed(int id, float anAmount)
+        public void AddMeleeMovementSpeed(int id, float anAmount)
         {
             if (!didInit)
                 Init();
@@ -108,12 +112,45 @@ namespace Assets.Scripts.Character_Controller_Layer
             global_UserDatas[id].movementSpeed += anAmount;
         }
         
-        public void SubtractMovementSpeed(int id, float anAmount)
+        public void SubtractMeleeMovementSpeed(int id, float anAmount)
         {
             if (!didInit)
                 Init();
 
             global_UserDatas[id].movementSpeed -= anAmount;
+        }
+        
+        //Casting Movement Speed
+        public float GetCastingMovementSpeed(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_UserDatas[id].castingMovementSpeed;
+        }
+        
+        public void SetCastingMovementSpeed(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].castingMovementSpeed = anAmount;
+        }
+        
+        public void AddCastingMovementSpeed(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].castingMovementSpeed += anAmount;
+        }
+        
+        public void SubtractCastingMovementSpeed(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].castingMovementSpeed -= anAmount;
         }
         
         //Stable Movement Sharpness
@@ -125,12 +162,12 @@ namespace Assets.Scripts.Character_Controller_Layer
             return global_UserDatas[id].stableMovementSharpness;
         }
         
-        public void SetStableMovementSharpness(int id, float aStableMovementSharpness)
+        public void SetStableMovementSharpness(int id, float anAmount)
         {
             if (!didInit)
                 Init();
 
-            global_UserDatas[id].stableMovementSharpness = aStableMovementSharpness;
+            global_UserDatas[id].stableMovementSharpness = anAmount;
         }
         
         public void AddStableMovementSharpness(int id, float anAmount)
@@ -158,12 +195,12 @@ namespace Assets.Scripts.Character_Controller_Layer
             return global_UserDatas[id].orientationSharpness;
         }
         
-        public void SetOrientationSharpness(int id, float anOrientationSharpness)
+        public void SetOrientationSharpness(int id, float anAmount)
         {
             if (!didInit)
                 Init();
 
-            global_UserDatas[id].orientationSharpness = anOrientationSharpness;
+            global_UserDatas[id].orientationSharpness = anAmount;
         }
         
         public void AddOrientationSharpness(int id, float anAmount)
@@ -182,6 +219,106 @@ namespace Assets.Scripts.Character_Controller_Layer
             global_UserDatas[id].orientationSharpness -= anAmount;
         }
         
+        //Light Attack
+        //Light Attack Duration
+        public float GetLightAttackDuration(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_UserDatas[id].lightAttackDuration;
+        }
+        
+        public void SetLightAttackDuration(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].lightAttackDuration = anAmount;
+        }
+        
+        public void AddLightAttackDuration(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].lightAttackDuration += anAmount;
+        }
+        
+        public void SubtractLightAttackDuration(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].lightAttackDuration -= anAmount;
+        }
+        
+        //Light Attack Movement Speed Multiplier
+        public float GetLightAttackMovementSpeedMultiplier(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_UserDatas[id].lightAttackMovementSpeedMultiplier;
+        }
+        
+        public void SetLightAttackMovementSpeedMultiplier(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].lightAttackMovementSpeedMultiplier = anAmount;
+        }
+        
+        public void AddLightAttackMovementSpeedMultiplier(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].lightAttackMovementSpeedMultiplier += anAmount;
+        }
+        
+        public void SubtractLightAttackMovementSpeedMultiplier(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].lightAttackMovementSpeedMultiplier -= anAmount;
+        }
+        
+        //Light Attack Cooldown
+        public float GetLightAttackCooldown(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_UserDatas[id].lightAttackCooldown;
+        }
+        
+        public void SetLightAttackCooldown(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].lightAttackCooldown = anAmount;
+        }
+        
+        public void AddLightAttackCooldown(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].lightAttackCooldown += anAmount;
+        }
+        
+        public void SubtractLightAttackCooldown(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].lightAttackCooldown -= anAmount;
+        }
+
         //Charging
         //Charge Speed
         public float GetChargeSpeed(int id)
@@ -399,37 +536,5 @@ namespace Assets.Scripts.Character_Controller_Layer
             global_UserDatas[id].health -= anAmount;
         }
         
-        //Clones
-        public int GetClones(int id)
-        {
-            if (!didInit)
-                Init();
-
-            return global_UserDatas[id].clones;
-        }
-        
-        public void SetClones(int id, int anAmount)
-        {
-            if (!didInit)
-                Init();
-
-            global_UserDatas[id].clones = anAmount;
-        }
-        
-        public void AddClones(int id, int anAmount)
-        {
-            if (!didInit)
-                Init();
-
-            global_UserDatas[id].clones += anAmount;
-        }
-        
-        public void SubtractClones(int id, int anAmount)
-        {
-            if (!didInit)
-                Init();
-
-            global_UserDatas[id].clones -= anAmount;
-        }
     }
 }

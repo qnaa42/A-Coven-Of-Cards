@@ -65,36 +65,69 @@ namespace Assets.Scripts.Character_Controller_Layer
         
         //Movement
         //Movement Speed
-        public float GetMovementSpeed()
+        public float GetMeleeMovementSpeed()
         {
             if (!didInit)
                 Init();
 
-            return _myDataManager.GetMovementSpeed(_myId);
+            return _myDataManager.GetMeleeMovementSpeed(_myId);
         }
         
-        public virtual void SetMovementSpeed(float aMovementSpeed)
+        public virtual void SetMeleeMovementSpeed(float aMovementSpeed)
         {
             if (!didInit)
                 Init();
 
-            _myDataManager.SetMovementSpeed(_myId, aMovementSpeed);
+            _myDataManager.SetMeleeMovementSpeed(_myId, aMovementSpeed);
         }
         
-        public virtual void AddMovementSpeed(float aMovementSpeed)
+        public virtual void AddMeleeMovementSpeed(float aMovementSpeed)
         {
             if (!didInit)
                 Init();
 
-            _myDataManager.AddMovementSpeed(_myId, aMovementSpeed);
+            _myDataManager.AddMeleeMovementSpeed(_myId, aMovementSpeed);
         }
         
-        public virtual void SubtractMovementSpeed(float aMovementSpeed)
+        public virtual void SubtractMeleeMovementSpeed(float aMovementSpeed)
         {
             if (!didInit)
                 Init();
 
-            _myDataManager.SubtractMovementSpeed(_myId, aMovementSpeed);
+            _myDataManager.SubtractMeleeMovementSpeed(_myId, aMovementSpeed);
+        }
+        
+        //Casting Movement Speed
+        public float GetCastingMovementSpeed()
+        {
+            if (!didInit)
+                Init();
+
+            return _myDataManager.GetCastingMovementSpeed(_myId);
+        }
+        
+        public virtual void SetCastingMovementSpeed(float aCastingMovementSpeed)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SetCastingMovementSpeed(_myId, aCastingMovementSpeed);
+        }
+        
+        public virtual void AddCastingMovementSpeed(float aCastingMovementSpeed)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.AddCastingMovementSpeed(_myId, aCastingMovementSpeed);
+        }
+        
+        public virtual void SubtractCastingMovementSpeed(float aCastingMovementSpeed)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SubtractCastingMovementSpeed(_myId, aCastingMovementSpeed);
         }
         
         //Stable Movement Sharpness
@@ -163,6 +196,106 @@ namespace Assets.Scripts.Character_Controller_Layer
             _myDataManager.SubtractOrientationSharpness(_myId, aOrientationSharpness);
         }
         
+        //Light Attack
+        //Light Attack Duration
+        public float GetLightAttackDuration()
+        {
+            if (!didInit)
+                Init();
+
+            return _myDataManager.GetLightAttackDuration(_myId);
+        }
+        
+        public virtual void SetLightAttackDuration(float aLightAttackDuration)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SetLightAttackDuration(_myId, aLightAttackDuration);
+        }
+        
+        public virtual void AddLightAttackDuration(float aLightAttackDuration)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.AddLightAttackDuration(_myId, aLightAttackDuration);
+        }
+        
+        public virtual void SubtractLightAttackDuration(float aLightAttackDuration)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SubtractLightAttackDuration(_myId, aLightAttackDuration);
+        }
+        
+        //Light Attack Movement Speed Multiplier
+        public float GetLightAttackMovementSpeedMultiplier()
+        {
+            if (!didInit)
+                Init();
+
+            return _myDataManager.GetLightAttackMovementSpeedMultiplier(_myId);
+        }
+        
+        public virtual void SetLightAttackMovementSpeedMultiplier(float aLightAttackMovementSpeedMultiplier)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SetLightAttackMovementSpeedMultiplier(_myId, aLightAttackMovementSpeedMultiplier);
+        }
+        
+        public virtual void AddLightAttackMovementSpeedMultiplier(float aLightAttackMovementSpeedMultiplier)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.AddLightAttackMovementSpeedMultiplier(_myId, aLightAttackMovementSpeedMultiplier);
+        }
+        
+        public virtual void SubtractLightAttackMovementSpeedMultiplier(float aLightAttackMovementSpeedMultiplier)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SubtractLightAttackMovementSpeedMultiplier(_myId, aLightAttackMovementSpeedMultiplier);
+        }
+        
+        //Light Attack Cooldown
+        public float GetLightAttackCooldown()
+        {
+            if (!didInit)
+                Init();
+
+            return _myDataManager.GetLightAttackCooldown(_myId);
+        }
+        
+        public virtual void SetLightAttackCooldown(float aLightAttackCooldown)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SetLightAttackCooldown(_myId, aLightAttackCooldown);
+        }
+        
+        public virtual void AddLightAttackCooldown(float aLightAttackCooldown)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.AddLightAttackCooldown(_myId, aLightAttackCooldown);
+        }
+        
+        public virtual void SubtractLightAttackCooldown(float aLightAttackCooldown)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SubtractLightAttackCooldown(_myId, aLightAttackCooldown);
+        }
+
         //Charge
         //Charge Speed
         public float GetChargeSpeed()
@@ -379,37 +512,5 @@ namespace Assets.Scripts.Character_Controller_Layer
             _myDataManager.SubtractHealth(_myId, aHealth);
         }
         
-        //Clones
-        public int GetClones()
-        {
-            if (!didInit)
-                Init();
-
-            return _myDataManager.GetClones(_myId);
-        }
-        
-        public virtual void SetClones(int aClones)
-        {
-            if (!didInit)
-                Init();
-
-            _myDataManager.SetClones(_myId, aClones);
-        }
-        
-        public virtual void AddClones(int aClones)
-        {
-            if (!didInit)
-                Init();
-
-            _myDataManager.AddClones(_myId, aClones);
-        }
-        
-        public virtual void SubtractClones(int aClones)
-        {
-            if (!didInit)
-                Init();
-
-            _myDataManager.SubtractClones(_myId, aClones);
-        }
     }
 }

@@ -252,6 +252,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eb847ab97b24024588682c8601254cf, type: 3}
+--- !u!1 &539957139 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5263262698660614882, guid: f046c3877103c194db10dc19a868349b, type: 3}
+  m_PrefabInstance: {fileID: 1825787488}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &590028936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -440,6 +445,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eb847ab97b24024588682c8601254cf, type: 3}
+--- !u!1 &883745549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7828995231125552742, guid: f046c3877103c194db10dc19a868349b, type: 3}
+  m_PrefabInstance: {fileID: 1825787488}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1008437794
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,6 +725,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7063881608867782054, guid: ed0fad61a1177e444b613f9a6586fb65, type: 3}
+      propertyPath: Wand
+      value: 
+      objectReference: {fileID: 539957139}
+    - target: {fileID: 7063881608867782054, guid: ed0fad61a1177e444b613f9a6586fb65, type: 3}
+      propertyPath: Athame
+      value: 
+      objectReference: {fileID: 883745549}
     - target: {fileID: 7063881608867782054, guid: ed0fad61a1177e444b613f9a6586fb65, type: 3}
       propertyPath: Character
       value: 
