@@ -98,7 +98,11 @@ namespace Assets.Scripts.Character_Controller_Layer
         {
             // Handle initial state
             TransitionToState(CharacterState.Default);
-            
+            if (DebugMode == false)
+            {
+                StatsUpdate();
+            }
+
             // Assign the characterController to the motor
             Motor.CharacterController = this;
         }
@@ -248,18 +252,10 @@ namespace Assets.Scripts.Character_Controller_Layer
             {
                 case CharacterState.Default:
                     {
-                        if (DebugMode == false)
-                        {
-                            StatsUpdate();
-                        }
                         break;
                     }
                 case CharacterState.Charging:
                     {
-                        if (DebugMode == false)
-                        {
-                            StatsUpdate();
-                        }
                         _timeSinceStartedCharge += deltaTime;
                         if (_isStopped)
                         {
@@ -561,7 +557,7 @@ namespace Assets.Scripts.Character_Controller_Layer
         {
         }
         
-        private void StatsUpdate()
+        public void StatsUpdate()
         {
             // Update the character's stats
             //Update Movement Stats

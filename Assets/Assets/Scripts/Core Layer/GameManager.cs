@@ -11,6 +11,8 @@ namespace Assets.Scripts.Core_Layer
         public UserStatsManager userManager;
         public BaseUserManager baseUserManager;
         
+        public PlayerManager playerManager;
+        
         //Singleton
         public static GameManager instance { get; private set; }
         

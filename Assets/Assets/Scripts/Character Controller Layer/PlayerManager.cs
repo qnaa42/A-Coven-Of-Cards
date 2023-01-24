@@ -42,13 +42,14 @@ namespace Assets.Scripts.Character_Controller_Layer
     
         private void HandleCharacterInput()
         {
-            PlayerCharacterInputs characterInputs = new PlayerCharacterInputs();
-
-            // Build the CharacterInputs struct
-            characterInputs.MoveAxisForward = Input.GetAxisRaw(VerticalInput);
-            characterInputs.MoveAxisRight = Input.GetAxisRaw(HorizontalInput);
-            characterInputs.CameraRotation = OrbitCamera.Transform.rotation;
-            characterInputs.ChargingDown = Input.GetKeyDown(KeyCode.Space);
+            PlayerCharacterInputs characterInputs = new PlayerCharacterInputs
+            {
+                // Build the CharacterInputs struct
+                MoveAxisForward = Input.GetAxisRaw(VerticalInput),
+                MoveAxisRight = Input.GetAxisRaw(HorizontalInput),
+                CameraRotation = OrbitCamera.Transform.rotation,
+                ChargingDown = Input.GetKeyDown(KeyCode.Space)
+            };
 
             // Apply inputs to character
             Character.SetInputs(ref characterInputs);
