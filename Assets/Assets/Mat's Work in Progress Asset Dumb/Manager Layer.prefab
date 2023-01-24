@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7063881608867782041}
   - component: {fileID: 7063881608867782054}
+  - component: {fileID: 719835587}
+  - component: {fileID: 719835588}
   m_Layer: 0
   m_Name: PlayerManager
   m_TagString: Untagged
@@ -47,6 +49,31 @@ MonoBehaviour:
   OrbitCamera: {fileID: 0}
   CameraFollowPoint: {fileID: 0}
   Character: {fileID: 0}
+--- !u!114 &719835587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7063881608867782040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22fc5361f66e36341be5a3de8819e52e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &719835588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7063881608867782040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4b66a7ada4ace44ae338161af50670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _myDataManager: {fileID: 719835587}
 --- !u!1 &7063881609243094352
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,6 +83,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7063881609243094353}
+  - component: {fileID: 387704171}
   m_Layer: 0
   m_Name: Manager Layer
   m_TagString: Untagged
@@ -77,5 +105,51 @@ Transform:
   m_Children:
   - {fileID: 7063881608867782041}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &387704171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7063881609243094352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 424aaa3b6ce725f4f9d10c0e53398222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentGameState: 0
+  targetGameState: 0
+  lastGameState: 0
+  paused: 0
+  OnLoading:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLoaded:
+    m_PersistentCalls:
+      m_Calls: []
+  OnGameStarting:
+    m_PersistentCalls:
+      m_Calls: []
+  OnGameStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  OnGamePlaying:
+    m_PersistentCalls:
+      m_Calls: []
+  OnGameEnded:
+    m_PersistentCalls:
+      m_Calls: []
+  OnGamePausing:
+    m_PersistentCalls:
+      m_Calls: []
+  OnGameUnPaused:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRestarting:
+    m_PersistentCalls:
+      m_Calls: []
+  userManager: {fileID: 719835588}
+  baseUserManager: {fileID: 719835587}
+  playerManager: {fileID: 7063881608867782054}

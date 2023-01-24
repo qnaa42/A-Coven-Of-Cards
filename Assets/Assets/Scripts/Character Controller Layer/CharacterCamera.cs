@@ -20,8 +20,8 @@ namespace Assets.Scripts.Character_Controller_Layer
         public float DistanceMovementSharpness = 10f;
 
         [Header("Rotation")]
-        public bool InvertX = false;
-        public bool InvertY = false;
+        public bool InvertX;
+        public bool InvertY;
         [Range(-90f, 90f)]
         public float DefaultVerticalAngle = 20f;
         [Range(-90f, 90f)]
@@ -30,7 +30,7 @@ namespace Assets.Scripts.Character_Controller_Layer
         public float MaxVerticalAngle = 90f;
         public float RotationSpeed = 1f;
         public float RotationSharpness = 10000f;
-        public bool RotateWithPhysicsMover = false;
+        public bool RotateWithPhysicsMover;
 
         [Header("Obstruction")]
         public float ObstructionCheckRadius = 0.2f;
@@ -39,9 +39,9 @@ namespace Assets.Scripts.Character_Controller_Layer
         public List<Collider> IgnoredColliders = new List<Collider>();
 
         public Transform Transform { get; private set; }
-        public Transform FollowTransform { get; private set; }
+        private Transform FollowTransform { get; set; }
 
-        public Vector3 PlanarDirection { get; set; }
+        private Vector3 PlanarDirection { get; set; }
         public float TargetDistance { get; set; }
 
         private bool _distanceIsObstructed;
@@ -49,19 +49,19 @@ namespace Assets.Scripts.Character_Controller_Layer
         private float _targetVerticalAngle;
         private RaycastHit _obstructionHit;
         private int _obstructionCount;
-        private RaycastHit[] _obstructions = new RaycastHit[MaxObstructions];
+        private readonly RaycastHit[] _obstructions = new RaycastHit[MaxObstructions];
         private float _obstructionTime;
         private Vector3 _currentFollowPosition;
 
         private const int MaxObstructions = 32;
 
-        void OnValidate()
+        private void OnValidate()
         {
             DefaultDistance = Mathf.Clamp(DefaultDistance, MinDistance, MaxDistance);
             DefaultVerticalAngle = Mathf.Clamp(DefaultVerticalAngle, MinVerticalAngle, MaxVerticalAngle);
         }
 
-        void Awake()
+        private void Awake()
         {
             Transform = this.transform;
 
@@ -95,15 +95,16 @@ namespace Assets.Scripts.Character_Controller_Layer
                 }
 
                 // Process rotation input
-                Quaternion rotationFromInput = Quaternion.Euler(FollowTransform.up * (rotationInput.x * RotationSpeed));
+                var up = FollowTransform.up;
+                var rotationFromInput = Quaternion.Euler(up * (rotationInput.x * RotationSpeed));
                 PlanarDirection = rotationFromInput * PlanarDirection;
-                PlanarDirection = Vector3.Cross(FollowTransform.up, Vector3.Cross(PlanarDirection, FollowTransform.up));
-                Quaternion planarRot = Quaternion.LookRotation(PlanarDirection, FollowTransform.up);
+                PlanarDirection = Vector3.Cross(up, Vector3.Cross(PlanarDirection, up));
+                var planarRot = Quaternion.LookRotation(PlanarDirection, up);
 
                 _targetVerticalAngle -= (rotationInput.y * RotationSpeed);
                 _targetVerticalAngle = Mathf.Clamp(_targetVerticalAngle, MinVerticalAngle, MaxVerticalAngle);
-                Quaternion verticalRot = Quaternion.Euler(_targetVerticalAngle, 0, 0);
-                Quaternion targetRotation = Quaternion.Slerp(Transform.rotation, planarRot * verticalRot, 1f - Mathf.Exp(-RotationSharpness * deltaTime));
+                var verticalRot = Quaternion.Euler(_targetVerticalAngle, 0, 0);
+                var targetRotation = Quaternion.Slerp(Transform.rotation, planarRot * verticalRot, 1f - Mathf.Exp(-RotationSharpness * deltaTime));
 
                 // Apply rotation
                 Transform.rotation = targetRotation;
@@ -121,27 +122,25 @@ namespace Assets.Scripts.Character_Controller_Layer
 
                 // Handle obstructions
                 {
-                    RaycastHit closestHit = new RaycastHit();
-                    closestHit.distance = Mathf.Infinity;
-                    _obstructionCount = Physics.SphereCastNonAlloc(_currentFollowPosition, ObstructionCheckRadius, -Transform.forward, _obstructions, TargetDistance, ObstructionLayers, QueryTriggerInteraction.Ignore);
-                    for (int i = 0; i < _obstructionCount; i++)
+                    var closestHit = new RaycastHit
                     {
-                        bool isIgnored = false;
-                        for (int j = 0; j < IgnoredColliders.Count; j++)
+                        distance = Mathf.Infinity
+                    };
+                    _obstructionCount = Physics.SphereCastNonAlloc(_currentFollowPosition, ObstructionCheckRadius, -Transform.forward, _obstructions, TargetDistance, ObstructionLayers, QueryTriggerInteraction.Ignore);
+                    for (var i = 0; i < _obstructionCount; i++)
+                    {
+                        var isIgnored = false;
+                        foreach (var t in IgnoredColliders)
                         {
-                            if (IgnoredColliders[j] == _obstructions[i].collider)
-                            {
-                                isIgnored = true;
-                                break;
-                            }
+                            if (t != _obstructions[i].collider) continue;
+                            isIgnored = true;
+                            break;
                         }
-                        for (int j = 0; j < IgnoredColliders.Count; j++)
+                        foreach (var t in IgnoredColliders)
                         {
-                            if (IgnoredColliders[j] == _obstructions[i].collider)
-                            {
-                                isIgnored = true;
-                                break;
-                            }
+                            if (t != _obstructions[i].collider) continue;
+                            isIgnored = true;
+                            break;
                         }
 
                         if (!isIgnored && _obstructions[i].distance < closestHit.distance && _obstructions[i].distance > 0)
@@ -150,7 +149,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                         }
                     }
 
-                    // If obstructions detecter
+                    // If obstructions detected
                     if (closestHit.distance < Mathf.Infinity)
                     {
                         _distanceIsObstructed = true;
@@ -165,7 +164,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                 }
 
                 // Find the smoothed camera orbit position
-                Vector3 targetPosition = _currentFollowPosition - ((targetRotation * Vector3.forward) * _currentDistance);
+                var targetPosition = _currentFollowPosition - ((targetRotation * Vector3.forward) * _currentDistance);
 
                 // Handle framing
                 targetPosition += Transform.right * FollowPointFraming.x;

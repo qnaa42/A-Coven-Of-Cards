@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace Assets.Scripts.Character_Controller_Layer
+namespace Assets.Scripts.Character_Controller_Layer.Base.Data
 {
     public class UserData
     {

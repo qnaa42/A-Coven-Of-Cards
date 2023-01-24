@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using Assets.Scripts.Core_Layer;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-namespace Assets.Scripts.Core_Layer
+namespace Assets.Scripts.Core_Layer.Base
 {
     [System.Serializable]
     public class BaseGameManager : MonoBehaviour

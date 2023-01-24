@@ -24,7 +24,7 @@ namespace Assets.Scripts.Character_Controller_Layer
         }
 
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -42,13 +42,17 @@ namespace Assets.Scripts.Character_Controller_Layer
     
         private void HandleCharacterInput()
         {
-            PlayerCharacterInputs characterInputs = new PlayerCharacterInputs
+            var characterInputs = new PlayerCharacterInputs
             {
                 // Build the CharacterInputs struct
                 MoveAxisForward = Input.GetAxisRaw(VerticalInput),
                 MoveAxisRight = Input.GetAxisRaw(HorizontalInput),
                 CameraRotation = OrbitCamera.Transform.rotation,
-                ChargingDown = Input.GetKeyDown(KeyCode.Space)
+                LeftArrowInput = Input.GetKeyDown(KeyCode.LeftArrow),
+                UpArrowInput = Input.GetKeyDown(KeyCode.UpArrow),
+                RightArrowInput = Input.GetKeyDown(KeyCode.RightArrow),
+                DownArrowInput = Input.GetKeyDown(KeyCode.DownArrow),
+                SpaceInput = Input.GetKeyDown(KeyCode.Space),
             };
 
             // Apply inputs to character
@@ -59,7 +63,7 @@ namespace Assets.Scripts.Character_Controller_Layer
         {
             // Create the look input vector for the camera
         
-            Vector3 lookInputVector = new Vector3(0, 0, 0f);
+            var lookInputVector = new Vector3(0, 0, 0f);
 
             // Prevent moving the camera while the cursor isn't locked
             if (Cursor.lockState != CursorLockMode.Locked)

@@ -10,8 +10,8 @@ namespace Assets.Scripts.Character_Controller_Layer
     {
         public BaseUserManager _myDataManager;
 
-        public int _myId { get; set; }
-        public bool didInit { get; set; }
+        private int _myId { get; set; }
+        private bool didInit { get; set; }
         
         private void Awake()
         {
@@ -28,7 +28,7 @@ namespace Assets.Scripts.Character_Controller_Layer
         public virtual void SetPlayerDetails(int anID)
         {
             // this function can be used by a game manager to pass in details from the player list, such as
-            // this players ID or perhaps you could override this in the future to add avatar support, loadouts or
+            // this players ID or perhaps you could override this in the future to add avatar support, load outs or
             // special abilities etc?
             _myId = anID;
         }

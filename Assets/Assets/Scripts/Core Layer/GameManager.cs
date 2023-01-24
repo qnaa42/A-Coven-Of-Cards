@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts.Character_Controller_Layer;
 using Assets.Scripts.Core_Layer;
+using Assets.Scripts.Core_Layer.Base;
 using UnityEngine;
 
 namespace Assets.Scripts.Core_Layer
@@ -34,9 +35,9 @@ namespace Assets.Scripts.Core_Layer
             if (baseUserManager == null)
                 baseUserManager = GetComponent<BaseUserManager>();
 
-            if (baseUserManager.GetPlayerList().Count < 1) // get the player list from baseusermanager component and check players are in it
+            if (baseUserManager.GetPlayerList().Count < 1) // get the player list from base user manager component and check players are in it
             {
-                // reset baseusermanager
+                // reset base user manager
                 baseUserManager.ResetUsers();
 
                 // add a new player to the game
@@ -48,7 +49,7 @@ namespace Assets.Scripts.Core_Layer
         }
         
         // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             Debug.Log("Set TargetGameState = " + targetGameState);
             SetTargetState(Game.State.loaded);

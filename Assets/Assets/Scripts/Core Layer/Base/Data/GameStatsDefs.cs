@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Core_Layer
 {
-    public class Game
+    public static class Game
     {
         public enum State
         {
