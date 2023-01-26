@@ -3,15 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a1e62ff1-8c95-4f34-b705-2d1bd115eabc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.A Coven Of Cards/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.A Coven Of Cards/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.plastic/plastic.selector" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.selector" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.plastic/plastic.wktree" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.wktree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Prefabs/Character Controller Layer/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Prefabs/Character Controller Layer/Character.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/Base/BaseUserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/Base/BaseUserManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/Base/Data/UserData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/Base/Data/UserData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/CharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/CharacterController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/PlayerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/UserStatsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/UserStatsManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Debug/OnTriggerEnterStatReduce.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Debug/OnTriggerEnterStatReduce.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WhoteRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WhoteRoom.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/House.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/House.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,17 +35,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "rider.run.widget.enabled.cache": "false",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;rider.run.widget.enabled.cache&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Users\matst\Desktop\MDX\Game Design\GAM1002\Unity\2022.1.23f1\Editor\Unity.exe" />
@@ -90,7 +86,8 @@
       <updated>1674474890244</updated>
       <workItem from="1674474897743" duration="139000" />
       <workItem from="1674475069911" duration="13905000" />
-      <workItem from="1674559717438" duration="26008000" />
+      <workItem from="1674559717438" duration="26573000" />
+      <workItem from="1674731189006" duration="2924000" />
     </task>
     <servers />
   </component>

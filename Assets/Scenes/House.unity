@@ -2697,6 +2697,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3217263116016141336, guid: 09615a097e2ff3b458b54ecdb31dea20, type: 3}
   m_PrefabInstance: {fileID: 134839412}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &148852529 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5263262698660614882, guid: f046c3877103c194db10dc19a868349b, type: 3}
+  m_PrefabInstance: {fileID: 714143702847626139}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &150430212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17553,6 +17558,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4958141964136856, guid: 7738ccb3c7ccb2f4aa36bd30a8fbb7ef, type: 3}
   m_PrefabInstance: {fileID: 671738110}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1635149963 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7828995231125552742, guid: f046c3877103c194db10dc19a868349b, type: 3}
+  m_PrefabInstance: {fileID: 714143702847626139}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1653420465
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23534,6 +23544,30 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 580382387821700883, guid: f046c3877103c194db10dc19a868349b, type: 3}
+      propertyPath: m_Height
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 580382387821700883, guid: f046c3877103c194db10dc19a868349b, type: 3}
+      propertyPath: m_Radius
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 608363636136581575, guid: f046c3877103c194db10dc19a868349b, type: 3}
+      propertyPath: CapsuleHeight
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 608363636136581575, guid: f046c3877103c194db10dc19a868349b, type: 3}
+      propertyPath: CapsuleRadius
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 608363636136581575, guid: f046c3877103c194db10dc19a868349b, type: 3}
+      propertyPath: MinRequiredStepDepth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 608363636136581575, guid: f046c3877103c194db10dc19a868349b, type: 3}
+      propertyPath: MaxStableDistanceFromLedge
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 611410292610030115, guid: f046c3877103c194db10dc19a868349b, type: 3}
       propertyPath: IgnoredColliders.Array.data[0]
       value: 
@@ -23554,6 +23588,30 @@ PrefabInstance:
       propertyPath: IgnoredColliders.Array.data[4]
       value: 
       objectReference: {fileID: 404451039}
+    - target: {fileID: 697675571700891207, guid: f046c3877103c194db10dc19a868349b, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 697675571700891207, guid: f046c3877103c194db10dc19a868349b, type: 3}
+      propertyPath: near clip plane
+      value: -1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 697675571700891207, guid: f046c3877103c194db10dc19a868349b, type: 3}
+      propertyPath: m_OcclusionCulling
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 718410071992501067, guid: f046c3877103c194db10dc19a868349b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 718410071992501067, guid: f046c3877103c194db10dc19a868349b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 718410071992501067, guid: f046c3877103c194db10dc19a868349b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 1449883305306825785, guid: f046c3877103c194db10dc19a868349b, type: 3}
       propertyPath: m_Name
       value: Character Controller Layer
@@ -23613,6 +23671,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7063881608867782054, guid: ed0fad61a1177e444b613f9a6586fb65, type: 3}
+      propertyPath: Wand
+      value: 
+      objectReference: {fileID: 148852529}
+    - target: {fileID: 7063881608867782054, guid: ed0fad61a1177e444b613f9a6586fb65, type: 3}
+      propertyPath: Athame
+      value: 
+      objectReference: {fileID: 1635149963}
     - target: {fileID: 7063881608867782054, guid: ed0fad61a1177e444b613f9a6586fb65, type: 3}
       propertyPath: Character
       value: 

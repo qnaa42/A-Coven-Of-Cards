@@ -58,7 +58,8 @@ namespace Assets.Scripts.Character_Controller_Layer
         [Header("Debug Mode")] public bool DebugMode = true;
 
         [Header("Stable Movement")] public float MaxStableMeleeMoveSpeed = 10f;
-        public float MaxStableSpellcastingMoveSpeed = 10f;
+        public float MeleeStanceMoveSpeedMultiplier = 1f;
+        public float CastingStanceMoveSpeedMultiplier = 0.8f;
         public float StableMovementSharpness = 15f;
         public float OrientationSharpness = 10f;
         public OrientationMethod OrientationMethod = OrientationMethod.TowardsCamera;
@@ -321,55 +322,27 @@ namespace Assets.Scripts.Character_Controller_Layer
                 case CharacterState.MeleeStance:
                 {
                     // Move and look inputs
-                    _moveInputVector = cameraPlanarRotation * moveInputVector;
-
-                    _lookInputVector = OrientationMethod switch
-                    {
-                        OrientationMethod.TowardsCamera => cameraPlanarDirection,
-                        OrientationMethod.TowardsMovement => _moveInputVector.normalized,
-                        _ => _lookInputVector
-                    };
+                    HandleInputs(moveInputVector, cameraPlanarDirection, cameraPlanarRotation);
                     break;
                 }
 
                 case CharacterState.LightMeleeAttack:
                 {
                     // Move and look inputs
-                    _moveInputVector = cameraPlanarRotation * moveInputVector;
-
-                    _lookInputVector = OrientationMethod switch
-                    {
-                        OrientationMethod.TowardsCamera => cameraPlanarDirection,
-                        OrientationMethod.TowardsMovement => _moveInputVector.normalized,
-                        _ => _lookInputVector
-                    };
+                    HandleInputs(moveInputVector, cameraPlanarDirection, cameraPlanarRotation);
                     break;
                 }
 
                 case CharacterState.HeavyMeleeAttack:
                 {
-                    // Move and look inputs
-                    _moveInputVector = cameraPlanarRotation * moveInputVector;
-
-                    _lookInputVector = OrientationMethod switch
-                    {
-                        OrientationMethod.TowardsCamera => cameraPlanarDirection,
-                        OrientationMethod.TowardsMovement => _moveInputVector.normalized,
-                        _ => _lookInputVector
-                    };
+                    HandleInputs(moveInputVector, cameraPlanarDirection, cameraPlanarRotation);
                     break;
                 }
 
                 case CharacterState.Charging:
                 {
                     // Move and look inputs
-                    _moveInputVector = cameraPlanarRotation * moveInputVector;
-                    _lookInputVector = OrientationMethod switch
-                    {
-                        OrientationMethod.TowardsCamera => cameraPlanarDirection,
-                        OrientationMethod.TowardsMovement => _moveInputVector.normalized,
-                        _ => _lookInputVector
-                    };
+                    HandleInputs(moveInputVector, cameraPlanarDirection, cameraPlanarRotation);
 
                     break;
                 }
@@ -378,42 +351,21 @@ namespace Assets.Scripts.Character_Controller_Layer
                 case CharacterState.CastingStance:
                 {
                     // Move and look inputs
-                    _moveInputVector = cameraPlanarRotation * moveInputVector;
-
-                    _lookInputVector = OrientationMethod switch
-                    {
-                        OrientationMethod.TowardsCamera => cameraPlanarDirection,
-                        OrientationMethod.TowardsMovement => _moveInputVector.normalized,
-                        _ => _lookInputVector
-                    };
+                    HandleInputs(moveInputVector, cameraPlanarDirection, cameraPlanarRotation);
                     break;
                 }
 
                 case CharacterState.CastingSpell:
                 {
                     // Move and look inputs
-                    _moveInputVector = cameraPlanarRotation * moveInputVector;
-
-                    _lookInputVector = OrientationMethod switch
-                    {
-                        OrientationMethod.TowardsCamera => cameraPlanarDirection,
-                        OrientationMethod.TowardsMovement => _moveInputVector.normalized,
-                        _ => _lookInputVector
-                    };
+                    HandleInputs(moveInputVector, cameraPlanarDirection, cameraPlanarRotation);
                     break;
                 }
 
                 case CharacterState.CastingCombo:
                 {
                     // Move and look inputs
-                    _moveInputVector = cameraPlanarRotation * moveInputVector;
-
-                    _lookInputVector = OrientationMethod switch
-                    {
-                        OrientationMethod.TowardsCamera => cameraPlanarDirection,
-                        OrientationMethod.TowardsMovement => _moveInputVector.normalized,
-                        _ => _lookInputVector
-                    };
+                    HandleInputs(moveInputVector, cameraPlanarDirection, cameraPlanarRotation);
                     break;
                 }
                 
@@ -421,19 +373,14 @@ namespace Assets.Scripts.Character_Controller_Layer
                 case CharacterState.InteractingWithObject:
                 {
                     // Move and look inputs
-                    _moveInputVector = cameraPlanarRotation * moveInputVector;
-
-                    _lookInputVector = OrientationMethod switch
-                    {
-                        OrientationMethod.TowardsCamera => cameraPlanarDirection,
-                        OrientationMethod.TowardsMovement => _moveInputVector.normalized,
-                        _ => _lookInputVector
-                    };
+                    HandleInputs(moveInputVector, cameraPlanarDirection, cameraPlanarRotation);
                     break;
                 }
-                
+
                 default:
+                {
                     throw new ArgumentOutOfRangeException();
+                }
             }
         }
 
@@ -505,6 +452,11 @@ namespace Assets.Scripts.Character_Controller_Layer
                 {
                     break;
                 }
+                
+                default:
+                {
+                    throw new ArgumentOutOfRangeException();
+                }
             }
         }
 
@@ -515,65 +467,13 @@ namespace Assets.Scripts.Character_Controller_Layer
         /// </summary>
         public void UpdateRotation(ref Quaternion currentRotation, float deltaTime)
         {
+            
             switch (CurrentCharacterState)
             {
                 //Melee Stance
                 case CharacterState.MeleeStance:
                 {
-                    if (_lookInputVector.sqrMagnitude > 0f && OrientationSharpness > 0f)
-                    {
-                        // Smoothly interpolate from current to target look direction
-                        var smoothedLookInputDirection = Vector3.Slerp(Motor.CharacterForward, _lookInputVector,
-                            1 - Mathf.Exp(-OrientationSharpness * deltaTime)).normalized;
-
-                        // Set the current rotation (which will be used by the KinematicCharacterMotor)
-                        currentRotation = Quaternion.LookRotation(smoothedLookInputDirection, Motor.CharacterUp);
-                    }
-
-                    var currentUp = (currentRotation * Vector3.up);
-                    switch (BonusOrientationMethod)
-                    {
-                        case BonusOrientationMethod.TowardsGravity:
-                        {
-                            // Rotate from current up to invert gravity
-                            var smoothedGravityDir = Vector3.Slerp(currentUp, -Gravity.normalized,
-                                1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
-                            currentRotation = Quaternion.FromToRotation(currentUp, smoothedGravityDir) * currentRotation;
-                            break;
-                        }
-                        case BonusOrientationMethod.TowardsGroundSlopeAndGravity when Motor.GroundingStatus.IsStableOnGround:
-                        {
-                            var initialCharacterBottomHemCenter =
-                                Motor.TransientPosition + (currentUp * Motor.Capsule.radius);
-
-                            var smoothedGroundNormal = Vector3.Slerp(Motor.CharacterUp,
-                                Motor.GroundingStatus.GroundNormal,
-                                1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
-                            currentRotation = Quaternion.FromToRotation(currentUp, smoothedGroundNormal) *
-                                              currentRotation;
-
-                            // Move the position to create a rotation around the bottom hem center instead of around the pivot
-                            Motor.SetTransientPosition(initialCharacterBottomHemCenter +
-                                                       (currentRotation * Vector3.down * Motor.Capsule.radius));
-                            break;
-                        }
-                        case BonusOrientationMethod.TowardsGroundSlopeAndGravity:
-                        {
-                            var smoothedGravityDir = Vector3.Slerp(currentUp, -Gravity.normalized,
-                                1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
-                            currentRotation = Quaternion.FromToRotation(currentUp, smoothedGravityDir) *
-                                              currentRotation;
-                            break;
-                        }
-                        default:
-                        {
-                            var smoothedGravityDir = Vector3.Slerp(currentUp, Vector3.up,
-                                1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
-                            currentRotation = Quaternion.FromToRotation(currentUp, smoothedGravityDir) * currentRotation;
-                            break;
-                        }
-                    }
-
+                    HandleRotation(ref currentRotation, deltaTime);
                     break;
                 }
                 
@@ -589,118 +489,14 @@ namespace Assets.Scripts.Character_Controller_Layer
                 
                 case CharacterState.Charging:
                 {
-                    if (_lookInputVector.sqrMagnitude > 0f && OrientationSharpness > 0f)
-                    {
-                        // Smoothly interpolate from current to target look direction
-                        var smoothedLookInputDirection = Vector3.Slerp(Motor.CharacterForward, _lookInputVector,
-                            1 - Mathf.Exp(-OrientationSharpness * deltaTime)).normalized;
-
-                        // Set the current rotation (which will be used by the KinematicCharacterMotor)
-                        currentRotation = Quaternion.LookRotation(smoothedLookInputDirection, Motor.CharacterUp);
-                    }
-
-                    var currentUp = (currentRotation * Vector3.up);
-                    switch (BonusOrientationMethod)
-                    {
-                        case BonusOrientationMethod.TowardsGravity:
-                        {
-                            // Rotate from current up to invert gravity
-                            var smoothedGravityDir = Vector3.Slerp(currentUp, -Gravity.normalized,
-                                1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
-                            currentRotation = Quaternion.FromToRotation(currentUp, smoothedGravityDir) * currentRotation;
-                            break;
-                        }
-                        case BonusOrientationMethod.TowardsGroundSlopeAndGravity when Motor.GroundingStatus.IsStableOnGround:
-                        {
-                            var initialCharacterBottomHemCenter =
-                                Motor.TransientPosition + (currentUp * Motor.Capsule.radius);
-
-                            var smoothedGroundNormal = Vector3.Slerp(Motor.CharacterUp,
-                                Motor.GroundingStatus.GroundNormal,
-                                1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
-                            currentRotation = Quaternion.FromToRotation(currentUp, smoothedGroundNormal) *
-                                              currentRotation;
-
-                            // Move the position to create a rotation around the bottom hem center instead of around the pivot
-                            Motor.SetTransientPosition(initialCharacterBottomHemCenter +
-                                                       (currentRotation * Vector3.down * Motor.Capsule.radius));
-                            break;
-                        }
-                        case BonusOrientationMethod.TowardsGroundSlopeAndGravity:
-                        {
-                            var smoothedGravityDir = Vector3.Slerp(currentUp, -Gravity.normalized,
-                                1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
-                            currentRotation = Quaternion.FromToRotation(currentUp, smoothedGravityDir) *
-                                              currentRotation;
-                            break;
-                        }
-                        default:
-                        {
-                            var smoothedGravityDir = Vector3.Slerp(currentUp, Vector3.up,
-                                1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
-                            currentRotation = Quaternion.FromToRotation(currentUp, smoothedGravityDir) * currentRotation;
-                            break;
-                        }
-                    }
+                    HandleRotation(ref currentRotation, deltaTime);
                     break;
                 }
 
                 //Casting Stance
                 case CharacterState.CastingStance:
                 {
-                    if (_lookInputVector.sqrMagnitude > 0f && OrientationSharpness > 0f)
-                    {
-                        // Smoothly interpolate from current to target look direction
-                        var smoothedLookInputDirection = Vector3.Slerp(Motor.CharacterForward, _lookInputVector,
-                            1 - Mathf.Exp(-OrientationSharpness * deltaTime)).normalized;
-
-                        // Set the current rotation (which will be used by the KinematicCharacterMotor)
-                        currentRotation = Quaternion.LookRotation(smoothedLookInputDirection, Motor.CharacterUp);
-                    }
-
-                    var currentUp = (currentRotation * Vector3.up);
-                    switch (BonusOrientationMethod)
-                    {
-                        case BonusOrientationMethod.TowardsGravity:
-                        {
-                            // Rotate from current up to invert gravity
-                            var smoothedGravityDir = Vector3.Slerp(currentUp, -Gravity.normalized,
-                                1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
-                            currentRotation = Quaternion.FromToRotation(currentUp, smoothedGravityDir) * currentRotation;
-                            break;
-                        }
-                        case BonusOrientationMethod.TowardsGroundSlopeAndGravity when Motor.GroundingStatus.IsStableOnGround:
-                        {
-                            var initialCharacterBottomHemCenter =
-                                Motor.TransientPosition + (currentUp * Motor.Capsule.radius);
-
-                            var smoothedGroundNormal = Vector3.Slerp(Motor.CharacterUp,
-                                Motor.GroundingStatus.GroundNormal,
-                                1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
-                            currentRotation = Quaternion.FromToRotation(currentUp, smoothedGroundNormal) *
-                                              currentRotation;
-
-                            // Move the position to create a rotation around the bottom hem center instead of around the pivot
-                            Motor.SetTransientPosition(initialCharacterBottomHemCenter +
-                                                       (currentRotation * Vector3.down * Motor.Capsule.radius));
-                            break;
-                        }
-                        case BonusOrientationMethod.TowardsGroundSlopeAndGravity:
-                        {
-                            var smoothedGravityDir = Vector3.Slerp(currentUp, -Gravity.normalized,
-                                1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
-                            currentRotation = Quaternion.FromToRotation(currentUp, smoothedGravityDir) *
-                                              currentRotation;
-                            break;
-                        }
-                        default:
-                        {
-                            var smoothedGravityDir = Vector3.Slerp(currentUp, Vector3.up,
-                                1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
-                            currentRotation = Quaternion.FromToRotation(currentUp, smoothedGravityDir) * currentRotation;
-                            break;
-                        }
-                    }
+                    HandleRotation(ref currentRotation, deltaTime);
                     break;
                 }
                 
@@ -734,184 +530,13 @@ namespace Assets.Scripts.Character_Controller_Layer
                 //Melee Stance
                 case CharacterState.MeleeStance:
                 {
-                    // Ground movement
-                    if (Motor.GroundingStatus.IsStableOnGround)
-                    {
-                        var currentVelocityMagnitude = currentVelocity.magnitude;
-
-                        var effectiveGroundNormal = Motor.GroundingStatus.GroundNormal;
-                        if (currentVelocityMagnitude > 0f && Motor.GroundingStatus.SnappingPrevented)
-                        {
-                            // Take the normal from where we're coming from
-                            var groundPointToCharacter =
-                                Motor.TransientPosition - Motor.GroundingStatus.GroundPoint;
-                            effectiveGroundNormal = Vector3.Dot(currentVelocity, groundPointToCharacter) >= 0f ? Motor.GroundingStatus.OuterGroundNormal : Motor.GroundingStatus.InnerGroundNormal;
-                        }
-
-                        // Reorient velocity on slope
-                        currentVelocity = Motor.GetDirectionTangentToSurface(currentVelocity, effectiveGroundNormal) *
-                                          currentVelocityMagnitude;
-
-                        // Calculate target velocity
-                        var inputRight = Vector3.Cross(_moveInputVector, Motor.CharacterUp);
-                        var reorientedInput = Vector3.Cross(effectiveGroundNormal, inputRight).normalized *
-                                              _moveInputVector.magnitude;
-                        var targetMovementVelocity = reorientedInput * MaxStableMeleeMoveSpeed;
-
-                        // Smooth movement Velocity
-                        currentVelocity = Vector3.Lerp(currentVelocity, targetMovementVelocity,
-                            1f - Mathf.Exp(-StableMovementSharpness * deltaTime));
-                    }
-                    // Air movement
-                    else
-                    {
-                        // Add move input
-                        if (_moveInputVector.sqrMagnitude > 0f)
-                        {
-                            var addedVelocity = _moveInputVector * (AirAccelerationSpeed * deltaTime);
-
-                            var currentVelocityOnInputsPlane = Vector3.ProjectOnPlane(currentVelocity, Motor.CharacterUp);
-
-                            // Limit air velocity from inputs
-                            if (currentVelocityOnInputsPlane.magnitude < MaxAirMoveSpeed)
-                            {
-                                // clamp addedVel to make total vel not exceed max vel on inputs plane
-                                var newTotal = Vector3.ClampMagnitude(currentVelocityOnInputsPlane + addedVelocity,
-                                    MaxAirMoveSpeed);
-                                addedVelocity = newTotal - currentVelocityOnInputsPlane;
-                            }
-                            else
-                            {
-                                // Make sure added vel doesn't go in the direction of the already-exceeding velocity
-                                if (Vector3.Dot(currentVelocityOnInputsPlane, addedVelocity) > 0f)
-                                {
-                                    addedVelocity = Vector3.ProjectOnPlane(addedVelocity,
-                                        currentVelocityOnInputsPlane.normalized);
-                                }
-                            }
-
-                            // Prevent air-climbing sloped walls
-                            if (Motor.GroundingStatus.FoundAnyGround)
-                            {
-                                if (Vector3.Dot(currentVelocity + addedVelocity, addedVelocity) > 0f)
-                                {
-                                    var perpendicularObstructionNormal = Vector3
-                                        .Cross(Vector3.Cross(Motor.CharacterUp, Motor.GroundingStatus.GroundNormal),
-                                            Motor.CharacterUp).normalized;
-                                    addedVelocity = Vector3.ProjectOnPlane(addedVelocity, perpendicularObstructionNormal);
-                                }
-                            }
-
-                            // Apply added velocity
-                            currentVelocity += addedVelocity;
-                        }
-
-                        // Gravity
-                        currentVelocity += Gravity * deltaTime;
-
-                        // Drag
-                        currentVelocity *= (1f / (1f + (Drag * deltaTime)));
-                    }
-
-
-                    // Take into account additive velocity
-                    if (_internalVelocityAdd.sqrMagnitude > 0f)
-                    {
-                        currentVelocity += _internalVelocityAdd;
-                        _internalVelocityAdd = Vector3.zero;
-                    }
-
+                    HandleVelocity(ref currentVelocity, deltaTime, MaxStableMeleeMoveSpeed, MeleeStanceMoveSpeedMultiplier);
                     break;
                 }
                 
                 case CharacterState.LightMeleeAttack:
                 {
-                    // Ground movement
-                    if (Motor.GroundingStatus.IsStableOnGround)
-                    {
-                        var currentVelocityMagnitude = currentVelocity.magnitude;
-
-                        var effectiveGroundNormal = Motor.GroundingStatus.GroundNormal;
-                        if (currentVelocityMagnitude > 0f && Motor.GroundingStatus.SnappingPrevented)
-                        {
-                            // Take the normal from where we're coming from
-                            var groundPointToCharacter =
-                                Motor.TransientPosition - Motor.GroundingStatus.GroundPoint;
-                            effectiveGroundNormal = Vector3.Dot(currentVelocity, groundPointToCharacter) >= 0f ? Motor.GroundingStatus.OuterGroundNormal : Motor.GroundingStatus.InnerGroundNormal;
-                        }
-
-                        // Reorient velocity on slope
-                        currentVelocity = Motor.GetDirectionTangentToSurface(currentVelocity, effectiveGroundNormal) *
-                                          currentVelocityMagnitude;
-
-                        // Calculate target velocity
-                        var inputRight = Vector3.Cross(_moveInputVector, Motor.CharacterUp);
-                        var reorientedInput = Vector3.Cross(effectiveGroundNormal, inputRight).normalized *
-                                              _moveInputVector.magnitude;
-                        var targetMovementVelocity = reorientedInput * (MaxStableMeleeMoveSpeed * LightMeleeAttackStableMoveSpeedMultiplier);
-
-                        // Smooth movement Velocity
-                        currentVelocity = Vector3.Lerp(currentVelocity, targetMovementVelocity,
-                            1f - Mathf.Exp(-StableMovementSharpness * deltaTime));
-                    }
-                    // Air movement
-                    else
-                    {
-                        // Add move input
-                        if (_moveInputVector.sqrMagnitude > 0f)
-                        {
-                            var addedVelocity = _moveInputVector * (AirAccelerationSpeed * deltaTime);
-
-                            var currentVelocityOnInputsPlane = Vector3.ProjectOnPlane(currentVelocity, Motor.CharacterUp);
-
-                            // Limit air velocity from inputs
-                            if (currentVelocityOnInputsPlane.magnitude < MaxAirMoveSpeed)
-                            {
-                                // clamp addedVel to make total vel not exceed max vel on inputs plane
-                                var newTotal = Vector3.ClampMagnitude(currentVelocityOnInputsPlane + addedVelocity,
-                                    MaxAirMoveSpeed);
-                                addedVelocity = newTotal - currentVelocityOnInputsPlane;
-                            }
-                            else
-                            {
-                                // Make sure added vel doesn't go in the direction of the already-exceeding velocity
-                                if (Vector3.Dot(currentVelocityOnInputsPlane, addedVelocity) > 0f)
-                                {
-                                    addedVelocity = Vector3.ProjectOnPlane(addedVelocity,
-                                        currentVelocityOnInputsPlane.normalized);
-                                }
-                            }
-
-                            // Prevent air-climbing sloped walls
-                            if (Motor.GroundingStatus.FoundAnyGround)
-                            {
-                                if (Vector3.Dot(currentVelocity + addedVelocity, addedVelocity) > 0f)
-                                {
-                                    var perpendicularObstructionNormal = Vector3
-                                        .Cross(Vector3.Cross(Motor.CharacterUp, Motor.GroundingStatus.GroundNormal),
-                                            Motor.CharacterUp).normalized;
-                                    addedVelocity = Vector3.ProjectOnPlane(addedVelocity, perpendicularObstructionNormal);
-                                }
-                            }
-
-                            // Apply added velocity
-                            currentVelocity += addedVelocity;
-                        }
-
-                        // Gravity
-                        currentVelocity += Gravity * deltaTime;
-
-                        // Drag
-                        currentVelocity *= (1f / (1f + (Drag * deltaTime)));
-                    }
-
-
-                    // Take into account additive velocity
-                    if (_internalVelocityAdd.sqrMagnitude > 0f)
-                    {
-                        currentVelocity += _internalVelocityAdd;
-                        _internalVelocityAdd = Vector3.zero;
-                    }
+                    HandleVelocity(ref currentVelocity, deltaTime, MaxStableMeleeMoveSpeed, LightMeleeAttackStableMoveSpeedMultiplier);
                     break;
                 }
                 
@@ -949,92 +574,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                 //Casting Stance
                 case CharacterState.CastingStance:
                 {
-                    // Ground movement
-                    if (Motor.GroundingStatus.IsStableOnGround)
-                    {
-                        var currentVelocityMagnitude = currentVelocity.magnitude;
-
-                        var effectiveGroundNormal = Motor.GroundingStatus.GroundNormal;
-                        if (currentVelocityMagnitude > 0f && Motor.GroundingStatus.SnappingPrevented)
-                        {
-                            // Take the normal from where we're coming from
-                            var groundPointToCharacter =
-                                Motor.TransientPosition - Motor.GroundingStatus.GroundPoint;
-                            effectiveGroundNormal = Vector3.Dot(currentVelocity, groundPointToCharacter) >= 0f ? Motor.GroundingStatus.OuterGroundNormal : Motor.GroundingStatus.InnerGroundNormal;
-                        }
-
-                        // Reorient velocity on slope
-                        currentVelocity = Motor.GetDirectionTangentToSurface(currentVelocity, effectiveGroundNormal) *
-                                          currentVelocityMagnitude;
-
-                        // Calculate target velocity
-                        var inputRight = Vector3.Cross(_moveInputVector, Motor.CharacterUp);
-                        var reorientedInput = Vector3.Cross(effectiveGroundNormal, inputRight).normalized *
-                                              _moveInputVector.magnitude;
-                        var targetMovementVelocity = reorientedInput * MaxStableSpellcastingMoveSpeed;
-
-                        // Smooth movement Velocity
-                        currentVelocity = Vector3.Lerp(currentVelocity, targetMovementVelocity,
-                            1f - Mathf.Exp(-StableMovementSharpness * deltaTime));
-                    }
-                    // Air movement
-                    else
-                    {
-                        // Add move input
-                        if (_moveInputVector.sqrMagnitude > 0f)
-                        {
-                            var addedVelocity = _moveInputVector * (AirAccelerationSpeed * deltaTime);
-
-                            var currentVelocityOnInputsPlane = Vector3.ProjectOnPlane(currentVelocity, Motor.CharacterUp);
-
-                            // Limit air velocity from inputs
-                            if (currentVelocityOnInputsPlane.magnitude < MaxAirMoveSpeed)
-                            {
-                                // clamp addedVel to make total vel not exceed max vel on inputs plane
-                                var newTotal = Vector3.ClampMagnitude(currentVelocityOnInputsPlane + addedVelocity,
-                                    MaxAirMoveSpeed);
-                                addedVelocity = newTotal - currentVelocityOnInputsPlane;
-                            }
-                            else
-                            {
-                                // Make sure added vel doesn't go in the direction of the already-exceeding velocity
-                                if (Vector3.Dot(currentVelocityOnInputsPlane, addedVelocity) > 0f)
-                                {
-                                    addedVelocity = Vector3.ProjectOnPlane(addedVelocity,
-                                        currentVelocityOnInputsPlane.normalized);
-                                }
-                            }
-
-                            // Prevent air-climbing sloped walls
-                            if (Motor.GroundingStatus.FoundAnyGround)
-                            {
-                                if (Vector3.Dot(currentVelocity + addedVelocity, addedVelocity) > 0f)
-                                {
-                                    var perpendicularObstructionNormal = Vector3
-                                        .Cross(Vector3.Cross(Motor.CharacterUp, Motor.GroundingStatus.GroundNormal),
-                                            Motor.CharacterUp).normalized;
-                                    addedVelocity = Vector3.ProjectOnPlane(addedVelocity, perpendicularObstructionNormal);
-                                }
-                            }
-
-                            // Apply added velocity
-                            currentVelocity += addedVelocity;
-                        }
-
-                        // Gravity
-                        currentVelocity += Gravity * deltaTime;
-
-                        // Drag
-                        currentVelocity *= (1f / (1f + (Drag * deltaTime)));
-                    }
-
-
-                    // Take into account additive velocity
-                    if (_internalVelocityAdd.sqrMagnitude > 0f)
-                    {
-                        currentVelocity += _internalVelocityAdd;
-                        _internalVelocityAdd = Vector3.zero;
-                    }
+                    HandleVelocity(ref currentVelocity, deltaTime, MaxStableMeleeMoveSpeed, CastingStanceMoveSpeedMultiplier);
                     break;
                 }
                 
@@ -1175,7 +715,7 @@ namespace Assets.Scripts.Character_Controller_Layer
             // Update the character's stats
             //Update Movement Stats
             MaxStableMeleeMoveSpeed = GameManager.instance.userManager.GetMeleeMovementSpeed();
-            MaxStableSpellcastingMoveSpeed = GameManager.instance.userManager.GetCastingMovementSpeed();
+            // MaxStableSpellcastingMoveSpeed = GameManager.instance.userManager.GetCastingMovementSpeed();
             StableMovementSharpness = GameManager.instance.userManager.GetStableMovementSharpness();
             OrientationSharpness = GameManager.instance.userManager.GetOrientationSharpness();
             //Update Light Melee Attack Stats
@@ -1217,6 +757,169 @@ namespace Assets.Scripts.Character_Controller_Layer
                     throw new ArgumentOutOfRangeException();
             }
         }
+        
+        private void HandleInputs(Vector3 moveInputVector, Vector3 cameraPlanarDirection, Quaternion cameraPlanarRotation)
+        {// Move and look inputs
+            _moveInputVector = cameraPlanarRotation * moveInputVector;
+
+            _lookInputVector = OrientationMethod switch
+            {
+                OrientationMethod.TowardsCamera => cameraPlanarDirection,
+                OrientationMethod.TowardsMovement => _moveInputVector.normalized,
+                _ => _lookInputVector
+            };
+            
+        }
+
+        private void HandleRotation(ref Quaternion currentRotation, float deltaTime)
+        {
+            if (_lookInputVector.sqrMagnitude > 0f && OrientationSharpness > 0f)
+            {
+                // Smoothly interpolate from current to target look direction
+                var smoothedLookInputDirection = Vector3.Slerp(Motor.CharacterForward, _lookInputVector,
+                    1 - Mathf.Exp(-OrientationSharpness * deltaTime)).normalized;
+
+                // Set the current rotation (which will be used by the KinematicCharacterMotor)
+                currentRotation = Quaternion.LookRotation(smoothedLookInputDirection, Motor.CharacterUp);
+            }
+
+            var currentUp = (currentRotation * Vector3.up);
+            switch (BonusOrientationMethod)
+            {
+                case BonusOrientationMethod.TowardsGravity:
+                {
+                    // Rotate from current up to invert gravity
+                    var smoothedGravityDir = Vector3.Slerp(currentUp, -Gravity.normalized,
+                        1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
+                    currentRotation = Quaternion.FromToRotation(currentUp, smoothedGravityDir) * currentRotation;
+                    break;
+                }
+                case BonusOrientationMethod.TowardsGroundSlopeAndGravity when Motor.GroundingStatus.IsStableOnGround:
+                {
+                    var initialCharacterBottomHemCenter =
+                        Motor.TransientPosition + (currentUp * Motor.Capsule.radius);
+
+                    var smoothedGroundNormal = Vector3.Slerp(Motor.CharacterUp,
+                        Motor.GroundingStatus.GroundNormal,
+                        1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
+                    currentRotation = Quaternion.FromToRotation(currentUp, smoothedGroundNormal) *
+                                      currentRotation;
+
+                    // Move the position to create a rotation around the bottom hem center instead of around the pivot
+                    Motor.SetTransientPosition(initialCharacterBottomHemCenter +
+                                               (currentRotation * Vector3.down * Motor.Capsule.radius));
+                    break;
+                }
+                case BonusOrientationMethod.TowardsGroundSlopeAndGravity:
+                {
+                    var smoothedGravityDir = Vector3.Slerp(currentUp, -Gravity.normalized,
+                        1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
+                    currentRotation = Quaternion.FromToRotation(currentUp, smoothedGravityDir) *
+                                      currentRotation;
+                    break;
+                }
+                case BonusOrientationMethod.None:
+                default:
+                {
+                    var smoothedGravityDir = Vector3.Slerp(currentUp, Vector3.up,
+                        1 - Mathf.Exp(-BonusOrientationSharpness * deltaTime));
+                    currentRotation = Quaternion.FromToRotation(currentUp, smoothedGravityDir) * currentRotation;
+                    break;
+                }
+            }
+        }
+
+        private void HandleVelocity(ref Vector3 currentVelocity, float deltaTime, float movementSpeed, float movementSpeedMultiplier)
+        {
+            // Ground movement
+                    if (Motor.GroundingStatus.IsStableOnGround)
+                    {
+                        var currentVelocityMagnitude = currentVelocity.magnitude;
+
+                        var effectiveGroundNormal = Motor.GroundingStatus.GroundNormal;
+                        if (currentVelocityMagnitude > 0f && Motor.GroundingStatus.SnappingPrevented)
+                        {
+                            // Take the normal from where we're coming from
+                            var groundPointToCharacter =
+                                Motor.TransientPosition - Motor.GroundingStatus.GroundPoint;
+                            effectiveGroundNormal = Vector3.Dot(currentVelocity, groundPointToCharacter) >= 0f ? Motor.GroundingStatus.OuterGroundNormal : Motor.GroundingStatus.InnerGroundNormal;
+                        }
+
+                        // Reorient velocity on slope
+                        currentVelocity = Motor.GetDirectionTangentToSurface(currentVelocity, effectiveGroundNormal) *
+                                          currentVelocityMagnitude;
+
+                        // Calculate target velocity
+                        var inputRight = Vector3.Cross(_moveInputVector, Motor.CharacterUp);
+                        var reorientedInput = Vector3.Cross(effectiveGroundNormal, inputRight).normalized *
+                                              _moveInputVector.magnitude;
+                        var targetMovementVelocity = reorientedInput * (movementSpeed * movementSpeedMultiplier);
+
+                        // Smooth movement Velocity
+                        currentVelocity = Vector3.Lerp(currentVelocity, targetMovementVelocity,
+                            1f - Mathf.Exp(-StableMovementSharpness * deltaTime));
+                    }
+                    // Air movement
+                    else
+                    {
+                        // Add move input
+                        if (_moveInputVector.sqrMagnitude > 0f)
+                        {
+                            var addedVelocity = _moveInputVector * (AirAccelerationSpeed * deltaTime);
+
+                            var currentVelocityOnInputsPlane = Vector3.ProjectOnPlane(currentVelocity, Motor.CharacterUp);
+
+                            // Limit air velocity from inputs
+                            if (currentVelocityOnInputsPlane.magnitude < MaxAirMoveSpeed)
+                            {
+                                // clamp addedVel to make total vel not exceed max vel on inputs plane
+                                var newTotal = Vector3.ClampMagnitude(currentVelocityOnInputsPlane + addedVelocity,
+                                    MaxAirMoveSpeed);
+                                addedVelocity = newTotal - currentVelocityOnInputsPlane;
+                            }
+                            else
+                            {
+                                // Make sure added vel doesn't go in the direction of the already-exceeding velocity
+                                if (Vector3.Dot(currentVelocityOnInputsPlane, addedVelocity) > 0f)
+                                {
+                                    addedVelocity = Vector3.ProjectOnPlane(addedVelocity,
+                                        currentVelocityOnInputsPlane.normalized);
+                                }
+                            }
+
+                            // Prevent air-climbing sloped walls
+                            if (Motor.GroundingStatus.FoundAnyGround)
+                            {
+                                if (Vector3.Dot(currentVelocity + addedVelocity, addedVelocity) > 0f)
+                                {
+                                    var perpendicularObstructionNormal = Vector3
+                                        .Cross(Vector3.Cross(Motor.CharacterUp, Motor.GroundingStatus.GroundNormal),
+                                            Motor.CharacterUp).normalized;
+                                    addedVelocity = Vector3.ProjectOnPlane(addedVelocity, perpendicularObstructionNormal);
+                                }
+                            }
+
+                            // Apply added velocity
+                            currentVelocity += addedVelocity;
+                        }
+
+                        // Gravity
+                        currentVelocity += Gravity * deltaTime;
+
+                        // Drag
+                        currentVelocity *= (1f / (1f + (Drag * deltaTime)));
+                    }
+
+
+                    // Take into account additive velocity
+                    if (_internalVelocityAdd.sqrMagnitude > 0f)
+                    {
+                        currentVelocity += _internalVelocityAdd;
+                        _internalVelocityAdd = Vector3.zero;
+                    }
+
+        }
+        
 
         public void ProcessHitStabilityReport(Collider hitCollider, Vector3 hitNormal, Vector3 hitPoint,
             Vector3 atCharacterPosition, Quaternion atCharacterRotation, ref HitStabilityReport hitStabilityReport)
