@@ -218,6 +218,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a607b140cd50a94c85f5db1693a22a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spellsStatsManager: {fileID: 955413409574467624}
+  baseSpellManager: {fileID: 8575054097062548852}
+  Spell1Id: 1
+  Spell2Id: 2
+  Spell3Id: 3
 --- !u!114 &8575054097062548852
 MonoBehaviour:
   m_ObjectHideFlags: 0

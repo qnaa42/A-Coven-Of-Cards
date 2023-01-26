@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using KinematicCharacterController;
 using System;
+using Assets.Scripts.Character_Controller_Layer.Base.Data;
 using Assets.Scripts.Core_Layer;
 using UnityEngine.Serialization;
+using Assets.Scripts.Spells_Control_Layer;
 
 namespace Assets.Scripts.Character_Controller_Layer
 {
@@ -124,11 +126,13 @@ namespace Assets.Scripts.Character_Controller_Layer
         private bool _mustStopVelocity;
         private float _timeSinceStartedCharge;
         private float _timeSinceStopped;
-        
-        //Spell Casting Privates
-
         private bool _secondChargePossible;
         private float _timeSinceLastCharge = 0.0f;
+        
+        //Casting Spell Privates
+        private float _timeSinceStartedCastingSpell = 0f;
+        private float _timeSinceLastCastingSpell = 0f;
+        
         
         public CharacterState _lastState;
 
@@ -205,11 +209,18 @@ namespace Assets.Scripts.Character_Controller_Layer
                 //Casting Stance
                 case CharacterState.CastingStance:
                 {
+                    switch (fromState)
+                    {
+                        case CharacterState.CastingSpell:
+                            _timeSinceLastCastingSpell = 0f;
+                            break;
+                    }
                     break;
                 }
 
                 case CharacterState.CastingSpell:
                 {
+                    _timeSinceStartedCastingSpell = 0f;
                     break;
                 }
 
@@ -290,45 +301,65 @@ namespace Assets.Scripts.Character_Controller_Layer
         /// </summary>
         public void SetInputs(ref PlayerCharacterInputs inputs)
         {
-            if (inputs.SpaceInput)
+            //Handle state transition from Input
+            if (inputs.UpArrowInput)
             {
                 switch (CurrentCharacterState)
                 {
-                    case CharacterState.MeleeStance:
-                        TransitionToState(CharacterState.CastingStance);
+                    case CharacterState.MeleeStance when (_timeSinceLastHeavyMeleeAttack > HeavyMeleeAttackCooldown):
+                        TransitionToState(CharacterState.HeavyMeleeAttack);
                         break;
-                    case CharacterState.CastingStance:
-                        TransitionToState(CharacterState.MeleeStance);
+                    case CharacterState.CastingStance when (_timeSinceLastCastingSpell > CastingSpellCooldown):
+                        GameManager.instance.spellsControlManager.spellsStatsManager.SetSpellDetails(GameManager.instance.spellsControlManager.Spell1Id);
+                        StatsUpdate();
+                        TransitionToState(CharacterState.CastingSpell);
                         break;
                 }
             }
-            
-            //Handle state transition from Input
-            
-            if (inputs.UpArrowInput && CurrentCharacterState is CharacterState.MeleeStance && (_timeSinceLastHeavyMeleeAttack > HeavyMeleeAttackCooldown))
+            else if (inputs.RightArrowInput)
             {
-                TransitionToState(CharacterState.HeavyMeleeAttack);
-            }
-            else if (inputs.RightArrowInput && CurrentCharacterState is CharacterState.MeleeStance && (_timeSinceLastLightMeleeAttack > LightMeleeAttackCooldown))
-            {
-                TransitionToState(CharacterState.LightMeleeAttack);
-            }
-            else if (inputs.DownArrowInput && CurrentCharacterState is CharacterState.MeleeStance or CharacterState.Charging or CharacterState.LightMeleeAttack or CharacterState.HeavyMeleeAttack)
-            {
-                if (CurrentCharacterState != CharacterState.Charging && (_timeSinceLastCharge > ChargeCooldown))
+                switch (CurrentCharacterState)
                 {
-                    if (CanDoubleCharge)
+                    case CharacterState.MeleeStance when (_timeSinceLastLightMeleeAttack > LightMeleeAttackCooldown):
+                        TransitionToState(CharacterState.LightMeleeAttack);
+                        break;
+                    case CharacterState.CastingStance when (_timeSinceLastCastingSpell > CastingSpellCooldown):
+                        GameManager.instance.spellsControlManager.spellsStatsManager.SetSpellDetails(GameManager.instance.spellsControlManager.Spell2Id);
+                        StatsUpdate();
+                        TransitionToState(CharacterState.CastingSpell);
+                        break;
+                }
+            }
+            else if (inputs.DownArrowInput)
+            {
+                switch (CurrentCharacterState)
+                {
+                    case CharacterState.MeleeStance or CharacterState.Charging or CharacterState.LightMeleeAttack or CharacterState.HeavyMeleeAttack when CurrentCharacterState != CharacterState.Charging && (_timeSinceLastCharge > ChargeCooldown):
                     {
-                        _secondChargePossible = true;
-                    }
+                        if (CanDoubleCharge)
+                        {
+                            _secondChargePossible = true;
+                        }
 
-                    TransitionToState(CharacterState.Charging);
-                }
-                else if (CurrentCharacterState != CharacterState.Charging && (_timeSinceLastCharge < ChargeCooldown) &&
-                         _secondChargePossible)
-                {
-                    _secondChargePossible = false;
-                    TransitionToState(CharacterState.Charging);
+                        TransitionToState(CharacterState.Charging);
+                        break;
+                    }
+                    case CharacterState.MeleeStance or CharacterState.Charging or CharacterState.LightMeleeAttack or CharacterState.HeavyMeleeAttack:
+                    {
+                        if (CurrentCharacterState != CharacterState.Charging && (_timeSinceLastCharge < ChargeCooldown) &&
+                            _secondChargePossible)
+                        {
+                            _secondChargePossible = false;
+                            TransitionToState(CharacterState.Charging);
+                        }
+
+                        break;
+                    }
+                    case CharacterState.CastingStance when (_timeSinceLastCastingSpell > CastingSpellCooldown):
+                        GameManager.instance.spellsControlManager.spellsStatsManager.SetSpellDetails(GameManager.instance.spellsControlManager.Spell3Id);
+                        StatsUpdate();
+                        TransitionToState(CharacterState.CastingSpell);
+                        break;
                 }
             }
             else if (inputs.LeftArrowInput)
@@ -343,9 +374,20 @@ namespace Assets.Scripts.Character_Controller_Layer
                         break;
                 }
             }
+            else if (inputs.SpaceInput)
             {
-                
+                switch (CurrentCharacterState)
+                {
+                    case CharacterState.MeleeStance:
+                        TransitionToState(CharacterState.CastingStance);
+                        break;
+                    case CharacterState.CastingStance:
+                        TransitionToState(CharacterState.MeleeStance);
+                        break;
+                }
             }
+            
+            
             
                 
             
@@ -490,6 +532,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                 
                 case CharacterState.CastingSpell:
                 {
+                    _timeSinceStartedCastingSpell += deltaTime;
                     break;
                 }
                 
@@ -551,7 +594,10 @@ namespace Assets.Scripts.Character_Controller_Layer
                 //Casting Stance
                 case CharacterState.CastingStance:
                 {
-                    HandleRotation(ref currentRotation, deltaTime);
+                    if (_timeSinceLastCastingSpell > CastingSpellDirectionLockDuration)
+                    {
+                        HandleRotation(ref currentRotation, deltaTime);
+                    }
                     break;
                 }
                 
@@ -642,6 +688,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                 
                 case CharacterState.CastingSpell:
                 {
+                    HandleVelocity(ref currentVelocity, deltaTime, MaxStableMoveSpeed, CastingSpellStableMoveSpeedMultiplier, GlobalMovementSpeedMultiplier);
                     break;
                 }
                 
@@ -728,11 +775,17 @@ namespace Assets.Scripts.Character_Controller_Layer
                 //Casting Stance
                 case CharacterState.CastingStance:
                 {
+                    if (_timeSinceLastCastingSpell <= CastingSpellDirectionLockDuration)
+                    {
+                        _timeSinceLastCastingSpell += deltaTime;
+                    }
                     break;
                 }
                 
                 case CharacterState.CastingSpell:
                 {
+                    if(_timeSinceStartedCastingSpell > CastingSpellDuration)
+                        TransitionToState(CharacterState.CastingStance);
                     break;
                 }
                 
@@ -814,6 +867,12 @@ namespace Assets.Scripts.Character_Controller_Layer
             StoppedTime = GameManager.instance.userManager.GetStoppedTime();
             ChargeCooldown = GameManager.instance.userManager.GetChargeCooldown();
             CanDoubleCharge = GameManager.instance.userManager.GetCanDoubleCharge();
+            //Update Spell Casting Stats
+            CastingSpellDuration = GameManager.instance.spellsManager.GetCastingSpellDuration();
+            CastingSpellStableMoveSpeedMultiplier = GameManager.instance.spellsManager.GetCastingSpellMovementSpeedMultiplier();
+            CastingSpellCooldown = GameManager.instance.spellsManager.GetCastingSpellCooldown();
+            CastingSpellDirectionLockDuration = GameManager.instance.spellsManager.GetCastingSpellDirectionLockDuration();
+
         }
 
         public void AddVelocity(Vector3 velocity)

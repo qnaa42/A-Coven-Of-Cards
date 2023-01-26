@@ -70,12 +70,20 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2646047321519450079, guid: 7974ca75c07c4b2408d3e13925399383, type: 3}
+      propertyPath: HeavyMeleeAttackDuration
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2646047321519450079, guid: 7974ca75c07c4b2408d3e13925399383, type: 3}
       propertyPath: LightMeleeAttackCooldown
       value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 2646047321519450079, guid: 7974ca75c07c4b2408d3e13925399383, type: 3}
       propertyPath: MaxStableSpellcastingMoveSpeed
       value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2646047321519450079, guid: 7974ca75c07c4b2408d3e13925399383, type: 3}
+      propertyPath: HeavyMeleeAttackStableMoveSpeedMultiplier
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 2646047321519450079, guid: 7974ca75c07c4b2408d3e13925399383, type: 3}
       propertyPath: LightMeleeAttackStableMoveSpeedMultiplier

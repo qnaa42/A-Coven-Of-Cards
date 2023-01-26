@@ -53,14 +53,12 @@ namespace Assets.Scripts.Core_Layer
 
                 
             }
-            
-            if (baseSpellManager.GetSpellList().Count < 1)
+            if (baseSpellManager.GetSpellList().Count < 1) // get the spell list from base spell manager component and check spells are in it
             {
-                for (var i = 0; i < 10; i++)
-                {
-                    baseSpellManager.AddNewSpell(""+i,1, 1, 1, 1);
-                }
+                spellsControlManager.InitializeSpellList();
             }
+            
+            
             // ------------------------------------------------------
         }
         
