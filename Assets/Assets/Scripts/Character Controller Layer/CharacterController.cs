@@ -311,7 +311,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                         break;
                     case CharacterState.CastingStance when (_timeSinceLastCastingSpell > CastingSpellCooldown):
                         GameManager.instance.spellsControlManager.spellsStatsManager.SetSpellDetails(GameManager.instance.spellsControlManager.Spell1Id);
-                        StatsUpdate();
+                        UpdateSpellStats();
                         TransitionToState(CharacterState.CastingSpell);
                         break;
                 }
@@ -325,7 +325,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                         break;
                     case CharacterState.CastingStance when (_timeSinceLastCastingSpell > CastingSpellCooldown):
                         GameManager.instance.spellsControlManager.spellsStatsManager.SetSpellDetails(GameManager.instance.spellsControlManager.Spell2Id);
-                        StatsUpdate();
+                        UpdateSpellStats();
                         TransitionToState(CharacterState.CastingSpell);
                         break;
                 }
@@ -357,7 +357,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                     }
                     case CharacterState.CastingStance when (_timeSinceLastCastingSpell > CastingSpellCooldown):
                         GameManager.instance.spellsControlManager.spellsStatsManager.SetSpellDetails(GameManager.instance.spellsControlManager.Spell3Id);
-                        StatsUpdate();
+                        UpdateSpellStats();
                         TransitionToState(CharacterState.CastingSpell);
                         break;
                 }
@@ -867,13 +867,17 @@ namespace Assets.Scripts.Character_Controller_Layer
             StoppedTime = GameManager.instance.userManager.GetStoppedTime();
             ChargeCooldown = GameManager.instance.userManager.GetChargeCooldown();
             CanDoubleCharge = GameManager.instance.userManager.GetCanDoubleCharge();
+        }
+
+        public void UpdateSpellStats()
+        {
             //Update Spell Casting Stats
             CastingSpellDuration = GameManager.instance.spellsManager.GetCastingSpellDuration();
             CastingSpellStableMoveSpeedMultiplier = GameManager.instance.spellsManager.GetCastingSpellMovementSpeedMultiplier();
             CastingSpellCooldown = GameManager.instance.spellsManager.GetCastingSpellCooldown();
             CastingSpellDirectionLockDuration = GameManager.instance.spellsManager.GetCastingSpellDirectionLockDuration();
-
         }
+        
 
         public void AddVelocity(Vector3 velocity)
         {
