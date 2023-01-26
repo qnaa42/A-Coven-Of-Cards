@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using Assets.Scripts.Character_Controller_Layer;
 using Assets.Scripts.Core_Layer;
 using Assets.Scripts.Core_Layer.Base;
+using Assets.Scripts.Spells_Control_Layer;
+using Assets.Scripts.Spells_Control_Layer.Base;
 using UnityEngine;
 
 namespace Assets.Scripts.Core_Layer
@@ -13,7 +15,12 @@ namespace Assets.Scripts.Core_Layer
         public UserStatsManager userManager;
         public BaseUserManager baseUserManager;
         
+        public SpellsStatsManager spellsManager;
+        public BaseSpellManager baseSpellManager;
+        
+        
         public PlayerManager playerManager;
+        public SpellsManager spellsControlManager;
         
         //Singleton
         public static GameManager instance { get; private set; }
@@ -45,6 +52,14 @@ namespace Assets.Scripts.Core_Layer
                 baseUserManager.AddNewPlayer();
 
                 
+            }
+            
+            if (baseSpellManager.GetSpellList().Count < 1)
+            {
+                for (var i = 0; i < 10; i++)
+                {
+                    baseSpellManager.AddNewSpell(""+i,1, 1, 1, 1);
+                }
             }
             // ------------------------------------------------------
         }

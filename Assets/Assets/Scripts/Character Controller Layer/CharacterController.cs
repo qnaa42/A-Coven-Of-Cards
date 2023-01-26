@@ -81,6 +81,11 @@ namespace Assets.Scripts.Character_Controller_Layer
         public float StoppedTime = 1.0f;
         public float ChargeCooldown = 1.0f;
         public bool CanDoubleCharge = false;
+        
+        [Header("Casting Spell")] public float CastingSpellDuration = 0.5f;
+        public float CastingSpellStableMoveSpeedMultiplier = 0.5f;
+        public float CastingSpellCooldown = 0.5f;
+        public float CastingSpellDirectionLockDuration = 0.7f;
 
         [Header("Air Movement")] public float MaxAirMoveSpeed = 15f;
         public float AirAccelerationSpeed = 15f;
@@ -119,9 +124,13 @@ namespace Assets.Scripts.Character_Controller_Layer
         private bool _mustStopVelocity;
         private float _timeSinceStartedCharge;
         private float _timeSinceStopped;
+        
+        //Spell Casting Privates
 
         private bool _secondChargePossible;
         private float _timeSinceLastCharge = 0.0f;
+        
+        public CharacterState _lastState;
 
         private void Awake()
         {
@@ -212,6 +221,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                 //No Movement States
                 case CharacterState.InteractingWithObject:
                 {
+                    _lastState = fromState;
                     break;
                 }
 
@@ -320,6 +330,21 @@ namespace Assets.Scripts.Character_Controller_Layer
                     _secondChargePossible = false;
                     TransitionToState(CharacterState.Charging);
                 }
+            }
+            else if (inputs.LeftArrowInput)
+            {
+                switch (CurrentCharacterState)
+                {
+                    case CharacterState.MeleeStance or CharacterState.CastingStance:
+                        TransitionToState(CharacterState.InteractingWithObject);
+                        break;
+                    case CharacterState.InteractingWithObject:
+                        TransitionToState(_lastState);
+                        break;
+                }
+            }
+            {
+                
             }
             
                 
@@ -628,6 +653,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                 //No Movement Stance
                 case CharacterState.InteractingWithObject:
                 {
+                    currentVelocity = Vector3.zero;
                     break;
                 }
 
