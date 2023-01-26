@@ -47,13 +47,21 @@ namespace Assets.Scripts.Character_Controller_Layer
                 playerName = "Default",
                 //Movement
                 movementSpeed = 7.5f,
-                castingMovementSpeed = 5.0f,
+                globalMovementSpeedMultiplier = 1.0f,
+                meleeMovementSpeedMultiplier = 1.0f,
+                castingMovementSpeedMultiplier = 0.8f,
                 stableMovementSharpness = 50,
                 orientationSharpness = 50,
                 //Light Attack
                 lightAttackDuration = 0.5f,
                 lightAttackMovementSpeedMultiplier = 0.1f,
                 lightAttackCooldown = 0.15f,
+                lightAttackDirectionLockDuration = 0.25f,
+                //Heavy Attack
+                heavyAttackDuration = 0.7f,
+                heavyAttackMovementSpeedMultiplier = 0.05f,
+                heavyAttackCooldown = 0.25f,
+                heavyAttackDirectionLockDuration = 0.35f,
                 //Charging
                 chargeSpeed = 50,
                 maxChargeTime = 0.3f,
@@ -88,7 +96,7 @@ namespace Assets.Scripts.Character_Controller_Layer
         
         //Movement
         //Movement Speed
-        public float GetMeleeMovementSpeed(int id)
+        public float GetMovementSpeed(int id)
         {
             if (!didInit)
                 Init();
@@ -96,7 +104,7 @@ namespace Assets.Scripts.Character_Controller_Layer
             return global_UserDatas[id].movementSpeed;
         }
         
-        public void SetMeleeMovementSpeed(int id, float anAmount)
+        public void SetMovementSpeed(int id, float anAmount)
         {
             if (!didInit)
                 Init();
@@ -104,7 +112,7 @@ namespace Assets.Scripts.Character_Controller_Layer
             global_UserDatas[id].movementSpeed = anAmount;
         }
         
-        public void AddMeleeMovementSpeed(int id, float anAmount)
+        public void AddMovementSpeed(int id, float anAmount)
         {
             if (!didInit)
                 Init();
@@ -112,7 +120,7 @@ namespace Assets.Scripts.Character_Controller_Layer
             global_UserDatas[id].movementSpeed += anAmount;
         }
         
-        public void SubtractMeleeMovementSpeed(int id, float anAmount)
+        public void SubtractMovementSpeed(int id, float anAmount)
         {
             if (!didInit)
                 Init();
@@ -120,37 +128,104 @@ namespace Assets.Scripts.Character_Controller_Layer
             global_UserDatas[id].movementSpeed -= anAmount;
         }
         
-        //Casting Movement Speed
-        public float GetCastingMovementSpeed(int id)
+        //Global Movement Speed Multiplier
+        public float GetGlobalMovementSpeedMultiplier(int id)
         {
             if (!didInit)
                 Init();
 
-            return global_UserDatas[id].castingMovementSpeed;
+            return global_UserDatas[id].globalMovementSpeedMultiplier;
         }
         
-        public void SetCastingMovementSpeed(int id, float anAmount)
+        public void SetGlobalMovementSpeedMultiplier(int id, float anAmount)
         {
             if (!didInit)
                 Init();
 
-            global_UserDatas[id].castingMovementSpeed = anAmount;
+            global_UserDatas[id].globalMovementSpeedMultiplier = anAmount;
         }
         
-        public void AddCastingMovementSpeed(int id, float anAmount)
+        public void AddGlobalMovementSpeedMultiplier(int id, float anAmount)
         {
             if (!didInit)
                 Init();
 
-            global_UserDatas[id].castingMovementSpeed += anAmount;
+            global_UserDatas[id].globalMovementSpeedMultiplier += anAmount;
         }
         
-        public void SubtractCastingMovementSpeed(int id, float anAmount)
+        public void SubtractGlobalMovementSpeedMultiplier(int id, float anAmount)
         {
             if (!didInit)
                 Init();
 
-            global_UserDatas[id].castingMovementSpeed -= anAmount;
+            global_UserDatas[id].globalMovementSpeedMultiplier -= anAmount;
+        }
+        
+        //Melee Movement Speed Multiplier
+        public float GetMeleeMovementSpeedMultiplier(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_UserDatas[id].meleeMovementSpeedMultiplier;
+        }
+        
+        public void SetMeleeMovementSpeedMultiplier(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].meleeMovementSpeedMultiplier = anAmount;
+        }
+        
+        public void AddMeleeMovementSpeedMultiplier(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].meleeMovementSpeedMultiplier += anAmount;
+        }
+
+        public void SubtractMeleeMovementSpeedMultiplier(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].meleeMovementSpeedMultiplier -= anAmount;
+        }
+        
+        
+        //Casting Movement Speed Multiplier
+        public float GetCastingMovementSpeedMultiplier(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_UserDatas[id].castingMovementSpeedMultiplier;
+        }
+        
+        public void SetCastingMovementSpeedMultiplier(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].castingMovementSpeedMultiplier = anAmount;
+        }
+        
+        public void AddCastingMovementSpeedMultiplier(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].castingMovementSpeedMultiplier += anAmount;
+        }
+        
+        public void SubtractCastingMovementSpeedMultiplier(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].castingMovementSpeedMultiplier -= anAmount;
         }
         
         //Stable Movement Sharpness
@@ -317,6 +392,172 @@ namespace Assets.Scripts.Character_Controller_Layer
                 Init();
 
             global_UserDatas[id].lightAttackCooldown -= anAmount;
+        }
+        
+        //Light Attack Direction Lock Duration
+        public float GetLightAttackDirectionLockDuration(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_UserDatas[id].lightAttackDirectionLockDuration;
+        }
+        
+        public void SetLightAttackDirectionLockDuration(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].lightAttackDirectionLockDuration = anAmount;
+        }
+        
+        public void AddLightAttackDirectionLockDuration(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].lightAttackDirectionLockDuration += anAmount;
+        }
+        
+        public void SubtractLightAttackDirectionLockDuration(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].lightAttackDirectionLockDuration -= anAmount;
+        }
+        
+        //Heavy Attack
+        //Heavy Attack Duration
+        public float GetHeavyAttackDuration(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_UserDatas[id].heavyAttackDuration;
+        }
+        
+        public void SetHeavyAttackDuration(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].heavyAttackDuration = anAmount;
+        }
+        
+        public void AddHeavyAttackDuration(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].heavyAttackDuration += anAmount;
+        }
+        
+        public void SubtractHeavyAttackDuration(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].heavyAttackDuration -= anAmount;
+        }
+        
+        //Heavy Attack Movement Speed Multiplier
+        public float GetHeavyAttackMovementSpeedMultiplier(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_UserDatas[id].heavyAttackMovementSpeedMultiplier;
+        }
+        
+        public void SetHeavyAttackMovementSpeedMultiplier(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].heavyAttackMovementSpeedMultiplier = anAmount;
+        }
+        
+        public void AddHeavyAttackMovementSpeedMultiplier(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].heavyAttackMovementSpeedMultiplier += anAmount;
+        }
+        
+        public void SubtractHeavyAttackMovementSpeedMultiplier(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].heavyAttackMovementSpeedMultiplier -= anAmount;
+        }
+        
+        //Heavy Attack Cooldown
+        public float GetHeavyAttackCooldown(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_UserDatas[id].heavyAttackCooldown;
+        }
+        
+        public void SetHeavyAttackCooldown(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].heavyAttackCooldown = anAmount;
+        }
+        
+        public void AddHeavyAttackCooldown(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].heavyAttackCooldown += anAmount;
+        }
+        
+        public void SubtractHeavyAttackCooldown(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].heavyAttackCooldown -= anAmount;
+        }
+        
+        //Heavy Attack Direction Lock Duration
+        public float GetHeavyAttackDirectionLockDuration(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_UserDatas[id].heavyAttackDirectionLockDuration;
+        }
+        
+        public void SetHeavyAttackDirectionLockDuration(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].heavyAttackDirectionLockDuration = anAmount;
+        }
+        
+        public void AddHeavyAttackDirectionLockDuration(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].heavyAttackDirectionLockDuration += anAmount;
+        }
+        
+        public void SubtractHeavyAttackDirectionLockDuration(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].heavyAttackDirectionLockDuration -= anAmount;
         }
 
         //Charging

@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a1e62ff1-8c95-4f34-b705-2d1bd115eabc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.A Coven Of Cards/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.A Coven Of Cards/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.plastic/plastic.selector" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.selector" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.plastic/plastic.wktree" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.wktree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/Base/BaseUserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/Base/BaseUserManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/Base/Data/UserData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/Base/Data/UserData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/CharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/CharacterController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/House.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/House.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/UserStatsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/UserStatsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Debug/OnTriggerEnterStatReduce.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Debug/OnTriggerEnterStatReduce.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +87,7 @@
       <workItem from="1674474897743" duration="139000" />
       <workItem from="1674475069911" duration="13905000" />
       <workItem from="1674559717438" duration="26573000" />
-      <workItem from="1674731189006" duration="2924000" />
+      <workItem from="1674731189006" duration="7604000" />
     </task>
     <servers />
   </component>

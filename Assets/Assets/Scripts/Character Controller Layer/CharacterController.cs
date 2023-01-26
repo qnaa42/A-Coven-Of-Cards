@@ -57,7 +57,8 @@ namespace Assets.Scripts.Character_Controller_Layer
         public KinematicCharacterMotor Motor;
         [Header("Debug Mode")] public bool DebugMode = true;
 
-        [Header("Stable Movement")] public float MaxStableMeleeMoveSpeed = 10f;
+        [Header("Stable Movement")] public float MaxStableMoveSpeed = 10f;
+        public float GlobalMovementSpeedMultiplier = 1f;
         public float MeleeStanceMoveSpeedMultiplier = 1f;
         public float CastingStanceMoveSpeedMultiplier = 0.8f;
         public float StableMovementSharpness = 15f;
@@ -67,6 +68,13 @@ namespace Assets.Scripts.Character_Controller_Layer
         [Header("Light Melee Attack")] public float LightMeleeAttackDuration = 0.5f;
         public float LightMeleeAttackStableMoveSpeedMultiplier = 0.5f;
         public float LightMeleeAttackCooldown = 0.5f;
+        public float LightMeleeAttackDirectionLockDuration = 0.7f;
+        
+        [Header("Heavy Melee Attack")] public float HeavyMeleeAttackDuration = 0.5f;
+        public float HeavyMeleeAttackStableMoveSpeedMultiplier = 0.5f;
+        public float HeavyMeleeAttackCooldown = 0.5f;
+        public float HeavyMeleeAttackDirectionLockDuration = 0.7f;
+        
 
         [Header("Charging")] public float ChargeSpeed = 15f;
         public float MaxChargeTime = 1.5f;
@@ -101,6 +109,10 @@ namespace Assets.Scripts.Character_Controller_Layer
         private float _timeSinceStartedLightMeleeAttack = 0f;
         private float _timeSinceLastLightMeleeAttack = 0f;
         
+        //Heavy Melee Attack Privates
+        private float _timeSinceStartedHeavyMeleeAttack = 0f;
+        private float _timeSinceLastHeavyMeleeAttack = 0f;
+
         //Charge Privates
         private Vector3 _currentChargeVelocity;
         private bool _isStopped;
@@ -153,6 +165,9 @@ namespace Assets.Scripts.Character_Controller_Layer
                         case CharacterState.LightMeleeAttack:
                             _timeSinceLastLightMeleeAttack = 0f;
                             break;
+                        case CharacterState.HeavyMeleeAttack:
+                            _timeSinceLastHeavyMeleeAttack = 0f;
+                            break;
                     }
                     break;
                 }
@@ -165,6 +180,7 @@ namespace Assets.Scripts.Character_Controller_Layer
 
                 case CharacterState.HeavyMeleeAttack:
                 {
+                    _timeSinceStartedHeavyMeleeAttack = 0f;
                     break;
                 }
 
@@ -199,6 +215,10 @@ namespace Assets.Scripts.Character_Controller_Layer
                     break;
                 }
 
+                default:
+                {
+                    throw new ArgumentOutOfRangeException(nameof(state), state, null);
+                }
             }
         }
 
@@ -274,7 +294,16 @@ namespace Assets.Scripts.Character_Controller_Layer
             }
             
             //Handle state transition from Input
-            if (inputs.DownArrowInput && CurrentCharacterState is CharacterState.MeleeStance or CharacterState.Charging)
+            
+            if (inputs.UpArrowInput && CurrentCharacterState is CharacterState.MeleeStance && (_timeSinceLastHeavyMeleeAttack > HeavyMeleeAttackCooldown))
+            {
+                TransitionToState(CharacterState.HeavyMeleeAttack);
+            }
+            else if (inputs.RightArrowInput && CurrentCharacterState is CharacterState.MeleeStance && (_timeSinceLastLightMeleeAttack > LightMeleeAttackCooldown))
+            {
+                TransitionToState(CharacterState.LightMeleeAttack);
+            }
+            else if (inputs.DownArrowInput && CurrentCharacterState is CharacterState.MeleeStance or CharacterState.Charging or CharacterState.LightMeleeAttack or CharacterState.HeavyMeleeAttack)
             {
                 if (CurrentCharacterState != CharacterState.Charging && (_timeSinceLastCharge > ChargeCooldown))
                 {
@@ -291,13 +320,10 @@ namespace Assets.Scripts.Character_Controller_Layer
                     _secondChargePossible = false;
                     TransitionToState(CharacterState.Charging);
                 }
-
             }
-
-            if (inputs.RightArrowInput && CurrentCharacterState is CharacterState.MeleeStance && (_timeSinceLastLightMeleeAttack > LightMeleeAttackCooldown))
-            {
-                TransitionToState(CharacterState.LightMeleeAttack);
-            }
+            
+                
+            
 
 
 
@@ -417,6 +443,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                 
                 case CharacterState.HeavyMeleeAttack:
                 {
+                    _timeSinceStartedHeavyMeleeAttack += deltaTime;
                     break;
                 }
                 
@@ -473,7 +500,10 @@ namespace Assets.Scripts.Character_Controller_Layer
                 //Melee Stance
                 case CharacterState.MeleeStance:
                 {
-                    HandleRotation(ref currentRotation, deltaTime);
+                    if (_timeSinceLastLightMeleeAttack > LightMeleeAttackDirectionLockDuration && _timeSinceLastHeavyMeleeAttack > HeavyMeleeAttackDirectionLockDuration)
+                    {
+                        HandleRotation(ref currentRotation, deltaTime);
+                    }
                     break;
                 }
                 
@@ -515,6 +545,11 @@ namespace Assets.Scripts.Character_Controller_Layer
                 {
                     break;
                 }
+                
+                default:
+                {
+                    throw new ArgumentOutOfRangeException();
+                }
             }
         }
 
@@ -530,18 +565,20 @@ namespace Assets.Scripts.Character_Controller_Layer
                 //Melee Stance
                 case CharacterState.MeleeStance:
                 {
-                    HandleVelocity(ref currentVelocity, deltaTime, MaxStableMeleeMoveSpeed, MeleeStanceMoveSpeedMultiplier);
+                    HandleVelocity(ref currentVelocity, deltaTime, MaxStableMoveSpeed, MeleeStanceMoveSpeedMultiplier, GlobalMovementSpeedMultiplier);
                     break;
                 }
                 
                 case CharacterState.LightMeleeAttack:
                 {
-                    HandleVelocity(ref currentVelocity, deltaTime, MaxStableMeleeMoveSpeed, LightMeleeAttackStableMoveSpeedMultiplier);
+                    HandleVelocity(ref currentVelocity, deltaTime, MaxStableMoveSpeed, LightMeleeAttackStableMoveSpeedMultiplier, GlobalMovementSpeedMultiplier);
                     break;
                 }
                 
                 case CharacterState.HeavyMeleeAttack:
                 {
+                    HandleVelocity(ref currentVelocity, deltaTime, MaxStableMoveSpeed,
+                        HeavyMeleeAttackStableMoveSpeedMultiplier, GlobalMovementSpeedMultiplier);
                     break;
                 }
                 
@@ -574,7 +611,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                 //Casting Stance
                 case CharacterState.CastingStance:
                 {
-                    HandleVelocity(ref currentVelocity, deltaTime, MaxStableMeleeMoveSpeed, CastingStanceMoveSpeedMultiplier);
+                    HandleVelocity(ref currentVelocity, deltaTime, MaxStableMoveSpeed, CastingStanceMoveSpeedMultiplier, GlobalMovementSpeedMultiplier);
                     break;
                 }
                 
@@ -612,8 +649,21 @@ namespace Assets.Scripts.Character_Controller_Layer
                 //Melee Stance
                 case CharacterState.MeleeStance:
                 {
-                    _timeSinceLastCharge += deltaTime;
-                    _timeSinceLastLightMeleeAttack += deltaTime;
+                    if (_timeSinceLastHeavyMeleeAttack <= HeavyMeleeAttackDirectionLockDuration)
+                    {
+                        _timeSinceLastHeavyMeleeAttack += deltaTime;
+                    }
+                    
+                    if (_timeSinceLastCharge <= ChargeCooldown)
+                    {
+                        _timeSinceLastCharge += deltaTime;
+                    }
+
+                    if (_timeSinceLastLightMeleeAttack <= LightMeleeAttackDirectionLockDuration)
+                    {
+                        _timeSinceLastLightMeleeAttack += deltaTime;
+                    }
+
                     break;
                 }
                 
@@ -626,6 +676,8 @@ namespace Assets.Scripts.Character_Controller_Layer
                 
                 case CharacterState.HeavyMeleeAttack:
                 {
+                    if(_timeSinceStartedHeavyMeleeAttack > HeavyMeleeAttackDuration)
+                        TransitionToState(CharacterState.MeleeStance);
                     break;
                 }
                 
@@ -714,14 +766,22 @@ namespace Assets.Scripts.Character_Controller_Layer
         {
             // Update the character's stats
             //Update Movement Stats
-            MaxStableMeleeMoveSpeed = GameManager.instance.userManager.GetMeleeMovementSpeed();
-            // MaxStableSpellcastingMoveSpeed = GameManager.instance.userManager.GetCastingMovementSpeed();
+            MaxStableMoveSpeed = GameManager.instance.userManager.GetMovementSpeed();
+            GlobalMovementSpeedMultiplier = GameManager.instance.userManager.GetGlobalMovementSpeedMultiplier();
+            MeleeStanceMoveSpeedMultiplier = GameManager.instance.userManager.GetMeleeMovementSpeedMultiplier();
+            CastingStanceMoveSpeedMultiplier = GameManager.instance.userManager.GetCastingMovementSpeedMultiplier();
             StableMovementSharpness = GameManager.instance.userManager.GetStableMovementSharpness();
             OrientationSharpness = GameManager.instance.userManager.GetOrientationSharpness();
             //Update Light Melee Attack Stats
             LightMeleeAttackDuration = GameManager.instance.userManager.GetLightAttackDuration();
             LightMeleeAttackStableMoveSpeedMultiplier = GameManager.instance.userManager.GetLightAttackMovementSpeedMultiplier();
             LightMeleeAttackCooldown = GameManager.instance.userManager.GetLightAttackCooldown();
+            LightMeleeAttackDirectionLockDuration = GameManager.instance.userManager.GetLightAttackDirectionLockDuration();
+            //Update Heavy Melee Attack Stats
+            HeavyMeleeAttackDuration = GameManager.instance.userManager.GetHeavyAttackDuration();
+            HeavyMeleeAttackStableMoveSpeedMultiplier = GameManager.instance.userManager.GetHeavyAttackMovementSpeedMultiplier();
+            HeavyMeleeAttackCooldown = GameManager.instance.userManager.GetHeavyAttackCooldown();
+            HeavyMeleeAttackDirectionLockDuration = GameManager.instance.userManager.GetHeavyAttackDirectionLockDuration();
             //Update Charge Stats
             ChargeSpeed = GameManager.instance.userManager.GetChargeSpeed();
             MaxChargeTime = GameManager.instance.userManager.GetMaxChargeTime();
@@ -829,7 +889,7 @@ namespace Assets.Scripts.Character_Controller_Layer
             }
         }
 
-        private void HandleVelocity(ref Vector3 currentVelocity, float deltaTime, float movementSpeed, float movementSpeedMultiplier)
+        private void HandleVelocity(ref Vector3 currentVelocity, float deltaTime, float movementSpeed, float movementSpeedMultiplier, float globalMovementSpeedMultiplier)
         {
             // Ground movement
                     if (Motor.GroundingStatus.IsStableOnGround)
@@ -853,7 +913,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                         var inputRight = Vector3.Cross(_moveInputVector, Motor.CharacterUp);
                         var reorientedInput = Vector3.Cross(effectiveGroundNormal, inputRight).normalized *
                                               _moveInputVector.magnitude;
-                        var targetMovementVelocity = reorientedInput * (movementSpeed * movementSpeedMultiplier);
+                        var targetMovementVelocity = reorientedInput * (movementSpeed * movementSpeedMultiplier * globalMovementSpeedMultiplier);
 
                         // Smooth movement Velocity
                         currentVelocity = Vector3.Lerp(currentVelocity, targetMovementVelocity,

@@ -65,61 +65,128 @@ namespace Assets.Scripts.Character_Controller_Layer
         
         //Movement
         //Movement Speed
-        public float GetMeleeMovementSpeed()
+        public float GetMovementSpeed()
         {
             if (!didInit)
                 Init();
 
-            return _myDataManager.GetMeleeMovementSpeed(_myId);
+            return _myDataManager.GetMovementSpeed(_myId);
         }
         
-        public virtual void SetMeleeMovementSpeed(float aMovementSpeed)
+        public virtual void SetMovementSpeed(float aMovementSpeed)
         {
             if (!didInit)
                 Init();
 
-            _myDataManager.SetMeleeMovementSpeed(_myId, aMovementSpeed);
+            _myDataManager.SetMovementSpeed(_myId, aMovementSpeed);
         }
         
-        public virtual void AddMeleeMovementSpeed(float aMovementSpeed)
+        public virtual void AddMovementSpeed(float aMovementSpeed)
         {
             if (!didInit)
                 Init();
 
-            _myDataManager.AddMeleeMovementSpeed(_myId, aMovementSpeed);
+            _myDataManager.AddMovementSpeed(_myId, aMovementSpeed);
         }
         
-        public virtual void SubtractMeleeMovementSpeed(float aMovementSpeed)
+        public virtual void SubtractMovementSpeed(float aMovementSpeed)
         {
             if (!didInit)
                 Init();
 
-            _myDataManager.SubtractMeleeMovementSpeed(_myId, aMovementSpeed);
+            _myDataManager.SubtractMovementSpeed(_myId, aMovementSpeed);
         }
         
-        //Casting Movement Speed
-        public float GetCastingMovementSpeed()
+        //Global Movement Speed Multiplier
+        public float GetGlobalMovementSpeedMultiplier()
         {
             if (!didInit)
                 Init();
 
-            return _myDataManager.GetCastingMovementSpeed(_myId);
+            return _myDataManager.GetGlobalMovementSpeedMultiplier(_myId);
         }
         
-        public virtual void SetCastingMovementSpeed(float aCastingMovementSpeed)
+        public virtual void SetGlobalMovementSpeedMultiplier(float aGlobalMovementSpeed)
         {
             if (!didInit)
                 Init();
 
-            _myDataManager.SetCastingMovementSpeed(_myId, aCastingMovementSpeed);
+            _myDataManager.SetGlobalMovementSpeedMultiplier(_myId, aGlobalMovementSpeed);
         }
         
-        public virtual void AddCastingMovementSpeed(float aCastingMovementSpeed)
+        public virtual void AddGlobalMovementSpeedMultiplier(float aGlobalMovementSpeed)
         {
             if (!didInit)
                 Init();
 
-            _myDataManager.AddCastingMovementSpeed(_myId, aCastingMovementSpeed);
+            _myDataManager.AddGlobalMovementSpeedMultiplier(_myId, aGlobalMovementSpeed);
+        }
+        
+        public virtual void SubtractGlobalMovementSpeedMultiplier(float aGlobalMovementSpeed)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SubtractGlobalMovementSpeedMultiplier(_myId, aGlobalMovementSpeed);
+        }
+        
+        //Melee Movement Speed Multiplier
+        public float GetMeleeMovementSpeedMultiplier()
+        {
+            if (!didInit)
+                Init();
+
+            return _myDataManager.GetMeleeMovementSpeedMultiplier(_myId);
+        }
+        
+        public virtual void SetMeleeMovementSpeedMultiplier(float aMeleeMovementSpeed)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SetMeleeMovementSpeedMultiplier(_myId, aMeleeMovementSpeed);
+        }
+        
+        public virtual void AddMeleeMovementSpeedMultiplier(float aMeleeMovementSpeed)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.AddMeleeMovementSpeedMultiplier(_myId, aMeleeMovementSpeed);
+        }
+        
+        public virtual void SubtractMeleeMovementSpeedMultiplier(float aMeleeMovementSpeed)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SubtractMeleeMovementSpeedMultiplier(_myId, aMeleeMovementSpeed);
+        }
+        
+        
+        //Casting Movement Speed Multiplier
+        public float GetCastingMovementSpeedMultiplier()
+        {
+            if (!didInit)
+                Init();
+
+            return _myDataManager.GetCastingMovementSpeedMultiplier(_myId);
+        }
+        
+        public virtual void SetCastingMovementSpeedMultiplier(float aCastingMovementSpeed)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SetCastingMovementSpeedMultiplier(_myId, aCastingMovementSpeed);
+        }
+        
+        public virtual void AddCastingMovementSpeedMultiplier(float aCastingMovementSpeed)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.AddCastingMovementSpeedMultiplier(_myId, aCastingMovementSpeed);
         }
         
         public virtual void SubtractCastingMovementSpeed(float aCastingMovementSpeed)
@@ -127,7 +194,7 @@ namespace Assets.Scripts.Character_Controller_Layer
             if (!didInit)
                 Init();
 
-            _myDataManager.SubtractCastingMovementSpeed(_myId, aCastingMovementSpeed);
+            _myDataManager.SubtractCastingMovementSpeedMultiplier(_myId, aCastingMovementSpeed);
         }
         
         //Stable Movement Sharpness
@@ -294,6 +361,172 @@ namespace Assets.Scripts.Character_Controller_Layer
                 Init();
 
             _myDataManager.SubtractLightAttackCooldown(_myId, aLightAttackCooldown);
+        }
+        
+        //Light Attack Direction Lock Duration
+        public float GetLightAttackDirectionLockDuration()
+        {
+            if (!didInit)
+                Init();
+
+            return _myDataManager.GetLightAttackDirectionLockDuration(_myId);
+        }
+        
+        public virtual void SetLightAttackDirectionLockDuration(float aLightAttackDirectionLookDuration)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SetLightAttackDirectionLockDuration(_myId, aLightAttackDirectionLookDuration);
+        }
+        
+        public virtual void AddLightAttackDirectionLockDuration(float aLightAttackDirectionLookDuration)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.AddLightAttackDirectionLockDuration(_myId, aLightAttackDirectionLookDuration);
+        }
+        
+        public virtual void SubtractLightAttackDirectionLockDuration(float aLightAttackDirectionLookDuration)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SubtractLightAttackDirectionLockDuration(_myId, aLightAttackDirectionLookDuration);
+        }
+        
+        //Heavy Attack
+        //Heavy Attack Duration
+        public float GetHeavyAttackDuration()
+        {
+            if (!didInit)
+                Init();
+
+            return _myDataManager.GetHeavyAttackDuration(_myId);
+        }
+        
+        public virtual void SetHeavyAttackDuration(float aHeavyAttackDuration)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SetHeavyAttackDuration(_myId, aHeavyAttackDuration);
+        }
+        
+        public virtual void AddHeavyAttackDuration(float aHeavyAttackDuration)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.AddHeavyAttackDuration(_myId, aHeavyAttackDuration);
+        }
+        
+        public virtual void SubtractHeavyAttackDuration(float aHeavyAttackDuration)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SubtractHeavyAttackDuration(_myId, aHeavyAttackDuration);
+        }
+        
+        //Heavy Attack Movement Speed Multiplier
+        public float GetHeavyAttackMovementSpeedMultiplier()
+        {
+            if (!didInit)
+                Init();
+
+            return _myDataManager.GetHeavyAttackMovementSpeedMultiplier(_myId);
+        }
+        
+        public virtual void SetHeavyAttackMovementSpeedMultiplier(float aHeavyAttackMovementSpeedMultiplier)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SetHeavyAttackMovementSpeedMultiplier(_myId, aHeavyAttackMovementSpeedMultiplier);
+        }
+        
+        public virtual void AddHeavyAttackMovementSpeedMultiplier(float aHeavyAttackMovementSpeedMultiplier)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.AddHeavyAttackMovementSpeedMultiplier(_myId, aHeavyAttackMovementSpeedMultiplier);
+        }
+        
+        public virtual void SubtractHeavyAttackMovementSpeedMultiplier(float aHeavyAttackMovementSpeedMultiplier)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SubtractHeavyAttackMovementSpeedMultiplier(_myId, aHeavyAttackMovementSpeedMultiplier);
+        }
+        
+        //Heavy Attack Cooldown
+        public float GetHeavyAttackCooldown()
+        {
+            if (!didInit)
+                Init();
+
+            return _myDataManager.GetHeavyAttackCooldown(_myId);
+        }
+        
+        public virtual void SetHeavyAttackCooldown(float aHeavyAttackCooldown)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SetHeavyAttackCooldown(_myId, aHeavyAttackCooldown);
+        }
+        
+        public virtual void AddHeavyAttackCooldown(float aHeavyAttackCooldown)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.AddHeavyAttackCooldown(_myId, aHeavyAttackCooldown);
+        }
+        
+        public virtual void SubtractHeavyAttackCooldown(float aHeavyAttackCooldown)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SubtractHeavyAttackCooldown(_myId, aHeavyAttackCooldown);
+        }
+        
+        //Heavy Attack Direction Lock Duration
+        public float GetHeavyAttackDirectionLockDuration()
+        {
+            if (!didInit)
+                Init();
+
+            return _myDataManager.GetHeavyAttackDirectionLockDuration(_myId);
+        }
+        
+        public virtual void SetHeavyAttackDirectionLockDuration(float aHeavyAttackDirectionLookDuration)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SetHeavyAttackDirectionLockDuration(_myId, aHeavyAttackDirectionLookDuration);
+        }
+        
+        public virtual void AddHeavyAttackDirectionLockDuration(float aHeavyAttackDirectionLookDuration)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.AddHeavyAttackDirectionLockDuration(_myId, aHeavyAttackDirectionLookDuration);
+        }
+        
+        public virtual void SubtractHeavyAttackDirectionLockDuration(float aHeavyAttackDirectionLookDuration)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SubtractHeavyAttackDirectionLockDuration(_myId, aHeavyAttackDirectionLookDuration);
         }
 
         //Charge

@@ -6,13 +6,13 @@ using System.Collections.Generic;
 
 public class OnTriggerEnterStatReduce : MonoBehaviour
     {
-        public float movementSpeedChange = 5;
+        public float movementMultiplier = 0.5f;
 
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                GameManager.instance.userManager.SubtractMeleeMovementSpeed(movementSpeedChange);
+                GameManager.instance.userManager.SetGlobalMovementSpeedMultiplier(movementMultiplier);
                 GameManager.instance.playerManager.Character.StatsUpdate();
             }
         }
@@ -21,7 +21,7 @@ public class OnTriggerEnterStatReduce : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                GameManager.instance.userManager.AddMeleeMovementSpeed(movementSpeedChange);
+                GameManager.instance.userManager.SetGlobalMovementSpeedMultiplier(1f);
                 GameManager.instance.playerManager.Character.StatsUpdate();
             }
         }

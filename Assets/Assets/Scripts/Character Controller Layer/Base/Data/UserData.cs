@@ -10,7 +10,9 @@ namespace Assets.Scripts.Character_Controller_Layer.Base.Data
         
         //Movement
         public float movementSpeed;
-        public float castingMovementSpeed;
+        public float globalMovementSpeedMultiplier;
+        public float meleeMovementSpeedMultiplier;
+        public float castingMovementSpeedMultiplier;
         public float stableMovementSharpness;
         public float orientationSharpness;
         
@@ -18,6 +20,13 @@ namespace Assets.Scripts.Character_Controller_Layer.Base.Data
         public float lightAttackDuration;
         public float lightAttackMovementSpeedMultiplier;
         public float lightAttackCooldown;
+        public float lightAttackDirectionLockDuration;
+        
+        //Heavy Attack
+        public float heavyAttackDuration;
+        public float heavyAttackMovementSpeedMultiplier;
+        public float heavyAttackCooldown;
+        public float heavyAttackDirectionLockDuration;
         
         //Charging
         public float chargeSpeed;
