@@ -18,6 +18,9 @@ namespace Assets.Scripts.Core_Layer
         public SpellsStatsManager spellsManager;
         public BaseSpellManager baseSpellManager;
         
+        public ComboSpellsStatsManager comboSpellsManager;
+        public BaseComboSpellManager baseComboSpellManager;
+        
         
         public PlayerManager playerManager;
         public SpellsManager spellsControlManager;
@@ -57,6 +60,13 @@ namespace Assets.Scripts.Core_Layer
             {
                 spellsControlManager.InitializeSpellList();
             }
+            
+            if(baseComboSpellManager.GetComboSpellList().Count < 1) // get the spell list from base spell manager component and check spells are in it
+            {
+                spellsControlManager.InitializeComboSpellList();
+            }
+            
+            
             
             
             // ------------------------------------------------------

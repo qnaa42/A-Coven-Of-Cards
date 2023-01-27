@@ -64,6 +64,15 @@ namespace Assets.Scripts.Spells_Control_Layer
             _mySpellManager.SetSpellName(_myId, aName);
         }
         
+        //Element
+        public string GetSpellElement()
+        {
+            if (!didInit)
+                Init();
+
+            return _mySpellManager.GetSpellElement(_myId);
+        }
+        
         //Casting Spell Duration
         public float GetCastingSpellDuration()
         {

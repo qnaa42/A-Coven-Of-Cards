@@ -367,6 +367,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                 switch (CurrentCharacterState)
                 {
                     case CharacterState.MeleeStance or CharacterState.CastingStance:
+                        Debug.Log(GameManager.instance.baseSpellManager.GetSpellList().ToString());
                         TransitionToState(CharacterState.InteractingWithObject);
                         break;
                     case CharacterState.InteractingWithObject:

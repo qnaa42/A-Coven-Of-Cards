@@ -33,7 +33,15 @@ namespace Assets.Scripts.Spells_Control_Layer.Base
             return global_SpellDatas;
         }
 
-        public int AddNewSpell(string _name, float _castingSpellDuration, float _castingSpellMovementSpeedMultiplier, float _castingSpellCooldown, float _castingSpellDirectionLockDuration)
+        public int AddNewSpell
+                (
+                string _name, 
+                string _element,
+                float _castingSpellDuration, 
+                float _castingSpellMovementSpeedMultiplier, 
+                float _castingSpellCooldown, 
+                float _castingSpellDirectionLockDuration
+                )
         {
             if (!didInit)
                 Init();
@@ -42,6 +50,8 @@ namespace Assets.Scripts.Spells_Control_Layer.Base
             {
                 id = global_SpellDatas.Count,
                 spellName = _name,
+                
+                element = _element,
 
                 castingSpellDuration = _castingSpellDuration,
                 castingSpellMovementSpeedMultiplier = _castingSpellMovementSpeedMultiplier,
@@ -69,6 +79,15 @@ namespace Assets.Scripts.Spells_Control_Layer.Base
                 Init();
 
             global_SpellDatas[id].spellName = aName;
+        }
+        
+        //Element
+        public string GetSpellElement(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_SpellDatas[id].element;
         }
         
         //Casting Spell Duration

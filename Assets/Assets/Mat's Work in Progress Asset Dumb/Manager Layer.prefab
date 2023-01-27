@@ -157,6 +157,8 @@ MonoBehaviour:
   baseUserManager: {fileID: 719835587}
   spellsManager: {fileID: 955413409574467624}
   baseSpellManager: {fileID: 8575054097062548852}
+  comboSpellsManager: {fileID: 1499099499}
+  baseComboSpellManager: {fileID: 1499099498}
   playerManager: {fileID: 7063881608867782054}
   spellsControlManager: {fileID: 2691932711574480136}
 --- !u!1 &7474931297298951817
@@ -171,6 +173,8 @@ GameObject:
   - component: {fileID: 955413409574467624}
   - component: {fileID: 2691932711574480136}
   - component: {fileID: 8575054097062548852}
+  - component: {fileID: 1499099498}
+  - component: {fileID: 1499099499}
   m_Layer: 0
   m_Name: SpellsManager
   m_TagString: Untagged
@@ -220,9 +224,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spellsStatsManager: {fileID: 955413409574467624}
   baseSpellManager: {fileID: 8575054097062548852}
-  Spell1Id: 1
-  Spell2Id: 2
-  Spell3Id: 3
+  comboSpellsStatsManager: {fileID: 1499099499}
+  baseComboSpellManager: {fileID: 1499099498}
+  spellList:
+  - {fileID: 11400000, guid: 80af00964bdaa86448e9ad79b46b0883, type: 2}
+  - {fileID: 11400000, guid: 75dbbc0cad260154f8a854df10bfef84, type: 2}
+  - {fileID: 11400000, guid: aa4a73cf6d823434ea6e2d1b928a984d, type: 2}
+  - {fileID: 11400000, guid: 4675f18dbe89cca4c8b7ac771190f0df, type: 2}
+  - {fileID: 11400000, guid: ff2860b1442af68459f01e30ab9be427, type: 2}
+  - {fileID: 11400000, guid: 6313d260da3bc3e45b42a7baf6a8b738, type: 2}
+  - {fileID: 11400000, guid: 21df32259af134e429c75f96490b6cc6, type: 2}
+  - {fileID: 11400000, guid: ffe7d5da2e012d14db153368153b4ce6, type: 2}
+  - {fileID: 11400000, guid: e5b9595817822b44a94ac8958d0067fa, type: 2}
+  - {fileID: 11400000, guid: 882679e45d6d8d5478526f0691959ef2, type: 2}
+  - {fileID: 11400000, guid: fbb353da8f55c0842a0143f92d72efe9, type: 2}
+  - {fileID: 11400000, guid: b57d3e440cf0a6a42a80e9da12d786f4, type: 2}
+  - {fileID: 11400000, guid: becf6e3e0b53d4e408681d4a1362f1d7, type: 2}
+  - {fileID: 11400000, guid: 2b26cb26727b3394b8c429372e02efbe, type: 2}
+  - {fileID: 11400000, guid: 949bba990b9db69448d914c036be3f5f, type: 2}
+  - {fileID: 11400000, guid: ed5b064a8015a2348b62b35b22758c1c, type: 2}
+  - {fileID: 11400000, guid: 8c7d67fae81af3e4ba769affb647b98b, type: 2}
+  - {fileID: 11400000, guid: 73d0c4ca2caad9c4bb0e30abd716d3a4, type: 2}
+  - {fileID: 11400000, guid: c8232ddbbaf1bca4b9d6f4f1e6878202, type: 2}
+  - {fileID: 11400000, guid: ae2b3347ed9265c4294b4aef850f30aa, type: 2}
+  comboSpellList:
+  - {fileID: 11400000, guid: 6070bfaedb6974e42adefa3a1692622d, type: 2}
+  - {fileID: 11400000, guid: 28da6608c1c3bfc4ca6c39edf084136b, type: 2}
+  - {fileID: 11400000, guid: bf5cf9f72966bc442b0c61a42ee9f3ed, type: 2}
+  - {fileID: 11400000, guid: dfcae947a62e1e04e9a27de3d7e6407e, type: 2}
+  - {fileID: 11400000, guid: 922be354c87492a48ae99d6562fa0db6, type: 2}
+  - {fileID: 11400000, guid: d2ce33c5399f7d341b44a4d3697a5551, type: 2}
+  - {fileID: 11400000, guid: 3fa45a6cf98d50c439ab9053edfc4a7b, type: 2}
+  - {fileID: 11400000, guid: 78b0e091d28a1c145bfb8695a5e6ec57, type: 2}
+  - {fileID: 11400000, guid: 99dcb4606de0c9647977a05ddb2ce514, type: 2}
+  - {fileID: 11400000, guid: f1781a9da6eb3354ebd3685435825ccf, type: 2}
+  - {fileID: 11400000, guid: b80bc3a8ab2274a40983b7469e1d59bd, type: 2}
+  - {fileID: 11400000, guid: 17ec645ee30421249bca9b27842b1c58, type: 2}
+  - {fileID: 11400000, guid: d993c7a0c0a0a134891b907b6b9a54d8, type: 2}
+  - {fileID: 11400000, guid: 181c238e3b6ef2944a6e77a20f3336f3, type: 2}
+  - {fileID: 11400000, guid: 6e9adc5f93323354b9f2294fe21244df, type: 2}
+  - {fileID: 11400000, guid: b2df1a71ef26f6849887626b300ddd0e, type: 2}
+  Spell1Id: 0
+  Spell2Id: 1
+  Spell3Id: 2
 --- !u!114 &8575054097062548852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,3 +279,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea7d6a7bc6af32c4f96bd74bd206696d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1499099498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7474931297298951817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f91e738d0387c5245b424b826b46a362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1499099499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7474931297298951817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6bb8f5f11efea64a90a9e8b1de17520, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _myComboSpellManager: {fileID: 1499099498}
