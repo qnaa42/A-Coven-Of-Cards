@@ -73,6 +73,15 @@ namespace Assets.Scripts.Spells_Control_Layer
             return _mySpellManager.GetSpellElement(_myId);
         }
         
+        //Spell Description
+        public string GetSpellDescription()
+        {
+            if (!didInit)
+                Init();
+
+            return _mySpellManager.GetSpellDescription(_myId);
+        }
+        
         //Casting Spell Duration
         public float GetCastingSpellDuration()
         {

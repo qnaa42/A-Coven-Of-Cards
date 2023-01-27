@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a58becf6de45efc479bb82b1f336af7b, type: 3}
   m_Name: 12 - The Hanged Man
   m_EditorClassIdentifier: 
-  spellName: The Hanged Man
+  spellName: Water Shield
   element: Water
+  spellDescription: Apply shield that heal over time and apply slow to enemies that
+    attack you, your movement is reduced during duration of the shield.
   castingSpellDuration: 3.5
   castingSpellMovementSpeedMultiplier: 0.05
   castingSpellCooldown: 1.5

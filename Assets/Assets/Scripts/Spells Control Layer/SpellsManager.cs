@@ -35,6 +35,7 @@ namespace Assets.Scripts.Spells_Control_Layer
                     (
                         spell.spellName, 
                         spell.element,
+                        spell.spellDescription,
                         spell.castingSpellDuration, 
                         spell.castingSpellMovementSpeedMultiplier, 
                         spell.castingSpellCooldown, 

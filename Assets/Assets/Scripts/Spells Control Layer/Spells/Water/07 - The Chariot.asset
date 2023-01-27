@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a58becf6de45efc479bb82b1f336af7b, type: 3}
   m_Name: 07 - The Chariot
   m_EditorClassIdentifier: 
-  spellName: The Chariot
+  spellName: Water Dash
   element: Water
+  spellDescription: Dash forward leaving trail that slow down enemies walking in
+    and applying poison.
   castingSpellDuration: 3.5
   castingSpellMovementSpeedMultiplier: 0.05
   castingSpellCooldown: 1.5

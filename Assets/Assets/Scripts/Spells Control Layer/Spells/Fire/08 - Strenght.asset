@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a58becf6de45efc479bb82b1f336af7b, type: 3}
   m_Name: 08 - Strenght
   m_EditorClassIdentifier: 
-  spellName: Strenght
+  spellName: Fire Bolt
   element: Fire
+  spellDescription: Default
   castingSpellDuration: 3.5
   castingSpellMovementSpeedMultiplier: 0.05
   castingSpellCooldown: 1.5

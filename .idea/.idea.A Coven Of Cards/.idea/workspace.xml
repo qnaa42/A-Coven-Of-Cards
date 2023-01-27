@@ -3,30 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a1e62ff1-8c95-4f34-b705-2d1bd115eabc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.A Coven Of Cards/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.A Coven Of Cards/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.plastic/plastic.wktree" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.wktree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/Character Controller Layer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/Character Controller Layer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/Manager Layer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/Manager Layer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Materials/Black.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Materials/Black.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/FantasyInHouseProps_Free/Scenes/Demo_Free.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/FantasyInHouseProps_Free/Scenes/Demo_Free.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/MedievalTavernPack/Material/Architecture/Floor_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/MedievalTavernPack/Material/Architecture/Floor_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/MedievalTavernPack/Scenes/demo_01.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/MedievalTavernPack/Scenes/demo_01.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/MedievalTavernPack/Scenes/demo_02.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/MedievalTavernPack/Scenes/demo_02.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/RawWoodenFurnitureFree/Scenes/Demo 1.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/RawWoodenFurnitureFree/Scenes/Demo 1.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/RunemarkStudio/DarkFantasyKit [Free]/Scenes/DemoScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/RunemarkStudio/DarkFantasyKit [Free]/Scenes/DemoScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/CharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/CharacterController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Core Layer/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Core Layer/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Scriptable Objects/Spell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Scriptable Objects/Spell.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Base/BaseSpellManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Base/BaseSpellManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Base/Data/SpellData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Base/Data/SpellData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/SpellsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/SpellsManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/SpellsStatsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/SpellsStatsManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/House.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/House.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WhoteRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WhoteRoom.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +94,7 @@
       <workItem from="1674475069911" duration="13905000" />
       <workItem from="1674559717438" duration="26573000" />
       <workItem from="1674731189006" duration="22450000" />
-      <workItem from="1674818650685" duration="4734000" />
+      <workItem from="1674818650685" duration="5866000" />
     </task>
     <servers />
   </component>

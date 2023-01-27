@@ -37,6 +37,7 @@ namespace Assets.Scripts.Spells_Control_Layer.Base
                 (
                 string _name, 
                 string _element,
+                string _spellDescription,
                 float _castingSpellDuration, 
                 float _castingSpellMovementSpeedMultiplier, 
                 float _castingSpellCooldown, 
@@ -52,11 +53,14 @@ namespace Assets.Scripts.Spells_Control_Layer.Base
                 spellName = _name,
                 
                 element = _element,
+                
+                spellDescription = _spellDescription,
 
                 castingSpellDuration = _castingSpellDuration,
                 castingSpellMovementSpeedMultiplier = _castingSpellMovementSpeedMultiplier,
                 castingSpellCooldown = _castingSpellCooldown,
                 castingSpellDirectionLockDuration = _castingSpellDirectionLockDuration,
+                
             };
             
             global_SpellDatas.Add(newSpell);
@@ -88,6 +92,15 @@ namespace Assets.Scripts.Spells_Control_Layer.Base
                 Init();
 
             return global_SpellDatas[id].element;
+        }
+        
+        //Spell Description
+        public string GetSpellDescription(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_SpellDatas[id].spellDescription;
         }
         
         //Casting Spell Duration

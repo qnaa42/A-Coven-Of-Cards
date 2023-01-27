@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a58becf6de45efc479bb82b1f336af7b, type: 3}
   m_Name: 06 - The Lovers
   m_EditorClassIdentifier: 
-  spellName: The Lovers
+  spellName: Air Dash
   element: Air
+  spellDescription: Default
   castingSpellDuration: 3.5
   castingSpellMovementSpeedMultiplier: 0.05
   castingSpellCooldown: 1.5

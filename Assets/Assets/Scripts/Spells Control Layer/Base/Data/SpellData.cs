@@ -9,6 +9,8 @@ namespace Assets.Scripts.Spells_Control_Layer.Base.Data
         public string spellName = "Default";
         
         public string element = "Default";
+        
+        public string spellDescription = "Default";
 
         public float castingSpellDuration;
         public float castingSpellMovementSpeedMultiplier;

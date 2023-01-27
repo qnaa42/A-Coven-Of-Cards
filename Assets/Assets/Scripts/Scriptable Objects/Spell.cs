@@ -9,6 +9,8 @@ namespace Assets.Scripts.Scriptable_Objects
         
         public string element = "Default";
         
+        public string spellDescription = "Default";
+        
         public float castingSpellDuration;
         public float castingSpellMovementSpeedMultiplier;
         public float castingSpellCooldown;
