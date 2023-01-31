@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts.Character_Controller_Layer;
+using Assets.Scripts.Combat_Controller_Layer;
 using Assets.Scripts.Core_Layer;
 using Assets.Scripts.Core_Layer.Base;
 using Assets.Scripts.Spells_Control_Layer;
@@ -12,6 +13,8 @@ namespace Assets.Scripts.Core_Layer
 {
     public class GameManager : BaseGameManager
     {
+        
+        
         public UserStatsManager userManager;
         public BaseUserManager baseUserManager;
         
@@ -24,6 +27,8 @@ namespace Assets.Scripts.Core_Layer
         
         public PlayerManager playerManager;
         public SpellsManager spellsControlManager;
+        
+        public CombatManager combatManager;
         
         //Singleton
         public static GameManager instance { get; private set; }

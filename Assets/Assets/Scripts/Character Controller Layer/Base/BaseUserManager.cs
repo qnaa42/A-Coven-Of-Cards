@@ -57,11 +57,15 @@ namespace Assets.Scripts.Character_Controller_Layer
                 lightAttackMovementSpeedMultiplier = 0.1f,
                 lightAttackCooldown = 0.15f,
                 lightAttackDirectionLockDuration = 0.25f,
+                lightAttackRange = 1.0f,
+                lightAttackRadius = 0.44f,
                 //Heavy Attack
                 heavyAttackDuration = 0.7f,
                 heavyAttackMovementSpeedMultiplier = 0.05f,
                 heavyAttackCooldown = 0.25f,
                 heavyAttackDirectionLockDuration = 0.35f,
+                heavyAttackRange = 0.4f,
+                heavyAttackRadius = 1.0f,
                 //Charging
                 chargeSpeed = 50,
                 maxChargeTime = 0.3f,
@@ -427,6 +431,74 @@ namespace Assets.Scripts.Character_Controller_Layer
             global_UserDatas[id].lightAttackDirectionLockDuration -= anAmount;
         }
         
+        //Light Attack Range
+        public float GetLightAttackRange(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_UserDatas[id].lightAttackRange;
+        }
+        
+        public void SetLightAttackRange(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].lightAttackRange = anAmount;
+        }
+
+        public void AddLightAttackRange(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].lightAttackRange += anAmount;
+        }
+        
+        public void SubtractLightAttackRange(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].lightAttackRange -= anAmount;
+        }
+        
+        //Light Attack Radius
+        public float GetLightAttackRadius(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_UserDatas[id].lightAttackRadius;
+        }
+        
+        public void SetLightAttackRadius(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].lightAttackRadius = anAmount;
+        }
+        
+        public void AddLightAttackRadius(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].lightAttackRadius += anAmount;
+        }
+        
+        public void SubtractLightAttackRadius(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].lightAttackRadius -= anAmount;
+        }
+        
+        
+        
         //Heavy Attack
         //Heavy Attack Duration
         public float GetHeavyAttackDuration(int id)
@@ -558,6 +630,72 @@ namespace Assets.Scripts.Character_Controller_Layer
                 Init();
 
             global_UserDatas[id].heavyAttackDirectionLockDuration -= anAmount;
+        }
+        
+        //Heavy Attack Range
+        public float GetHeavyAttackRange(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_UserDatas[id].heavyAttackRange;
+        }
+        
+        public void SetHeavyAttackRange(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].heavyAttackRange = anAmount;
+        }
+        
+        public void AddHeavyAttackRange(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].heavyAttackRange += anAmount;
+        }
+        
+        public void SubtractHeavyAttackRange(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].heavyAttackRange -= anAmount;
+        }
+        
+        //Heavy Attack Radius
+        public float GetHeavyAttackRadius(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_UserDatas[id].heavyAttackRadius;
+        }
+        
+        public void SetHeavyAttackRadius(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].heavyAttackRadius = anAmount;
+        }
+        
+        public void AddHeavyAttackRadius(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].heavyAttackRadius += anAmount;
+        }
+        
+        public void SubtractHeavyAttackRadius(int id, float anAmount)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].heavyAttackRadius -= anAmount;
         }
 
         //Charging

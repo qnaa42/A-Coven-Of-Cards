@@ -396,6 +396,72 @@ namespace Assets.Scripts.Character_Controller_Layer
             _myDataManager.SubtractLightAttackDirectionLockDuration(_myId, aLightAttackDirectionLookDuration);
         }
         
+        //Light Attack Range
+        public float GetLightAttackRange()
+        {
+            if (!didInit)
+                Init();
+
+            return _myDataManager.GetLightAttackRange(_myId);
+        }
+        
+        public virtual void SetLightAttackRange(float aLightAttackRange)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SetLightAttackRange(_myId, aLightAttackRange);
+        }
+        
+        public virtual void AddLightAttackRange(float aLightAttackRange)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.AddLightAttackRange(_myId, aLightAttackRange);
+        }
+        
+        public virtual void SubtractLightAttackRange(float aLightAttackRange)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SubtractLightAttackRange(_myId, aLightAttackRange);
+        }
+        
+        //Light Attack Radius
+        public float GetLightAttackRadius()
+        {
+            if (!didInit)
+                Init();
+
+            return _myDataManager.GetLightAttackRadius(_myId);
+        }
+        
+        public virtual void SetLightAttackRadius(float aLightAttackRadius)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SetLightAttackRadius(_myId, aLightAttackRadius);
+        }
+        
+        public virtual void AddLightAttackRadius(float aLightAttackRadius)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.AddLightAttackRadius(_myId, aLightAttackRadius);
+        }
+        
+        public virtual void SubtractLightAttackRadius(float aLightAttackRadius)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SubtractLightAttackRadius(_myId, aLightAttackRadius);
+        }
+        
         //Heavy Attack
         //Heavy Attack Duration
         public float GetHeavyAttackDuration()
@@ -528,6 +594,73 @@ namespace Assets.Scripts.Character_Controller_Layer
 
             _myDataManager.SubtractHeavyAttackDirectionLockDuration(_myId, aHeavyAttackDirectionLookDuration);
         }
+        
+        //Heavy Attack Range
+        public float GetHeavyAttackRange()
+        {
+            if (!didInit)
+                Init();
+
+            return _myDataManager.GetHeavyAttackRange(_myId);
+        }
+        
+        public virtual void SetHeavyAttackRange(float aHeavyAttackRange)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SetHeavyAttackRange(_myId, aHeavyAttackRange);
+        }
+        
+        public virtual void AddHeavyAttackRange(float aHeavyAttackRange)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.AddHeavyAttackRange(_myId, aHeavyAttackRange);
+        }
+        
+        public virtual void SubtractHeavyAttackRange(float aHeavyAttackRange)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SubtractHeavyAttackRange(_myId, aHeavyAttackRange);
+        }
+        
+        //Heavy Attack Radius
+        public float GetHeavyAttackRadius()
+        {
+            if (!didInit)
+                Init();
+
+            return _myDataManager.GetHeavyAttackRadius(_myId);
+        }
+        
+        public virtual void SetHeavyAttackRadius(float aHeavyAttackRadius)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SetHeavyAttackRadius(_myId, aHeavyAttackRadius);
+        }
+        
+        public virtual void AddHeavyAttackRadius(float aHeavyAttackRadius)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.AddHeavyAttackRadius(_myId, aHeavyAttackRadius);
+        }
+        
+        public virtual void SubtractHeavyAttackRadius(float aHeavyAttackRadius)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SubtractHeavyAttackRadius(_myId, aHeavyAttackRadius);
+        }
+
 
         //Charge
         //Charge Speed

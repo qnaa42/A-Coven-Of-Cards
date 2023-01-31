@@ -71,11 +71,15 @@ namespace Assets.Scripts.Character_Controller_Layer
         public float LightMeleeAttackStableMoveSpeedMultiplier = 0.5f;
         public float LightMeleeAttackCooldown = 0.5f;
         public float LightMeleeAttackDirectionLockDuration = 0.7f;
+        public float LightMeleeAttackRange = 1.0f;
+        public float LightMeleeAttackRadius = 0.44f;
         
         [Header("Heavy Melee Attack")] public float HeavyMeleeAttackDuration = 0.5f;
         public float HeavyMeleeAttackStableMoveSpeedMultiplier = 0.5f;
         public float HeavyMeleeAttackCooldown = 0.5f;
         public float HeavyMeleeAttackDirectionLockDuration = 0.7f;
+        public float HeavyMeleeAttackRange = 0.4f;
+        public float HeavyMeleeAttackRadius = 1.5f;
         
 
         [Header("Charging")] public float ChargeSpeed = 15f;
@@ -115,10 +119,13 @@ namespace Assets.Scripts.Character_Controller_Layer
         //Light Melee Attack Privates
         private float _timeSinceStartedLightMeleeAttack = 0f;
         private float _timeSinceLastLightMeleeAttack = 0f;
+        public int _consecutiveLightMeleeAttacks = 0;
         
         //Heavy Melee Attack Privates
         private float _timeSinceStartedHeavyMeleeAttack = 0f;
         private float _timeSinceLastHeavyMeleeAttack = 0f;
+        
+        
 
         //Charge Privates
         private Vector3 _currentChargeVelocity;
@@ -188,12 +195,15 @@ namespace Assets.Scripts.Character_Controller_Layer
                 case CharacterState.LightMeleeAttack:
                 {
                     _timeSinceStartedLightMeleeAttack = 0f;
+                    _consecutiveLightMeleeAttacks++;
+                    GameManager.instance.combatManager.ShowLightAttackDebugCone();
                     break;
                 }
 
                 case CharacterState.HeavyMeleeAttack:
                 {
                     _timeSinceStartedHeavyMeleeAttack = 0f;
+                    GameManager.instance.combatManager.SowHeavyAttackDebugCone();
                     break;
                 }
 
@@ -246,7 +256,7 @@ namespace Assets.Scripts.Character_Controller_Layer
         /// <summary>
         /// Event when exiting a state
         /// </summary>
-        private static void OnStateExit(CharacterState state, CharacterState toState)
+        protected virtual void OnStateExit(CharacterState state, CharacterState toState)
         {
             switch (state)
             {
@@ -258,11 +268,36 @@ namespace Assets.Scripts.Character_Controller_Layer
                 
                 case CharacterState.LightMeleeAttack:
                 {
+                    
+                    switch (_consecutiveLightMeleeAttacks)
+                    {
+                        case 3:
+                            GameManager.instance.combatManager.Attack(LightMeleeAttackRange, LightMeleeAttackRadius,
+                                true);
+                            _consecutiveLightMeleeAttacks = 0;
+                            break;
+                        case < 3:
+                            GameManager.instance.combatManager.Attack(LightMeleeAttackRange, LightMeleeAttackRadius,
+                                false);
+                            break;
+                    }
+                    GameManager.instance.combatManager.HideLightAttackDebugCone();
                     break;
                 }
                 
                 case CharacterState.HeavyMeleeAttack:
                 {
+                    switch (_consecutiveLightMeleeAttacks)
+                    {
+                        case 2:
+                            GameManager.instance.combatManager.Attack(HeavyMeleeAttackRange, HeavyMeleeAttackRadius, true);
+                            _consecutiveLightMeleeAttacks = 0;
+                            break;
+                        case < 2:
+                            GameManager.instance.combatManager.Attack(HeavyMeleeAttackRange, HeavyMeleeAttackRadius, false);
+                            break;
+                    }
+                    GameManager.instance.combatManager.HideHeavyAttackDebugCone();
                     break;
                 }
                 
@@ -571,6 +606,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                 {
                     if (_timeSinceLastLightMeleeAttack > LightMeleeAttackDirectionLockDuration && _timeSinceLastHeavyMeleeAttack > HeavyMeleeAttackDirectionLockDuration)
                     {
+                        _consecutiveLightMeleeAttacks = 0;
                         HandleRotation(ref currentRotation, deltaTime);
                     }
                     break;
@@ -857,11 +893,15 @@ namespace Assets.Scripts.Character_Controller_Layer
             LightMeleeAttackStableMoveSpeedMultiplier = GameManager.instance.userManager.GetLightAttackMovementSpeedMultiplier();
             LightMeleeAttackCooldown = GameManager.instance.userManager.GetLightAttackCooldown();
             LightMeleeAttackDirectionLockDuration = GameManager.instance.userManager.GetLightAttackDirectionLockDuration();
+            LightMeleeAttackRange = GameManager.instance.userManager.GetLightAttackRange();
+            LightMeleeAttackRadius = GameManager.instance.userManager.GetLightAttackRadius();
             //Update Heavy Melee Attack Stats
             HeavyMeleeAttackDuration = GameManager.instance.userManager.GetHeavyAttackDuration();
             HeavyMeleeAttackStableMoveSpeedMultiplier = GameManager.instance.userManager.GetHeavyAttackMovementSpeedMultiplier();
             HeavyMeleeAttackCooldown = GameManager.instance.userManager.GetHeavyAttackCooldown();
             HeavyMeleeAttackDirectionLockDuration = GameManager.instance.userManager.GetHeavyAttackDirectionLockDuration();
+            HeavyMeleeAttackRange = GameManager.instance.userManager.GetHeavyAttackRange();
+            HeavyMeleeAttackRadius = GameManager.instance.userManager.GetHeavyAttackRadius();
             //Update Charge Stats
             ChargeSpeed = GameManager.instance.userManager.GetChargeSpeed();
             MaxChargeTime = GameManager.instance.userManager.GetMaxChargeTime();

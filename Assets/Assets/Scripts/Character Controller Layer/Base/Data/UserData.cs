@@ -21,12 +21,17 @@ namespace Assets.Scripts.Character_Controller_Layer.Base.Data
         public float lightAttackMovementSpeedMultiplier;
         public float lightAttackCooldown;
         public float lightAttackDirectionLockDuration;
+        public float lightAttackRange;
+        public float lightAttackRadius;
         
         //Heavy Attack
         public float heavyAttackDuration;
         public float heavyAttackMovementSpeedMultiplier;
         public float heavyAttackCooldown;
         public float heavyAttackDirectionLockDuration;
+        public float heavyAttackRange;
+        public float heavyAttackRadius;
+        
         
         //Charging
         public float chargeSpeed;

@@ -7,8 +7,12 @@ namespace Assets.Scripts.Character_Controller_Layer
 {
     public class PlayerManager : MonoBehaviour
     {
+        public bool DebugMode;
+        
         public GameObject Athame;
         public GameObject Wand;
+        
+        public GameObject lightAttackDebugCone;
         
         // Start is called before the first frame update
         public CharacterCamera OrbitCamera;
@@ -20,6 +24,7 @@ namespace Assets.Scripts.Character_Controller_Layer
 
         private void Start()
         {
+            Cursor.lockState = !DebugMode ? CursorLockMode.Locked : CursorLockMode.None;
             Cursor.lockState = CursorLockMode.Locked;
         
             OrbitCamera.SetFollowTransform(CameraFollowPoint);
@@ -30,35 +35,35 @@ namespace Assets.Scripts.Character_Controller_Layer
         // Update is called once per frame
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-            }
+           if (Input.GetMouseButtonDown(0) && !DebugMode)
+           {
+               Cursor.lockState = CursorLockMode.Locked;
+           }
             
-            switch (Character.CurrentCharacterState)
-            {
-                case CharacterState.MeleeStance:
-                case CharacterState.LightMeleeAttack:
-                case CharacterState.HeavyMeleeAttack:
-                case CharacterState.Charging:
-                    Athame.SetActive(true);
-                    Wand.SetActive(false);
-                    break;
-                case CharacterState.CastingStance:
-                case CharacterState.CastingSpell:
-                case CharacterState.CastingCombo:
-                    Athame.SetActive(false);
-                    Wand.SetActive(true);
-                    break;
-                case CharacterState.InteractingWithObject:
-                    Athame.SetActive(false);
-                    Wand.SetActive(false);
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
+           switch (Character.CurrentCharacterState)
+           {
+               case CharacterState.MeleeStance:
+               case CharacterState.LightMeleeAttack:
+               case CharacterState.HeavyMeleeAttack:
+               case CharacterState.Charging:
+                   Athame.SetActive(true);
+                   Wand.SetActive(false);
+                   break;
+               case CharacterState.CastingStance:
+               case CharacterState.CastingSpell:
+               case CharacterState.CastingCombo:
+                   Athame.SetActive(false);
+                   Wand.SetActive(true);
+                   break;
+               case CharacterState.InteractingWithObject:
+                   Athame.SetActive(false);
+                   Wand.SetActive(false);
+                   break;
+               default:
+                   throw new ArgumentOutOfRangeException();
+           }
 
-            HandleCharacterInput();
+           HandleCharacterInput();
         }
 
         private void LateUpdate()

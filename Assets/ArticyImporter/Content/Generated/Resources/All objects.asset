@@ -1,0 +1,6008 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9190843150768433373
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_E73070AD
+  m_EditorClassIdentifier: 
+  id: 72057594037930232
+  technicalName: DFr_E73070AD
+  parentId: 72057594037929332
+  childrenIds: 
+  mMenuText: What about rituals?
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928302
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Aren't there any rituals we can perform, there must be!
+  mExternalId: 
+  mPosition: {x: 725, y: 475}
+  mZIndex: 4
+  mSize: {x: 225, y: 200}
+  mShortId: 3878711469
+  mInputPins:
+    value:
+    - id: 72057594037930235
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930232
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930236
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930232
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930272
+          mTarget:
+            objectRef: 72057594037930269
+      mOwnerInstanceId: 0
+--- !u!114 &-8965956474551066915
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_9A9310F5
+  m_EditorClassIdentifier: 
+  id: 72057594037929864
+  technicalName: DFr_9A9310F5
+  parentId: 72057594037929283
+  childrenIds: 
+  mMenuText: Why can't you go?
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928302
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Why can't you go Cassandra, too afraid to get your hands dirty?
+  mExternalId: 
+  mPosition: {x: 1250, y: 125}
+  mZIndex: 4
+  mSize: {x: 225, y: 200}
+  mShortId: 2593329397
+  mInputPins:
+    value:
+    - id: 72057594037929867
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929864
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929868
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929864
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929891
+          mTarget:
+            objectRef: 72057594037929888
+      mOwnerInstanceId: 0
+--- !u!114 &-8875223898211233423
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_9E0862C0
+  m_EditorClassIdentifier: 
+  id: 72057594037930289
+  technicalName: DFr_9E0862C0
+  parentId: 72057594037929332
+  childrenIds: 
+  mMenuText: Dreamscape? Witching hour?
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928302
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Wait, wait, Dreamscape? Witching hour?
+  mExternalId: 
+  mPosition: {x: 2350, y: 0}
+  mZIndex: 18
+  mSize: {x: 225, y: 200}
+  mShortId: 2651349696
+  mInputPins:
+    value:
+    - id: 72057594037930292
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930289
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930293
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930289
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930315
+          mTarget:
+            objectRef: 72057594037930312
+      mOwnerInstanceId: 0
+--- !u!114 &-8690866396151731444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_CA8A01C8
+  m_EditorClassIdentifier: 
+  id: 72057594037929878
+  technicalName: DFr_CA8A01C8
+  parentId: 72057594037929283
+  childrenIds: 
+  mMenuText: Why so many?
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928302
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Why eight, I thought we needed two herbs for one potion.
+  mExternalId: 
+  mPosition: {x: 1250, y: 575}
+  mZIndex: 8
+  mSize: {x: 225, y: 200}
+  mShortId: 3398042056
+  mInputPins:
+    value:
+    - id: 72057594037929881
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929878
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929882
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929878
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929922
+          mTarget:
+            objectRef: 72057594037929919
+      mOwnerInstanceId: 0
+--- !u!114 &-8644930300243797648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 615cd7cba2bd6c94db46df8c74b70bae, type: 3}
+  m_Name: Hub_70169FEB
+  m_EditorClassIdentifier: 
+  id: 72057594037930296
+  technicalName: Hub_70169FEB
+  parentId: 72057594037929332
+  childrenIds: 
+  mDisplayName: Hub 4
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 2075, y: 300}
+  mZIndex: 19
+  mSize: {x: 175, y: 50}
+  mShortId: 1880530923
+  mInputPins:
+    value:
+    - id: 72057594037930298
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930296
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930299
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930296
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930292
+          mTarget:
+            objectRef: 72057594037930289
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930306
+          mTarget:
+            objectRef: 72057594037930303
+      mOwnerInstanceId: 0
+--- !u!114 &-8542574492118174592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2876efb6dba1ad34a9ef000d0e1d743a, type: 3}
+  m_Name: Ast_2F52443B
+  m_EditorClassIdentifier: 
+  id: 72057594037928329
+  technicalName: Ast_2F52443B
+  parentId: 72057594037928197
+  childrenIds: 
+  mDisplayName: Witch 3
+  mFilename: Witch_3(0089).jpg
+  mOriginalSource: file:///E:/Games Design/A Game of Cards_Witch Game/Data/Narrative/Assets/Witch
+    3.jpg
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 80, y: 80}
+  mZIndex: 4
+  mSize: {x: 256, y: 196}
+  mShortId: 793920571
+  mAssetRefPath: Assets/Images/Witch_3
+  mCachedAsset: {fileID: 0}
+  mCategory: 1
+--- !u!114 &-8479280517426382574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71978bef4c44c0a49b8d94d4281197bf, type: 3}
+  m_Name: Ntt_049164C2
+  m_EditorClassIdentifier: 
+  id: 72057594037929250
+  technicalName: Ntt_049164C2
+  parentId: 216172785005863603
+  childrenIds: 
+  mAttachments:
+    listIds: 
+  mDisplayName: Luke Baily (Baby)
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 100, y: 100}
+  mZIndex: 5
+  mSize: {x: 256, y: 196}
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mShortId: 76637378
+--- !u!114 &-8351317135313098686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_1997E198
+  m_EditorClassIdentifier: 
+  id: 72057594037930262
+  technicalName: DFr_1997E198
+  parentId: 72057594037929332
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928345
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: I need you to go into the woods again, but be careful this time, the sheen
+    of reality will slip, and you'll have to deal with all manner of things. I need
+    you to get me one (regent 1), one (regent 2), one (regent 3) and one (regent
+    4).
+  mExternalId: 
+  mPosition: {x: 1750, y: 225}
+  mZIndex: 10
+  mSize: {x: 225, y: 200}
+  mShortId: 429384088
+  mInputPins:
+    value:
+    - id: 72057594037930265
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930262
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930266
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930262
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930298
+          mTarget:
+            objectRef: 72057594037930296
+      mOwnerInstanceId: 0
+--- !u!114 &-8151017710841651334
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_4D0BE77F
+  m_EditorClassIdentifier: 
+  id: 72057594037931335
+  technicalName: DFr_4D0BE77F
+  parentId: 72057594037929402
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928345
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: I see you brought the regents back, good, take this potion that I have prepared
+    and strengthen it, be careful not to mess the recipe up.
+  mExternalId: 
+  mPosition: {x: 250, y: 500}
+  mZIndex: 0
+  mSize: {x: 225, y: 200}
+  mShortId: 1292625791
+  mInputPins:
+    value:
+    - id: 72057594037931336
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037931335
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037931337
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037931335
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &-7986611831778644661
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69bae069048b3d84b9af9294b11fa898, type: 3}
+  m_Name: FFr_A714315E
+  m_EditorClassIdentifier: 
+  id: 72057594037930399
+  technicalName: FFr_A714315E
+  parentId: 72057594037929402
+  childrenIds: 32100000000000014410000000000001161000000000000120100000000000013e1000000000000139100000000000014a10000000000001
+  mAttachments:
+    listIds: 6e01000000000001
+  mDisplayName: Player strengthens the health potions
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: The player goes to the cauldron and combines the items collected with the
+    health potions in order to strengthen them.
+  mExternalId: 
+  mPosition: {x: 700, y: 350}
+  mZIndex: 2
+  mSize: {x: 275, y: 200}
+  mShortId: 2803118430
+  mInputPins:
+    value:
+    - id: 72057594037930402
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930399
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037932056
+          mTarget:
+            objectRef: 72057594037932054
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930403
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930399
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &-7944098997427305389
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_E40299FF
+  m_EditorClassIdentifier: 
+  id: 72057594037930248
+  technicalName: DFr_E40299FF
+  parentId: 72057594037929332
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928345
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Yes, actually, maybe there is something we can do. In order to strengthen
+    the potion we need to create it and then add some regents in order to provide
+    more potent effects.
+  mExternalId: 
+  mPosition: {x: 1075, y: 225}
+  mZIndex: 6
+  mSize: {x: 225, y: 200}
+  mShortId: 3825375743
+  mInputPins:
+    value:
+    - id: 72057594037930251
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930248
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930252
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930248
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930258
+          mTarget:
+            objectRef: 72057594037930255
+      mOwnerInstanceId: 0
+--- !u!114 &-7879875403098600278
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_BD7675A3
+  m_EditorClassIdentifier: 
+  id: 72057594037930312
+  technicalName: DFr_BD7675A3
+  parentId: 72057594037929332
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928345
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Yes, don't you know what they are?
+  mExternalId: 
+  mPosition: {x: 2725, y: 0}
+  mZIndex: 24
+  mSize: {x: 225, y: 200}
+  mShortId: 3178657187
+  mInputPins:
+    value:
+    - id: 72057594037930315
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930312
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930316
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930312
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930322
+          mTarget:
+            objectRef: 72057594037930319
+      mOwnerInstanceId: 0
+--- !u!114 &-7592889480723848085
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_C57AD316
+  m_EditorClassIdentifier: 
+  id: 72057594037929497
+  technicalName: DFr_C57AD316
+  parentId: 72057594037929265
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928332
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Your sisters said he was breathing but this isn't normal, he needs help!
+  mExternalId: 
+  mPosition: {x: 1400, y: 150}
+  mZIndex: 13
+  mSize: {x: 225, y: 200}
+  mShortId: 3313160982
+  mInputPins:
+    value:
+    - id: 72057594037929500
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929497
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929501
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929497
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929507
+          mTarget:
+            objectRef: 72057594037929504
+      mOwnerInstanceId: 0
+--- !u!114 &-7559173908282995591
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_FC50E135
+  m_EditorClassIdentifier: 
+  id: 72057594037930319
+  technicalName: DFr_FC50E135
+  parentId: 72057594037929332
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928345
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Ok, the dream scape is the place we witches go to when we fall asleep. It's
+    essentially when the sheen of reality falls and the esoteric is allowed into
+    our world. Be careful, because you'll find all manner of distorted creatures
+    there.
+  mExternalId: 
+  mPosition: {x: 3075, y: 0}
+  mZIndex: 26
+  mSize: {x: 225, y: 200}
+  mShortId: 4233158965
+  mInputPins:
+    value:
+    - id: 72057594037930322
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930319
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930323
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930319
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930329
+          mTarget:
+            objectRef: 72057594037930326
+      mOwnerInstanceId: 0
+--- !u!114 &-6573084977325465932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69bae069048b3d84b9af9294b11fa898, type: 3}
+  m_Name: FFr_58AD9167
+  m_EditorClassIdentifier: 
+  id: 72057594037932082
+  technicalName: FFr_58AD9167
+  parentId: 72057594037930399
+  childrenIds: 
+  mAttachments:
+    listIds: 
+  mDisplayName: Make mother health pot
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 1050, y: 275}
+  mZIndex: 5
+  mSize: {x: 275, y: 200}
+  mShortId: 1487769959
+  mInputPins:
+    value:
+    - id: 72057594037932085
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932082
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037932086
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932082
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037932091
+          mTarget:
+            objectRef: 72057594037932089
+      mOwnerInstanceId: 0
+--- !u!114 &-6148364235128227927
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_89BDA5B9
+  m_EditorClassIdentifier: 
+  id: 72057594037929909
+  technicalName: DFr_89BDA5B9
+  parentId: 72057594037929283
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928302
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Fine, watch and learn how it's done!
+  mExternalId: 
+  mPosition: {x: 1875, y: 200}
+  mZIndex: 14
+  mSize: {x: 225, y: 200}
+  mShortId: 2310907321
+  mInputPins:
+    value:
+    - id: 72057594037929912
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929909
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929913
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929909
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929287
+          mTarget:
+            objectRef: 72057594037929283
+      mOwnerInstanceId: 0
+--- !u!114 &-5779071690617912087
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_5380D3E6
+  m_EditorClassIdentifier: 
+  id: 72057594037929888
+  technicalName: DFr_5380D3E6
+  parentId: 72057594037929283
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928349
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "HA, aren't you snippy today. I need to stay here with Nyx to keep them
+    stable, that's why we called you. \r\n\r\nWe wouldn't have if we didn't need
+    to!"
+  mExternalId: 
+  mPosition: {x: 1575, y: 125}
+  mZIndex: 10
+  mSize: {x: 225, y: 200}
+  mShortId: 1400951782
+  mInputPins:
+    value:
+    - id: 72057594037929891
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929888
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929892
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929888
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929912
+          mTarget:
+            objectRef: 72057594037929909
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929941
+          mTarget:
+            objectRef: 72057594037929938
+      mOwnerInstanceId: 0
+--- !u!114 &-5650176134998715151
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7399a3f07188824dad4f6f34f0a628f, type: 3}
+  m_Name: Ntt_63F8B158
+  m_EditorClassIdentifier: 
+  id: 72057594037928341
+  technicalName: Ntt_63F8B158
+  parentId: 216172785005863603
+  childrenIds: 
+  mAttachments:
+    listIds: 
+  mDisplayName: Evelyn Bailey(Mother)
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: The mother, tutorial character (for now) soon to give birth.
+  mExternalId: 
+  mPosition: {x: 162, y: 103}
+  mZIndex: 2
+  mSize: {x: 256, y: 196}
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 72057594037928323
+  mShortId: 1677242712
+  mTemplate:
+    value:
+      mDefaultBasicCharacterFeature:
+        value:
+          mAge: 26
+          mSpecies: Human
+          mBornIn: 
+          mSex: 1
+          mOccupation: 'Baker '
+          mAccent: Soothin Feminine
+          mPersonality: 'She is strong willed and head strong, the mother knows what
+            she wants and doesn''t care if others don''t like that. In addition,
+            she is well mannered, kind, good natured and polite. With a fiery temper
+            and strong will she doesn''t give up. '
+          mAppearance: 
+          mOwnerId: 72057594037928341
+          mOwnerInstanceId: 0
+      mOwnerId: 72057594037928341
+      mOwnerInstanceId: 0
+--- !u!114 &-5488363658420319998
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_5C38AC34
+  m_EditorClassIdentifier: 
+  id: 72057594037929466
+  technicalName: DFr_5C38AC34
+  parentId: 72057594037929265
+  childrenIds: 
+  mMenuText: I'll see what I can do, but I promise nothing.
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928302
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: I'll see what I can do, but I promise nothing.
+  mExternalId: 
+  mPosition: {x: 700, y: 375}
+  mZIndex: 3
+  mSize: {x: 225, y: 200}
+  mShortId: 1547217972
+  mInputPins:
+    value:
+    - id: 72057594037929469
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929466
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929470
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929466
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929486
+          mTarget:
+            objectRef: 72057594037929483
+      mOwnerInstanceId: 0
+--- !u!114 &-5391500962618061241
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5949e2752928b7843a0dc8ec79b1e988, type: 3}
+  m_Name: Jmp_1F64DEF6
+  m_EditorClassIdentifier: 
+  id: 72057594037929504
+  technicalName: Jmp_1F64DEF6
+  parentId: 72057594037929265
+  childrenIds: 
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 1750, y: 175}
+  mZIndex: 15
+  mSize: {x: 175, y: 150}
+  mShortId: 526704374
+  mTarget:
+    objectRef: 72057594037929606
+  mTargetPin: 72057594037929608
+  mInputPins:
+    value:
+    - id: 72057594037929507
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929504
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value: []
+--- !u!114 &-5340430826919975150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_99FFB4AB
+  m_EditorClassIdentifier: 
+  id: 72057594037930366
+  technicalName: DFr_99FFB4AB
+  parentId: 72057594037929332
+  childrenIds: 
+  mMenuText: Give Nyx the herbs
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928302
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Here you go.
+  mExternalId: 
+  mPosition: {x: 3775, y: 225}
+  mZIndex: 38
+  mSize: {x: 225, y: 200}
+  mShortId: 2583671979
+  mInputPins:
+    value:
+    - id: 72057594037930369
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930366
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930370
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930366
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.5764706, g: 0.75686276, b: 0.8, a: 1}
+          mTargetPin: 72057594037930392
+          mTarget:
+            objectRef: 72057594037930389
+      mOwnerInstanceId: 0
+--- !u!114 &-4890411726096038890
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb99aecdd3d007a4c9dc5ef5ab2aec4b, type: 3}
+  m_Name: Dlg_5D04C641
+  m_EditorClassIdentifier: 
+  id: 72057594037929276
+  technicalName: Dlg_5D04C641
+  parentId: 72057594037929243
+  childrenIds: 
+  mAttachments:
+    listIds: 95010000000000016e01000000000001
+  mDisplayName: PC interacts with mother
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: The woman before you looks pale, this must be Amos' wife, she clearly needs
+    help, you can even feel her fading.
+  mExternalId: 
+  mPosition: {x: 1042, y: 50}
+  mZIndex: 3
+  mSize: {x: 291, y: 200}
+  mShortId: 1560593985
+  mInputPins:
+    value:
+    - id: 72057594037929279
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929276
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929280
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929276
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &-4660374657069035592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e76ba0375bc09409339b3546dd626a, type: 3}
+  m_Name: Ntt_01C88FBD
+  m_EditorClassIdentifier: 
+  id: 72057594037928302
+  technicalName: Ntt_01C88FBD
+  parentId: 216172785005863603
+  childrenIds: 
+  mAttachments:
+    listIds: 
+  mDisplayName: Main Character
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: The player character, shaped by the players decisions.
+  mExternalId: 
+  mPosition: {x: 0, y: 0}
+  mZIndex: 0
+  mSize: {x: 256, y: 196}
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 72057594037928317
+  mShortId: 29921213
+  mTemplate:
+    value:
+      mDefaultExtendedCharacterFeature:
+        value:
+          mMotivation: Player dependant
+          mInnerConflict: Player dependant
+          mSkills: Sabbat upgrades, Magic individual, Magic combination, Melee, Dash
+          mFears: Enemy damage
+          mHabits: Player dependant
+          mFurtherDetails: 
+          mOwnerId: 72057594037928302
+          mOwnerInstanceId: 0
+      mDefaultBasicCharacterFeature:
+        value:
+          mAge: 0
+          mSpecies: Human (For Now)
+          mBornIn: 
+          mSex: 1
+          mOccupation: Witch
+          mAccent: N/A
+          mPersonality: Decided on by the players morality and path they wish to
+            follow
+          mAppearance: 
+          mOwnerId: 72057594037928302
+          mOwnerInstanceId: 0
+      mOwnerId: 72057594037928302
+      mOwnerInstanceId: 0
+--- !u!114 &-4595592368757759024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_DDA17BEF
+  m_EditorClassIdentifier: 
+  id: 72057594037930463
+  technicalName: DFr_DDA17BEF
+  parentId: 72057594037929402
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928332
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Oh, thank god, he's crying... Thank you so much, I wont forget this!
+  mExternalId: 
+  mPosition: {x: 2900, y: 475}
+  mZIndex: 20
+  mSize: {x: 225, y: 200}
+  mShortId: 3718347759
+  mInputPins:
+    value:
+    - id: 72057594037930466
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930463
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930467
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930463
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &-3752776311097830540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_91D7CD42
+  m_EditorClassIdentifier: 
+  id: 72057594037930255
+  technicalName: DFr_91D7CD42
+  parentId: 72057594037929332
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928345
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: The issue is, the regents we need for them can only be gathered in the dreamscape.
+    But luckily for you its nearly witching hour.
+  mExternalId: 
+  mPosition: {x: 1400, y: 225}
+  mZIndex: 8
+  mSize: {x: 225, y: 200}
+  mShortId: 2446839106
+  mInputPins:
+    value:
+    - id: 72057594037930258
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930255
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930259
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930255
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930265
+          mTarget:
+            objectRef: 72057594037930262
+      mOwnerInstanceId: 0
+--- !u!114 &-3740848657709198147
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 615cd7cba2bd6c94db46df8c74b70bae, type: 3}
+  m_Name: Hub_181C31F4
+  m_EditorClassIdentifier: 
+  id: 72057594037929895
+  technicalName: Hub_181C31F4
+  parentId: 72057594037929283
+  childrenIds: 
+  mDisplayName: Hub 2
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 1000, y: 425}
+  mZIndex: 9
+  mSize: {x: 175, y: 50}
+  mShortId: 404500980
+  mInputPins:
+    value:
+    - id: 72057594037929897
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929895
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929898
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929895
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929874
+          mTarget:
+            objectRef: 72057594037929871
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929867
+          mTarget:
+            objectRef: 72057594037929864
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929881
+          mTarget:
+            objectRef: 72057594037929878
+      mOwnerInstanceId: 0
+--- !u!114 &-3391385876102164090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_20783B22
+  m_EditorClassIdentifier: 
+  id: 72057594037930442
+  technicalName: DFr_20783B22
+  parentId: 72057594037929402
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928341
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: As, you give her the final drops of the health potion, she gasps for air,
+    colour and life return to her body and you can visibly see she is much better,
+    though she is still asleep.
+  mExternalId: 
+  mPosition: {x: 2525, y: 225}
+  mZIndex: 14
+  mSize: {x: 225, y: 200}
+  mShortId: 544750370
+  mInputPins:
+    value:
+    - id: 72057594037930445
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930442
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930446
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930442
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930459
+          mTarget:
+            objectRef: 72057594037930456
+      mOwnerInstanceId: 0
+--- !u!114 &-3379772863089960440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_4C851DC4
+  m_EditorClassIdentifier: 
+  id: 72057594037930208
+  technicalName: DFr_4C851DC4
+  parentId: 72057594037929325
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928349
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Damn it all! Both of them are worse than I feared, they'll need something
+    stronger. Nyx knows more about strengthening potions than I do, go talk to her.
+  mExternalId: 
+  mPosition: {x: 1775, y: 400}
+  mZIndex: 10
+  mSize: {x: 225, y: 200}
+  mShortId: 1283792324
+  mInputPins:
+    value:
+    - id: 72057594037930211
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930208
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930212
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930208
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929329
+          mTarget:
+            objectRef: 72057594037929325
+      mOwnerInstanceId: 0
+--- !u!114 &-3286996031892967601
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_0FF2F766
+  m_EditorClassIdentifier: 
+  id: 72057594037930449
+  technicalName: DFr_0FF2F766
+  parentId: 72057594037929402
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037929250
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: As you administer the last drops of the health potion to the little baby
+    he begins crying. You can take that as a sign that he will be alright.
+  mExternalId: 
+  mPosition: {x: 2525, y: 475}
+  mZIndex: 16
+  mSize: {x: 225, y: 200}
+  mShortId: 267581286
+  mInputPins:
+    value:
+    - id: 72057594037930452
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930449
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930453
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930449
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930466
+          mTarget:
+            objectRef: 72057594037930463
+      mOwnerInstanceId: 0
+--- !u!114 &-3099845303885115686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69bae069048b3d84b9af9294b11fa898, type: 3}
+  m_Name: FFr_F1A72CD1
+  m_EditorClassIdentifier: 
+  id: 72057594037929426
+  technicalName: FFr_F1A72CD1
+  parentId: 72057594037929243
+  childrenIds: ba050000000000017405000000000001
+  mAttachments:
+    listIds: 8c010000000000019d01000000000001950100000000000122050000000000016e010000000000019901000000000001
+  mDisplayName: ACT 3
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: The player must make a hard choice with who to save, based on their own
+    capabilities.
+  mExternalId: 
+  mPosition: {x: 1800, y: 300}
+  mZIndex: 20
+  mSize: {x: 275, y: 200}
+  mShortId: 4054265041
+  mInputPins:
+    value:
+    - id: 72057594037929429
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929426
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929430
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929426
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &-2803206609323327984
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7399a3f07188824dad4f6f34f0a628f, type: 3}
+  m_Name: Ntt_065AF716
+  m_EditorClassIdentifier: 
+  id: 72057594037928349
+  technicalName: Ntt_065AF716
+  parentId: 216172785005863603
+  childrenIds: 
+  mAttachments:
+    listIds: 
+  mDisplayName: Cassandra Vindicraft (Witch 1 Baby)
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: The witch, who helps with the baby and is connected to it.
+  mExternalId: 
+  mPosition: {x: 80, y: 80}
+  mZIndex: 4
+  mSize: {x: 256, y: 196}
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 72057594037928326
+  mShortId: 106624790
+  mTemplate:
+    value:
+      mDefaultBasicCharacterFeature:
+        value:
+          mAge: 31
+          mSpecies: Human
+          mBornIn: 
+          mSex: 1
+          mOccupation: Witch
+          mAccent: 
+          mPersonality: 'Nature over humanity. She is at one with nature and prefers
+            it over living things though in her natural state of duplicity she has
+            learned to hide her cruelty and is able to foster easy friendships and
+            relationships with the townsfolk. People tend to tell her things, and
+            she tends to use them. '
+          mAppearance: 
+          mOwnerId: 72057594037928349
+          mOwnerInstanceId: 0
+      mOwnerId: 72057594037928349
+      mOwnerInstanceId: 0
+--- !u!114 &-2790881804347564429
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2876efb6dba1ad34a9ef000d0e1d743a, type: 3}
+  m_Name: Ast_C2A0424F
+  m_EditorClassIdentifier: 
+  id: 72057594037928317
+  technicalName: Ast_C2A0424F
+  parentId: 72057594037928197
+  childrenIds: 
+  mDisplayName: Witch 1
+  mFilename: Witch_1(007D).jpg
+  mOriginalSource: file:///E:/Games Design/A Game of Cards_Witch Game/Data/Narrative/Assets/Witch
+    1.jpg
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 0, y: 0}
+  mZIndex: 0
+  mSize: {x: 256, y: 196}
+  mShortId: 3265282639
+  mAssetRefPath: Assets/Images/Witch_1
+  mCachedAsset: {fileID: 0}
+  mCategory: 1
+--- !u!114 &-2553396513911512238
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_4AECF46A
+  m_EditorClassIdentifier: 
+  id: 72057594037930435
+  technicalName: DFr_4AECF46A
+  parentId: 72057594037929402
+  childrenIds: 
+  mMenuText: Administer strengthened healing potion.
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928302
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 1800, y: 475}
+  mZIndex: 10
+  mSize: {x: 225, y: 200}
+  mShortId: 1257043050
+  mInputPins:
+    value:
+    - id: 72057594037930436
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930435
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930437
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930435
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037932137
+          mTarget:
+            objectRef: 72057594037932136
+      mOwnerInstanceId: 0
+--- !u!114 &-2148552914280267179
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_F6B88D77
+  m_EditorClassIdentifier: 
+  id: 72057594037929483
+  technicalName: DFr_F6B88D77
+  parentId: 72057594037929265
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928332
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Please... you must save them!
+  mExternalId: 
+  mPosition: {x: 1050, y: 375}
+  mZIndex: 9
+  mSize: {x: 225, y: 200}
+  mShortId: 4139289975
+  mInputPins:
+    value:
+    - id: 72057594037929486
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929483
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929487
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929483
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929269
+          mTarget:
+            objectRef: 72057594037929265
+      mOwnerInstanceId: 0
+--- !u!114 &-2084853159179215246
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_14ECAA3D
+  m_EditorClassIdentifier: 
+  id: 72057594037930219
+  technicalName: DFr_14ECAA3D
+  parentId: 72057594037929332
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928345
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: I see it didn't go so well, what can I do to help?
+  mExternalId: 
+  mPosition: {x: 100, y: 350}
+  mZIndex: 0
+  mSize: {x: 225, y: 200}
+  mShortId: 351054397
+  mInputPins:
+    value:
+    - id: 72057594037930222
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930219
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930223
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930219
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930278
+          mTarget:
+            objectRef: 72057594037930276
+      mOwnerInstanceId: 0
+--- !u!114 &-1971953211230150128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_1004D7BC
+  m_EditorClassIdentifier: 
+  id: 72057594037930186
+  technicalName: DFr_1004D7BC
+  parentId: 72057594037929325
+  childrenIds: 
+  mMenuText: What happened?
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928302
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Cass, what's wrong, what happened?
+  mExternalId: 
+  mPosition: {x: 1400, y: 275}
+  mZIndex: 6
+  mSize: {x: 225, y: 200}
+  mShortId: 268752828
+  mInputPins:
+    value:
+    - id: 72057594037930189
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930186
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930190
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930186
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930211
+          mTarget:
+            objectRef: 72057594037930208
+      mOwnerInstanceId: 0
+--- !u!114 &-1941746418801419691
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 057a743a4ed58e74c99c8c9c0abb200a, type: 3}
+  m_Name: Ins_70F20CE6
+  m_EditorClassIdentifier: 
+  id: 72057594037932106
+  technicalName: Ins_70F20CE6
+  parentId: 72057594037930399
+  childrenIds: 
+  mDisplayName: VerticalSlice.babyHealthPot = 1
+  mText: 
+  mExternalId: 
+  mPosition: {x: 2450, y: 325}
+  mZIndex: 7
+  mSize: {x: 225, y: 100}
+  mShortId: 1894911206
+  mExpression:
+    value:
+      handlerId: 4
+      ownerId: 72057594037932106
+      ownerInstanceId: 0
+      mRawScript: VerticalSlice.babyHealthPot = 1
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mInputPins:
+    value:
+    - id: 72057594037932107
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932106
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037932108
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932106
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930403
+          mTarget:
+            objectRef: 72057594037930399
+      mOwnerInstanceId: 0
+--- !u!114 &-1722309818924067455
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_0E85628B
+  m_EditorClassIdentifier: 
+  id: 72057594037929850
+  technicalName: DFr_0E85628B
+  parentId: 72057594037929283
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928349
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Finally, you are here, as you can see the situation is dire, I'm going to
+    need your help.
+  mExternalId: 
+  mPosition: {x: 350, y: 350}
+  mZIndex: 0
+  mSize: {x: 225, y: 200}
+  mShortId: 243622539
+  mInputPins:
+    value:
+    - id: 72057594037929853
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929850
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929854
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929850
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929860
+          mTarget:
+            objectRef: 72057594037929857
+      mOwnerInstanceId: 0
+--- !u!114 &-1616168298029958462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_862B0243
+  m_EditorClassIdentifier: 
+  id: 72057594037930360
+  technicalName: DFr_862B0243
+  parentId: 72057594037929402
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928345
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: I see you brought some of the regents back, good, take these two potions
+    that I have prepared and strengthen them, be careful not to mess the recipe up.
+  mExternalId: 
+  mPosition: {x: 250, y: 225}
+  mZIndex: 0
+  mSize: {x: 225, y: 200}
+  mShortId: 2250965571
+  mInputPins:
+    value:
+    - id: 72057594037930363
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930360
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930364
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930360
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &-1591862237914852961
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_E4B14368
+  m_EditorClassIdentifier: 
+  id: 72057594037929446
+  technicalName: DFr_E4B14368
+  parentId: 72057594037929265
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928332
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 'You''re finally here, please, you must help my wife and son, she isn''t
+    looking to good.
+
+    
+
+    God... he hasn''t even cried yet, please you must
+    help them!'
+  mExternalId: 
+  mPosition: {x: 100, y: 375}
+  mZIndex: 0
+  mSize: {x: 225, y: 200}
+  mShortId: 3836822376
+  mInputPins:
+    value:
+    - id: 72057594037929449
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929446
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929450
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929446
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929608
+          mTarget:
+            objectRef: 72057594037929606
+      mOwnerInstanceId: 0
+--- !u!114 &-1574813199139477311
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_45D83F48
+  m_EditorClassIdentifier: 
+  id: 72057594037930154
+  technicalName: DFr_45D83F48
+  parentId: 72057594037929311
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928349
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Make, only 2 potions, leave the rest of the herbs for later if we need them.
+  mExternalId: 
+  mPosition: {x: 725, y: 375}
+  mZIndex: 1
+  mSize: {x: 225, y: 200}
+  mShortId: 1171799880
+  mInputPins:
+    value:
+    - id: 72057594037930157
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930154
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930158
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930154
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929315
+          mTarget:
+            objectRef: 72057594037929311
+      mOwnerInstanceId: 0
+--- !u!114 &-1140376085323289211
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_03BAFB9A
+  m_EditorClassIdentifier: 
+  id: 72057594037929926
+  technicalName: DFr_03BAFB9A
+  parentId: 72057594037929283
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928349
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Then another four just to be safe, we don't know if this will work after
+    all.
+  mExternalId: 
+  mPosition: {x: 1900, y: 575}
+  mZIndex: 20
+  mSize: {x: 225, y: 200}
+  mShortId: 62585754
+  mInputPins:
+    value:
+    - id: 72057594037929929
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929926
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929930
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929926
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929936
+          mTarget:
+            objectRef: 72057594037929933
+      mOwnerInstanceId: 0
+--- !u!114 &-957346995888866741
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_D7E682E7
+  m_EditorClassIdentifier: 
+  id: 72057594037930372
+  technicalName: DFr_D7E682E7
+  parentId: 72057594037929332
+  childrenIds: 
+  mMenuText: Don't give Nyx the herbs
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928302
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: No, I think I'll keep them for now.
+  mExternalId: 
+  mPosition: {x: 3775, y: 475}
+  mZIndex: 38
+  mSize: {x: 225, y: 200}
+  mShortId: 3622208231
+  mInputPins:
+    value:
+    - id: 72057594037930373
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930372
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930374
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930372
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930385
+          mTarget:
+            objectRef: 72057594037930382
+      mOwnerInstanceId: 0
+--- !u!114 &-926497506073135949
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_278757F5
+  m_EditorClassIdentifier: 
+  id: 72057594037930338
+  technicalName: DFr_278757F5
+  parentId: 72057594037929332
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928345
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: wait a minute, you should know, when you enter the dreamscape you'll be
+    on a timer, remember it's better that we save at least one of them, than you
+    go out trying to save both and failing to do so.
+  mExternalId: 
+  mPosition: {x: 2725, y: 225}
+  mZIndex: 32
+  mSize: {x: 225, y: 200}
+  mShortId: 663181301
+  mInputPins:
+    value:
+    - id: 72057594037930341
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930338
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930342
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930338
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930348
+          mTarget:
+            objectRef: 72057594037930345
+      mOwnerInstanceId: 0
+--- !u!114 &-858620476653972545
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_5E57C39D
+  m_EditorClassIdentifier: 
+  id: 72057594037932208
+  technicalName: DFr_5E57C39D
+  parentId: 72057594037932198
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928332
+  mSplitHeight: 64
+  mColor: {r: 0.5764706, g: 0.75686276, b: 0.8, a: 1}
+  mText: Please help my wife and son!
+  mExternalId: 
+  mPosition: {x: 525, y: 350}
+  mZIndex: 0
+  mSize: {x: 225, y: 200}
+  mShortId: 1582810013
+  mInputPins:
+    value:
+    - id: 72057594037932211
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932208
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037932212
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932208
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.5764706, g: 0.75686276, b: 0.8, a: 1}
+          mTargetPin: 72057594037932200
+          mTarget:
+            objectRef: 72057594037932198
+      mOwnerInstanceId: 0
+--- !u!114 &-817706230855552398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 615cd7cba2bd6c94db46df8c74b70bae, type: 3}
+  m_Name: Hub_34B2B5C7
+  m_EditorClassIdentifier: 
+  id: 72057594037932054
+  technicalName: Hub_34B2B5C7
+  parentId: 72057594037930399
+  childrenIds: 
+  mDisplayName: Open world 4
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 350, y: 475}
+  mZIndex: 0
+  mSize: {x: 175, y: 50}
+  mShortId: 884127175
+  mInputPins:
+    value:
+    - id: 72057594037932056
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932054
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037932057
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932054
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037932065
+          mTarget:
+            objectRef: 72057594037932064
+      mOwnerInstanceId: 0
+--- !u!114 &-732803565390132263
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_E30F005C
+  m_EditorClassIdentifier: 
+  id: 72057594037930194
+  technicalName: DFr_E30F005C
+  parentId: 72057594037929325
+  childrenIds: 
+  mMenuText: Did you mess up?
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928302
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Did you seriously manage to mess this up? What did I go in the forest for?
+  mExternalId: 
+  mPosition: {x: 1400, y: 525}
+  mZIndex: 8
+  mSize: {x: 225, y: 200}
+  mShortId: 3809411164
+  mInputPins:
+    value:
+    - id: 72057594037930197
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930194
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930198
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930194
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930211
+          mTarget:
+            objectRef: 72057594037930208
+      mOwnerInstanceId: 0
+--- !u!114 &-657291691281911285
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_38593A11
+  m_EditorClassIdentifier: 
+  id: 72057594037930179
+  technicalName: DFr_38593A11
+  parentId: 72057594037929325
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928349
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: DAMN!
+  mExternalId: 
+  mPosition: {x: 1075, y: 400}
+  mZIndex: 4
+  mSize: {x: 225, y: 200}
+  mShortId: 945371665
+  mInputPins:
+    value:
+    - id: 72057594037930182
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930179
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930183
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930179
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930189
+          mTarget:
+            objectRef: 72057594037930186
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930197
+          mTarget:
+            objectRef: 72057594037930194
+      mOwnerInstanceId: 0
+--- !u!114 &-336719422835945795
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_3FFFAC03
+  m_EditorClassIdentifier: 
+  id: 72057594037929452
+  technicalName: DFr_3FFFAC03
+  parentId: 72057594037929265
+  childrenIds: 
+  mMenuText: Calm down, tell me what happened.
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928302
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Calm down, tell me what happened.
+  mExternalId: 
+  mPosition: {x: 700, y: 150}
+  mZIndex: 1
+  mSize: {x: 225, y: 200}
+  mShortId: 1073720323
+  mInputPins:
+    value:
+    - id: 72057594037929455
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929452
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929456
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929452
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929493
+          mTarget:
+            objectRef: 72057594037929490
+      mOwnerInstanceId: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1919818469, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: All objects
+  m_EditorClassIdentifier: 
+  mPackagePath: Assets/ArticyImporter/Content/Generated/Resources/All objects.asset
+  mResourceKey: All objects
+  mObjects:
+  - {fileID: 3935236454512884084}
+  - {fileID: 3070256320464378197}
+  - {fileID: 6786459324009092877}
+  - {fileID: -3099845303885115686}
+  - {fileID: 4179361779196489157}
+  - {fileID: -7986611831778644661}
+  - {fileID: -6573084977325465932}
+  - {fileID: 4596653273733749988}
+  - {fileID: 1806041056530533999}
+  - {fileID: -4890411726096038890}
+  - {fileID: 1016128114963474095}
+  - {fileID: 5908996665129794295}
+  - {fileID: 5598904343155575868}
+  - {fileID: 4412465433142442628}
+  - {fileID: 6298836813034097069}
+  - {fileID: 8570895808165634058}
+  - {fileID: 235628814384837772}
+  - {fileID: -1591862237914852961}
+  - {fileID: -336719422835945795}
+  - {fileID: 99505055085913894}
+  - {fileID: -5488363658420319998}
+  - {fileID: 965483226885221992}
+  - {fileID: -2148552914280267179}
+  - {fileID: 8946382700539103571}
+  - {fileID: -7592889480723848085}
+  - {fileID: -1722309818924067455}
+  - {fileID: 3764846948404818467}
+  - {fileID: -8965956474551066915}
+  - {fileID: 5009545143021009696}
+  - {fileID: -8690866396151731444}
+  - {fileID: -5779071690617912087}
+  - {fileID: -6148364235128227927}
+  - {fileID: 7554246139023561710}
+  - {fileID: -1140376085323289211}
+  - {fileID: 6615849815958643863}
+  - {fileID: 7554809572220531116}
+  - {fileID: -1574813199139477311}
+  - {fileID: 8179908325050142178}
+  - {fileID: -657291691281911285}
+  - {fileID: -1971953211230150128}
+  - {fileID: -732803565390132263}
+  - {fileID: -3379772863089960440}
+  - {fileID: -2084853159179215246}
+  - {fileID: 1744878968561194667}
+  - {fileID: -9190843150768433373}
+  - {fileID: -7944098997427305389}
+  - {fileID: -3752776311097830540}
+  - {fileID: -8351317135313098686}
+  - {fileID: 981006554782229536}
+  - {fileID: -8875223898211233423}
+  - {fileID: 8184711782276466157}
+  - {fileID: -7879875403098600278}
+  - {fileID: -7559173908282995591}
+  - {fileID: 3149495770946931986}
+  - {fileID: -926497506073135949}
+  - {fileID: 7783057407448070833}
+  - {fileID: 1985562219948308978}
+  - {fileID: -5340430826919975150}
+  - {fileID: -957346995888866741}
+  - {fileID: 3586870182061403398}
+  - {fileID: 310048175040691797}
+  - {fileID: -1616168298029958462}
+  - {fileID: 4280618693261228828}
+  - {fileID: 8229702232405024520}
+  - {fileID: 6010308519937509800}
+  - {fileID: -2553396513911512238}
+  - {fileID: -3391385876102164090}
+  - {fileID: -3286996031892967601}
+  - {fileID: 7324348848113449995}
+  - {fileID: -4595592368757759024}
+  - {fileID: -8151017710841651334}
+  - {fileID: -858620476653972545}
+  - {fileID: 1560248689557201877}
+  - {fileID: -3740848657709198147}
+  - {fileID: 3607247739916305224}
+  - {fileID: -8644930300243797648}
+  - {fileID: -817706230855552398}
+  - {fileID: -5391500962618061241}
+  - {fileID: 4864223812034674507}
+  - {fileID: 2465627992365971508}
+  - {fileID: 658273203213504496}
+  - {fileID: 9136020292435860941}
+  - {fileID: 9055082784233091391}
+  - {fileID: 4991255232439282135}
+  - {fileID: 7319468338538985657}
+  - {fileID: -1941746418801419691}
+  - {fileID: 4181571472187856287}
+  - {fileID: 8816652496852512666}
+  - {fileID: -4660374657069035592}
+  - {fileID: 4264426943014817746}
+  - {fileID: -5650176134998715151}
+  - {fileID: 5599794155960160949}
+  - {fileID: -2803206609323327984}
+  - {fileID: -8479280517426382574}
+  - {fileID: -2790881804347564429}
+  - {fileID: 3916076811032210059}
+  - {fileID: 2167906314389421633}
+  - {fileID: 5097571918618088025}
+  - {fileID: -8542574492118174592}
+  - {fileID: 2449443702656281519}
+  - {fileID: 2825510695080993165}
+  - {fileID: 8407336015340271178}
+  - {fileID: 7662014697542403096}
+  - {fileID: 1758700138179171374}
+--- !u!114 &99505055085913894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_6BEBCA51
+  m_EditorClassIdentifier: 
+  id: 72057594037929459
+  technicalName: DFr_6BEBCA51
+  parentId: 72057594037929265
+  childrenIds: 
+  mMenuText: Don't worry I'll save them
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928302
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Calm down, Amos, I'll do everything in my power to help them.
+  mExternalId: 
+  mPosition: {x: 700, y: 600}
+  mZIndex: 2
+  mSize: {x: 225, y: 200}
+  mShortId: 1810614865
+  mInputPins:
+    value:
+    - id: 72057594037929462
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929459
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929463
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929459
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929479
+          mTarget:
+            objectRef: 72057594037929476
+      mOwnerInstanceId: 0
+--- !u!114 &235628814384837772
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb99aecdd3d007a4c9dc5ef5ab2aec4b, type: 3}
+  m_Name: Dlg_4CE3C05D
+  m_EditorClassIdentifier: 
+  id: 72057594037932198
+  technicalName: Dlg_4CE3C05D
+  parentId: 72057594037929243
+  childrenIds: b010000000000001
+  mAttachments:
+    listIds: 6e010000000000018c01000000000001
+  mDisplayName: PC interacts with Father
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.5764706, g: 0.75686276, b: 0.8, a: 1}
+  mText: Amos, looks worried, he is clearly tired but refuses to rest.
+  mExternalId: 
+  mPosition: {x: 1042, y: -200}
+  mZIndex: 3
+  mSize: {x: 291, y: 200}
+  mShortId: 1289994333
+  mInputPins:
+    value:
+    - id: 72057594037932199
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932198
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.5764706, g: 0.75686276, b: 0.8, a: 1}
+          mTargetPin: 72057594037932211
+          mTarget:
+            objectRef: 72057594037932208
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037932200
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932198
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &310048175040691797
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_6C6FA471
+  m_EditorClassIdentifier: 
+  id: 72057594037930389
+  technicalName: DFr_6C6FA471
+  parentId: 72057594037929332
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928345
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Thanks, and good luck out there!
+  mExternalId: 
+  mPosition: {x: 4150, y: 225}
+  mZIndex: 44
+  mSize: {x: 225, y: 200}
+  mShortId: 1819255921
+  mInputPins:
+    value:
+    - id: 72057594037930392
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930389
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930393
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930389
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929336
+          mTarget:
+            objectRef: 72057594037929332
+      mOwnerInstanceId: 0
+--- !u!114 &658273203213504496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5949e2752928b7843a0dc8ec79b1e988, type: 3}
+  m_Name: Jmp_7D7EE814
+  m_EditorClassIdentifier: 
+  id: 72057594037930284
+  technicalName: Jmp_7D7EE814
+  parentId: 72057594037929332
+  childrenIds: 
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 1450, y: 500}
+  mZIndex: 16
+  mSize: {x: 175, y: 150}
+  mShortId: 2105468948
+  mTarget:
+    objectRef: 72057594037930276
+  mTargetPin: 72057594037930278
+  mInputPins:
+    value:
+    - id: 72057594037930287
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930284
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value: []
+--- !u!114 &965483226885221992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_6407A293
+  m_EditorClassIdentifier: 
+  id: 72057594037929476
+  technicalName: DFr_6407A293
+  parentId: 72057594037929265
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928332
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Thank you, oh, thank you, God bless you and your sisters!
+  mExternalId: 
+  mPosition: {x: 1050, y: 600}
+  mZIndex: 7
+  mSize: {x: 225, y: 200}
+  mShortId: 1678221971
+  mInputPins:
+    value:
+    - id: 72057594037929479
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929476
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929480
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929476
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929269
+          mTarget:
+            objectRef: 72057594037929265
+      mOwnerInstanceId: 0
+--- !u!114 &981006554782229536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_4EC69F55
+  m_EditorClassIdentifier: 
+  id: 72057594037930269
+  technicalName: DFr_4EC69F55
+  parentId: 72057594037929332
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928345
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: We could, but I'm afraid we don't have the time. Plus we'd have to sacrifice
+    something anyway.
+  mExternalId: 
+  mPosition: {x: 1100, y: 475}
+  mZIndex: 12
+  mSize: {x: 225, y: 200}
+  mShortId: 1321639765
+  mInputPins:
+    value:
+    - id: 72057594037930272
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930269
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930273
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930269
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930287
+          mTarget:
+            objectRef: 72057594037930284
+      mOwnerInstanceId: 0
+--- !u!114 &1016128114963474095
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb99aecdd3d007a4c9dc5ef5ab2aec4b, type: 3}
+  m_Name: Dlg_7DC03A95
+  m_EditorClassIdentifier: 
+  id: 72057594037929283
+  technicalName: Dlg_7DC03A95
+  parentId: 72057594037929243
+  childrenIds: 7a07000000000001810700000000000188070000000000018f070000000000019607000000000001a007000000000001b507000000000001bf07000000000001c607000000000001a707000000000001cd07000000000001d207000000000001
+  mAttachments:
+    listIds: 9d010000000000016e01000000000001
+  mDisplayName: PC talks with witch 1
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "Cassandra Vindicraft tells the player that they need to go out into the
+    woods and gather 8 herbs (2 herbs for 1 normal health potion) so that they have
+    enough for the mother and the baby plus some extra in case they need it. \r\n\r\n."
+  mExternalId: 
+  mPosition: {x: 1042, y: 300}
+  mZIndex: 4
+  mSize: {x: 291, y: 200}
+  mShortId: 2109749909
+  mInputPins:
+    value:
+    - id: 72057594037929286
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929283
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929853
+          mTarget:
+            objectRef: 72057594037929850
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929287
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929283
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &1560248689557201877
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 615cd7cba2bd6c94db46df8c74b70bae, type: 3}
+  m_Name: Hub_959044C3
+  m_EditorClassIdentifier: 
+  id: 72057594037929606
+  technicalName: Hub_959044C3
+  parentId: 72057594037929265
+  childrenIds: 
+  mDisplayName: Hub 1
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 425, y: 450}
+  mZIndex: 17
+  mSize: {x: 175, y: 50}
+  mShortId: 2509259971
+  mInputPins:
+    value:
+    - id: 72057594037929608
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929606
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929609
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929606
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929455
+          mTarget:
+            objectRef: 72057594037929452
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929469
+          mTarget:
+            objectRef: 72057594037929466
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929462
+          mTarget:
+            objectRef: 72057594037929459
+      mOwnerInstanceId: 0
+--- !u!114 &1744878968561194667
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_C15D3F1B
+  m_EditorClassIdentifier: 
+  id: 72057594037930226
+  technicalName: DFr_C15D3F1B
+  parentId: 72057594037929332
+  childrenIds: 
+  mMenuText: How about strengthening the potions?
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928302
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Cassandra said you'd know what to do, something about strengthening the
+    potion.
+  mExternalId: 
+  mPosition: {x: 725, y: 225}
+  mZIndex: 2
+  mSize: {x: 225, y: 200}
+  mShortId: 3244113691
+  mInputPins:
+    value:
+    - id: 72057594037930229
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930226
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930230
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930226
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930251
+          mTarget:
+            objectRef: 72057594037930248
+      mOwnerInstanceId: 0
+--- !u!114 &1758700138179171374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b18de7e682fa6499769d7ddb539727, type: 3}
+  m_Name: Ufo_1F7A90D3
+  m_EditorClassIdentifier: 
+  id: 72057594037928205
+  technicalName: Ufo_1F7A90D3
+  parentId: 216172783392894804
+  childrenIds: 
+  mDisplayName: Miscellaneous
+  mExternalId: 
+  mShortId: 528126163
+  mZIndex: 0
+--- !u!114 &1806041056530533999
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb99aecdd3d007a4c9dc5ef5ab2aec4b, type: 3}
+  m_Name: Dlg_EBE8BA1A
+  m_EditorClassIdentifier: 
+  id: 72057594037929265
+  technicalName: Dlg_EBE8BA1A
+  parentId: 72057594037929243
+  childrenIds: e605000000000001ec05000000000001f305000000000001fa0500000000000104060000000000010b060000000000011206000000000001190600000000000186060000000000012006000000000001
+  mAttachments:
+    listIds: 8c010000000000016e01000000000001
+  mDisplayName: Player Character talks to father
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Amos Bailey explains the situation his wife and child are in and implores
+    you to save them both.
+  mExternalId: 
+  mPosition: {x: 667, y: 300}
+  mZIndex: 1
+  mSize: {x: 291, y: 200}
+  mShortId: 3957897754
+  mInputPins:
+    value:
+    - id: 72057594037929268
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929265
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929449
+          mTarget:
+            objectRef: 72057594037929446
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929269
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929265
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &1985562219948308978
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_D1EBDDAB
+  m_EditorClassIdentifier: 
+  id: 72057594037930352
+  technicalName: DFr_D1EBDDAB
+  parentId: 72057594037929332
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928345
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Oh, and before I forget let me have those herbs so I can brew the potions
+    while you are gone.
+  mExternalId: 
+  mPosition: {x: 3425, y: 225}
+  mZIndex: 36
+  mSize: {x: 225, y: 200}
+  mShortId: 3521895851
+  mInputPins:
+    value:
+    - id: 72057594037930355
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930352
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930356
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930352
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930369
+          mTarget:
+            objectRef: 72057594037930366
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930373
+          mTarget:
+            objectRef: 72057594037930372
+      mOwnerInstanceId: 0
+--- !u!114 &2167906314389421633
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2876efb6dba1ad34a9ef000d0e1d743a, type: 3}
+  m_Name: Ast_1F57EE57
+  m_EditorClassIdentifier: 
+  id: 72057594037928323
+  technicalName: Ast_1F57EE57
+  parentId: 72057594037928197
+  childrenIds: 
+  mDisplayName: Mother
+  mFilename: Mother(0083).jpg
+  mOriginalSource: file:///E:/Games Design/A Game of Cards_Witch Game/Data/Narrative/Assets/Mother.jpg
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 40, y: 40}
+  mZIndex: 2
+  mSize: {x: 256, y: 196}
+  mShortId: 525856343
+  mAssetRefPath: Assets/Images/Mother
+  mCachedAsset: {fileID: 0}
+  mCategory: 1
+--- !u!114 &2449443702656281519
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b18de7e682fa6499769d7ddb539727, type: 3}
+  m_Name: Ufo_25C03CAE
+  m_EditorClassIdentifier: 
+  id: 72057594037928197
+  technicalName: Ufo_25C03CAE
+  parentId: 216172783392894804
+  childrenIds: 7d010000000000018001000000000001830100000000000186010000000000018901000000000001
+  mDisplayName: Images
+  mExternalId: 
+  mShortId: 633355438
+  mZIndex: 0
+--- !u!114 &2465627992365971508
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5949e2752928b7843a0dc8ec79b1e988, type: 3}
+  m_Name: Jmp_E7472AD0
+  m_EditorClassIdentifier: 
+  id: 72057594037929938
+  technicalName: Jmp_E7472AD0
+  parentId: 72057594037929283
+  childrenIds: 
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 1900, y: 25}
+  mZIndex: 24
+  mSize: {x: 175, y: 150}
+  mShortId: 3880200912
+  mTarget:
+    objectRef: 72057594037929895
+  mTargetPin: 72057594037929897
+  mInputPins:
+    value:
+    - id: 72057594037929941
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929938
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value: []
+--- !u!114 &2825510695080993165
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b18de7e682fa6499769d7ddb539727, type: 3}
+  m_Name: Ufo_4CCE3F27
+  m_EditorClassIdentifier: 
+  id: 72057594037928199
+  technicalName: Ufo_4CCE3F27
+  parentId: 216172783392894804
+  childrenIds: 
+  mDisplayName: Videos
+  mExternalId: 
+  mShortId: 1288584999
+  mZIndex: 0
+--- !u!114 &3070256320464378197
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69bae069048b3d84b9af9294b11fa898, type: 3}
+  m_Name: FFr_E66CBC98
+  m_EditorClassIdentifier: 
+  id: 72057594037929417
+  technicalName: FFr_E66CBC98
+  parentId: 72057594037929243
+  childrenIds: 5f050000000000016d05000000000001
+  mAttachments:
+    listIds: 6e010000000000019d01000000000001
+  mDisplayName: ACT 2
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: The player goes to gather herbs in order to create them into a potion to
+    save the mother and the baby's lives.
+  mExternalId: 
+  mPosition: {x: 1450, y: 300}
+  mZIndex: 27
+  mSize: {x: 275, y: 200}
+  mShortId: 3865885848
+  mInputPins:
+    value:
+    - id: 72057594037929420
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929417
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929421
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929417
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &3149495770946931986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_E3F003C0
+  m_EditorClassIdentifier: 
+  id: 72057594037930326
+  technicalName: DFr_E3F003C0
+  parentId: 72057594037929332
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928345
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: And, the witching hour is between 3am  and 7am, its when we, as witches
+    can enter the dreamscape.
+  mExternalId: 
+  mPosition: {x: 3425, y: 0}
+  mZIndex: 28
+  mSize: {x: 225, y: 200}
+  mShortId: 3824157632
+  mInputPins:
+    value:
+    - id: 72057594037930329
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930326
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930330
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930326
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930336
+          mTarget:
+            objectRef: 72057594037930333
+      mOwnerInstanceId: 0
+--- !u!114 &3586870182061403398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_9A5E9AA9
+  m_EditorClassIdentifier: 
+  id: 72057594037930382
+  technicalName: DFr_9A5E9AA9
+  parentId: 72057594037929332
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928345
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Fine, suit yourself.
+  mExternalId: 
+  mPosition: {x: 4150, y: 475}
+  mZIndex: 42
+  mSize: {x: 225, y: 200}
+  mShortId: 2589891241
+  mInputPins:
+    value:
+    - id: 72057594037930385
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930382
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930386
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930382
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929336
+          mTarget:
+            objectRef: 72057594037929332
+      mOwnerInstanceId: 0
+--- !u!114 &3607247739916305224
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 615cd7cba2bd6c94db46df8c74b70bae, type: 3}
+  m_Name: Hub_27A1C6F0
+  m_EditorClassIdentifier: 
+  id: 72057594037930276
+  technicalName: Hub_27A1C6F0
+  parentId: 72057594037929332
+  childrenIds: 
+  mDisplayName: Hub 3
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 425, y: 425}
+  mZIndex: 12
+  mSize: {x: 175, y: 50}
+  mShortId: 664913648
+  mInputPins:
+    value:
+    - id: 72057594037930278
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930276
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930279
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930276
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930229
+          mTarget:
+            objectRef: 72057594037930226
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930235
+          mTarget:
+            objectRef: 72057594037930232
+      mOwnerInstanceId: 0
+--- !u!114 &3764846948404818467
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_A1C0CEB6
+  m_EditorClassIdentifier: 
+  id: 72057594037929857
+  technicalName: DFr_A1C0CEB6
+  parentId: 72057594037929283
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928349
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "You need to go to the woods, they should be just outside. \r\n\r\nGo there
+    and get me as many herbs as possible, preferably eight."
+  mExternalId: 
+  mPosition: {x: 675, y: 350}
+  mZIndex: 2
+  mSize: {x: 225, y: 200}
+  mShortId: 2713767606
+  mInputPins:
+    value:
+    - id: 72057594037929860
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929857
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929861
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929857
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929897
+          mTarget:
+            objectRef: 72057594037929895
+      mOwnerInstanceId: 0
+--- !u!114 &3916076811032210059
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2876efb6dba1ad34a9ef000d0e1d743a, type: 3}
+  m_Name: Ast_2B7A15B3
+  m_EditorClassIdentifier: 
+  id: 72057594037928320
+  technicalName: Ast_2B7A15B3
+  parentId: 72057594037928197
+  childrenIds: 
+  mDisplayName: Father
+  mFilename: Father(0080).png
+  mOriginalSource: file:///E:/Games Design/A Game of Cards_Witch Game/Data/Narrative/Assets/Father.png
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 20, y: 20}
+  mZIndex: 1
+  mSize: {x: 256, y: 196}
+  mShortId: 729421235
+  mAssetRefPath: Assets/Images/Father
+  mCachedAsset: {fileID: 0}
+  mCategory: 1
+--- !u!114 &3935236454512884084
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69bae069048b3d84b9af9294b11fa898, type: 3}
+  m_Name: FFr_AA23B409
+  m_EditorClassIdentifier: 
+  id: 72057594037929243
+  technicalName: FFr_AA23B409
+  parentId: 216172783251375095
+  childrenIds: c905000000000001d20500000000000131050000000000013c0500000000000143050000000000014a050000000000015105000000000001a610000000000001
+  mAttachments:
+    listIds: 
+  mDisplayName: Vertical Slice
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: The player character and their fellow witches rush to gather ingredients
+    in order to save the lives of a new born baby, and its mother that is in critical
+    condition.
+  mExternalId: 
+  mPosition: {x: -925, y: -200}
+  mZIndex: 1
+  mSize: {x: 275, y: 200}
+  mShortId: 2854466569
+  mInputPins:
+    value:
+    - id: 72057594037929246
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929243
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929247
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929243
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &4179361779196489157
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69bae069048b3d84b9af9294b11fa898, type: 3}
+  m_Name: FFr_657B2E70
+  m_EditorClassIdentifier: 
+  id: 72057594037929402
+  technicalName: FFr_657B2E70
+  parentId: 72057594037929426
+  childrenIds: 9f090000000000017809000000000001ae09000000000001b409000000000001bc09000000000001c309000000000001ca09000000000001d109000000000001d809000000000001df09000000000001470d0000000000015b100000000000016810000000000001
+  mAttachments:
+    listIds: 8c010000000000019d01000000000001950100000000000122050000000000016e010000000000016e01000000000001
+  mDisplayName: PC returns to witch 1 with regents
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: The player character returns to save whomever they can with the regents
+    that they have collected.
+  mExternalId: 
+  mPosition: {x: 1189, y: 341}
+  mZIndex: 24
+  mSize: {x: 275, y: 200}
+  mShortId: 1702571632
+  mInputPins:
+    value:
+    - id: 72057594037929405
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929402
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929406
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929402
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &4181571472187856287
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 057a743a4ed58e74c99c8c9c0abb200a, type: 3}
+  m_Name: Ins_6C60886A
+  m_EditorClassIdentifier: 
+  id: 72057594037932123
+  technicalName: Ins_6C60886A
+  parentId: 72057594037929402
+  childrenIds: 
+  mDisplayName: VerticalSlice.motherLiving = true
+  mText: 
+  mExternalId: 
+  mPosition: {x: 2150, y: 275}
+  mZIndex: 54
+  mSize: {x: 225, y: 100}
+  mShortId: 1818265706
+  mExpression:
+    value:
+      handlerId: 5
+      ownerId: 72057594037932123
+      ownerInstanceId: 0
+      mRawScript: VerticalSlice.motherLiving = true
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mInputPins:
+    value:
+    - id: 72057594037932125
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932123
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037932126
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932123
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930445
+          mTarget:
+            objectRef: 72057594037930442
+      mOwnerInstanceId: 0
+--- !u!114 &4264426943014817746
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7399a3f07188824dad4f6f34f0a628f, type: 3}
+  m_Name: Ntt_9FD70B8F
+  m_EditorClassIdentifier: 
+  id: 72057594037928332
+  technicalName: Ntt_9FD70B8F
+  parentId: 216172785005863603
+  childrenIds: 
+  mAttachments:
+    listIds: 
+  mDisplayName: Amos Bailey (Father)
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: The father, first quest giver.
+  mExternalId: 
+  mPosition: {x: 289, y: 77}
+  mZIndex: 1
+  mSize: {x: 256, y: 196}
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 72057594037928320
+  mShortId: 2681670543
+  mTemplate:
+    value:
+      mDefaultBasicCharacterFeature:
+        value:
+          mAge: 32
+          mSpecies: Human
+          mBornIn: 
+          mSex: 0
+          mOccupation: Lumberjack
+          mAccent: Manly
+          mPersonality: A normal man, the father is well mannered, polite and kind,
+            he only really cares for his family and the outside world doesn't have
+            much meaning to him other than that with which he is forced to interact
+            with. He is through and through a strong man, lacking ambition but a
+            man whose sole focus is his family and the love of his life.
+          mAppearance: 
+          mOwnerId: 72057594037928332
+          mOwnerInstanceId: 0
+      mOwnerId: 72057594037928332
+      mOwnerInstanceId: 0
+--- !u!114 &4280618693261228828
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_0D690743
+  m_EditorClassIdentifier: 
+  id: 72057594037930414
+  technicalName: DFr_0D690743
+  parentId: 72057594037929402
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928341
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Evelyn's condition seems to have worsened, she needs serious medical assistance
+    now.
+  mExternalId: 
+  mPosition: {x: 1400, y: 225}
+  mZIndex: 6
+  mSize: {x: 225, y: 200}
+  mShortId: 224986947
+  mInputPins:
+    value:
+    - id: 72057594037930417
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930414
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930418
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930414
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930431
+          mTarget:
+            objectRef: 72057594037930428
+      mOwnerInstanceId: 0
+--- !u!114 &4412465433142442628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb99aecdd3d007a4c9dc5ef5ab2aec4b, type: 3}
+  m_Name: Dlg_BAEA583E
+  m_EditorClassIdentifier: 
+  id: 72057594037929311
+  technicalName: Dlg_BAEA583E
+  parentId: 72057594037929417
+  childrenIds: a408000000000001aa08000000000001
+  mAttachments:
+    listIds: 9d010000000000016e01000000000001
+  mDisplayName: PC talks to witch 1 again
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Cassandra tells the player to use the cauldron in order to make the potions.
+  mExternalId: 
+  mPosition: {x: 828, y: 376}
+  mZIndex: 8
+  mSize: {x: 291, y: 200}
+  mShortId: 3135920190
+  mInputPins:
+    value:
+    - id: 72057594037929314
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929311
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930151
+          mTarget:
+            objectRef: 72057594037930148
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929315
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929311
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &4596653273733749988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69bae069048b3d84b9af9294b11fa898, type: 3}
+  m_Name: FFr_E573097A
+  m_EditorClassIdentifier: 
+  id: 72057594037932100
+  technicalName: FFr_E573097A
+  parentId: 72057594037930399
+  childrenIds: 
+  mAttachments:
+    listIds: 
+  mDisplayName: Make baby health pot
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 2075, y: 275}
+  mZIndex: 5
+  mSize: {x: 275, y: 200}
+  mShortId: 3849521530
+  mInputPins:
+    value:
+    - id: 72057594037932101
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932100
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037932102
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932100
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037932107
+          mTarget:
+            objectRef: 72057594037932106
+      mOwnerInstanceId: 0
+--- !u!114 &4864223812034674507
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5949e2752928b7843a0dc8ec79b1e988, type: 3}
+  m_Name: Jmp_3303705D
+  m_EditorClassIdentifier: 
+  id: 72057594037929933
+  technicalName: Jmp_3303705D
+  parentId: 72057594037929283
+  childrenIds: 
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 2225, y: 600}
+  mZIndex: 22
+  mSize: {x: 175, y: 150}
+  mShortId: 855863389
+  mTarget:
+    objectRef: 72057594037929895
+  mTargetPin: 72057594037929897
+  mInputPins:
+    value:
+    - id: 72057594037929936
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929933
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value: []
+--- !u!114 &4991255232439282135
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4c1780a65439d647890a46233d13687, type: 3}
+  m_Name: Cnd_981D198F
+  m_EditorClassIdentifier: 
+  id: 72057594037932094
+  technicalName: Cnd_981D198F
+  parentId: 72057594037930399
+  childrenIds: 
+  mDisplayName: VerticalSlice.babySave == true
+  mText: 
+  mExternalId: 
+  mPosition: {x: 1750, y: 450}
+  mZIndex: 8
+  mSize: {x: 225, y: 100}
+  mShortId: 2552043919
+  mExpression:
+    value:
+      handlerId: 2
+      ownerId: 72057594037932094
+      ownerInstanceId: 0
+      mRawScript: VerticalSlice.babySave == true
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mInputPins:
+    value:
+    - id: 72057594037932096
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932094
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037932097
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932094
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037932101
+          mTarget:
+            objectRef: 72057594037932100
+      mOwnerInstanceId: 0
+    - id: 72057594037932098
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932094
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930403
+          mTarget:
+            objectRef: 72057594037930399
+      mOwnerInstanceId: 0
+--- !u!114 &5009545143021009696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_19CEF0AF
+  m_EditorClassIdentifier: 
+  id: 72057594037929871
+  technicalName: DFr_19CEF0AF
+  parentId: 72057594037929283
+  childrenIds: 
+  mMenuText: Ok, I'll be back shortly!
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928302
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Ok Cass, got it, eight herbs, ill be back as soon as I can, keep them breathing!
+  mExternalId: 
+  mPosition: {x: 1250, y: 350}
+  mZIndex: 6
+  mSize: {x: 225, y: 200}
+  mShortId: 432992431
+  mInputPins:
+    value:
+    - id: 72057594037929874
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929871
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929875
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929871
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929287
+          mTarget:
+            objectRef: 72057594037929283
+      mOwnerInstanceId: 0
+--- !u!114 &5097571918618088025
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2876efb6dba1ad34a9ef000d0e1d743a, type: 3}
+  m_Name: Ast_3D848238
+  m_EditorClassIdentifier: 
+  id: 72057594037928326
+  technicalName: Ast_3D848238
+  parentId: 72057594037928197
+  childrenIds: 
+  mDisplayName: Witch 2
+  mFilename: Witch_2(0086).png
+  mOriginalSource: file:///E:/Games Design/A Game of Cards_Witch Game/Data/Narrative/Assets/Witch
+    2.png
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 60, y: 60}
+  mZIndex: 3
+  mSize: {x: 256, y: 196}
+  mShortId: 1032094264
+  mAssetRefPath: Assets/Images/Witch_2
+  mCachedAsset: {fileID: 0}
+  mCategory: 1
+--- !u!114 &5598904343155575868
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb99aecdd3d007a4c9dc5ef5ab2aec4b, type: 3}
+  m_Name: Dlg_AC0FDAB4
+  m_EditorClassIdentifier: 
+  id: 72057594037929297
+  technicalName: Dlg_AC0FDAB4
+  parentId: 72057594037929243
+  childrenIds: 
+  mAttachments:
+    listIds: 22050000000000016e01000000000001
+  mDisplayName: PC Interacts with baby
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: The new born babe is asleep, though its breathing seems shallow and forced,
+    its clinging on to life, but for how much longer?
+  mExternalId: 
+  mPosition: {x: 1042, y: 800}
+  mZIndex: 6
+  mSize: {x: 291, y: 200}
+  mShortId: 2886720180
+  mInputPins:
+    value:
+    - id: 72057594037929300
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929297
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+    - id: 72057594037929734
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929297
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929301
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929297
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &5599794155960160949
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7399a3f07188824dad4f6f34f0a628f, type: 3}
+  m_Name: Ntt_CBF1B32B
+  m_EditorClassIdentifier: 
+  id: 72057594037928345
+  technicalName: Ntt_CBF1B32B
+  parentId: 216172785005863603
+  childrenIds: 
+  mAttachments:
+    listIds: 
+  mDisplayName: Nyx (Witch 2 Mother)
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: The witch, who helps with the mother and is connected to her.
+  mExternalId: 
+  mPosition: {x: 60, y: 60}
+  mZIndex: 3
+  mSize: {x: 256, y: 196}
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 72057594037928329
+  mShortId: 3421614891
+  mTemplate:
+    value:
+      mDefaultBasicCharacterFeature:
+        value:
+          mAge: 24
+          mSpecies: Human
+          mBornIn: 
+          mSex: 1
+          mOccupation: Witch
+          mAccent: 
+          mPersonality: Despite her dark and cold appearance she is actually quite
+            the warm and nurturing lady. She is kind and always good natured, wishing
+            to help everyone. She is honest and makes no point in hiding what her
+            intentions are even though some might think she is hiding something dark.
+            That being said, if you are on her bad side, she will be your worst nightmare.
+          mAppearance: 
+          mOwnerId: 72057594037928345
+          mOwnerInstanceId: 0
+      mOwnerId: 72057594037928345
+      mOwnerInstanceId: 0
+--- !u!114 &5908996665129794295
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb99aecdd3d007a4c9dc5ef5ab2aec4b, type: 3}
+  m_Name: Dlg_F74FBDBE
+  m_EditorClassIdentifier: 
+  id: 72057594037929290
+  technicalName: Dlg_F74FBDBE
+  parentId: 72057594037929243
+  childrenIds: 7207000000000001
+  mAttachments:
+    listIds: 99010000000000016e01000000000001
+  mDisplayName: PC interacts with cauldron
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Nyx tells the player that they need to go check on Cassandra first.
+  mExternalId: 
+  mPosition: {x: 1042, y: 550}
+  mZIndex: 5
+  mSize: {x: 291, y: 200}
+  mShortId: 4149198270
+  mInputPins:
+    value:
+    - id: 72057594037929293
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929290
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929845
+          mTarget:
+            objectRef: 72057594037929842
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929294
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929290
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &6010308519937509800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_17823419
+  m_EditorClassIdentifier: 
+  id: 72057594037930428
+  technicalName: DFr_17823419
+  parentId: 72057594037929402
+  childrenIds: 
+  mMenuText: Administer strengthened healing potion.
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928302
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 1800, y: 225}
+  mZIndex: 10
+  mSize: {x: 225, y: 200}
+  mShortId: 394408985
+  mInputPins:
+    value:
+    - id: 72057594037930431
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930428
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930432
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930428
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037932125
+          mTarget:
+            objectRef: 72057594037932123
+      mOwnerInstanceId: 0
+--- !u!114 &6298836813034097069
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb99aecdd3d007a4c9dc5ef5ab2aec4b, type: 3}
+  m_Name: Dlg_5492109D
+  m_EditorClassIdentifier: 
+  id: 72057594037929325
+  technicalName: Dlg_5492109D
+  parentId: 72057594037929417
+  childrenIds: bc08000000000001b508000000000001c308000000000001ca08000000000001d208000000000001e008000000000001
+  mAttachments:
+    listIds: 9d010000000000016e01000000000001
+  mDisplayName: PC talks to witch 1 again
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: The player returns to Cassandra who administers both of the health potions
+    to the mother and the baby, but sees that they have little effect.
+  mExternalId: 
+  mPosition: {x: 1528, y: 376}
+  mZIndex: 10
+  mSize: {x: 291, y: 200}
+  mShortId: 1418858653
+  mInputPins:
+    value:
+    - id: 72057594037929328
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929325
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930168
+          mTarget:
+            objectRef: 72057594037930165
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929329
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929325
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &6615849815958643863
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_29F55892
+  m_EditorClassIdentifier: 
+  id: 72057594037929842
+  technicalName: DFr_29F55892
+  parentId: 72057594037929290
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928345
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: You don't need the cauldron right now. Go and talk to Cassandra, she needs
+    your help.
+  mExternalId: 
+  mPosition: {x: 400, y: 375}
+  mZIndex: 0
+  mSize: {x: 225, y: 200}
+  mShortId: 703944850
+  mInputPins:
+    value:
+    - id: 72057594037929845
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929842
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929846
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929842
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929294
+          mTarget:
+            objectRef: 72057594037929290
+      mOwnerInstanceId: 0
+--- !u!114 &6786459324009092877
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69bae069048b3d84b9af9294b11fa898, type: 3}
+  m_Name: FFr_83B2F86F
+  m_EditorClassIdentifier: 
+  id: 72057594037930172
+  technicalName: FFr_83B2F86F
+  parentId: 72057594037929325
+  childrenIds: 
+  mAttachments:
+    listIds: 9d01000000000001
+  mDisplayName: Cassandra administers the potions
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Cassandra proceeds to give the potion to the baby and the mother but clearly
+    there is no effect.
+  mExternalId: 
+  mPosition: {x: 700, y: 400}
+  mZIndex: 2
+  mSize: {x: 275, y: 200}
+  mShortId: 2209544303
+  mInputPins:
+    value:
+    - id: 72057594037930175
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930172
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930176
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930172
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930182
+          mTarget:
+            objectRef: 72057594037930179
+      mOwnerInstanceId: 0
+--- !u!114 &7319468338538985657
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 057a743a4ed58e74c99c8c9c0abb200a, type: 3}
+  m_Name: Ins_6929775C
+  m_EditorClassIdentifier: 
+  id: 72057594037932089
+  technicalName: Ins_6929775C
+  parentId: 72057594037930399
+  childrenIds: 
+  mDisplayName: VerticalSlice.motherHealthPot = 1
+  mText: 
+  mExternalId: 
+  mPosition: {x: 1425, y: 325}
+  mZIndex: 7
+  mSize: {x: 225, y: 100}
+  mShortId: 1764325212
+  mExpression:
+    value:
+      handlerId: 3
+      ownerId: 72057594037932089
+      ownerInstanceId: 0
+      mRawScript: VerticalSlice.motherHealthPot = 1
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mInputPins:
+    value:
+    - id: 72057594037932091
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932089
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037932092
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932089
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037932096
+          mTarget:
+            objectRef: 72057594037932094
+      mOwnerInstanceId: 0
+--- !u!114 &7324348848113449995
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_842A748E
+  m_EditorClassIdentifier: 
+  id: 72057594037930456
+  technicalName: DFr_842A748E
+  parentId: 72057594037929402
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928349
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Looks, like she will be fine, let her get some rest, you did well.
+  mExternalId: 
+  mPosition: {x: 2900, y: 225}
+  mZIndex: 18
+  mSize: {x: 225, y: 200}
+  mShortId: 2217374862
+  mInputPins:
+    value:
+    - id: 72057594037930459
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930456
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930460
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930456
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &7554246139023561710
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_DAAE5D56
+  m_EditorClassIdentifier: 
+  id: 72057594037929919
+  technicalName: DFr_DAAE5D56
+  parentId: 72057594037929283
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928349
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Oh little witch, do the math. If we need two herbs for one potion, then
+    we need four herbs to help them both.
+  mExternalId: 
+  mPosition: {x: 1575, y: 575}
+  mZIndex: 18
+  mSize: {x: 225, y: 200}
+  mShortId: 3668860246
+  mInputPins:
+    value:
+    - id: 72057594037929922
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929919
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929923
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929919
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929929
+          mTarget:
+            objectRef: 72057594037929926
+      mOwnerInstanceId: 0
+--- !u!114 &7554809572220531116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_99CB5927
+  m_EditorClassIdentifier: 
+  id: 72057594037930148
+  technicalName: DFr_99CB5927
+  parentId: 72057594037929311
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928349
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: I see you have them, ok, go to the cauldron over there and start brewing,
+    make sure you place the right ingredients in the right order or you'll just be
+    wasting them.
+  mExternalId: 
+  mPosition: {x: 375, y: 375}
+  mZIndex: 0
+  mSize: {x: 225, y: 200}
+  mShortId: 2580240679
+  mInputPins:
+    value:
+    - id: 72057594037930151
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930148
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930152
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930148
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930157
+          mTarget:
+            objectRef: 72057594037930154
+      mOwnerInstanceId: 0
+--- !u!114 &7662014697542403096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b18de7e682fa6499769d7ddb539727, type: 3}
+  m_Name: Ufo_20FC569C
+  m_EditorClassIdentifier: 
+  id: 72057594037928203
+  technicalName: Ufo_20FC569C
+  parentId: 216172783392894804
+  childrenIds: 
+  mDisplayName: Documents
+  mExternalId: 
+  mShortId: 553408156
+  mZIndex: 0
+--- !u!114 &7783057407448070833
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_94D1C562
+  m_EditorClassIdentifier: 
+  id: 72057594037930345
+  technicalName: DFr_94D1C562
+  parentId: 72057594037929332
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928345
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: (Regent A) and (regent B) will help the mother, while (regent C) and (regent
+    D) will help her son.
+  mExternalId: 
+  mPosition: {x: 3075, y: 225}
+  mZIndex: 34
+  mSize: {x: 225, y: 200}
+  mShortId: 2496775522
+  mInputPins:
+    value:
+    - id: 72057594037930348
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930345
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930349
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930345
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930355
+          mTarget:
+            objectRef: 72057594037930352
+      mOwnerInstanceId: 0
+--- !u!114 &8179908325050142178
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_87A6F8EC
+  m_EditorClassIdentifier: 
+  id: 72057594037930165
+  technicalName: DFr_87A6F8EC
+  parentId: 72057594037929325
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928349
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Ok, give them here.
+  mExternalId: 
+  mPosition: {x: 350, y: 400}
+  mZIndex: 0
+  mSize: {x: 225, y: 200}
+  mShortId: 2275866860
+  mInputPins:
+    value:
+    - id: 72057594037930168
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930165
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930169
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930165
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.5764706, g: 0.75686276, b: 0.8, a: 1}
+          mTargetPin: 72057594037930175
+          mTarget:
+            objectRef: 72057594037930172
+      mOwnerInstanceId: 0
+--- !u!114 &8184711782276466157
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_110E8DBC
+  m_EditorClassIdentifier: 
+  id: 72057594037930303
+  technicalName: DFr_110E8DBC
+  parentId: 72057594037929332
+  childrenIds: 
+  mMenuText: Ok, i'm on it!
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928302
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Ok, Nyx, I'll get to it as fast as possible
+  mExternalId: 
+  mPosition: {x: 2350, y: 225}
+  mZIndex: 22
+  mSize: {x: 225, y: 200}
+  mShortId: 286166460
+  mInputPins:
+    value:
+    - id: 72057594037930306
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930303
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930307
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930303
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930341
+          mTarget:
+            objectRef: 72057594037930338
+      mOwnerInstanceId: 0
+--- !u!114 &8229702232405024520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_F1CEBAF6
+  m_EditorClassIdentifier: 
+  id: 72057594037930420
+  technicalName: DFr_F1CEBAF6
+  parentId: 72057594037929402
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037929250
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Baby Luke's breathing has all but nearly stopped, he needs help, and he
+    needs it now.
+  mExternalId: 
+  mPosition: {x: 1400, y: 475}
+  mZIndex: 8
+  mSize: {x: 225, y: 200}
+  mShortId: 4056857334
+  mInputPins:
+    value:
+    - id: 72057594037930423
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930420
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037930424
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930420
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930436
+          mTarget:
+            objectRef: 72057594037930435
+      mOwnerInstanceId: 0
+--- !u!114 &8407336015340271178
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b18de7e682fa6499769d7ddb539727, type: 3}
+  m_Name: Ufo_FF237B2A
+  m_EditorClassIdentifier: 
+  id: 72057594037928201
+  technicalName: Ufo_FF237B2A
+  parentId: 216172783392894804
+  childrenIds: 
+  mDisplayName: Audio
+  mExternalId: 
+  mShortId: 4280515370
+  mZIndex: 0
+--- !u!114 &8570895808165634058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb99aecdd3d007a4c9dc5ef5ab2aec4b, type: 3}
+  m_Name: Dlg_FADE0403
+  m_EditorClassIdentifier: 
+  id: 72057594037929332
+  technicalName: Dlg_FADE0403
+  parentId: 72057594037929426
+  childrenIds: eb08000000000001f208000000000001f80800000000000108090000000000010f0900000000000116090000000000011d0900000000000131090000000000013f0900000000000148090000000000014f0900000000000156090000000000016209000000000001690900000000000170090000000000017e0900000000000184090000000000018e090000000000019509000000000001240900000000000138090000000000012c090000000000015d09000000000001
+  mAttachments:
+    listIds: 99010000000000016e01000000000001
+  mDisplayName: PC talks to witch 2
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: Nyx tells the player that they need regents for stronger potions and that
+    the player needs to go back into the woods during the witching hour to collect
+    these regents.
+  mExternalId: 
+  mPosition: {x: 481, y: 341}
+  mZIndex: 11
+  mSize: {x: 291, y: 200}
+  mShortId: 4208854019
+  mInputPins:
+    value:
+    - id: 72057594037929335
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929332
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930222
+          mTarget:
+            objectRef: 72057594037930219
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929336
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929332
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &8816652496852512666
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 057a743a4ed58e74c99c8c9c0abb200a, type: 3}
+  m_Name: Ins_C32E5B6E
+  m_EditorClassIdentifier: 
+  id: 72057594037932136
+  technicalName: Ins_C32E5B6E
+  parentId: 72057594037929402
+  childrenIds: 
+  mDisplayName: VerticalSlice.babyLiving = true
+  mText: 
+  mExternalId: 
+  mPosition: {x: 2150, y: 525}
+  mZIndex: 54
+  mSize: {x: 225, y: 100}
+  mShortId: 3274595182
+  mExpression:
+    value:
+      handlerId: 6
+      ownerId: 72057594037932136
+      ownerInstanceId: 0
+      mRawScript: VerticalSlice.babyLiving = true
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mInputPins:
+    value:
+    - id: 72057594037932137
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932136
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037932138
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932136
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037930452
+          mTarget:
+            objectRef: 72057594037930449
+      mOwnerInstanceId: 0
+--- !u!114 &8946382700539103571
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a4721b9c165974a86cc2ddac11c3ed, type: 3}
+  m_Name: DFr_47FE5CF2
+  m_EditorClassIdentifier: 
+  id: 72057594037929490
+  technicalName: DFr_47FE5CF2
+  parentId: 72057594037929265
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928332
+  mSplitHeight: 64
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: I... I don't know, your sisters were here, helping my wife give birth, she
+    was in terrible pain, then luke... he came out, silent... oh devils.
+  mExternalId: 
+  mPosition: {x: 1050, y: 150}
+  mZIndex: 11
+  mSize: {x: 225, y: 200}
+  mShortId: 1207852274
+  mInputPins:
+    value:
+    - id: 72057594037929493
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929490
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929494
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929490
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929500
+          mTarget:
+            objectRef: 72057594037929497
+      mOwnerInstanceId: 0
+--- !u!114 &9055082784233091391
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4c1780a65439d647890a46233d13687, type: 3}
+  m_Name: Cnd_C79FAF69
+  m_EditorClassIdentifier: 
+  id: 72057594037932064
+  technicalName: Cnd_C79FAF69
+  parentId: 72057594037930399
+  childrenIds: 
+  mDisplayName: VerticalSlice.motherSave == true
+  mText: 
+  mExternalId: 
+  mPosition: {x: 725, y: 450}
+  mZIndex: 26
+  mSize: {x: 225, y: 100}
+  mShortId: 3349131113
+  mExpression:
+    value:
+      handlerId: 1
+      ownerId: 72057594037932064
+      ownerInstanceId: 0
+      mRawScript: VerticalSlice.motherSave == true
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mInputPins:
+    value:
+    - id: 72057594037932065
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932064
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037932066
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932064
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037932085
+          mTarget:
+            objectRef: 72057594037932082
+      mOwnerInstanceId: 0
+    - id: 72057594037932067
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037932064
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037932096
+          mTarget:
+            objectRef: 72057594037932094
+      mOwnerInstanceId: 0
+--- !u!114 &9136020292435860941
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5949e2752928b7843a0dc8ec79b1e988, type: 3}
+  m_Name: Jmp_7B9C104F
+  m_EditorClassIdentifier: 
+  id: 72057594037930333
+  technicalName: Jmp_7B9C104F
+  parentId: 72057594037929332
+  childrenIds: 
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 3775, y: 25}
+  mZIndex: 30
+  mSize: {x: 175, y: 150}
+  mShortId: 2073825359
+  mTarget:
+    objectRef: 72057594037930296
+  mTargetPin: 72057594037930298
+  mInputPins:
+    value:
+    - id: 72057594037930336
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037930333
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value: []
