@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using Assets.Scripts.Core_Layer;
+using Assets.Scripts.Scriptable_Objects;
 using UnityEngine;
 using CharacterController = UnityEngine.CharacterController;
 namespace Assets.Scripts.Character_Controller_Layer
@@ -8,6 +9,11 @@ namespace Assets.Scripts.Character_Controller_Layer
     public class PlayerManager : MonoBehaviour
     {
         public bool DebugMode;
+        
+        public UserStatsManager UserStatsManager;
+        public BaseUserManager BaseUserManager;
+        
+        public Player Player;
         
         public GameObject Athame;
         public GameObject Wand;
@@ -110,6 +116,44 @@ namespace Assets.Scripts.Character_Controller_Layer
             {
                 OrbitCamera.TargetDistance = (OrbitCamera.TargetDistance == 0f) ? OrbitCamera.DefaultDistance : 0f;
             }
+        }
+
+        private void InitializePlayer()
+        {
+            BaseUserManager.ResetUsers();
+            BaseUserManager.AddNewPlayer(
+                Player.playerName,
+                //Movement
+                Player.movementSpeed,
+                Player.globalMovementSpeedMultiplier,
+                Player.meleeMovementSpeedMultiplier,
+                Player.castingMovementSpeedMultiplier,
+                Player.stableMovementSharpness,
+                Player.orientationSharpness,
+                //Light Attack
+                Player.lightAttackDuration,
+                Player.lightAttackMovementSpeedMultiplier,
+                Player.lightAttackCooldown,
+                Player.lightAttackDirectionLockDuration,
+                Player.lightAttackRange,
+                Player.lightAttackRadius,
+                //Heavy Attack
+                Player.heavyAttackDuration,
+                Player.heavyAttackMovementSpeedMultiplier,
+                Player.heavyAttackCooldown,
+                Player.heavyAttackDirectionLockDuration,
+                Player.heavyAttackRange,
+                Player.heavyAttackRadius,
+                //Charging
+                Player.chargeSpeed,
+                Player.maxChargeTime,
+                Player.stoppedTime,
+                Player.chargeCooldown,
+                Player.canDoubleCharge,
+                
+                Player.score,
+                Player.health
+                );
         }
 
         

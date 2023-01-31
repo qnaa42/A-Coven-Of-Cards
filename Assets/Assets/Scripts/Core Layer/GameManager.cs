@@ -53,11 +53,7 @@ namespace Assets.Scripts.Core_Layer
 
             if (baseUserManager.GetPlayerList().Count < 1) // get the player list from base user manager component and check players are in it
             {
-                // reset base user manager
-                baseUserManager.ResetUsers();
-
-                // add a new player to the game
-                baseUserManager.AddNewPlayer();
+                
 
                 
             }

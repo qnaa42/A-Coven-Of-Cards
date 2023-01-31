@@ -36,7 +36,39 @@ namespace Assets.Scripts.Character_Controller_Layer
             return global_UserDatas;
         }
         
-        public int AddNewPlayer()
+        public int AddNewPlayer(
+        string playerName,
+        //Movement
+        float movementSpeed,
+        float globalMovementSpeedMultiplier,
+        float meleeMovementSpeedMultiplier,
+        float castingMovementSpeedMultiplier,
+        float stableMovementSharpness,
+        float orientationSharpness,
+        //Light Attack
+        float lightAttackDuration,
+        float lightAttackMovementSpeedMultiplier,
+        float lightAttackCooldown,
+        float lightAttackDirectionLockDuration,
+        float lightAttackRange,
+        float lightAttackRadius,
+        //Heavy Attack
+        float heavyAttackDuration,
+        float heavyAttackMovementSpeedMultiplier,
+        float heavyAttackCooldown,
+        float heavyAttackDirectionLockDuration,
+        float heavyAttackRange,
+        float heavyAttackRadius,
+        //Charging
+        float chargeSpeed,
+        float maxChargeTime,
+        float stoppedTime,
+        float chargeCooldown,
+        bool canDoubleCharge,
+        
+        int score,
+        int health
+            )
         {
             if (!didInit)
                 Init();
@@ -44,36 +76,38 @@ namespace Assets.Scripts.Character_Controller_Layer
             var newUser = new UserData
             {
                 id = global_UserDatas.Count,
-                playerName = "Default",
+                
+                playerName = playerName,
                 //Movement
-                movementSpeed = 7.5f,
-                globalMovementSpeedMultiplier = 1.0f,
-                meleeMovementSpeedMultiplier = 1.0f,
-                castingMovementSpeedMultiplier = 0.8f,
-                stableMovementSharpness = 50,
-                orientationSharpness = 50,
+                movementSpeed = movementSpeed,
+                globalMovementSpeedMultiplier = globalMovementSpeedMultiplier,
+                meleeMovementSpeedMultiplier = meleeMovementSpeedMultiplier,
+                castingMovementSpeedMultiplier = castingMovementSpeedMultiplier,
+                stableMovementSharpness = stableMovementSharpness,
+                orientationSharpness = orientationSharpness,
                 //Light Attack
-                lightAttackDuration = 0.5f,
-                lightAttackMovementSpeedMultiplier = 0.1f,
-                lightAttackCooldown = 0.15f,
-                lightAttackDirectionLockDuration = 0.25f,
-                lightAttackRange = 1.0f,
-                lightAttackRadius = 0.44f,
+                lightAttackDuration = lightAttackDuration,
+                lightAttackMovementSpeedMultiplier = lightAttackMovementSpeedMultiplier,
+                lightAttackCooldown = lightAttackCooldown,
+                lightAttackDirectionLockDuration = lightAttackDirectionLockDuration,
+                lightAttackRange = lightAttackRange,
+                lightAttackRadius = lightAttackRadius,
                 //Heavy Attack
-                heavyAttackDuration = 0.7f,
-                heavyAttackMovementSpeedMultiplier = 0.05f,
-                heavyAttackCooldown = 0.25f,
-                heavyAttackDirectionLockDuration = 0.35f,
-                heavyAttackRange = 0.4f,
-                heavyAttackRadius = 1.0f,
+                heavyAttackDuration = heavyAttackDuration,
+                heavyAttackMovementSpeedMultiplier = heavyAttackMovementSpeedMultiplier,
+                heavyAttackCooldown = heavyAttackCooldown,
+                heavyAttackDirectionLockDuration = heavyAttackDirectionLockDuration,
+                heavyAttackRange = heavyAttackRange,
+                heavyAttackRadius = heavyAttackRadius,
                 //Charging
-                chargeSpeed = 50,
-                maxChargeTime = 0.3f,
-                stoppedTime = 0.3f,
-                chargeCooldown = 1.5f,
-                canDoubleCharge = false,
-                score = 0,
-                health = 100
+                chargeSpeed = chargeSpeed,
+                maxChargeTime = maxChargeTime,
+                stoppedTime = stoppedTime,
+                chargeCooldown = chargeCooldown,
+                canDoubleCharge = canDoubleCharge,
+                
+                score = score,
+                health = health
             };
 
             global_UserDatas.Add(newUser);

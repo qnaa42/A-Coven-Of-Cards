@@ -6,32 +6,11 @@
       <change beforePath="$PROJECT_DIR$/.plastic/plastic.wktree" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.wktree" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/Character Controller Layer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/Character Controller Layer.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/Manager Layer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/Manager Layer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/RunemarkStudio/DarkFantasyKit [Free]/Readme.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/RunemarkStudio/DarkFantasyKit [Free]/Readme/Parts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/RunemarkStudio/DarkFantasyKit [Free]/Readme/Parts/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/RunemarkStudio/DarkFantasyKit [Free]/Readme/Parts/Editor/ReadmeEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/RunemarkStudio/DarkFantasyKit [Free]/Readme/Parts/Editor/ReadmeEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/RunemarkStudio/DarkFantasyKit [Free]/Readme/Parts/RMLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/RunemarkStudio/DarkFantasyKit [Free]/Readme/Parts/RMLogo.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/RunemarkStudio/DarkFantasyKit [Free]/Readme/Parts/Readme.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/RunemarkStudio/DarkFantasyKit [Free]/Readme/Parts/Readme.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/RunemarkStudio/DarkFantasyKit [Free]/Readme/Readme.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/RunemarkStudio/DarkFantasyKit [Free]/Readme/Readme.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/RunemarkStudio/DarkFantasyKit [Free]/Readme/UserGuide [free].pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/RunemarkStudio/DarkFantasyKit [Free]/Readme/UserGuide [free].pdf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Prefabs/Character Controller Layer/Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Prefabs/Character Controller Layer/Camera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Prefabs/Character Controller Layer/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Prefabs/Character Controller Layer/Character.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Momchil's Work in process/ArticyImporter/Content/Generated/ArticyEditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Momchil's Work in process/ArticyImporter/Content/Generated/ArticyEditorSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/Base/BaseUserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/Base/BaseUserManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/Base/Data/UserData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/Base/Data/UserData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/CharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/CharacterController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/PlayerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/UserStatsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/UserStatsManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Core Layer/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Core Layer/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/WhoteRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WhoteRoom.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +103,8 @@
       <workItem from="1674818650685" duration="6473000" />
       <workItem from="1675092691994" duration="1203000" />
       <workItem from="1675095934316" duration="399000" />
-      <workItem from="1675162029254" duration="15151000" />
+      <workItem from="1675162029254" duration="15446000" />
+      <workItem from="1675188501647" duration="1978000" />
     </task>
     <servers />
   </component>
