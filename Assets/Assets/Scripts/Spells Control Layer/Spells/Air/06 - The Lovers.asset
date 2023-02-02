@@ -15,7 +15,20 @@ MonoBehaviour:
   spellName: Air Dash
   element: Air
   spellDescription: Default
-  castingSpellDuration: 3.5
+  spellType: 3
+  castingSpellDuration: 1.5
   castingSpellMovementSpeedMultiplier: 0.05
   castingSpellCooldown: 1.5
   castingSpellDirectionLockDuration: 2
+  projectileSpeed: 0
+  projectilePrefab: {fileID: 0}
+  projectileLifeSpawn: 0
+  distanceFromCastingPoint: 0
+  aeoLifeSpawn: 0
+  aeoRadius: 0
+  aeoPrefab: {fileID: 0}
+  dashChargeSpeed: 20
+  dashMaxChargeTime: 0.35
+  dashStoppedTime: 0.05
+  dashTrailPrefab: {fileID: 4584408225393960838, guid: 2fdde12cfaf621a4b84a4b85f1d7bfec, type: 3}
+  dashTrailLifeSpawn: 5

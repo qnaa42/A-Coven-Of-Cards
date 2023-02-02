@@ -66,6 +66,12 @@ namespace Assets.Scripts.Character_Controller_Layer
         float chargeCooldown,
         bool canDoubleCharge,
         
+        //Casting
+        int castingSpell1Id,
+        int castingSpell2Id,
+        int castingSpell3Id,
+        
+        
         int score,
         int health
             )
@@ -105,6 +111,10 @@ namespace Assets.Scripts.Character_Controller_Layer
                 stoppedTime = stoppedTime,
                 chargeCooldown = chargeCooldown,
                 canDoubleCharge = canDoubleCharge,
+                //Casting
+                castingSpell1Id = castingSpell1Id,
+                castingSpell2Id = castingSpell2Id,
+                castingSpell3Id = castingSpell3Id,
                 
                 score = score,
                 health = health
@@ -880,6 +890,59 @@ namespace Assets.Scripts.Character_Controller_Layer
                 Init();
 
             global_UserDatas[id].canDoubleCharge = aBool;
+        }
+        
+        //Casting
+
+        //Casting Spell 1 Id
+        public int GetCastingSpell1Id(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_UserDatas[id].castingSpell1Id;
+        }
+        
+        public void SetCastingSpell1Id(int id, int anId)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].castingSpell1Id = anId;
+        }
+        
+        //Casting Spell 2 Id
+        public int GetCastingSpell2Id(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_UserDatas[id].castingSpell2Id;
+        }
+        
+        public void SetCastingSpell2Id(int id, int anId)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].castingSpell2Id = anId;
+        }
+        
+        //Casting Spell 3 Id
+        public int GetCastingSpell3Id(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_UserDatas[id].castingSpell3Id;
+        }
+        
+        public void SetCastingSpell3Id(int id, int anId)
+        {
+            if (!didInit)
+                Init();
+
+            global_UserDatas[id].castingSpell3Id = anId;
         }
         
         

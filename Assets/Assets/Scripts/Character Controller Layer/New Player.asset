@@ -36,5 +36,8 @@ MonoBehaviour:
   stoppedTime: 0.5
   chargeCooldown: 1
   canDoubleCharge: 1
+  castingSpell1Id: 19
+  castingSpell2Id: 5
+  castingSpell3Id: 16
   score: 0
   health: 0

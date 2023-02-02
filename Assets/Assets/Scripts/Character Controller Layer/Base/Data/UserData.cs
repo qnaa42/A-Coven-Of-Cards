@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace Assets.Scripts.Character_Controller_Layer.Base.Data
 {
     public class UserData
@@ -39,6 +41,11 @@ namespace Assets.Scripts.Character_Controller_Layer.Base.Data
         public float stoppedTime;
         public float chargeCooldown;
         public bool canDoubleCharge;
+        
+        //Casting
+        public int castingSpell1Id;
+        public int castingSpell2Id;
+        public int castingSpell3Id;
         
         
         

@@ -53,9 +53,7 @@ namespace Assets.Scripts.Core_Layer
 
             if (baseUserManager.GetPlayerList().Count < 1) // get the player list from base user manager component and check players are in it
             {
-                
-
-                
+                playerManager.InitializePlayer();
             }
             if (baseSpellManager.GetSpellList().Count < 1) // get the spell list from base spell manager component and check spells are in it
             {

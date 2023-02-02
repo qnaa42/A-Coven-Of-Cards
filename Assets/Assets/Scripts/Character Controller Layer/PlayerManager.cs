@@ -118,7 +118,7 @@ namespace Assets.Scripts.Character_Controller_Layer
             }
         }
 
-        private void InitializePlayer()
+        public void InitializePlayer()
         {
             BaseUserManager.ResetUsers();
             BaseUserManager.AddNewPlayer(
@@ -150,6 +150,10 @@ namespace Assets.Scripts.Character_Controller_Layer
                 Player.stoppedTime,
                 Player.chargeCooldown,
                 Player.canDoubleCharge,
+                //Casting
+                Player.castingSpell1Id,
+                Player.castingSpell2Id,
+                Player.castingSpell3Id,
                 
                 Player.score,
                 Player.health

@@ -9,6 +9,7 @@ namespace Assets.Scripts.Scriptable_Objects
     {
         public string playerName = "Default";
         
+        [Header("Movement")]
         //Movement
         public float movementSpeed;
         public float globalMovementSpeedMultiplier;
@@ -17,6 +18,7 @@ namespace Assets.Scripts.Scriptable_Objects
         public float stableMovementSharpness;
         public float orientationSharpness;
         
+        [Header("Light Attack")]
         //Light Attack
         public float lightAttackDuration;
         public float lightAttackMovementSpeedMultiplier;
@@ -25,6 +27,7 @@ namespace Assets.Scripts.Scriptable_Objects
         public float lightAttackRange;
         public float lightAttackRadius;
         
+        [Header("Heavy Attack")]
         //Heavy Attack
         public float heavyAttackDuration;
         public float heavyAttackMovementSpeedMultiplier;
@@ -33,7 +36,7 @@ namespace Assets.Scripts.Scriptable_Objects
         public float heavyAttackRange;
         public float heavyAttackRadius;
         
-        
+        [Header("Charging")]
         //Charging
         public float chargeSpeed;
         public float maxChargeTime;
@@ -41,6 +44,11 @@ namespace Assets.Scripts.Scriptable_Objects
         public float chargeCooldown;
         public bool canDoubleCharge;
         
+        [Header("Casting")]
+        //Casting
+        public int castingSpell1Id;
+        public int castingSpell2Id;
+        public int castingSpell3Id;
         
         
         

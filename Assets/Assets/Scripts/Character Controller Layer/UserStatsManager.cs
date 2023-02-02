@@ -811,6 +811,59 @@ namespace Assets.Scripts.Character_Controller_Layer
 
             _myDataManager.SetCanDoubleCharge(_myId, aCanDoubleCharge);
         }
+        
+        //Casting
+
+        //Casting Spell 1 Id (int)
+        public int GetCastingSpell1Id()
+        {
+            if (!didInit)
+                Init();
+
+            return _myDataManager.GetCastingSpell1Id(_myId);
+        }
+        
+        public virtual void SetCastingSpell1Id(int aCastingSpell1Id)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SetCastingSpell1Id(_myId, aCastingSpell1Id);
+        }
+        
+        //Casting Spell 2 Id (int)
+        public int GetCastingSpell2Id()
+        {
+            if (!didInit)
+                Init();
+
+            return _myDataManager.GetCastingSpell2Id(_myId);
+        }
+        
+        public virtual void SetCastingSpell2Id(int aCastingSpell2Id)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SetCastingSpell2Id(_myId, aCastingSpell2Id);
+        }
+        
+        //Casting Spell 3 Id (int)
+        public int GetCastingSpell3Id()
+        {
+            if (!didInit)
+                Init();
+
+            return _myDataManager.GetCastingSpell3Id(_myId);
+        }
+        
+        public virtual void SetCastingSpell3Id(int aCastingSpell3Id)
+        {
+            if (!didInit)
+                Init();
+
+            _myDataManager.SetCastingSpell3Id(_myId, aCastingSpell3Id);
+        }
 
         //Score
         public int GetScore()

@@ -14,7 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spellName: The Star
   element: Air
+  spellDescription: Default
+  spellType: 2
   castingSpellDuration: 2.5
   castingSpellMovementSpeedMultiplier: 0.05
   castingSpellCooldown: 1.5
   castingSpellDirectionLockDuration: 2
+  projectileSpeed: 0
+  projectilePrefab: {fileID: 0}
+  projectileLifeSpawn: 0
+  distanceFromCastingPoint: 15
+  aeoLifeSpawn: 10
+  aeoRadius: 10
+  aeoPrefab: {fileID: 765885456888056004, guid: fd50b05d87106944da54006fb9556534, type: 3}
+  dashChargeSpeed: 0
+  dashMaxChargeTime: 0
+  dashStoppedTime: 0
+  dashTrailPrefab: {fileID: 0}
+  dashTrailLifeSpawn: 0

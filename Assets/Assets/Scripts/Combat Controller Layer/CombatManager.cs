@@ -1,3 +1,4 @@
+using Assets.Scripts.Core_Layer;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -46,20 +47,41 @@ namespace Assets.Scripts.Combat_Controller_Layer
         }
         
 
-        public void Attack(float attackRange, float attackRadius, bool isCombo)
+        public void LightAttack(bool isCombo)
         {
             var coneTip = attackPoint.transform.position + transform.forward * lightAttackConeLengthGizmoDebug;
-            var hits = Physics.SphereCastAll(attackPoint.transform.position, attackRadius, transform.forward, attackRange, layerMask);
+            var userStatsManager = GameManager.instance.userManager;   
+            var hits = Physics.SphereCastAll(attackPoint.transform.position, userStatsManager.GetLightAttackRadius(), transform.forward, userStatsManager.GetLightAttackRange(), layerMask);
 
             foreach (var hit in hits)
             {
                 switch (isCombo)
                 {
                     case true:
-                        Debug.Log("Hit object with combo attack: " + hit.collider.gameObject.name);
+                        Debug.Log("Hit object with light combo attack: " + hit.collider.gameObject.name);
                         break;
                     case false:
-                        Debug.Log("Hit object: " + hit.collider.gameObject.name);
+                        Debug.Log("Hit object with light attack: " + hit.collider.gameObject.name);
+                        break;
+                }
+            }
+        }
+        
+        public void HeavyAttack(bool isCombo)
+        {
+            var coneTip = attackPoint.transform.position + transform.forward * lightAttackConeLengthGizmoDebug;
+            var userStatsManager = GameManager.instance.userManager;   
+            var hits = Physics.SphereCastAll(attackPoint.transform.position, userStatsManager.GetHeavyAttackRadius(), transform.forward, userStatsManager.GetHeavyAttackRange(), layerMask);
+
+            foreach (var hit in hits)
+            {
+                switch (isCombo)
+                {
+                    case true:
+                        Debug.Log("Hit object with heavy combo attack: " + hit.collider.gameObject.name);
+                        break;
+                    case false:
+                        Debug.Log("Hit object with heavy attack: " + hit.collider.gameObject.name);
                         break;
                 }
             }

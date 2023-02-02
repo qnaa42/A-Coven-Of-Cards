@@ -71,16 +71,12 @@ namespace Assets.Scripts.Character_Controller_Layer
         public float LightMeleeAttackStableMoveSpeedMultiplier = 0.5f;
         public float LightMeleeAttackCooldown = 0.5f;
         public float LightMeleeAttackDirectionLockDuration = 0.7f;
-        public float LightMeleeAttackRange = 1.0f;
-        public float LightMeleeAttackRadius = 0.44f;
-        
+
         [Header("Heavy Melee Attack")] public float HeavyMeleeAttackDuration = 0.5f;
         public float HeavyMeleeAttackStableMoveSpeedMultiplier = 0.5f;
         public float HeavyMeleeAttackCooldown = 0.5f;
         public float HeavyMeleeAttackDirectionLockDuration = 0.7f;
-        public float HeavyMeleeAttackRange = 0.4f;
-        public float HeavyMeleeAttackRadius = 1.5f;
-        
+
 
         [Header("Charging")] public float ChargeSpeed = 15f;
         public float MaxChargeTime = 1.5f;
@@ -126,21 +122,21 @@ namespace Assets.Scripts.Character_Controller_Layer
         private float _timeSinceLastHeavyMeleeAttack = 0f;
         
         
-
+        [Header("Charge Privates")]
         //Charge Privates
-        private Vector3 _currentChargeVelocity;
-        private bool _isStopped;
-        private bool _mustStopVelocity;
-        private float _timeSinceStartedCharge;
-        private float _timeSinceStopped;
-        private bool _secondChargePossible;
-        private float _timeSinceLastCharge = 0.0f;
+        public Vector3 _currentChargeVelocity;
+        public bool _isStopped;
+        public bool _mustStopVelocity;
+        public float _timeSinceStartedCharge;
+        public float _timeSinceStopped;
+        public bool _secondChargePossible;
+        public float _timeSinceLastCharge = 0.0f;
         
         //Casting Spell Privates
         private float _timeSinceStartedCastingSpell = 0f;
         private float _timeSinceLastCastingSpell = 0f;
-        
-        
+
+
         public CharacterState _lastState;
 
         private void Awake()
@@ -230,6 +226,13 @@ namespace Assets.Scripts.Character_Controller_Layer
 
                 case CharacterState.CastingSpell:
                 {
+                    if (GameManager.instance.spellsManager.GetSpellType() == 3)
+                    {
+                        _currentChargeVelocity = Motor.CharacterForward * GameManager.instance.spellsManager.GetDashChargeSpeed();
+                        _isStopped = false;
+                        _timeSinceStartedCharge = 0f;
+                        _timeSinceStopped = 0f;
+                    }
                     _timeSinceStartedCastingSpell = 0f;
                     break;
                 }
@@ -272,13 +275,11 @@ namespace Assets.Scripts.Character_Controller_Layer
                     switch (_consecutiveLightMeleeAttacks)
                     {
                         case 3:
-                            GameManager.instance.combatManager.Attack(LightMeleeAttackRange, LightMeleeAttackRadius,
-                                true);
+                            GameManager.instance.combatManager.LightAttack(true);
                             _consecutiveLightMeleeAttacks = 0;
                             break;
                         case < 3:
-                            GameManager.instance.combatManager.Attack(LightMeleeAttackRange, LightMeleeAttackRadius,
-                                false);
+                            GameManager.instance.combatManager.LightAttack(false);
                             break;
                     }
                     GameManager.instance.combatManager.HideLightAttackDebugCone();
@@ -290,11 +291,11 @@ namespace Assets.Scripts.Character_Controller_Layer
                     switch (_consecutiveLightMeleeAttacks)
                     {
                         case 2:
-                            GameManager.instance.combatManager.Attack(HeavyMeleeAttackRange, HeavyMeleeAttackRadius, true);
+                            GameManager.instance.combatManager.HeavyAttack(true);
                             _consecutiveLightMeleeAttacks = 0;
                             break;
                         case < 2:
-                            GameManager.instance.combatManager.Attack(HeavyMeleeAttackRange, HeavyMeleeAttackRadius, false);
+                            GameManager.instance.combatManager.HeavyAttack(false);
                             break;
                     }
                     GameManager.instance.combatManager.HideHeavyAttackDebugCone();
@@ -314,6 +315,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                 
                 case CharacterState.CastingSpell:
                 {
+                    GameManager.instance.spellsControlManager.CastSpell();
                     break;
                 }
                 
@@ -345,7 +347,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                         TransitionToState(CharacterState.HeavyMeleeAttack);
                         break;
                     case CharacterState.CastingStance when (_timeSinceLastCastingSpell > CastingSpellCooldown):
-                        GameManager.instance.spellsControlManager.spellsStatsManager.SetSpellDetails(GameManager.instance.spellsControlManager.Spell1Id);
+                        GameManager.instance.spellsControlManager.spellsStatsManager.SetSpellDetails(GameManager.instance.userManager.GetCastingSpell1Id());
                         UpdateSpellStats();
                         TransitionToState(CharacterState.CastingSpell);
                         break;
@@ -359,7 +361,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                         TransitionToState(CharacterState.LightMeleeAttack);
                         break;
                     case CharacterState.CastingStance when (_timeSinceLastCastingSpell > CastingSpellCooldown):
-                        GameManager.instance.spellsControlManager.spellsStatsManager.SetSpellDetails(GameManager.instance.spellsControlManager.Spell2Id);
+                        GameManager.instance.spellsControlManager.spellsStatsManager.SetSpellDetails(GameManager.instance.userManager.GetCastingSpell2Id());
                         UpdateSpellStats();
                         TransitionToState(CharacterState.CastingSpell);
                         break;
@@ -391,7 +393,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                         break;
                     }
                     case CharacterState.CastingStance when (_timeSinceLastCastingSpell > CastingSpellCooldown):
-                        GameManager.instance.spellsControlManager.spellsStatsManager.SetSpellDetails(GameManager.instance.spellsControlManager.Spell3Id);
+                        GameManager.instance.spellsControlManager.spellsStatsManager.SetSpellDetails(GameManager.instance.userManager.GetCastingSpell3Id());
                         UpdateSpellStats();
                         TransitionToState(CharacterState.CastingSpell);
                         break;
@@ -568,6 +570,14 @@ namespace Assets.Scripts.Character_Controller_Layer
                 
                 case CharacterState.CastingSpell:
                 {
+                    if (GameManager.instance.spellsManager.GetSpellType() == 3)
+                    {
+                        _timeSinceStartedCharge += deltaTime;
+                        if (_isStopped)
+                        {
+                            _timeSinceStopped += deltaTime;
+                        }
+                    }
                     _timeSinceStartedCastingSpell += deltaTime;
                     break;
                 }
@@ -640,6 +650,11 @@ namespace Assets.Scripts.Character_Controller_Layer
                 
                 case CharacterState.CastingSpell:
                 {
+                    if (GameManager.instance.spellsManager.GetSpellType() == 3)
+                    {
+                        HandleRotation(ref currentRotation, deltaTime);
+                    }
+                    
                     break;
                 }
                 
@@ -692,26 +707,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                 
                 case CharacterState.Charging:
                 {
-                    // If we have stopped and need to cancel velocity, do it here
-                    if (_mustStopVelocity)
-                    {
-                        currentVelocity = Vector3.zero;
-                        _mustStopVelocity = false;
-                    }
-
-                    if (_isStopped)
-                    {
-                        // When stopped, do no velocity handling except gravity
-                        currentVelocity += Gravity * deltaTime;
-                    }
-                    else
-                    {
-                        // When charging, velocity is always constant
-                        var previousY = currentVelocity.y;
-                        currentVelocity = _currentChargeVelocity;
-                        currentVelocity.y = previousY;
-                        currentVelocity += Gravity * deltaTime;
-                    }
+                    HandleCharging(ref currentVelocity, deltaTime);
 
                     break;
                 }
@@ -725,7 +721,14 @@ namespace Assets.Scripts.Character_Controller_Layer
                 
                 case CharacterState.CastingSpell:
                 {
-                    HandleVelocity(ref currentVelocity, deltaTime, MaxStableMoveSpeed, CastingSpellStableMoveSpeedMultiplier, GlobalMovementSpeedMultiplier);
+                    if (GameManager.instance.spellsManager.GetSpellType() == 3)
+                    {
+                        HandleCharging(ref currentVelocity, deltaTime);
+                    }
+                    else
+                    {
+                        HandleVelocity(ref currentVelocity, deltaTime, MaxStableMoveSpeed, CastingSpellStableMoveSpeedMultiplier, GlobalMovementSpeedMultiplier);
+                    }
                     break;
                 }
                 
@@ -821,8 +824,25 @@ namespace Assets.Scripts.Character_Controller_Layer
                 
                 case CharacterState.CastingSpell:
                 {
-                    if(_timeSinceStartedCastingSpell > CastingSpellDuration)
-                        TransitionToState(CharacterState.CastingStance);
+                    if (GameManager.instance.spellsManager.GetSpellType() == 3)
+                    {
+                        if (!_isStopped && _timeSinceStartedCharge > GameManager.instance.spellsManager.GetDashMaxChargeTime())
+                        {
+                            _mustStopVelocity = true;
+                            _isStopped = true;
+                        }
+
+                        // Detect end of stopping phase and transition back to default movement state
+                        if (_timeSinceStopped > GameManager.instance.spellsManager.GetDashStoppedTime())
+                        {
+                            TransitionToState(CharacterState.CastingStance);
+                        }
+                    }
+                    else
+                    {
+                        if(_timeSinceStartedCastingSpell > CastingSpellDuration)
+                            TransitionToState(CharacterState.CastingStance);
+                    }
                     break;
                 }
                 
@@ -893,15 +913,11 @@ namespace Assets.Scripts.Character_Controller_Layer
             LightMeleeAttackStableMoveSpeedMultiplier = GameManager.instance.userManager.GetLightAttackMovementSpeedMultiplier();
             LightMeleeAttackCooldown = GameManager.instance.userManager.GetLightAttackCooldown();
             LightMeleeAttackDirectionLockDuration = GameManager.instance.userManager.GetLightAttackDirectionLockDuration();
-            LightMeleeAttackRange = GameManager.instance.userManager.GetLightAttackRange();
-            LightMeleeAttackRadius = GameManager.instance.userManager.GetLightAttackRadius();
             //Update Heavy Melee Attack Stats
             HeavyMeleeAttackDuration = GameManager.instance.userManager.GetHeavyAttackDuration();
             HeavyMeleeAttackStableMoveSpeedMultiplier = GameManager.instance.userManager.GetHeavyAttackMovementSpeedMultiplier();
             HeavyMeleeAttackCooldown = GameManager.instance.userManager.GetHeavyAttackCooldown();
             HeavyMeleeAttackDirectionLockDuration = GameManager.instance.userManager.GetHeavyAttackDirectionLockDuration();
-            HeavyMeleeAttackRange = GameManager.instance.userManager.GetHeavyAttackRange();
-            HeavyMeleeAttackRadius = GameManager.instance.userManager.GetHeavyAttackRadius();
             //Update Charge Stats
             ChargeSpeed = GameManager.instance.userManager.GetChargeSpeed();
             MaxChargeTime = GameManager.instance.userManager.GetMaxChargeTime();
@@ -1108,6 +1124,30 @@ namespace Assets.Scripts.Character_Controller_Layer
                         _internalVelocityAdd = Vector3.zero;
                     }
 
+        }
+
+        private void HandleCharging(ref Vector3 currentVelocity, float deltaTime)
+        {
+            // If we have stopped and need to cancel velocity, do it here
+            if (_mustStopVelocity)
+            {
+                currentVelocity = Vector3.zero;
+                _mustStopVelocity = false;
+            }
+
+            if (_isStopped)
+            {
+                // When stopped, do no velocity handling except gravity
+                currentVelocity += Gravity * deltaTime;
+            }
+            else
+            {
+                // When charging, velocity is always constant
+                var previousY = currentVelocity.y;
+                currentVelocity = _currentChargeVelocity;
+                currentVelocity.y = previousY;
+                currentVelocity += Gravity * deltaTime;
+            }
         }
         
 

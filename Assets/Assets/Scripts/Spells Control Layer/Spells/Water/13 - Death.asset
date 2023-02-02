@@ -20,3 +20,6 @@ MonoBehaviour:
   castingSpellMovementSpeedMultiplier: 0.05
   castingSpellCooldown: 1.5
   castingSpellDirectionLockDuration: 2
+  projectileSpeed: 25
+  projectilePrefab: {fileID: 1090879606115016992, guid: 48232b50054431d419e8fe26d7422923, type: 3}
+  projectileLifeSpawn: 1

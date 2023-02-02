@@ -14,7 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spellName: The Judgment
   element: Fire
+  spellDescription: Default
+  spellType: 6
   castingSpellDuration: 0.5
   castingSpellMovementSpeedMultiplier: 0.05
   castingSpellCooldown: 1.5
   castingSpellDirectionLockDuration: 2
+  projectileSpeed: 0
+  projectilePrefab: {fileID: 0}
+  projectileLifeSpawn: 0
+  aoeProjectileDistanceFromCastingPoint: 0
+  aoeLifeSpawn: 0
+  aoeRadius: 0
+  aoePrefab: {fileID: 0}
+  dashChargeSpeed: 0
+  dashMaxChargeTime: 0
+  dashStoppedTime: 0
+  dashTrailPrefab: {fileID: 0}
+  dashTrailLifeSpawn: 0
+  projectileExplosionProjectilePrefab: {fileID: 1090879606115016992, guid: 48232b50054431d419e8fe26d7422923, type: 3}
+  projectileExplosionAoePrefab: {fileID: 765885456888056004, guid: fd50b05d87106944da54006fb9556534, type: 3}
+  projectileExplosionProjectileSpeed: 10
+  projectileExplosionProjectileLifeSpawn: 3
+  projectileExplosionAoeLifeSpawn: 2
+  projectileExplosionAoeRadius: 3

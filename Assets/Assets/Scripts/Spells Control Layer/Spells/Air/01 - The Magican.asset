@@ -15,7 +15,20 @@ MonoBehaviour:
   spellName: Air Bolt
   element: Air
   spellDescription: Default
+  spellType: 1
   castingSpellDuration: 0.5
   castingSpellMovementSpeedMultiplier: 0.05
   castingSpellCooldown: 1.5
   castingSpellDirectionLockDuration: 2
+  projectileSpeed: 5
+  projectilePrefab: {fileID: 1090879606115016992, guid: 48232b50054431d419e8fe26d7422923, type: 3}
+  projectileLifeSpawn: 5
+  distanceFromCastingPoint: 0
+  aeoLifeSpawn: 0
+  aeoRadius: 0
+  aeoPrefab: {fileID: 0}
+  dashChargeSpeed: 0
+  dashMaxChargeTime: 0
+  dashStoppedTime: 0
+  dashTrailPrefab: {fileID: 0}
+  dashTrailLifeSpawn: 0
