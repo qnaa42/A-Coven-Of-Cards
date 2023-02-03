@@ -634,7 +634,10 @@ namespace Assets.Scripts.Character_Controller_Layer
                 
                 case CharacterState.Charging:
                 {
-                    HandleRotation(ref currentRotation, deltaTime);
+                    if (_isStopped)
+                    {
+                        HandleRotation(ref currentRotation, deltaTime);
+                    }
                     break;
                 }
 
@@ -652,7 +655,10 @@ namespace Assets.Scripts.Character_Controller_Layer
                 {
                     if (GameManager.instance.spellsManager.GetSpellType() == 3)
                     {
-                        HandleRotation(ref currentRotation, deltaTime);
+                        if (_isStopped)
+                        {
+                            HandleRotation(ref currentRotation, deltaTime);
+                        }
                     }
                     
                     break;
