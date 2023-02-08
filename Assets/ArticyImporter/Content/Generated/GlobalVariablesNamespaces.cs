@@ -20,80 +20,14 @@ namespace Articy.A_Coven_Of_Cards.GlobalVariables
     
     
     [Serializable()]
-    public class VerticalSlice : IArticyNamespace
+    public class gameState : IArticyNamespace
     {
         
         [SerializeField()]
         private BaseGlobalVariables _VariableStorage;
         
-        // The amount of herbs that the player character collects & has in their inventory
-        public int herbAmount
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueInt32(0);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueInt32(0, value);
-            }
-        }
-        
-        // Mother regent 1
-        //
-        public int regentA
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueInt32(1);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueInt32(1, value);
-            }
-        }
-        
-        // Mother regent 2
-        public int regentB
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueInt32(2);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueInt32(2, value);
-            }
-        }
-        
-        // Baby regent 1
-        public int regentC
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueInt32(3);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueInt32(3, value);
-            }
-        }
-        
-        // Baby regent 2
-        public int regentD
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueInt32(4);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueInt32(4, value);
-            }
-        }
-        
-        // Is the mother alive
-        public bool motherLiving
+        // Is the mother alive - True after administering strengthened health potion.
+        public bool motherIll
         {
             get
             {
@@ -105,8 +39,8 @@ namespace Articy.A_Coven_Of_Cards.GlobalVariables
             }
         }
         
-        // Is the baby alive
-        public bool babyLiving
+        // Is the baby alive - True after administering strengthened health potion.
+        public bool babyIll
         {
             get
             {
@@ -118,47 +52,21 @@ namespace Articy.A_Coven_Of_Cards.GlobalVariables
             }
         }
         
-        // Amount of herbs Nyx has in her inventory
-        public int nyxherbs
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueInt32(5);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueInt32(5, value);
-            }
-        }
-        
-        // The amount of health potions made
-        public int healthPots
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueInt32(6);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueInt32(6, value);
-            }
-        }
-        
         // The amount of time that passes in the dreamscape
         public int timeInDreamscape
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueInt32(7);
+                return _VariableStorage.Internal_GetVariableValueInt32(0);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueInt32(7, value);
+                _VariableStorage.Internal_SetVariableValueInt32(0, value);
             }
         }
         
-        // Can you save the mother
-        public bool motherSave
+        // Can you save the mother - True if respective regents are in inventory.
+        public bool motherCanSave
         {
             get
             {
@@ -170,8 +78,8 @@ namespace Articy.A_Coven_Of_Cards.GlobalVariables
             }
         }
         
-        // Can you save the baby
-        public bool babySave
+        // Can you save the baby - True if respective regents are in inventory.
+        public bool babyCanSave
         {
             get
             {
@@ -183,8 +91,220 @@ namespace Articy.A_Coven_Of_Cards.GlobalVariables
             }
         }
         
+        // True when player first talks to Cassandra
+        public bool awake
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(4);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(4, value);
+            }
+        }
+        
+        // True after Cassandra tries to administer the generic health potions
+        public bool healthPotFail
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(5);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(5, value);
+            }
+        }
+        
+        // Is the mother alive, false if no potion to give
+        public bool motherAlive
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(6);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(6, value);
+            }
+        }
+        
+        // Is the baby alive, false if no potion to give
+        public bool babyAlive
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(7);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(7, value);
+            }
+        }
+        
+        // True when player is completing act 1
+        public bool act1
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(8);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(8, value);
+            }
+        }
+        
+        // True when player is completing act 2
+        public bool act2
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(9);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(9, value);
+            }
+        }
+        
+        // True when player is completing act 3
+        public bool act3
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(10);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(10, value);
+            }
+        }
+        
+        public void RegisterVariables(BaseGlobalVariables aStorage)
+        {
+            _VariableStorage = aStorage;
+            aStorage.RegisterVariable("gameState.motherIll", true);
+            aStorage.RegisterVariable("gameState.babyIll", true);
+            aStorage.RegisterVariable("gameState.timeInDreamscape", 0);
+            aStorage.RegisterVariable("gameState.motherCanSave", false);
+            aStorage.RegisterVariable("gameState.babyCanSave", false);
+            aStorage.RegisterVariable("gameState.awake", false);
+            aStorage.RegisterVariable("gameState.healthPotFail", false);
+            aStorage.RegisterVariable("gameState.motherAlive", true);
+            aStorage.RegisterVariable("gameState.babyAlive", true);
+            aStorage.RegisterVariable("gameState.act1", false);
+            aStorage.RegisterVariable("gameState.act2", false);
+            aStorage.RegisterVariable("gameState.act3", false);
+        }
+    }
+}
+namespace Articy.A_Coven_Of_Cards.GlobalVariables
+{
+    
+    
+    [Serializable()]
+    public class playerInventory : IArticyNamespace
+    {
+        
+        [SerializeField()]
+        private BaseGlobalVariables _VariableStorage;
+        
+        // The strengthened health potion to heal the baby
+        public int sHealthPotB
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(1);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(1, value);
+            }
+        }
+        
+        // The amount of health potions made
+        public int genericHealthPots
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(2);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(2, value);
+            }
+        }
+        
+        // The amount of herbs that the player character collects & has in their inventory
+        public int genericHerbAmount
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(3);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(3, value);
+            }
+        }
+        
         // The strengthened health potion to heal the mother
-        public int motherHealthPot
+        public int sHealthPotM
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(4);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(4, value);
+            }
+        }
+        
+        // Mother regent 1 
+        //
+        public int regentA
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(5);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(5, value);
+            }
+        }
+        
+        // Mother regent 2
+        public int regentB
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(6);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(6, value);
+            }
+        }
+        
+        // Baby regent 1
+        public int regentC
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(7);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(7, value);
+            }
+        }
+        
+        // Baby regent 2
+        public int regentD
         {
             get
             {
@@ -196,8 +316,33 @@ namespace Articy.A_Coven_Of_Cards.GlobalVariables
             }
         }
         
-        // The strengthened health potion to heal the baby
-        public int babyHealthPot
+        public void RegisterVariables(BaseGlobalVariables aStorage)
+        {
+            _VariableStorage = aStorage;
+            aStorage.RegisterVariable("playerInventory.sHealthPotB", 0);
+            aStorage.RegisterVariable("playerInventory.genericHealthPots", 0);
+            aStorage.RegisterVariable("playerInventory.genericHerbAmount", 0);
+            aStorage.RegisterVariable("playerInventory.sHealthPotM", 0);
+            aStorage.RegisterVariable("playerInventory.regentA", 0);
+            aStorage.RegisterVariable("playerInventory.regentB", 0);
+            aStorage.RegisterVariable("playerInventory.regentC", 0);
+            aStorage.RegisterVariable("playerInventory.regentD", 0);
+        }
+    }
+}
+namespace Articy.A_Coven_Of_Cards.GlobalVariables
+{
+    
+    
+    [Serializable()]
+    public class nyxInventory : IArticyNamespace
+    {
+        
+        [SerializeField()]
+        private BaseGlobalVariables _VariableStorage;
+        
+        // Amount of herbs Nyx has in her inventory
+        public int genericHerbAmount
         {
             get
             {
@@ -212,20 +357,7 @@ namespace Articy.A_Coven_Of_Cards.GlobalVariables
         public void RegisterVariables(BaseGlobalVariables aStorage)
         {
             _VariableStorage = aStorage;
-            aStorage.RegisterVariable("VerticalSlice.herbAmount", 0);
-            aStorage.RegisterVariable("VerticalSlice.regentA", 0);
-            aStorage.RegisterVariable("VerticalSlice.regentB", 0);
-            aStorage.RegisterVariable("VerticalSlice.regentC", 0);
-            aStorage.RegisterVariable("VerticalSlice.regentD", 0);
-            aStorage.RegisterVariable("VerticalSlice.motherLiving", true);
-            aStorage.RegisterVariable("VerticalSlice.babyLiving", true);
-            aStorage.RegisterVariable("VerticalSlice.nyxherbs", 0);
-            aStorage.RegisterVariable("VerticalSlice.healthPots", 0);
-            aStorage.RegisterVariable("VerticalSlice.timeInDreamscape", 0);
-            aStorage.RegisterVariable("VerticalSlice.motherSave", false);
-            aStorage.RegisterVariable("VerticalSlice.babySave", false);
-            aStorage.RegisterVariable("VerticalSlice.motherHealthPot", 0);
-            aStorage.RegisterVariable("VerticalSlice.babyHealthPot", 0);
+            aStorage.RegisterVariable("nyxInventory.genericHerbAmount", 0);
         }
     }
 }

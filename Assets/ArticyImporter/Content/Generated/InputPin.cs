@@ -22,7 +22,7 @@ namespace Articy.A_Coven_Of_Cards
     
     
     [Serializable()]
-    [Articy.Unity.ArticyCodeGenerationHashAttribute(638106997736192112)]
+    [Articy.Unity.ArticyCodeGenerationHashAttribute(638113806859856216)]
     public class InputPin : ArticyPrimitive, IInputPin
     {
         

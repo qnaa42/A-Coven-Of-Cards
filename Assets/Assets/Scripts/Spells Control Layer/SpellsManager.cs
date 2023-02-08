@@ -8,6 +8,8 @@ using Assets.Scripts.Core_Layer;
 using Assets.Scripts.Spells_Control_Layer.Base.Data;
 using Assets.Scripts.Scriptable_Objects;
 using Assets.Scripts.Spells_Control_Layer.Misc;
+using DevionGames.InventorySystem;
+using Projectile = Assets.Scripts.Spells_Control_Layer.Misc.Projectile;
 
 namespace Assets.Scripts.Spells_Control_Layer
 {
@@ -24,7 +26,14 @@ namespace Assets.Scripts.Spells_Control_Layer
 
         public List<Spell> spellList;
         public List<ComboSpell> comboSpellList;
-        
+        public GameObject SpellSlot1;
+        public GameObject SpellSlot2;
+        public Item item;
+
+        private void Start()
+        {
+            
+        }
 
         //Initializing Spell Data Manager from list of scriptable objects Spell
         public void InitializeSpellList()

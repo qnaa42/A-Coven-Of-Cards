@@ -26,33 +26,64 @@ namespace Articy.A_Coven_Of_Cards.GlobalVariables
         
         [SerializeField()]
         [HideInInspector()]
-        private VerticalSlice mVerticalSlice = new VerticalSlice();
+        private gameState mGameState = new gameState();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private playerInventory mPlayerInventory = new playerInventory();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private nyxInventory mNyxInventory = new nyxInventory();
         
         #region Initialize static VariableName set
         static ArticyGlobalVariables()
         {
-            variableNames.Add("VerticalSlice.herbAmount");
-            variableNames.Add("VerticalSlice.regentA");
-            variableNames.Add("VerticalSlice.regentB");
-            variableNames.Add("VerticalSlice.regentC");
-            variableNames.Add("VerticalSlice.regentD");
-            variableNames.Add("VerticalSlice.motherLiving");
-            variableNames.Add("VerticalSlice.babyLiving");
-            variableNames.Add("VerticalSlice.nyxherbs");
-            variableNames.Add("VerticalSlice.healthPots");
-            variableNames.Add("VerticalSlice.timeInDreamscape");
-            variableNames.Add("VerticalSlice.motherSave");
-            variableNames.Add("VerticalSlice.babySave");
-            variableNames.Add("VerticalSlice.motherHealthPot");
-            variableNames.Add("VerticalSlice.babyHealthPot");
+            variableNames.Add("gameState.motherIll");
+            variableNames.Add("gameState.babyIll");
+            variableNames.Add("gameState.timeInDreamscape");
+            variableNames.Add("gameState.motherCanSave");
+            variableNames.Add("gameState.babyCanSave");
+            variableNames.Add("gameState.awake");
+            variableNames.Add("gameState.healthPotFail");
+            variableNames.Add("gameState.motherAlive");
+            variableNames.Add("gameState.babyAlive");
+            variableNames.Add("gameState.act1");
+            variableNames.Add("gameState.act2");
+            variableNames.Add("gameState.act3");
+            variableNames.Add("playerInventory.sHealthPotB");
+            variableNames.Add("playerInventory.genericHealthPots");
+            variableNames.Add("playerInventory.genericHerbAmount");
+            variableNames.Add("playerInventory.sHealthPotM");
+            variableNames.Add("playerInventory.regentA");
+            variableNames.Add("playerInventory.regentB");
+            variableNames.Add("playerInventory.regentC");
+            variableNames.Add("playerInventory.regentD");
+            variableNames.Add("nyxInventory.genericHerbAmount");
         }
         #endregion
         
-        public VerticalSlice VerticalSlice
+        public gameState gameState
         {
             get
             {
-                return mVerticalSlice;
+                return mGameState;
+            }
+        }
+        
+        public playerInventory playerInventory
+        {
+            get
+            {
+                return mPlayerInventory;
+            }
+        }
+        
+        public nyxInventory nyxInventory
+        {
+            get
+            {
+                return mNyxInventory;
             }
         }
         
@@ -66,7 +97,9 @@ namespace Articy.A_Coven_Of_Cards.GlobalVariables
         
         public override void Init()
         {
-            VerticalSlice.RegisterVariables(this);
+            gameState.RegisterVariables(this);
+            playerInventory.RegisterVariables(this);
+            nyxInventory.RegisterVariables(this);
         }
         
         public static ArticyGlobalVariables CreateGlobalVariablesClone()

@@ -4,12 +4,27 @@
     <list default="true" id="a1e62ff1-8c95-4f34-b705-2d1bd115eabc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.A Coven Of Cards/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.A Coven Of Cards/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.plastic/plastic.wktree" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.wktree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/ArticyGlobalVariables.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/ArticyGlobalVariables.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/ArticyScriptFragments.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/ArticyScriptFragments.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/GlobalVariablesNamespaces.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/GlobalVariablesNamespaces.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/InputPin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/InputPin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/Resources/All objects.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/Resources/All objects.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/Resources/ArticyDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/Resources/ArticyDatabase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/Resources/ArticyTypeSystem.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/Resources/ArticyTypeSystem.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Momchil's Work in process/ArticyImporter/Content/ArticyPluginSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Momchil's Work in process/ArticyImporter/Content/ArticyPluginSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Momchil's Work in process/ArticyImporter/Content/Generated/ArticyEditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Momchil's Work in process/ArticyImporter/Content/Generated/ArticyEditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/stone_wall_2_d.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/stone_wall_2_d.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Prefabs/Invontory Controller Layer/Sword.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Prefabs/Invontory Controller Layer/Sword.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/CharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/CharacterController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Misc/ProjectileExplosionAoe.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Misc/ProjectileExplosionAoe.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Misc/ProjectileExplosionProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Misc/ProjectileExplosionProjectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/PlayerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Inventory Controller Layer/Coven of Cards item Database.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Inventory Controller Layer/Coven of Cards item Database.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Air/17 - The Star.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Air/17 - The Star.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Earth/15 - The Devil.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Earth/15 - The Devil.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/SpellsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/SpellsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Devion Games/Inventory System/Examples/Databases/Skills Database.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Devion Games/Inventory System/Examples/Databases/Skills Database.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Devion Games/Inventory System/Examples/Databases/Spells Database.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Devion Games/Inventory System/Examples/Databases/Spells Database.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/House.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/House.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Momchil White Room.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Momchil White Room.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/WhoteRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WhoteRoom.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,20 +84,20 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="11584">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="11584" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="11584">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="11584" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -113,7 +128,8 @@
       <workItem from="1675162029254" duration="15446000" />
       <workItem from="1675188501647" duration="2567000" />
       <workItem from="1675337841209" duration="20861000" />
-      <workItem from="1675421177182" duration="3580000" />
+      <workItem from="1675421177182" duration="3796000" />
+      <workItem from="1675508971229" duration="7257000" />
     </task>
     <servers />
   </component>

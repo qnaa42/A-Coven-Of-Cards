@@ -7,6 +7,7 @@ using Assets.Scripts.Character_Controller_Layer.Base.Data;
 using Assets.Scripts.Core_Layer;
 using UnityEngine.Serialization;
 using Assets.Scripts.Spells_Control_Layer;
+using DevionGames.InventorySystem;
 
 namespace Assets.Scripts.Character_Controller_Layer
 {
@@ -347,7 +348,9 @@ namespace Assets.Scripts.Character_Controller_Layer
                         TransitionToState(CharacterState.HeavyMeleeAttack);
                         break;
                     case CharacterState.CastingStance when (_timeSinceLastCastingSpell > CastingSpellCooldown):
-                        GameManager.instance.spellsControlManager.spellsStatsManager.SetSpellDetails(GameManager.instance.userManager.GetCastingSpell1Id());
+                        var item = GameManager.instance.spellsControlManager.SpellSlot1.GetComponent<ItemContainer>().GetItems<Item>();
+                        var itemID = item[0].FindProperty("ID").intValue;
+                        GameManager.instance.spellsControlManager.spellsStatsManager.SetSpellDetails(itemID);
                         UpdateSpellStats();
                         TransitionToState(CharacterState.CastingSpell);
                         break;
@@ -361,7 +364,9 @@ namespace Assets.Scripts.Character_Controller_Layer
                         TransitionToState(CharacterState.LightMeleeAttack);
                         break;
                     case CharacterState.CastingStance when (_timeSinceLastCastingSpell > CastingSpellCooldown):
-                        GameManager.instance.spellsControlManager.spellsStatsManager.SetSpellDetails(GameManager.instance.userManager.GetCastingSpell2Id());
+                        var item = GameManager.instance.spellsControlManager.SpellSlot2.GetComponent<ItemContainer>().GetItems<Item>();
+                        var itemID = item[0].FindProperty("ID").intValue;
+                        GameManager.instance.spellsControlManager.spellsStatsManager.SetSpellDetails(itemID);
                         UpdateSpellStats();
                         TransitionToState(CharacterState.CastingSpell);
                         break;

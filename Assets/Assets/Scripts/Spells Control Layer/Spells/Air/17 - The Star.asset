@@ -23,12 +23,18 @@ MonoBehaviour:
   projectileSpeed: 0
   projectilePrefab: {fileID: 0}
   projectileLifeSpawn: 0
-  distanceFromCastingPoint: 15
-  aeoLifeSpawn: 10
-  aeoRadius: 10
-  aeoPrefab: {fileID: 765885456888056004, guid: fd50b05d87106944da54006fb9556534, type: 3}
+  aoeProjectileDistanceFromCastingPoint: 5
+  aoeLifeSpawn: 1.5
+  aoeRadius: 5
+  aoePrefab: {fileID: 765885456888056004, guid: fd50b05d87106944da54006fb9556534, type: 3}
   dashChargeSpeed: 0
   dashMaxChargeTime: 0
   dashStoppedTime: 0
   dashTrailPrefab: {fileID: 0}
   dashTrailLifeSpawn: 0
+  projectileExplosionProjectilePrefab: {fileID: 0}
+  projectileExplosionAoePrefab: {fileID: 0}
+  projectileExplosionProjectileSpeed: 0
+  projectileExplosionProjectileLifeSpawn: 0
+  projectileExplosionAoeLifeSpawn: 0
+  projectileExplosionAoeRadius: 0

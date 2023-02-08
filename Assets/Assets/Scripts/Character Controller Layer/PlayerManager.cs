@@ -30,8 +30,8 @@ namespace Assets.Scripts.Character_Controller_Layer
 
         private void Start()
         {
-            Cursor.lockState = !DebugMode ? CursorLockMode.Locked : CursorLockMode.None;
-            Cursor.lockState = CursorLockMode.Locked;
+          //  Cursor.lockState = !DebugMode ? CursorLockMode.Locked : CursorLockMode.None;
+          //  Cursor.lockState = CursorLockMode.Locked;
         
             OrbitCamera.SetFollowTransform(CameraFollowPoint);
             OrbitCamera.IgnoredColliders.Clear();
@@ -41,10 +41,10 @@ namespace Assets.Scripts.Character_Controller_Layer
         // Update is called once per frame
         private void Update()
         {
-           if (Input.GetMouseButtonDown(0) && !DebugMode)
-           {
-               Cursor.lockState = CursorLockMode.Locked;
-           }
+         //  if (Input.GetMouseButtonDown(0) && !DebugMode)
+         //  {
+         //      Cursor.lockState = CursorLockMode.Locked;
+         //  }
             
            switch (Character.CurrentCharacterState)
            {
