@@ -13,7 +13,7 @@ public class OnTriggerEnterStatReduce : MonoBehaviour
             if (other.gameObject.CompareTag("Player"))
             {
                 GameManager.instance.userManager.SetGlobalMovementSpeedMultiplier(movementMultiplier);
-                GameManager.instance.playerManager.Character.StatsUpdate();
+                
             }
         }
     
@@ -22,7 +22,7 @@ public class OnTriggerEnterStatReduce : MonoBehaviour
             if (other.gameObject.CompareTag("Player"))
             {
                 GameManager.instance.userManager.SetGlobalMovementSpeedMultiplier(1f);
-                GameManager.instance.playerManager.Character.StatsUpdate();
+                
             }
         }
     }

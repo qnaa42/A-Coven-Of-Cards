@@ -28,6 +28,7 @@ namespace Assets.Scripts.Spells_Control_Layer
         public List<ComboSpell> comboSpellList;
         public GameObject SpellSlot1;
         public GameObject SpellSlot2;
+        public GameObject SpellSlot3;
         public Item item;
 
         private void Start()

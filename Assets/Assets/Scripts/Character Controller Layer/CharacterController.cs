@@ -60,35 +60,9 @@ namespace Assets.Scripts.Character_Controller_Layer
         public KinematicCharacterMotor Motor;
         [Header("Debug Mode")] public bool DebugMode = true;
 
-        [Header("Stable Movement")] public float MaxStableMoveSpeed = 10f;
-        public float GlobalMovementSpeedMultiplier = 1f;
-        public float MeleeStanceMoveSpeedMultiplier = 1f;
-        public float CastingStanceMoveSpeedMultiplier = 0.8f;
-        public float StableMovementSharpness = 15f;
-        public float OrientationSharpness = 10f;
+        [Header("Stable Movement")]
         public OrientationMethod OrientationMethod = OrientationMethod.TowardsCamera;
         
-        [Header("Light Melee Attack")] public float LightMeleeAttackDuration = 0.5f;
-        public float LightMeleeAttackStableMoveSpeedMultiplier = 0.5f;
-        public float LightMeleeAttackCooldown = 0.5f;
-        public float LightMeleeAttackDirectionLockDuration = 0.7f;
-
-        [Header("Heavy Melee Attack")] public float HeavyMeleeAttackDuration = 0.5f;
-        public float HeavyMeleeAttackStableMoveSpeedMultiplier = 0.5f;
-        public float HeavyMeleeAttackCooldown = 0.5f;
-        public float HeavyMeleeAttackDirectionLockDuration = 0.7f;
-
-
-        [Header("Charging")] public float ChargeSpeed = 15f;
-        public float MaxChargeTime = 1.5f;
-        public float StoppedTime = 1.0f;
-        public float ChargeCooldown = 1.0f;
-        public bool CanDoubleCharge = false;
-        
-        [Header("Casting Spell")] public float CastingSpellDuration = 0.5f;
-        public float CastingSpellStableMoveSpeedMultiplier = 0.5f;
-        public float CastingSpellCooldown = 0.5f;
-        public float CastingSpellDirectionLockDuration = 0.7f;
 
         [Header("Air Movement")] public float MaxAirMoveSpeed = 15f;
         public float AirAccelerationSpeed = 15f;
@@ -144,10 +118,6 @@ namespace Assets.Scripts.Character_Controller_Layer
         {
             // Handle initial state
             TransitionToState(CharacterState.MeleeStance);
-            if (DebugMode == false)
-            {
-                StatsUpdate();
-            }
 
             // Assign the characterController to the motor
             Motor.CharacterController = this;
@@ -206,7 +176,7 @@ namespace Assets.Scripts.Character_Controller_Layer
 
                 case CharacterState.Charging:
                 {
-                    _currentChargeVelocity = Motor.CharacterForward * ChargeSpeed;
+                    _currentChargeVelocity = Motor.CharacterForward * GameManager.instance.userManager.GetChargeSpeed();
                     _isStopped = false;
                     _timeSinceStartedCharge = 0f;
                     _timeSinceStopped = 0f;
@@ -344,14 +314,13 @@ namespace Assets.Scripts.Character_Controller_Layer
             {
                 switch (CurrentCharacterState)
                 {
-                    case CharacterState.MeleeStance when (_timeSinceLastHeavyMeleeAttack > HeavyMeleeAttackCooldown):
+                    case CharacterState.MeleeStance when (_timeSinceLastHeavyMeleeAttack > GameManager.instance.userManager.GetHeavyAttackCooldown()):
                         TransitionToState(CharacterState.HeavyMeleeAttack);
                         break;
-                    case CharacterState.CastingStance when (_timeSinceLastCastingSpell > CastingSpellCooldown):
+                    case CharacterState.CastingStance when (_timeSinceLastCastingSpell > GameManager.instance.spellsManager.GetCastingSpellCooldown()):
                         var item = GameManager.instance.spellsControlManager.SpellSlot1.GetComponent<ItemContainer>().GetItems<Item>();
                         var itemID = item[0].FindProperty("ID").intValue;
                         GameManager.instance.spellsControlManager.spellsStatsManager.SetSpellDetails(itemID);
-                        UpdateSpellStats();
                         TransitionToState(CharacterState.CastingSpell);
                         break;
                 }
@@ -360,14 +329,13 @@ namespace Assets.Scripts.Character_Controller_Layer
             {
                 switch (CurrentCharacterState)
                 {
-                    case CharacterState.MeleeStance when (_timeSinceLastLightMeleeAttack > LightMeleeAttackCooldown):
+                    case CharacterState.MeleeStance when (_timeSinceLastLightMeleeAttack > GameManager.instance.userManager.GetLightAttackCooldown()):
                         TransitionToState(CharacterState.LightMeleeAttack);
                         break;
-                    case CharacterState.CastingStance when (_timeSinceLastCastingSpell > CastingSpellCooldown):
+                    case CharacterState.CastingStance when (_timeSinceLastCastingSpell > GameManager.instance.spellsManager.GetCastingSpellCooldown()):
                         var item = GameManager.instance.spellsControlManager.SpellSlot2.GetComponent<ItemContainer>().GetItems<Item>();
                         var itemID = item[0].FindProperty("ID").intValue;
                         GameManager.instance.spellsControlManager.spellsStatsManager.SetSpellDetails(itemID);
-                        UpdateSpellStats();
                         TransitionToState(CharacterState.CastingSpell);
                         break;
                 }
@@ -376,9 +344,9 @@ namespace Assets.Scripts.Character_Controller_Layer
             {
                 switch (CurrentCharacterState)
                 {
-                    case CharacterState.MeleeStance or CharacterState.Charging or CharacterState.LightMeleeAttack or CharacterState.HeavyMeleeAttack when CurrentCharacterState != CharacterState.Charging && (_timeSinceLastCharge > ChargeCooldown):
+                    case CharacterState.MeleeStance or CharacterState.Charging or CharacterState.LightMeleeAttack or CharacterState.HeavyMeleeAttack when CurrentCharacterState != CharacterState.Charging && (_timeSinceLastCharge > GameManager.instance.userManager.GetChargeCooldown()):
                     {
-                        if (CanDoubleCharge)
+                        if (GameManager.instance.userManager.GetCanDoubleCharge())
                         {
                             _secondChargePossible = true;
                         }
@@ -388,7 +356,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                     }
                     case CharacterState.MeleeStance or CharacterState.Charging or CharacterState.LightMeleeAttack or CharacterState.HeavyMeleeAttack:
                     {
-                        if (CurrentCharacterState != CharacterState.Charging && (_timeSinceLastCharge < ChargeCooldown) &&
+                        if (CurrentCharacterState != CharacterState.Charging && (_timeSinceLastCharge < GameManager.instance.userManager.GetChargeCooldown()) &&
                             _secondChargePossible)
                         {
                             _secondChargePossible = false;
@@ -397,9 +365,10 @@ namespace Assets.Scripts.Character_Controller_Layer
 
                         break;
                     }
-                    case CharacterState.CastingStance when (_timeSinceLastCastingSpell > CastingSpellCooldown):
-                        GameManager.instance.spellsControlManager.spellsStatsManager.SetSpellDetails(GameManager.instance.userManager.GetCastingSpell3Id());
-                        UpdateSpellStats();
+                    case CharacterState.CastingStance when (_timeSinceLastCastingSpell > GameManager.instance.spellsManager.GetCastingSpellCooldown()):
+                        var item = GameManager.instance.spellsControlManager.SpellSlot3.GetComponent<ItemContainer>().GetItems<Item>();
+                        var itemID = item[0].FindProperty("ID").intValue;
+                        GameManager.instance.spellsControlManager.spellsStatsManager.SetSpellDetails(itemID);
                         TransitionToState(CharacterState.CastingSpell);
                         break;
                 }
@@ -619,7 +588,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                 //Melee Stance
                 case CharacterState.MeleeStance:
                 {
-                    if (_timeSinceLastLightMeleeAttack > LightMeleeAttackDirectionLockDuration && _timeSinceLastHeavyMeleeAttack > HeavyMeleeAttackDirectionLockDuration)
+                    if (_timeSinceLastLightMeleeAttack > GameManager.instance.userManager.GetLightAttackDirectionLockDuration() && _timeSinceLastHeavyMeleeAttack > GameManager.instance.userManager.GetHeavyAttackDirectionLockDuration())
                     {
                         _consecutiveLightMeleeAttacks = 0;
                         HandleRotation(ref currentRotation, deltaTime);
@@ -649,7 +618,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                 //Casting Stance
                 case CharacterState.CastingStance:
                 {
-                    if (_timeSinceLastCastingSpell > CastingSpellDirectionLockDuration)
+                    if (_timeSinceLastCastingSpell > GameManager.instance.spellsManager.GetCastingSpellDirectionLockDuration())
                     {
                         HandleRotation(ref currentRotation, deltaTime);
                     }
@@ -694,25 +663,32 @@ namespace Assets.Scripts.Character_Controller_Layer
         /// </summary>
         public void UpdateVelocity(ref Vector3 currentVelocity, float deltaTime)
         {
+            var maxStableMoveSpeed = GameManager.instance.userManager.GetMovementSpeed();
+            var globalMovementSpeedMultiplier = GameManager.instance.userManager.GetGlobalMovementSpeedMultiplier();
+            var meleeMovementMultiplier = GameManager.instance.userManager.GetMeleeMovementSpeedMultiplier();
+            var lightMeleeAttackMovementMultiplier =
+                GameManager.instance.userManager.GetLightAttackMovementSpeedMultiplier();
+            var heavyMeleeAttackMovementMultiplier =
+                GameManager.instance.userManager.GetHeavyAttackMovementSpeedMultiplier();
+            var castingMovementMultiplier = GameManager.instance.userManager.GetCastingMovementSpeedMultiplier();
             switch (CurrentCharacterState)
             {
                 //Melee Stance
                 case CharacterState.MeleeStance:
                 {
-                    HandleVelocity(ref currentVelocity, deltaTime, MaxStableMoveSpeed, MeleeStanceMoveSpeedMultiplier, GlobalMovementSpeedMultiplier);
+                    HandleVelocity(ref currentVelocity, deltaTime, maxStableMoveSpeed, meleeMovementMultiplier, globalMovementSpeedMultiplier);
                     break;
                 }
                 
                 case CharacterState.LightMeleeAttack:
                 {
-                    HandleVelocity(ref currentVelocity, deltaTime, MaxStableMoveSpeed, LightMeleeAttackStableMoveSpeedMultiplier, GlobalMovementSpeedMultiplier);
+                    HandleVelocity(ref currentVelocity, deltaTime, maxStableMoveSpeed, lightMeleeAttackMovementMultiplier, globalMovementSpeedMultiplier);
                     break;
                 }
                 
                 case CharacterState.HeavyMeleeAttack:
                 {
-                    HandleVelocity(ref currentVelocity, deltaTime, MaxStableMoveSpeed,
-                        HeavyMeleeAttackStableMoveSpeedMultiplier, GlobalMovementSpeedMultiplier);
+                    HandleVelocity(ref currentVelocity, deltaTime, maxStableMoveSpeed, heavyMeleeAttackMovementMultiplier, globalMovementSpeedMultiplier);
                     break;
                 }
                 
@@ -726,7 +702,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                 //Casting Stance
                 case CharacterState.CastingStance:
                 {
-                    HandleVelocity(ref currentVelocity, deltaTime, MaxStableMoveSpeed, CastingStanceMoveSpeedMultiplier, GlobalMovementSpeedMultiplier);
+                    HandleVelocity(ref currentVelocity, deltaTime, maxStableMoveSpeed, castingMovementMultiplier, globalMovementSpeedMultiplier);
                     break;
                 }
                 
@@ -738,7 +714,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                     }
                     else
                     {
-                        HandleVelocity(ref currentVelocity, deltaTime, MaxStableMoveSpeed, CastingSpellStableMoveSpeedMultiplier, GlobalMovementSpeedMultiplier);
+                        HandleVelocity(ref currentVelocity, deltaTime, maxStableMoveSpeed, GameManager.instance.spellsManager.GetCastingSpellMovementSpeedMultiplier(), globalMovementSpeedMultiplier);
                     }
                     break;
                 }
@@ -773,17 +749,17 @@ namespace Assets.Scripts.Character_Controller_Layer
                 //Melee Stance
                 case CharacterState.MeleeStance:
                 {
-                    if (_timeSinceLastHeavyMeleeAttack <= HeavyMeleeAttackDirectionLockDuration)
+                    if (_timeSinceLastHeavyMeleeAttack <= GameManager.instance.userManager.GetHeavyAttackDirectionLockDuration())
                     {
                         _timeSinceLastHeavyMeleeAttack += deltaTime;
                     }
-                    
-                    if (_timeSinceLastCharge <= ChargeCooldown)
+
+                    if (_timeSinceLastCharge <= GameManager.instance.userManager.GetChargeCooldown())
                     {
                         _timeSinceLastCharge += deltaTime;
                     }
 
-                    if (_timeSinceLastLightMeleeAttack <= LightMeleeAttackDirectionLockDuration)
+                    if (_timeSinceLastLightMeleeAttack <= GameManager.instance.userManager.GetLightAttackDirectionLockDuration())
                     {
                         _timeSinceLastLightMeleeAttack += deltaTime;
                     }
@@ -793,14 +769,14 @@ namespace Assets.Scripts.Character_Controller_Layer
                 
                 case CharacterState.LightMeleeAttack:
                 {
-                    if(_timeSinceStartedLightMeleeAttack > LightMeleeAttackDuration)
+                    if(_timeSinceStartedLightMeleeAttack > GameManager.instance.userManager.GetLightAttackDuration())
                         TransitionToState(CharacterState.MeleeStance);
                     break;
                 }
                 
                 case CharacterState.HeavyMeleeAttack:
                 {
-                    if(_timeSinceStartedHeavyMeleeAttack > HeavyMeleeAttackDuration)
+                    if(_timeSinceStartedHeavyMeleeAttack > GameManager.instance.userManager.GetHeavyAttackDuration())
                         TransitionToState(CharacterState.MeleeStance);
                     break;
                 }
@@ -808,14 +784,14 @@ namespace Assets.Scripts.Character_Controller_Layer
                 case CharacterState.Charging:
                 {
                     // Detect being stopped by elapsed time
-                    if (!_isStopped && _timeSinceStartedCharge > MaxChargeTime)
+                    if (!_isStopped && _timeSinceStartedCharge > GameManager.instance.userManager.GetMaxChargeTime())
                     {
                         _mustStopVelocity = true;
                         _isStopped = true;
                     }
 
                     // Detect end of stopping phase and transition back to default movement state
-                    if (_timeSinceStopped > StoppedTime)
+                    if (_timeSinceStopped > GameManager.instance.userManager.GetStoppedTime())
                     {
                         TransitionToState(CharacterState.MeleeStance);
                     }
@@ -826,7 +802,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                 //Casting Stance
                 case CharacterState.CastingStance:
                 {
-                    if (_timeSinceLastCastingSpell <= CastingSpellDirectionLockDuration)
+                    if (_timeSinceLastCastingSpell <= GameManager.instance.spellsManager.GetCastingSpellDirectionLockDuration())
                     {
                         _timeSinceLastCastingSpell += deltaTime;
                     }
@@ -851,7 +827,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                     }
                     else
                     {
-                        if(_timeSinceStartedCastingSpell > CastingSpellDuration)
+                        if(_timeSinceStartedCastingSpell > GameManager.instance.spellsManager.GetCastingSpellDuration())
                             TransitionToState(CharacterState.CastingStance);
                     }
                     break;
@@ -909,42 +885,7 @@ namespace Assets.Scripts.Character_Controller_Layer
         {
         }
 
-        public void StatsUpdate()
-        {
-            // Update the character's stats
-            //Update Movement Stats
-            MaxStableMoveSpeed = GameManager.instance.userManager.GetMovementSpeed();
-            GlobalMovementSpeedMultiplier = GameManager.instance.userManager.GetGlobalMovementSpeedMultiplier();
-            MeleeStanceMoveSpeedMultiplier = GameManager.instance.userManager.GetMeleeMovementSpeedMultiplier();
-            CastingStanceMoveSpeedMultiplier = GameManager.instance.userManager.GetCastingMovementSpeedMultiplier();
-            StableMovementSharpness = GameManager.instance.userManager.GetStableMovementSharpness();
-            OrientationSharpness = GameManager.instance.userManager.GetOrientationSharpness();
-            //Update Light Melee Attack Stats
-            LightMeleeAttackDuration = GameManager.instance.userManager.GetLightAttackDuration();
-            LightMeleeAttackStableMoveSpeedMultiplier = GameManager.instance.userManager.GetLightAttackMovementSpeedMultiplier();
-            LightMeleeAttackCooldown = GameManager.instance.userManager.GetLightAttackCooldown();
-            LightMeleeAttackDirectionLockDuration = GameManager.instance.userManager.GetLightAttackDirectionLockDuration();
-            //Update Heavy Melee Attack Stats
-            HeavyMeleeAttackDuration = GameManager.instance.userManager.GetHeavyAttackDuration();
-            HeavyMeleeAttackStableMoveSpeedMultiplier = GameManager.instance.userManager.GetHeavyAttackMovementSpeedMultiplier();
-            HeavyMeleeAttackCooldown = GameManager.instance.userManager.GetHeavyAttackCooldown();
-            HeavyMeleeAttackDirectionLockDuration = GameManager.instance.userManager.GetHeavyAttackDirectionLockDuration();
-            //Update Charge Stats
-            ChargeSpeed = GameManager.instance.userManager.GetChargeSpeed();
-            MaxChargeTime = GameManager.instance.userManager.GetMaxChargeTime();
-            StoppedTime = GameManager.instance.userManager.GetStoppedTime();
-            ChargeCooldown = GameManager.instance.userManager.GetChargeCooldown();
-            CanDoubleCharge = GameManager.instance.userManager.GetCanDoubleCharge();
-        }
-
-        public void UpdateSpellStats()
-        {
-            //Update Spell Casting Stats
-            CastingSpellDuration = GameManager.instance.spellsManager.GetCastingSpellDuration();
-            CastingSpellStableMoveSpeedMultiplier = GameManager.instance.spellsManager.GetCastingSpellMovementSpeedMultiplier();
-            CastingSpellCooldown = GameManager.instance.spellsManager.GetCastingSpellCooldown();
-            CastingSpellDirectionLockDuration = GameManager.instance.spellsManager.GetCastingSpellDirectionLockDuration();
-        }
+        
         
 
         public void AddVelocity(Vector3 velocity)
@@ -990,11 +931,12 @@ namespace Assets.Scripts.Character_Controller_Layer
 
         private void HandleRotation(ref Quaternion currentRotation, float deltaTime)
         {
-            if (_lookInputVector.sqrMagnitude > 0f && OrientationSharpness > 0f)
+            var orientationSharpness = GameManager.instance.userManager.GetOrientationSharpness();
+            if (_lookInputVector.sqrMagnitude > 0f && orientationSharpness > 0f)
             {
                 // Smoothly interpolate from current to target look direction
                 var smoothedLookInputDirection = Vector3.Slerp(Motor.CharacterForward, _lookInputVector,
-                    1 - Mathf.Exp(-OrientationSharpness * deltaTime)).normalized;
+                    1 - Mathf.Exp(-orientationSharpness * deltaTime)).normalized;
 
                 // Set the current rotation (which will be used by the KinematicCharacterMotor)
                 currentRotation = Quaternion.LookRotation(smoothedLookInputDirection, Motor.CharacterUp);
@@ -1048,6 +990,7 @@ namespace Assets.Scripts.Character_Controller_Layer
 
         private void HandleVelocity(ref Vector3 currentVelocity, float deltaTime, float movementSpeed, float movementSpeedMultiplier, float globalMovementSpeedMultiplier)
         {
+            
             // Ground movement
                     if (Motor.GroundingStatus.IsStableOnGround)
                     {
@@ -1074,7 +1017,7 @@ namespace Assets.Scripts.Character_Controller_Layer
 
                         // Smooth movement Velocity
                         currentVelocity = Vector3.Lerp(currentVelocity, targetMovementVelocity,
-                            1f - Mathf.Exp(-StableMovementSharpness * deltaTime));
+                            1f - Mathf.Exp(-GameManager.instance.userManager.GetStableMovementSharpness() * deltaTime));
                     }
                     // Air movement
                     else

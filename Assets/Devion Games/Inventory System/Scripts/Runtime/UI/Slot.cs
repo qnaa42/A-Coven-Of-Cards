@@ -178,6 +178,20 @@ namespace DevionGames.InventorySystem
             }
         }
 
+        public void DynamicSlot(Slot slot)
+        {
+            var container = GetComponentInParent<ItemContainer>();
+            if (container.UseReferences)
+            {
+                ObservedItem = slot.ObservedItem;
+            }
+        }
+
+        public void ClearSlot()
+        {
+            ObservedItem = null;
+        }
+
         //Checks if we can use the item in this slot
         public virtual bool CanUse() {
             return true;

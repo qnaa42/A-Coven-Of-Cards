@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spellName: The Star
   element: Air
-  spellDescription: Default
+  spellDescription: Dash
   spellType: 2
   castingSpellDuration: 2.5
   castingSpellMovementSpeedMultiplier: 0.05
