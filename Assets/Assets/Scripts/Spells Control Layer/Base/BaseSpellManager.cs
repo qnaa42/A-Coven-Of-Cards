@@ -64,9 +64,27 @@ namespace Assets.Scripts.Spells_Control_Layer.Base
                 float _projectileExplosionProjectileSpeed,
                 float _projectileExplosionProjectileLifeSpawn,
                 float _projectileExplosionAoeLifeSpawn,
-                float _projectileExplosionAoeRadius
-                
-
+                float _projectileExplosionAoeRadius,
+                //Change to Movement Speed
+                float _changeToMovementSpeed,
+                //Change to Light Attack
+                float _changeToLightAttackDuration,
+                float _changeToLightAttackMovementSpeed,
+                float _changeToLightAttackCooldown,
+                float _changeToLightAttackRange,
+                float _changeToLightAttackRadius,
+                //Change to Heavy Attack
+                float _changeToHeavyAttackDuration,
+                float _changeToHeavyAttackMovementSpeed,
+                float _changeToHeavyAttackCooldown,
+                float _changeToHeavyAttackRange,
+                float _changeToHeavyAttackRadius,
+                //Change to Charge
+                float _changeToChargeSpeed,
+                float _changeToChargeMaxChargeTime,
+                float _changeToChargeStoppedTime,
+                float _changeToChargeCooldown,
+                bool _canDoubleCharge
                 )
         {
             if (!didInit)
@@ -112,7 +130,31 @@ namespace Assets.Scripts.Spells_Control_Layer.Base
                 projectileExplosionProjectileSpeed = _projectileExplosionProjectileSpeed,
                 projectileExplosionProjectileLifeSpawn = _projectileExplosionProjectileLifeSpawn,
                 projectileExplosionAoeLifeSpawn = _projectileExplosionAoeLifeSpawn,
-                projectileExplosionAoeRadius = _projectileExplosionAoeRadius
+                projectileExplosionAoeRadius = _projectileExplosionAoeRadius,
+                
+                //Change to Movement Speed
+                changeToMovementSpeed = _changeToMovementSpeed,
+                
+                //Change to Light Attack
+                changeToLightAttackDuration = _changeToLightAttackDuration,
+                changeToLightAttackMovementSpeed = _changeToLightAttackMovementSpeed,
+                changeToLightAttackCooldown = _changeToLightAttackCooldown,
+                changeToLightAttackRange = _changeToLightAttackRange,
+                changeToLightAttackRadius = _changeToLightAttackRadius,
+                
+                //Change to Heavy Attack
+                changeToHeavyAttackDuration = _changeToHeavyAttackDuration,
+                changeToHeavyAttackMovementSpeed = _changeToHeavyAttackMovementSpeed,
+                changeToHeavyAttackCooldown = _changeToHeavyAttackCooldown,
+                changeToHeavyAttackRange = _changeToHeavyAttackRange,
+                changeToHeavyAttackRadius = _changeToHeavyAttackRadius,
+                
+                //Change to Charge
+                changeToChargeSpeed = _changeToChargeSpeed,
+                changeToChargeMaxChargeTime = _changeToChargeMaxChargeTime,
+                changeToChargeStoppedTime = _changeToChargeStoppedTime,
+                changeToChargeCooldown = _changeToChargeCooldown,
+                canDoubleCharge = _canDoubleCharge
             };
             
             global_SpellDatas.Add(newSpell);
@@ -813,6 +855,154 @@ namespace Assets.Scripts.Spells_Control_Layer.Base
                 Init();
 
             global_SpellDatas[id].projectileExplosionAoeRadius -= anAmount;
+        }
+        
+        //Getters for change to stats
+        //Change to Movement Speed
+        public float GetChangeToMovementSpeed(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_SpellDatas[id].changeToMovementSpeed;
+        }
+        
+        //Change to Light Attack
+        //Change to Light Attack Duration
+        public float GetChangeToLightAttackDuration(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_SpellDatas[id].changeToLightAttackDuration;
+        }
+        
+        //Change to Light Attack Movement Speed
+        public float GetChangeToLightAttackMovementSpeed(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_SpellDatas[id].changeToLightAttackMovementSpeed;
+        }
+        
+        //Change to Light Attack Cooldown
+        public float GetChangeToLightAttackCooldown(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_SpellDatas[id].changeToLightAttackCooldown;
+        }
+        
+        //Change to Light Attack Range
+        public float GetChangeToLightAttackRange(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_SpellDatas[id].changeToLightAttackRange;
+        }
+        
+        //Change to Light Attack Radius
+        public float GetChangeToLightAttackRadius(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_SpellDatas[id].changeToLightAttackRadius;
+        }
+        
+        //Change To Heavy Attack
+        //Change to Heavy Attack Duration
+        public float GetChangeToHeavyAttackDuration(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_SpellDatas[id].changeToHeavyAttackDuration;
+        }
+        
+        //Change to Heavy Attack Movement Speed
+        public float GetChangeToHeavyAttackMovementSpeed(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_SpellDatas[id].changeToHeavyAttackMovementSpeed;
+        }
+        
+        //Change to Heavy Attack Cooldown
+        public float GetChangeToHeavyAttackCooldown(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_SpellDatas[id].changeToHeavyAttackCooldown;
+        }
+        
+        //Change to Heavy Attack Range
+        public float GetChangeToHeavyAttackRange(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_SpellDatas[id].changeToHeavyAttackRange;
+        }
+        
+        //Change to Heavy Attack Radius
+        public float GetChangeToHeavyAttackRadius(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_SpellDatas[id].changeToHeavyAttackRadius;
+        }
+        
+        //Change to Charge 
+        //Change to Charge Speed
+        public float GetChangeToChargeSpeed(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_SpellDatas[id].changeToChargeSpeed;
+        }
+        
+        //Change to Max Charge Time
+        public float GetChangeToMaxChargeTime(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_SpellDatas[id].changeToChargeMaxChargeTime;
+        }
+        
+        //Change to Charge Stopped Time
+        public float GetChangeToChargeStoppedTime(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_SpellDatas[id].changeToChargeStoppedTime;
+        }
+        
+        //Change to Charge Cooldown
+        public float GetChangeToChargeCooldown(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_SpellDatas[id].changeToChargeCooldown;
+        }
+        
+        //Can Double Charge?
+        public bool GetCanDoubleCharge(int id)
+        {
+            if (!didInit)
+                Init();
+
+            return global_SpellDatas[id].canDoubleCharge;
         }
     }
 }

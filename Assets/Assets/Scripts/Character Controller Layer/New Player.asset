@@ -35,7 +35,7 @@ MonoBehaviour:
   maxChargeTime: 0.15
   stoppedTime: 0.5
   chargeCooldown: 1
-  canDoubleCharge: 1
+  canDoubleCharge: 0
   castingSpell1Id: 19
   castingSpell2Id: 5
   castingSpell3Id: 16

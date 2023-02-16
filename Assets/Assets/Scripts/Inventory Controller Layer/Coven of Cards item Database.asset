@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 06 - The Lovers
+  m_Name: 06 - The Lovers (Air)
   m_EditorClassIdentifier: 
   m_Id: b6e3cea0-7a52-4067-a89f-4adbbb9fd4b5
   m_ItemName: 06 - The Lovers (Air)
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 15d5122f2a394f1409403e7a7983b233, type: 3}
+  m_Icon: {fileID: 21300000, guid: 046beceff1fc05240960c12733478dab, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: Cone - Charm enemies in a cone
   m_Category: {fileID: 5852377583727276087}
@@ -78,13 +78,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 
+  m_Name: 16 - The Tower (Fire)
   m_EditorClassIdentifier: 
   m_Id: d7ff02d7-0158-450e-bda6-e6870532608a
   m_ItemName: 16 - The Tower (Fire)
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 21300000, guid: 01a9442392466c845b488785d8519d7b, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: 
   m_Category: {fileID: 5852377583727276087}
@@ -159,13 +159,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 
+  m_Name: 11 - Justice (Air)
   m_EditorClassIdentifier: 
   m_Id: 08cf704c-6cde-40a1-a886-9cfeeda14b4b
   m_ItemName: 11 - Justice (Air)
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 21300000, guid: 66e78fa3408a2fa468ccce289152bcb5, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: "AOE - In an area enemies are picked up off the ground and \nas
     they rise up they disintigrate into the hevans.\n"
@@ -215,13 +215,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 
+  m_Name: 18 - The Moon (Water)
   m_EditorClassIdentifier: 
   m_Id: 6e14c43d-2ccc-4013-8678-3aa578aa4c04
   m_ItemName: 18 - The Moon (Water)
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 21300000, guid: 70029a49adb95c34c9c55a5ef2befdff, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: 
   m_Category: {fileID: 5852377583727276087}
@@ -270,13 +270,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 
+  m_Name: 12 - The Hanged Man (Water)
   m_EditorClassIdentifier: 
   m_Id: 318a6eac-ac2a-4862-8c95-31d93dfdea5b
   m_ItemName: 12 - The Hanged Man (Water)
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 21300000, guid: a08072c9c44b241488ab23db93e8ed58, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: 
   m_Category: {fileID: 5852377583727276087}
@@ -325,13 +325,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 
+  m_Name: 10 - The Wheel of Fortune (Fire)
   m_EditorClassIdentifier: 
   m_Id: 98d7dc90-4b6b-4d5c-8db2-8a57d57b808b
   m_ItemName: 10 - The Wheel of Fortune (Fire)
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 21300000, guid: b20215b9843659444bf34de2d1eb5274, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: 
   m_Category: {fileID: 5852377583727276087}
@@ -380,13 +380,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 01 - The Magican
+  m_Name: 01 - The Magican (Air)
   m_EditorClassIdentifier: 
   m_Id: caada890-425c-4d42-a6ad-1718176aee0c
   m_ItemName: 01 - The Magican (Air)
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 80cc7cae31c237243a41e369c390451e, type: 3}
+  m_Icon: {fileID: 21300000, guid: 21f9f56f8ac2aa445a0c79e116c3187e, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: Projectile - Magic bolt that penetrates
   m_Category: {fileID: 5852377583727276087}
@@ -447,13 +447,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 
+  m_Name: 02 - The High Priestess (Water)
   m_EditorClassIdentifier: 
   m_Id: 3069df30-f6dd-473c-a931-ff03d3d52775
   m_ItemName: 02 - The High Priestess (Water)
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 21300000, guid: f9898f6fd27edba4dbafab310715a718, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: 
   m_Category: {fileID: 5852377583727276087}
@@ -546,13 +546,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 
+  m_Name: 14 - Temperance (Fire)
   m_EditorClassIdentifier: 
   m_Id: d4370ccb-db43-4499-914f-f8efe37eec2c
   m_ItemName: 14 - Temperance (Fire)
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 21300000, guid: 46502122da16f7b4184912ff923905e8, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: 
   m_Category: {fileID: 5852377583727276087}
@@ -647,13 +647,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 
+  m_Name: 07 - The Chariot (Water)
   m_EditorClassIdentifier: 
   m_Id: 2a48f7fa-d4be-4aba-b7ef-7acaeedbca65
   m_ItemName: 07 - The Chariot (Water)
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 21300000, guid: 57bfff9eb5722684b95e6a1521cbb2fb, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: 
   m_Category: {fileID: 5852377583727276087}
@@ -715,13 +715,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 
+  m_Name: 13 - Death (Water)
   m_EditorClassIdentifier: 
   m_Id: ed6c7328-11f1-480e-b3d1-2bd16cc03d15
   m_ItemName: 13 - Death (Water)
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 21300000, guid: c559815a6d03f34469849d25b4ef0890, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: 
   m_Category: {fileID: 5852377583727276087}
@@ -847,13 +847,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 
+  m_Name: 09 - The Hermit (Earth)
   m_EditorClassIdentifier: 
   m_Id: f34410a1-edb8-4380-80ad-ca2993c8ddc4
   m_ItemName: 09 - The Hermit (Earth)
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 21300000, guid: e3dadee23c6b4794aa712b310c2ccfbe, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: 
   m_Category: {fileID: 5852377583727276087}
@@ -902,13 +902,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 
+  m_Name: 17 - The Star (Air)
   m_EditorClassIdentifier: 
   m_Id: 4b48d4ee-a4dc-48c7-8eca-0c6c7db93b22
   m_ItemName: 17 - The Star (Air)
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 21300000, guid: 136c3aef90c513742817f551b108944d, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: Dash - A dash of starlight that leaves nebulous damage and is super
     quick
@@ -958,13 +958,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 
+  m_Name: 04 - The Emperor (Fire)
   m_EditorClassIdentifier: 
   m_Id: 106712a5-f151-48f1-bf74-6cfb6a25b76e
   m_ItemName: 04 - The Emperor (Fire)
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 21300000, guid: 925c8909f6998cd45ab22767a50e0f9a, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: 
   m_Category: {fileID: 5852377583727276087}
@@ -1026,13 +1026,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 
+  m_Name: 19 - The Sun (Fire)
   m_EditorClassIdentifier: 
   m_Id: 39eab30d-4c67-49c0-a303-f70b942fd980
   m_ItemName: 19 - The Sun (Fire)
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 21300000, guid: 9f6df0b74010fe84daae76b985b8e786, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: 
   m_Category: {fileID: 5852377583727276087}
@@ -1108,13 +1108,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 
+  m_Name: 03 - The Empress (Earth)
   m_EditorClassIdentifier: 
   m_Id: 461448a5-8ba9-4479-8e37-10d251bfcdd4
   m_ItemName: 03 - The Empress (Earth)
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 21300000, guid: a62f7d0126d767240a339c59506cc59d, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: 
   m_Category: {fileID: 5852377583727276087}
@@ -1365,13 +1365,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 
+  m_Name: 20 - Judgement (Fire)
   m_EditorClassIdentifier: 
   m_Id: f6d6f08f-478c-4ebd-ad26-68a132e74d91
   m_ItemName: 20 - Judgement (Fire)
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 21300000, guid: 99e5c7875add711459cb84d54f0698d9, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: 
   m_Category: {fileID: 5852377583727276087}
@@ -1420,13 +1420,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 
+  m_Name: 05 - The Hierophant (Earth)
   m_EditorClassIdentifier: 
   m_Id: bc33f49a-185d-4634-842c-b7a8c6ef4bce
   m_ItemName: 05 - The Hierophant (Earth)
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 21300000, guid: 229b0498bd97c17469c4387d530895b2, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: 
   m_Category: {fileID: 5852377583727276087}
@@ -1504,13 +1504,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 
+  m_Name: 15 - The Devil (Earth)
   m_EditorClassIdentifier: 
   m_Id: 195f60dc-5978-4862-8681-7dc37c457de7
   m_ItemName: 15 - The Devil (Earth)
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 21300000, guid: 2cd90557b1c5ef449bbfac27e6cf7cb8, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: 
   m_Category: {fileID: 5852377583727276087}
@@ -1559,13 +1559,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
-  m_Name: 
+  m_Name: 08 - Strength (Fire)
   m_EditorClassIdentifier: 
   m_Id: d946641c-60ed-4e0e-86c7-ca1e7a0e1bff
   m_ItemName: 08 - Strength (Fire)
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 21300000, guid: 9deca65003d2e4c408fb936b4b9284b6, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: 
   m_Category: {fileID: 5852377583727276087}

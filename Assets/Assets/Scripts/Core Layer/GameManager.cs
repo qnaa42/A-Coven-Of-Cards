@@ -13,7 +13,7 @@ namespace Assets.Scripts.Core_Layer
 {
     public class GameManager : BaseGameManager
     {
-        
+        public MyUiManager uiManager;
         
         public UserStatsManager userManager;
         public BaseUserManager baseUserManager;
@@ -64,6 +64,8 @@ namespace Assets.Scripts.Core_Layer
             {
                 spellsControlManager.InitializeComboSpellList();
             }
+            
+            uiManager.UpdateTarotUi();
             
             
             

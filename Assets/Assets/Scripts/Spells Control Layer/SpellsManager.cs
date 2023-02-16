@@ -73,7 +73,27 @@ namespace Assets.Scripts.Spells_Control_Layer
                         spell.projectileExplosionProjectileSpeed,
                         spell.projectileExplosionProjectileLifeSpawn,
                         spell.projectileExplosionAoeLifeSpawn,
-                        spell.projectileExplosionAoeRadius
+                        spell.projectileExplosionAoeRadius,
+                        //Change to Movement Speed
+                        spell.changeToMovementSpeed,
+                        //Change to Light Attack
+                        spell.changeToLightAttackDuration,
+                        spell.changeToLightAttackMovementSpeed,
+                        spell.changeToLightAttackCooldown,
+                        spell.changeToLightAttackRange,
+                        spell.changeToLightAttackRadius,
+                        //Change to Heavy Attack
+                        spell.changeToHeavyAttackDuration,
+                        spell.changeToHeavyAttackMovementSpeed,
+                        spell.changeToHeavyAttackCooldown,
+                        spell.changeToHeavyAttackRange,
+                        spell.changeToHeavyAttackRadius,
+                        //Change to Charge 
+                        spell.changeToChargeSpeed,
+                        spell.changeToChargeMaxChargeTime,
+                        spell.changeToChargeStoppedTime,
+                        spell.changeToChargeCooldown,
+                        spell.canDoubleCharge
                     );
             }
         }

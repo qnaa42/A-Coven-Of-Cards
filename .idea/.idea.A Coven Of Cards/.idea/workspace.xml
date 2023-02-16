@@ -3,21 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="a1e62ff1-8c95-4f34-b705-2d1bd115eabc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.A Coven Of Cards/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.A Coven Of Cards/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.plastic/plastic.changes" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.plastic/plastic.wktree" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.wktree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/Character Controller Layer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/Character Controller Layer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/Dummy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/Dummy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/Manager Layer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/Manager Layer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/Resources/ArticyDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/Resources/ArticyDatabase.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Momchil's Work in process/ArticyImporter/Content/Generated/ArticyEditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Momchil's Work in process/ArticyImporter/Content/Generated/ArticyEditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/books_paper_d.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/books_paper_d.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/fabric_bag_2_d.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/fabric_bag_2_d.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/trunk_2_d.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/trunk_2_d.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/RunemarkStudio/DarkFantasyKit [Free]/Prefabs/Doors and Gates/dfk_door_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/RunemarkStudio/DarkFantasyKit [Free]/Prefabs/Doors and Gates/dfk_door_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Prefabs/METE Prefabs/HOUSE.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Prefabs/METE Prefabs/HOUSE.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Prefabs/UI Controller Layer/MainCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Prefabs/UI Controller Layer/MainCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/CharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/CharacterController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Debug/OnTriggerEnterStatReduce.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Debug/OnTriggerEnterStatReduce.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/New Player.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/New Player.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Core Layer/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Core Layer/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Inventory Controller Layer/Coven of Cards item Database.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Inventory Controller Layer/Coven of Cards item Database.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Air/17 - The Star.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Air/17 - The Star.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Scriptable Objects/Spell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Scriptable Objects/Spell.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Base/BaseSpellManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Base/BaseSpellManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Base/Data/SpellData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Base/Data/SpellData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Air/06 - The Lovers.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Air/06 - The Lovers.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Fire/16 - The Tower.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Fire/16 - The Tower.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Fire/19 - The Sun.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Fire/19 - The Sun.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Water/07 - The Chariot.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Water/07 - The Chariot.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/SpellsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/SpellsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/SpellsStatsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/SpellsStatsManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Devion Games/Inventory System/Scripts/Runtime/UI/Slot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Devion Games/Inventory System/Scripts/Runtime/UI/Slot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/House.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/House.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/WhoteRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WhoteRoom.unity" afterDir="false" />
@@ -125,7 +128,8 @@
       <workItem from="1675337841209" duration="20861000" />
       <workItem from="1675421177182" duration="3796000" />
       <workItem from="1675508971229" duration="7257000" />
-      <workItem from="1676377039201" duration="7582000" />
+      <workItem from="1676377039201" duration="8308000" />
+      <workItem from="1676550507963" duration="17057000" />
     </task>
     <servers />
   </component>

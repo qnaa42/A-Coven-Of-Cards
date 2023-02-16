@@ -740,5 +740,153 @@ namespace Assets.Scripts.Spells_Control_Layer
 
             _mySpellManager.SubtractProjectileExplosionAoeRadius(_myId, aProjectileExplosionAoeRadius);
         }
+        
+        //Getters for change to stats
+        //Change to Movement Speed
+        public float GetChangeToMovementSpeed()
+        {
+            if (!didInit)
+                Init();
+
+            return _mySpellManager.GetChangeToMovementSpeed(_myId);
+        }
+        
+        //Change to Light Attack
+        //Change to Light Attack Duration
+        public float GetChangeToLightAttackDuration()
+        {
+            if (!didInit)
+                Init();
+
+            return _mySpellManager.GetChangeToLightAttackDuration(_myId);
+        }
+        
+        //Change to Light Attack Movement Speed
+        public float GetChangeToLightAttackMovementSpeed()
+        {
+            if (!didInit)
+                Init();
+
+            return _mySpellManager.GetChangeToLightAttackMovementSpeed(_myId);
+        }
+        
+        //Change to Light Attack Cooldown
+        public float GetChangeToLightAttackCooldown()
+        {
+            if (!didInit)
+                Init();
+
+            return _mySpellManager.GetChangeToLightAttackCooldown(_myId);
+        }
+        
+        //Change to Light Attack Range
+        public float GetChangeToLightAttackRange()
+        {
+            if (!didInit)
+                Init();
+
+            return _mySpellManager.GetChangeToLightAttackRange(_myId);
+        }
+        
+        //Change to Light Attack Radius
+        public float GetChangeToLightAttackRadius()
+        {
+            if (!didInit)
+                Init();
+
+            return _mySpellManager.GetChangeToLightAttackRadius(_myId);
+        }
+        
+        //Change to Heavy Attack
+        //Change to Heavy Attack Duration
+        public float GetChangeToHeavyAttackDuration()
+        {
+            if (!didInit)
+                Init();
+
+            return _mySpellManager.GetChangeToHeavyAttackDuration(_myId);
+        }
+        
+        //Change to Heavy Attack Movement Speed
+        public float GetChangeToHeavyAttackMovementSpeed()
+        {
+            if (!didInit)
+                Init();
+
+            return _mySpellManager.GetChangeToHeavyAttackMovementSpeed(_myId);
+        }
+        
+        //Change to Heavy Attack Cooldown
+        public float GetChangeToHeavyAttackCooldown()
+        {
+            if (!didInit)
+                Init();
+
+            return _mySpellManager.GetChangeToHeavyAttackCooldown(_myId);
+        }
+        
+        //Change to Heavy Attack Range
+        public float GetChangeToHeavyAttackRange()
+        {
+            if (!didInit)
+                Init();
+
+            return _mySpellManager.GetChangeToHeavyAttackRange(_myId);
+        }
+        
+        //Change to Heavy Attack Radius
+        public float GetChangeToHeavyAttackRadius()
+        {
+            if (!didInit)
+                Init();
+
+            return _mySpellManager.GetChangeToHeavyAttackRadius(_myId);
+        }
+        
+        //Change to Charge 
+        //Change to Charge Speed
+        public float GetChangeToChargeSpeed()
+        {
+            if (!didInit)
+                Init();
+
+            return _mySpellManager.GetChangeToChargeSpeed(_myId);
+        }
+        
+        //Change to Max Charge Time
+        public float GetChangeToMaxChargeTime()
+        {
+            if (!didInit)
+                Init();
+
+            return _mySpellManager.GetChangeToMaxChargeTime(_myId);
+        }
+        
+        //Change to Charge Stopped Time
+        public float GetChangeToChargeStoppedTime()
+        {
+            if (!didInit)
+                Init();
+
+            return _mySpellManager.GetChangeToChargeStoppedTime(_myId);
+        }
+        
+        //Change to Charge Cooldown
+        public float GetChangeToChargeCooldown()
+        {
+            if (!didInit)
+                Init();
+
+            return _mySpellManager.GetChangeToChargeCooldown(_myId);
+        }
+        
+        //Can Double Charge?
+        public bool GetCanDoubleCharge()
+        {
+            if (!didInit)
+                Init();
+
+            return _mySpellManager.GetCanDoubleCharge(_myId);
+        }
     }
 }

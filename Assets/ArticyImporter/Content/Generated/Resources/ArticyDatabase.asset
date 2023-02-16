@@ -1178,4 +1178,4 @@ MonoBehaviour:
   mPackages:
   - PackageName: All objects
     PackagePath: All objects
-    mIsDefaultPackage: 1
+    mIsDefaultPackage: 0

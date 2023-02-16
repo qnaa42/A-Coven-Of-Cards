@@ -23,12 +23,34 @@ MonoBehaviour:
   projectileSpeed: 0
   projectilePrefab: {fileID: 0}
   projectileLifeSpawn: 0
-  distanceFromCastingPoint: 0
-  aeoLifeSpawn: 0
-  aeoRadius: 0
-  aeoPrefab: {fileID: 0}
+  aoeProjectileDistanceFromCastingPoint: 0
+  aoeLifeSpawn: 0
+  aoeRadius: 0
+  aoePrefab: {fileID: 0}
   dashChargeSpeed: 20
   dashMaxChargeTime: 0.35
   dashStoppedTime: 0.05
   dashTrailPrefab: {fileID: 4584408225393960838, guid: 2fdde12cfaf621a4b84a4b85f1d7bfec, type: 3}
   dashTrailLifeSpawn: 5
+  projectileExplosionProjectilePrefab: {fileID: 0}
+  projectileExplosionAoePrefab: {fileID: 0}
+  projectileExplosionProjectileSpeed: 0
+  projectileExplosionProjectileLifeSpawn: 0
+  projectileExplosionAoeLifeSpawn: 0
+  projectileExplosionAoeRadius: 0
+  changeToMovementSpeed: 0
+  changeToLightAttackDuration: 0
+  changeToLightAttackMovementSpeed: 0
+  changeToLightAttackCooldown: 0
+  changeToLightAttackRange: 0
+  changeToLightAttackRadius: 0
+  changeToHeavyAttackDuration: 0
+  changeToHeavyAttackMovementSpeed: 0
+  changeToHeavyAttackCooldown: 0
+  changeToHeavyAttackRange: 0
+  changeToHeavyAttackRadius: 0
+  changeToChargeSpeed: 0
+  changeToChargeMaxChargeTime: 0
+  changeToChargeStoppedTime: 0
+  changeToChargeCooldown: 0
+  canDoubleCharge: 1

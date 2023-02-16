@@ -14,7 +14,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spellName: The Tower
   element: Fire
+  spellDescription: Default
+  spellType: 0
   castingSpellDuration: 2.5
   castingSpellMovementSpeedMultiplier: 0.05
   castingSpellCooldown: 1.5
   castingSpellDirectionLockDuration: 2
+  projectileSpeed: 0
+  projectilePrefab: {fileID: 0}
+  projectileLifeSpawn: 0
+  aoeProjectileDistanceFromCastingPoint: 0
+  aoeLifeSpawn: 0
+  aoeRadius: 0
+  aoePrefab: {fileID: 0}
+  dashChargeSpeed: 0
+  dashMaxChargeTime: 0
+  dashStoppedTime: 0
+  dashTrailPrefab: {fileID: 0}
+  dashTrailLifeSpawn: 0
+  projectileExplosionProjectilePrefab: {fileID: 0}
+  projectileExplosionAoePrefab: {fileID: 0}
+  projectileExplosionProjectileSpeed: 0
+  projectileExplosionProjectileLifeSpawn: 0
+  projectileExplosionAoeLifeSpawn: 0
+  projectileExplosionAoeRadius: 0
+  changeToMovementSpeed: 0
+  changeToLightAttackDuration: 25
+  changeToLightAttackMovementSpeed: 10
+  changeToLightAttackCooldown: 5
+  changeToLightAttackRange: 4
+  changeToLightAttackRadius: 6
+  changeToHeavyAttackDuration: 0
+  changeToHeavyAttackMovementSpeed: 0
+  changeToHeavyAttackCooldown: 0
+  changeToHeavyAttackRange: 0
+  changeToHeavyAttackRadius: 0
+  changeToChargeSpeed: 0
+  changeToChargeMaxChargeTime: 0
+  changeToChargeStoppedTime: 0
+  changeToChargeCooldown: 0
+  canDoubleCharge: 0

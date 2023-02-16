@@ -48,6 +48,32 @@ namespace Assets.Scripts.Scriptable_Objects
         public float projectileExplosionProjectileLifeSpawn;
         public float projectileExplosionAoeLifeSpawn;
         public float projectileExplosionAoeRadius;
+        
+        [Header("Change to Movement Speed")]
+        public float changeToMovementSpeed;
+
+        [Header("Change to Light Attack")] 
+        public float changeToLightAttackDuration;
+        public float changeToLightAttackMovementSpeed;
+        public float changeToLightAttackCooldown;
+        public float changeToLightAttackRange;
+        public float changeToLightAttackRadius;
+        
+        [Header("Change to Heavy Attack")]
+        public float changeToHeavyAttackDuration;
+        public float changeToHeavyAttackMovementSpeed;
+        public float changeToHeavyAttackCooldown;
+        public float changeToHeavyAttackRange;
+        public float changeToHeavyAttackRadius;
+        
+        [Header("Change to Charge")]
+        public float changeToChargeSpeed;
+        public float changeToChargeMaxChargeTime;
+        public float changeToChargeStoppedTime;
+        public float changeToChargeCooldown;
+        public bool canDoubleCharge;
+
+
 
     }
 }
