@@ -5,8 +5,8 @@
     "set_IncludedNodes": "Settings, Project, GlobalVariables, ObjectDefinitions, Packages, ScriptMethods, Hierarchy, Assets",
     "set_UseScriptSupport": "True",
     "ExportVersion": "1.2",
-    "ObjectDefinitionsHash": "977A8845B2D4FCDFF40D6F9A81C07C91F35B9ED3E2070E13FB4F737106787C65",
-    "ScriptFragmentsHash": "6599714410"
+    "ObjectDefinitionsHash": "0FEA6A43440EA04A5011FF310A20F58E8AFF068565088C2373FB0A8B5D086989",
+    "ScriptFragmentsHash": "2304929800"
   },
   "Project": {
     "Name": "A Coven of Cards",
@@ -90,6 +90,24 @@
           "Type": "Boolean",
           "Value": "False",
           "Description": "True when player is completing act 3"
+        },
+        {
+          "Variable": "nyxHerbs4",
+          "Type": "Boolean",
+          "Value": "False",
+          "Description": "Nyx has enough for 2 health potions"
+        },
+        {
+          "Variable": "nyxHerbs2",
+          "Type": "Boolean",
+          "Value": "False",
+          "Description": "Nyx has enough for 1 health potion"
+        },
+        {
+          "Variable": "enteredDreamscape",
+          "Type": "Boolean",
+          "Value": "False",
+          "Description": "Has the player entered the dreamscape yet?"
         }
       ]
     },
@@ -150,14 +168,7 @@
     {
       "Namespace": "nyxInventory",
       "Description": "",
-      "Variables": [
-        {
-          "Variable": "genericHerbAmount",
-          "Type": "Integer",
-          "Value": "0",
-          "Description": "Amount of herbs Nyx has in her inventory"
-        }
-      ]
+      "Variables": []
     }
   ],
   "ObjectDefinitions": [
@@ -2671,6 +2682,72 @@
                     "Label": "",
                     "TargetPin": "0x0100000000001199",
                     "Target": "0x0100000000001196"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000015A5",
+                    "Target": "0x01000000000015A2"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000015AB",
+                    "Target": "0x01000000000015AA"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000015B1",
+                    "Target": "0x01000000000015B0"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000015BD",
+                    "Target": "0x01000000000015BA"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000168A",
+                    "Target": "0x0100000000001689"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001690",
+                    "Target": "0x010000000000168F"
                   }
                 ]
               }
@@ -2782,7 +2859,7 @@
               "g": 0.7605245,
               "b": 0.7991027
             },
-            "Text": "[Cassandra is taking care of Evelyn, it's best to not disturb her right now.]",
+            "Text": "Cassandra is taking care of Evelyn, it's best to not disturb her right now.",
             "ExternalId": "",
             "Position": {
               "x": 542.0,
@@ -2858,13 +2935,24 @@
                   {
                     "Color": {
                       "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
                     },
                     "Label": "",
                     "TargetPin": "0x010000000000154F",
                     "Target": "0x010000000000154C"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000155E",
+                    "Target": "0x010000000000155B"
                   },
                   {
                     "Color": {
@@ -2874,8 +2962,63 @@
                       "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x010000000000155E",
-                    "Target": "0x010000000000155B"
+                    "TargetPin": "0x01000000000015FB",
+                    "Target": "0x01000000000015FA"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001601",
+                    "Target": "0x0100000000001600"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001607",
+                    "Target": "0x0100000000001606"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000160D",
+                    "Target": "0x010000000000160C"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001670",
+                    "Target": "0x010000000000166F"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000166A",
+                    "Target": "0x0100000000001669"
                   }
                 ]
               }
@@ -2987,7 +3130,7 @@
               "g": 0.7605245,
               "b": 0.7991027
             },
-            "Text": "[Nyx is concocting some kind of plan, it's best not to disturb her right now.]",
+            "Text": "Nyx is concocting some kind of plan, it's best not to disturb her right now.",
             "ExternalId": "",
             "Position": {
               "x": 542.0,
@@ -3035,8 +3178,8 @@
                       "b": 0.7991027
                     },
                     "Label": "",
-                    "TargetPin": "0x01000000000013F3",
-                    "Target": "0x01000000000013F2"
+                    "TargetPin": "0x010000000000152E",
+                    "Target": "0x010000000000152D"
                   },
                   {
                     "Color": {
@@ -3046,8 +3189,74 @@
                       "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x010000000000152E",
-                    "Target": "0x010000000000152D"
+                    "TargetPin": "0x01000000000015C9",
+                    "Target": "0x01000000000015C8"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000015CF",
+                    "Target": "0x01000000000015CE"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000015D5",
+                    "Target": "0x01000000000015D4"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000015DB",
+                    "Target": "0x01000000000015DA"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001629",
+                    "Target": "0x0100000000001627"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001680",
+                    "Target": "0x010000000000167F"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000167A",
+                    "Target": "0x0100000000001679"
                   }
                 ]
               }
@@ -3132,6 +3341,70 @@
                 "Text": "",
                 "Id": "0x010000000000111E",
                 "Owner": "0x010000000000111A"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_6896FB8E",
+            "Id": "0x0100000000001715",
+            "Parent": "0x01000000000010CE",
+            "Attachments": [],
+            "DisplayName": "The Trader",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0000000000000000"
+            },
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "The man looks at you with dead eyes",
+            "ExternalId": "",
+            "Position": {
+              "x": 542.0,
+              "y": -450.0
+            },
+            "ZIndex": 6.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 1754725262,
+            "InputPins": [
+              {
+                "Text": "//Clicking on the trader",
+                "Id": "0x0100000000001726",
+                "Owner": "0x0100000000001715",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000171F",
+                    "Target": "0x010000000000171E"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000001727",
+                "Owner": "0x0100000000001715"
               }
             ]
           }
@@ -3658,8 +3931,8 @@
             "Text": "The woman before you looks pale, this must be Amos' wife, she clearly needs help, you can even feel her fading.",
             "ExternalId": "",
             "Position": {
-              "x": -775.0,
-              "y": 175.0
+              "x": -1075.0,
+              "y": -125.0
             },
             "ZIndex": 0.0,
             "Size": {
@@ -3967,7 +4240,7 @@
             ],
             "OutputPins": [
               {
-                "Text": "",
+                "Text": "gameState.act3 = false",
                 "Id": "0x01000000000013DD",
                 "Owner": "0x01000000000013DB",
                 "Connections": [
@@ -4135,7 +4408,7 @@
             ],
             "OutputPins": [
               {
-                "Text": "gameState.motherAlive = false",
+                "Text": "gameState.motherAlive = false;\ngameState.motherIll = false;\ngameState.act3 = false",
                 "Id": "0x01000000000014B9",
                 "Owner": "0x01000000000014B5",
                 "Connections": [
@@ -4184,7 +4457,7 @@
             "ShortId": 3679415535,
             "InputPins": [
               {
-                "Text": "",
+                "Text": "gameState.enteredDreamscape == true",
                 "Id": "0x01000000000014C1",
                 "Owner": "0x01000000000014BE"
               }
@@ -4217,7 +4490,7 @@
             "TechnicalName": "DFr_223E8B3B",
             "Id": "0x01000000000014C4",
             "Parent": "0x01000000000010FD",
-            "MenuText": "Leave her alone for now",
+            "MenuText": "",
             "StageDirections": "",
             "Speaker": "0x010000000000016E",
             "SplitHeight": 64.0,
@@ -4226,10 +4499,10 @@
               "g": 0.7605245,
               "b": 0.7991027
             },
-            "Text": "",
+            "Text": "You cannot do anything for her right now.",
             "ExternalId": "",
             "Position": {
-              "x": 350.0,
+              "x": 175.0,
               "y": 325.0
             },
             "ZIndex": 30.0,
@@ -4240,7 +4513,7 @@
             "ShortId": 574524219,
             "InputPins": [
               {
-                "Text": "",
+                "Text": "gameState.awake == false || gameState.act1 == true || gameState.act2 == true",
                 "Id": "0x01000000000014C7",
                 "Owner": "0x01000000000014C4"
               }
@@ -4657,9 +4930,9 @@
                   {
                     "Color": {
                       "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
                     },
                     "Label": "",
                     "TargetPin": "0x0100000000001107",
@@ -4836,9 +5109,9 @@
                   {
                     "Color": {
                       "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
                     },
                     "Label": "",
                     "TargetPin": "0x0100000000001107",
@@ -5019,7 +5292,7 @@
               "g": 0.7605245,
               "b": 0.7991027
             },
-            "Text": "I'm going to need a some more herbs.",
+            "Text": "I'm going to need some more herbs.",
             "ExternalId": "",
             "Position": {
               "x": 600.0,
@@ -5118,7 +5391,7 @@
               "g": 0.7605245,
               "b": 0.7991027
             },
-            "Text": "Make, only 2 potions, leave the rest of the herbs for later in case we need them.",
+            "Text": "Right now I only need two potions, if you have any extra herbs, keep them on you for now.",
             "ExternalId": "",
             "Position": {
               "x": 950.0,
@@ -5139,7 +5412,7 @@
             ],
             "OutputPins": [
               {
-                "Text": "gameState.act1 = false;\ngameState.act2 = true;",
+                "Text": "",
                 "Id": "0x0100000000001265",
                 "Owner": "0x0100000000001263",
                 "Connections": [
@@ -5151,8 +5424,8 @@
                       "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x0100000000001107",
-                    "Target": "0x0100000000001103"
+                    "TargetPin": "0x01000000000015F3",
+                    "Target": "0x01000000000015F2"
                   }
                 ]
               }
@@ -5412,7 +5685,7 @@
             "Text": "Damn it all! Both of them are worse than I feared, they'll need something stronger. Nyx knows more about strengthening potions than I do, go talk to her.",
             "ExternalId": "",
             "Position": {
-              "x": 2425.0,
+              "x": 2375.0,
               "y": 1475.0
             },
             "ZIndex": 10.0,
@@ -5437,13 +5710,13 @@
                   {
                     "Color": {
                       "a": 1.0,
-                      "r": 0.577580452,
-                      "g": 0.7605245,
-                      "b": 0.7991027
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x0100000000001107",
-                    "Target": "0x0100000000001103"
+                    "TargetPin": "0x01000000000015EB",
+                    "Target": "0x01000000000015EA"
                   }
                 ]
               }
@@ -5465,7 +5738,7 @@
               "g": 0.7605245,
               "b": 0.7991027
             },
-            "Text": "[Give Cassandra both health potions]",
+            "Text": "Give Cassandra both health potions",
             "ExternalId": "",
             "Position": {
               "x": 975.0,
@@ -5500,6 +5773,340 @@
                     "Label": "",
                     "TargetPin": "0x0100000000001273",
                     "Target": "0x0100000000001272"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_E56343FD",
+            "Id": "0x010000000000154C",
+            "Parent": "0x0100000000001103",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x010000000000019D",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Why are you still here, go and talk to Nyx!",
+            "ExternalId": "",
+            "Position": {
+              "x": 600.0,
+              "y": 1700.0
+            },
+            "ZIndex": 57.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3848487933,
+            "InputPins": [
+              {
+                "Text": "gameState.awake == true && gameState.act2 == true && gameState.healthPotFail == true",
+                "Id": "0x010000000000154F",
+                "Owner": "0x010000000000154C"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000001550",
+                "Owner": "0x010000000000154C"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_B5EDA0D8",
+            "Id": "0x010000000000155B",
+            "Parent": "0x0100000000001103",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x010000000000019D",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Whats this about regents I hear?",
+            "ExternalId": "",
+            "Position": {
+              "x": 600.0,
+              "y": 1925.0
+            },
+            "ZIndex": 59.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3052249304,
+            "InputPins": [
+              {
+                "Text": "gameState.awake == true && gameState.act3 == true",
+                "Id": "0x010000000000155E",
+                "Owner": "0x010000000000155B"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000155F",
+                "Owner": "0x010000000000155B",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001565",
+                    "Target": "0x0100000000001562"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000156B",
+                    "Target": "0x0100000000001568"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_FE42E5E1",
+            "Id": "0x0100000000001562",
+            "Parent": "0x0100000000001103",
+            "MenuText": "We can strengthen the potions",
+            "StageDirections": "",
+            "Speaker": "0x010000000000016E",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Nyx said something about infusing regular health potions with special regents in order to make them more potent.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1975.0,
+              "y": 1925.0
+            },
+            "ZIndex": 61.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 4265797089,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000001565",
+                "Owner": "0x0100000000001562"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000001566",
+                "Owner": "0x0100000000001562",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001573",
+                    "Target": "0x0100000000001570"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_90AE917B",
+            "Id": "0x0100000000001568",
+            "Parent": "0x0100000000001103",
+            "MenuText": "I'm not so sure about this",
+            "StageDirections": "",
+            "Speaker": "0x010000000000016E",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "I don't know, can this work Cass? \r\n\r\nI really think we should cast a spell or something.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1975.0,
+              "y": 2175.0
+            },
+            "ZIndex": 63.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2427359611,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000156B",
+                "Owner": "0x0100000000001568"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000156C",
+                "Owner": "0x0100000000001568",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000157B",
+                    "Target": "0x0100000000001578"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_96498C72",
+            "Id": "0x0100000000001570",
+            "Parent": "0x0100000000001103",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x010000000000019D",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Hmm, this could work yes but you'll have to careful with what you infuse them with. Remember the essence of Evelyn in different to that of Luke's, the same ingredients won't work for both.",
+            "ExternalId": "",
+            "Position": {
+              "x": 2350.0,
+              "y": 1925.0
+            },
+            "ZIndex": 65.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2521402482,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000001573",
+                "Owner": "0x0100000000001570"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000001574",
+                "Owner": "0x0100000000001570",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001107",
+                    "Target": "0x0100000000001103"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_5F551027",
+            "Id": "0x0100000000001578",
+            "Parent": "0x0100000000001103",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x010000000000019D",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "No, there shouldn't be any need to play with the fates, Nyx's plan could work just, please, be careful out there.",
+            "ExternalId": "",
+            "Position": {
+              "x": 2350.0,
+              "y": 2175.0
+            },
+            "ZIndex": 67.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1599410215,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000157B",
+                "Owner": "0x0100000000001578"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000157C",
+                "Owner": "0x0100000000001578",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001107",
+                    "Target": "0x0100000000001103"
                   }
                 ]
               }
@@ -5833,7 +6440,7 @@
             ],
             "OutputPins": [
               {
-                "Text": "",
+                "Text": "gameState.act3 = false\n",
                 "Id": "0x01000000000013E3",
                 "Owner": "0x01000000000013E1",
                 "Connections": [
@@ -5882,7 +6489,7 @@
             "ShortId": 1060854043,
             "InputPins": [
               {
-                "Text": "",
+                "Text": "gameState.enteredDreamscape == true\n",
                 "Id": "0x01000000000014D7",
                 "Owner": "0x01000000000014D6"
               }
@@ -5938,7 +6545,7 @@
             "ShortId": 2204756497,
             "InputPins": [
               {
-                "Text": "",
+                "Text": "gameState.awake == false || gameState.act1 == true || gameState.act2 == true",
                 "Id": "0x01000000000014DD",
                 "Owner": "0x01000000000014DC"
               }
@@ -6180,7 +6787,7 @@
             ],
             "OutputPins": [
               {
-                "Text": "gameState.babyAlive = false",
+                "Text": "gameState.babyAlive = false;\ngameState.babyIll = false;\ngameState.act3 = false\n",
                 "Id": "0x0100000000001501",
                 "Owner": "0x01000000000014FF",
                 "Connections": [
@@ -6330,8 +6937,8 @@
             "Text": "I see it didn't go so well, what can I do to help?",
             "ExternalId": "",
             "Position": {
-              "x": -650.0,
-              "y": 950.0
+              "x": -675.0,
+              "y": 100.0
             },
             "ZIndex": 0.0,
             "Size": {
@@ -6386,8 +6993,8 @@
             "Text": "Cassandra said you'd know what to do, something about strengthening the potions.",
             "ExternalId": "",
             "Position": {
-              "x": -25.0,
-              "y": 825.0
+              "x": -50.0,
+              "y": -25.0
             },
             "ZIndex": 2.0,
             "Size": {
@@ -6442,8 +7049,8 @@
             "Text": "Aren't there any rituals we can perform, there must be!",
             "ExternalId": "",
             "Position": {
-              "x": -25.0,
-              "y": 1075.0
+              "x": -50.0,
+              "y": 225.0
             },
             "ZIndex": 4.0,
             "Size": {
@@ -6498,8 +7105,8 @@
             "Text": "Yes, actually, maybe there is something we can do. In order to strengthen the potion we need to create it and then add some regents in order for it to provide more potent effects.",
             "ExternalId": "",
             "Position": {
-              "x": 325.0,
-              "y": 825.0
+              "x": 300.0,
+              "y": -25.0
             },
             "ZIndex": 6.0,
             "Size": {
@@ -6554,8 +7161,8 @@
             "Text": "The issue is, the regents we need for them can only be gathered in the dreamscape. But luckily for you its nearly witching hour.",
             "ExternalId": "",
             "Position": {
-              "x": 650.0,
-              "y": 825.0
+              "x": 625.0,
+              "y": -25.0
             },
             "ZIndex": 8.0,
             "Size": {
@@ -6610,8 +7217,8 @@
             "Text": "I need you to go out into the woods again, but be careful this time, the sheen of reality will slip, and you'll have to deal with all manner of things. I need you to get me one (regent 1), one (regent 2), one (regent 3) and one (regent 4).",
             "ExternalId": "",
             "Position": {
-              "x": 1000.0,
-              "y": 825.0
+              "x": 975.0,
+              "y": -25.0
             },
             "ZIndex": 10.0,
             "Size": {
@@ -6666,8 +7273,8 @@
             "Text": "We could, but I'm afraid we don't have the time. Plus we'd have to sacrifice something anyway.",
             "ExternalId": "",
             "Position": {
-              "x": 350.0,
-              "y": 1075.0
+              "x": 325.0,
+              "y": 225.0
             },
             "ZIndex": 12.0,
             "Size": {
@@ -6722,8 +7329,8 @@
             "Text": "Wait, wait, Dreamscape? Witching hour?",
             "ExternalId": "",
             "Position": {
-              "x": 1600.0,
-              "y": 600.0
+              "x": 1575.0,
+              "y": -250.0
             },
             "ZIndex": 18.0,
             "Size": {
@@ -6778,8 +7385,8 @@
             "Text": "Ok, Nyx, I'll get to it as fast as possible",
             "ExternalId": "",
             "Position": {
-              "x": 1600.0,
-              "y": 825.0
+              "x": 1575.0,
+              "y": -25.0
             },
             "ZIndex": 22.0,
             "Size": {
@@ -6834,8 +7441,8 @@
             "Text": "Yes, don't you know what they are?",
             "ExternalId": "",
             "Position": {
-              "x": 1975.0,
-              "y": 600.0
+              "x": 1950.0,
+              "y": -250.0
             },
             "ZIndex": 24.0,
             "Size": {
@@ -6890,8 +7497,8 @@
             "Text": "Ok, the dreamscape is the place we witches can go to when we fall asleep. It's essentially when the sheen of reality falls and the esoteric is allowed into our world. Be careful, because you'll find all manner of distorted creatures there.",
             "ExternalId": "",
             "Position": {
-              "x": 2325.0,
-              "y": 600.0
+              "x": 2300.0,
+              "y": -250.0
             },
             "ZIndex": 26.0,
             "Size": {
@@ -6946,8 +7553,8 @@
             "Text": "And, the witching hour is between 3am  and 7am, its when we, as witches can enter the dreamscape.",
             "ExternalId": "",
             "Position": {
-              "x": 2675.0,
-              "y": 600.0
+              "x": 2650.0,
+              "y": -250.0
             },
             "ZIndex": 28.0,
             "Size": {
@@ -7002,8 +7609,8 @@
             "Text": "wait a minute, you should know, when you enter the dreamscape you'll be on a timer, remember it's better that we save at least one of them, than you go out trying to save both and failing to do so.",
             "ExternalId": "",
             "Position": {
-              "x": 1975.0,
-              "y": 825.0
+              "x": 1950.0,
+              "y": -25.0
             },
             "ZIndex": 32.0,
             "Size": {
@@ -7046,7 +7653,7 @@
             "TechnicalName": "DFr_A8B9E0C6",
             "Id": "0x0100000000001315",
             "Parent": "0x010000000000110F",
-            "MenuText": "[Give Nyx the herbs]",
+            "MenuText": "Give Nyx the herbs",
             "StageDirections": "",
             "Speaker": "0x010000000000016E",
             "SplitHeight": 64.0,
@@ -7058,8 +7665,8 @@
             "Text": "Here you go.",
             "ExternalId": "",
             "Position": {
-              "x": 3025.0,
-              "y": 825.0
+              "x": 3000.0,
+              "y": -25.0
             },
             "ZIndex": 38.0,
             "Size": {
@@ -7069,27 +7676,27 @@
             "ShortId": 2830753990,
             "InputPins": [
               {
-                "Text": "playerInventory.genericHerbAmount > 0",
+                "Text": "playerInventory.genericHerbAmount > 1",
                 "Id": "0x0100000000001316",
                 "Owner": "0x0100000000001315"
               }
             ],
             "OutputPins": [
               {
-                "Text": "nyxInventory.genericHerbAmount = playerInventory.genericHerbAmount;\nplayerInventory.genericHerbAmount -= playerInventory.genericHerbAmount;",
+                "Text": "",
                 "Id": "0x0100000000001317",
                 "Owner": "0x0100000000001315",
                 "Connections": [
                   {
                     "Color": {
                       "a": 1.0,
-                      "r": 0.577580452,
-                      "g": 0.7605245,
-                      "b": 0.7991027
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x010000000000133E",
-                    "Target": "0x010000000000133D"
+                    "TargetPin": "0x0100000000001648",
+                    "Target": "0x0100000000001646"
                   }
                 ]
               }
@@ -7102,7 +7709,7 @@
             "TechnicalName": "DFr_3C1B95F3",
             "Id": "0x010000000000131C",
             "Parent": "0x010000000000110F",
-            "MenuText": "[Don't give Nyx the herbs]",
+            "MenuText": "Don't give Nyx the herbs",
             "StageDirections": "",
             "Speaker": "0x010000000000016E",
             "SplitHeight": 64.0,
@@ -7114,8 +7721,8 @@
             "Text": "No, I think I'll keep them for now.",
             "ExternalId": "",
             "Position": {
-              "x": 3025.0,
-              "y": 1050.0
+              "x": 3000.0,
+              "y": 200.0
             },
             "ZIndex": 38.0,
             "Size": {
@@ -7125,7 +7732,7 @@
             "ShortId": 1008440819,
             "InputPins": [
               {
-                "Text": "playerInventory.genericHerbAmount > 0",
+                "Text": "playerInventory.genericHerbAmount > 1",
                 "Id": "0x010000000000131D",
                 "Owner": "0x010000000000131C"
               }
@@ -7170,8 +7777,8 @@
             "Text": "Fine, suit yourself.",
             "ExternalId": "",
             "Position": {
-              "x": 3400.0,
-              "y": 1050.0
+              "x": 3375.0,
+              "y": 200.0
             },
             "ZIndex": 42.0,
             "Size": {
@@ -7195,9 +7802,9 @@
                   {
                     "Color": {
                       "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
                     },
                     "Label": "",
                     "TargetPin": "0x0100000000001113",
@@ -7226,8 +7833,8 @@
             "Text": "(Regent A) and (regent B) will help the mother, while (regent C) and (regent D) will help her son.",
             "ExternalId": "",
             "Position": {
-              "x": 2350.0,
-              "y": 825.0
+              "x": 2325.0,
+              "y": -25.0
             },
             "ZIndex": 34.0,
             "Size": {
@@ -7282,8 +7889,8 @@
             "Text": "Oh, and before I forget let me have those herbs so I can brew the potions while you are gone.",
             "ExternalId": "",
             "Position": {
-              "x": 2675.0,
-              "y": 825.0
+              "x": 2650.0,
+              "y": -25.0
             },
             "ZIndex": 36.0,
             "Size": {
@@ -7360,8 +7967,8 @@
             "Text": "Thanks, and good luck out there!",
             "ExternalId": "",
             "Position": {
-              "x": 3400.0,
-              "y": 825.0
+              "x": 4450.0,
+              "y": -50.0
             },
             "ZIndex": 44.0,
             "Size": {
@@ -7385,9 +7992,9 @@
                   {
                     "Color": {
                       "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
                     },
                     "Label": "",
                     "TargetPin": "0x0100000000001113",
@@ -7416,8 +8023,8 @@
             "Text": "I'm busy right now, Cassandra needs your help, go and talk to her.",
             "ExternalId": "",
             "Position": {
-              "x": -675.0,
-              "y": 400.0
+              "x": -700.0,
+              "y": -450.0
             },
             "ZIndex": 50.0,
             "Size": {
@@ -7447,7 +8054,7 @@
             "TechnicalName": "DFr_5BC25A00",
             "Id": "0x0100000000001367",
             "Parent": "0x010000000000110F",
-            "MenuText": "[You don't have any to give]",
+            "MenuText": "You don't have any to give",
             "StageDirections": "",
             "Speaker": "0x010000000000016E",
             "SplitHeight": 64.0,
@@ -7459,8 +8066,8 @@
             "Text": "I don't have any extra.",
             "ExternalId": "",
             "Position": {
-              "x": 3025.0,
-              "y": 1275.0
+              "x": 3000.0,
+              "y": 425.0
             },
             "ZIndex": 49.0,
             "Size": {
@@ -7470,7 +8077,7 @@
             "ShortId": 1539463680,
             "InputPins": [
               {
-                "Text": "playerInventory.genericHerbAmount < 1",
+                "Text": "playerInventory.genericHerbAmount <= 1",
                 "Id": "0x010000000000136A",
                 "Owner": "0x0100000000001367"
               }
@@ -7515,8 +8122,8 @@
             "Text": "Really, you didn't get any extra? Ok, that's fine just make sure to pick some up while you're out there or we wont have any potions to strengthen.",
             "ExternalId": "",
             "Position": {
-              "x": 3400.0,
-              "y": 1275.0
+              "x": 3375.0,
+              "y": 425.0
             },
             "ZIndex": 51.0,
             "Size": {
@@ -7540,9 +8147,9 @@
                   {
                     "Color": {
                       "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
                     },
                     "Label": "",
                     "TargetPin": "0x0100000000001113",
@@ -7568,11 +8175,11 @@
               "g": 0.7605245,
               "b": 0.7991027
             },
-            "Text": "I see you brought some of the regents back, good, take these two potions that I have prepared and strengthen them, be careful not to mess the recipe up.",
+            "Text": "I see you brought enough of the regents back for the child, good, take these two potions that I have prepared and strengthen them, be careful not to mess the recipe up.",
             "ExternalId": "",
             "Position": {
-              "x": 925.0,
-              "y": 1275.0
+              "x": 1825.0,
+              "y": 1550.0
             },
             "ZIndex": 0.0,
             "Size": {
@@ -7589,16 +8196,16 @@
             ],
             "OutputPins": [
               {
-                "Text": "playerInventory.genericHealthPots = 2;\nnyxInventory.genericHerbAmount = nyxInventory.genericHerbAmount - nyxInventory.genericHerbAmount;",
+                "Text": "playerInventory.genericHealthPots = 2;\ngameState.nyxHerbs4 = false;",
                 "Id": "0x0100000000001379",
                 "Owner": "0x0100000000001377",
                 "Connections": [
                   {
                     "Color": {
                       "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
                     },
                     "Label": "",
                     "TargetPin": "0x0100000000001113",
@@ -7624,11 +8231,11 @@
               "g": 0.7605245,
               "b": 0.7991027
             },
-            "Text": "I see you brought the regents back, good, take this potion that I have prepared and strengthen it, be careful not to mess the recipe up.",
+            "Text": "I see you brought enough of the regents back for the child, good, take this potion that I have prepared and strengthen it, be careful not to mess the recipe up.",
             "ExternalId": "",
             "Position": {
-              "x": 950.0,
-              "y": 1575.0
+              "x": 1825.0,
+              "y": 1775.0
             },
             "ZIndex": 0.0,
             "Size": {
@@ -7645,16 +8252,16 @@
             ],
             "OutputPins": [
               {
-                "Text": "playerInventory.genericHealthPots = 1;\nnyxInventory.genericHerbAmount = nyxInventory.genericHerbAmount - nyxInventory.genericHerbAmount;",
+                "Text": "playerInventory.genericHealthPots = 1;\ngameState.nyxHerbs2 = false;",
                 "Id": "0x01000000000013EE",
                 "Owner": "0x01000000000013EC",
                 "Connections": [
                   {
                     "Color": {
                       "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
                     },
                     "Label": "",
                     "TargetPin": "0x0100000000001113",
@@ -7683,8 +8290,8 @@
             "Text": "What, you couldn't even come back with one regent?",
             "ExternalId": "",
             "Position": {
-              "x": 600.0,
-              "y": 2275.0
+              "x": 1400.0,
+              "y": 2375.0
             },
             "ZIndex": 32.0,
             "Size": {
@@ -7739,8 +8346,8 @@
             "Text": "DAMN! You brought back the regents but you didn't give me enough herbs to make some more potions",
             "ExternalId": "",
             "Position": {
-              "x": 1850.0,
-              "y": 2000.0
+              "x": 1825.0,
+              "y": 2250.0
             },
             "ZIndex": 32.0,
             "Size": {
@@ -7795,8 +8402,8 @@
             "Text": "GOD DAMN IT! Now they're both going to die.",
             "ExternalId": "",
             "Position": {
-              "x": 2150.0,
-              "y": 2325.0
+              "x": 2225.0,
+              "y": 2375.0
             },
             "ZIndex": 32.0,
             "Size": {
@@ -7820,9 +8427,108 @@
                   {
                     "Color": {
                       "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001113",
+                    "Target": "0x010000000000110F"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_520C13A4",
+            "Id": "0x010000000000152D",
+            "Parent": "0x010000000000110F",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x0100000000000199",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "You need to get some herbs, hurry up they don't have long",
+            "ExternalId": "",
+            "Position": {
+              "x": -700.0,
+              "y": -175.0
+            },
+            "ZIndex": 50.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1376523172,
+            "InputPins": [
+              {
+                "Text": "gameState.awake == true && gameState.act1 == true",
+                "Id": "0x010000000000152E",
+                "Owner": "0x010000000000152D"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000152F",
+                "Owner": "0x010000000000152D"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_215E33D4",
+            "Id": "0x0100000000001599",
+            "Parent": "0x010000000000110F",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x0100000000000199",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "I hope you brought back enough herbs to save at least one of them.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1825.0,
+              "y": 2000.0
+            },
+            "ZIndex": 87.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 559821780,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000159C",
+                "Owner": "0x0100000000001599"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000159D",
+                "Owner": "0x0100000000001599",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
                     },
                     "Label": "",
                     "TargetPin": "0x0100000000001113",
@@ -7948,8 +8654,232 @@
         {
           "Type": "DialogueFragment",
           "Properties": {
-            "TechnicalName": "DFr_520C13A4",
-            "Id": "0x010000000000152D",
+            "TechnicalName": "DFr_29B03436",
+            "Id": "0x01000000000015A2",
+            "Parent": "0x01000000000010F7",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x010000000000018C",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "They're both alive and breathing! \r\n\r\nThank you so much, I will remember this forever!",
+            "ExternalId": "",
+            "Position": {
+              "x": 1350.0,
+              "y": 1425.0
+            },
+            "ZIndex": 25.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 699413558,
+            "InputPins": [
+              {
+                "Text": "gameState.babyIll == false && gameState.motherIll == false",
+                "Id": "0x01000000000015A5",
+                "Owner": "0x01000000000015A2"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000015A6",
+                "Owner": "0x01000000000015A2",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000010FB",
+                    "Target": "0x01000000000010F7"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_BFF5E2EF",
+            "Id": "0x01000000000015AA",
+            "Parent": "0x01000000000010F7",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x010000000000018C",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "She... Evelyn is dead. I... I will need time. Thank you for saving Luke, now please, leave.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1350.0,
+              "y": 1675.0
+            },
+            "ZIndex": 25.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3220562671,
+            "InputPins": [
+              {
+                "Text": "gameState.babyIll == false && gameState.motherAlive == false",
+                "Id": "0x01000000000015AB",
+                "Owner": "0x01000000000015AA"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000015AC",
+                "Owner": "0x01000000000015AA",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000010FB",
+                    "Target": "0x01000000000010F7"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_BA4A15BC",
+            "Id": "0x01000000000015B0",
+            "Parent": "0x01000000000010F7",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x010000000000018C",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Luke, NO LUKE! Why couldn't you save him! Leave! Get out of my home!",
+            "ExternalId": "",
+            "Position": {
+              "x": 1350.0,
+              "y": 1925.0
+            },
+            "ZIndex": 25.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3125417404,
+            "InputPins": [
+              {
+                "Text": "gameState.babyAlive == false && gameState.motherIll == false",
+                "Id": "0x01000000000015B1",
+                "Owner": "0x01000000000015B0"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000015B2",
+                "Owner": "0x01000000000015B0",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000010FB",
+                    "Target": "0x01000000000010F7"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_08D3555F",
+            "Id": "0x01000000000015BA",
+            "Parent": "0x01000000000010F7",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x010000000000018C",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "They're both dead! You witches killed them didn't you! You said you would help but you killed them! \r\n\r\nGET OUT NOW!",
+            "ExternalId": "",
+            "Position": {
+              "x": 1350.0,
+              "y": 2175.0
+            },
+            "ZIndex": 34.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 148067679,
+            "InputPins": [
+              {
+                "Text": "gameState.babyAlive == false && gameState.motherAlive == false",
+                "Id": "0x01000000000015BD",
+                "Owner": "0x01000000000015BA"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000015BE",
+                "Owner": "0x01000000000015BA",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000010FB",
+                    "Target": "0x01000000000010F7"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_855790F8",
+            "Id": "0x01000000000015DA",
             "Parent": "0x010000000000110F",
             "MenuText": "",
             "StageDirections": "",
@@ -7960,407 +8890,30 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "You need to get some herbs, hurry up they don't have long",
+            "Text": "GOD DAMN IT!\r\n\r\nWe couldn't save even one of them, we need to get out of here now. There's no telling what the townsfolk will do.",
             "ExternalId": "",
             "Position": {
-              "x": -675.0,
-              "y": 675.0
+              "x": -225.0,
+              "y": 4425.0
             },
-            "ZIndex": 50.0,
+            "ZIndex": 34.0,
             "Size": {
               "w": 225.0,
               "h": 200.0
             },
-            "ShortId": 1376523172,
+            "ShortId": 2237108472,
             "InputPins": [
               {
-                "Text": "gameState.awake == true && gameState.act1 == true",
-                "Id": "0x010000000000152E",
-                "Owner": "0x010000000000152D"
+                "Text": "gameState.babyAlive == false && gameState.motherAlive == false",
+                "Id": "0x01000000000015DB",
+                "Owner": "0x01000000000015DA"
               }
             ],
             "OutputPins": [
               {
                 "Text": "",
-                "Id": "0x010000000000152F",
-                "Owner": "0x010000000000152D"
-              }
-            ]
-          }
-        },
-        {
-          "Type": "DialogueFragment",
-          "Properties": {
-            "TechnicalName": "DFr_E56343FD",
-            "Id": "0x010000000000154C",
-            "Parent": "0x0100000000001103",
-            "MenuText": "",
-            "StageDirections": "",
-            "Speaker": "0x010000000000019D",
-            "SplitHeight": 64.0,
-            "Color": {
-              "r": 0.5764706,
-              "g": 0.75686276,
-              "b": 0.8
-            },
-            "Text": "Why are you still here, go and talk to Nyx!",
-            "ExternalId": "",
-            "Position": {
-              "x": 600.0,
-              "y": 1700.0
-            },
-            "ZIndex": 57.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 3848487933,
-            "InputPins": [
-              {
-                "Text": "gameState.awake == true && gameState.act2 == true && gameState.healthPotFail == true",
-                "Id": "0x010000000000154F",
-                "Owner": "0x010000000000154C"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x0100000000001550",
-                "Owner": "0x010000000000154C"
-              }
-            ]
-          }
-        },
-        {
-          "Type": "DialogueFragment",
-          "Properties": {
-            "TechnicalName": "DFr_B5EDA0D8",
-            "Id": "0x010000000000155B",
-            "Parent": "0x0100000000001103",
-            "MenuText": "",
-            "StageDirections": "",
-            "Speaker": "0x010000000000019D",
-            "SplitHeight": 64.0,
-            "Color": {
-              "r": 0.5764706,
-              "g": 0.75686276,
-              "b": 0.8
-            },
-            "Text": "Whats this about regents I hear?",
-            "ExternalId": "",
-            "Position": {
-              "x": 600.0,
-              "y": 1925.0
-            },
-            "ZIndex": 59.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 3052249304,
-            "InputPins": [
-              {
-                "Text": "gameState.awake == true && gameState.act3 == true",
-                "Id": "0x010000000000155E",
-                "Owner": "0x010000000000155B"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x010000000000155F",
-                "Owner": "0x010000000000155B",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x0100000000001565",
-                    "Target": "0x0100000000001562"
-                  },
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x010000000000156B",
-                    "Target": "0x0100000000001568"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "Type": "DialogueFragment",
-          "Properties": {
-            "TechnicalName": "DFr_FE42E5E1",
-            "Id": "0x0100000000001562",
-            "Parent": "0x0100000000001103",
-            "MenuText": "We can strengthen the potions",
-            "StageDirections": "",
-            "Speaker": "0x010000000000016E",
-            "SplitHeight": 64.0,
-            "Color": {
-              "r": 0.5764706,
-              "g": 0.75686276,
-              "b": 0.8
-            },
-            "Text": "Nyx said something about infusing regular health potions with special regents in order to make them more potent.",
-            "ExternalId": "",
-            "Position": {
-              "x": 1975.0,
-              "y": 1925.0
-            },
-            "ZIndex": 61.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 4265797089,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x0100000000001565",
-                "Owner": "0x0100000000001562"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x0100000000001566",
-                "Owner": "0x0100000000001562",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x0100000000001573",
-                    "Target": "0x0100000000001570"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "Type": "DialogueFragment",
-          "Properties": {
-            "TechnicalName": "DFr_90AE917B",
-            "Id": "0x0100000000001568",
-            "Parent": "0x0100000000001103",
-            "MenuText": "I'm not so sure about this",
-            "StageDirections": "",
-            "Speaker": "0x010000000000016E",
-            "SplitHeight": 64.0,
-            "Color": {
-              "r": 0.5764706,
-              "g": 0.75686276,
-              "b": 0.8
-            },
-            "Text": "I don't know, can this work Cass? \r\n\r\nI really think we should cast a spell or something.",
-            "ExternalId": "",
-            "Position": {
-              "x": 1975.0,
-              "y": 2175.0
-            },
-            "ZIndex": 63.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 2427359611,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x010000000000156B",
-                "Owner": "0x0100000000001568"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x010000000000156C",
-                "Owner": "0x0100000000001568",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x010000000000157B",
-                    "Target": "0x0100000000001578"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "Type": "DialogueFragment",
-          "Properties": {
-            "TechnicalName": "DFr_96498C72",
-            "Id": "0x0100000000001570",
-            "Parent": "0x0100000000001103",
-            "MenuText": "",
-            "StageDirections": "",
-            "Speaker": "0x010000000000019D",
-            "SplitHeight": 64.0,
-            "Color": {
-              "r": 0.5764706,
-              "g": 0.75686276,
-              "b": 0.8
-            },
-            "Text": "Hmm, this could work yes but you'll have to careful with what you infuse them with. Remember the essence of Evelyn in different to that of Luke's, the same ingredients won't work for both.",
-            "ExternalId": "",
-            "Position": {
-              "x": 2350.0,
-              "y": 1925.0
-            },
-            "ZIndex": 65.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 2521402482,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x0100000000001573",
-                "Owner": "0x0100000000001570"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x0100000000001574",
-                "Owner": "0x0100000000001570",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x0100000000001107",
-                    "Target": "0x0100000000001103"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "Type": "DialogueFragment",
-          "Properties": {
-            "TechnicalName": "DFr_5F551027",
-            "Id": "0x0100000000001578",
-            "Parent": "0x0100000000001103",
-            "MenuText": "",
-            "StageDirections": "",
-            "Speaker": "0x010000000000019D",
-            "SplitHeight": 64.0,
-            "Color": {
-              "r": 0.5764706,
-              "g": 0.75686276,
-              "b": 0.8
-            },
-            "Text": "No, there shouldn't be any need to play with the fates, Nyx's plan could work just, please, be careful out there.",
-            "ExternalId": "",
-            "Position": {
-              "x": 2350.0,
-              "y": 2175.0
-            },
-            "ZIndex": 67.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 1599410215,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x010000000000157B",
-                "Owner": "0x0100000000001578"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x010000000000157C",
-                "Owner": "0x0100000000001578",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x0100000000001107",
-                    "Target": "0x0100000000001103"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "Type": "DialogueFragment",
-          "Properties": {
-            "TechnicalName": "DFr_215E33D4",
-            "Id": "0x0100000000001599",
-            "Parent": "0x010000000000110F",
-            "MenuText": "",
-            "StageDirections": "",
-            "Speaker": "0x0100000000000199",
-            "SplitHeight": 64.0,
-            "Color": {
-              "r": 0.5764706,
-              "g": 0.75686276,
-              "b": 0.8
-            },
-            "Text": "I hope you brought back enough herbs to save at least one of them.",
-            "ExternalId": "",
-            "Position": {
-              "x": 1850.0,
-              "y": 1725.0
-            },
-            "ZIndex": 87.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 559821780,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x010000000000159C",
-                "Owner": "0x0100000000001599"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x010000000000159D",
-                "Owner": "0x0100000000001599",
+                "Id": "0x01000000000015DC",
+                "Owner": "0x01000000000015DA",
                 "Connections": [
                   {
                     "Color": {
@@ -8372,6 +8925,1311 @@
                     "Label": "",
                     "TargetPin": "0x0100000000001113",
                     "Target": "0x010000000000110F"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_36ED0FB8",
+            "Id": "0x01000000000015D4",
+            "Parent": "0x010000000000110F",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x0100000000000199",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Amos looks mad. We can't always save everyone, you know that right? \r\n\r\nWe did well however, lets go home before he gets more angry.",
+            "ExternalId": "",
+            "Position": {
+              "x": -225.0,
+              "y": 4175.0
+            },
+            "ZIndex": 25.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 921505720,
+            "InputPins": [
+              {
+                "Text": "gameState.babyAlive == false && gameState.motherIll == false",
+                "Id": "0x01000000000015D5",
+                "Owner": "0x01000000000015D4"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000015D6",
+                "Owner": "0x01000000000015D4",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001113",
+                    "Target": "0x010000000000110F"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_EF487EC8",
+            "Id": "0x01000000000015CE",
+            "Parent": "0x010000000000110F",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x0100000000000199",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "We can't always save everyone, you know that right? \r\n\r\nYou did well, now lets go home.",
+            "ExternalId": "",
+            "Position": {
+              "x": -225.0,
+              "y": 3925.0
+            },
+            "ZIndex": 25.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 4014505672,
+            "InputPins": [
+              {
+                "Text": "gameState.babyIll == false && gameState.motherAlive == false",
+                "Id": "0x01000000000015CF",
+                "Owner": "0x01000000000015CE"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000015D0",
+                "Owner": "0x01000000000015CE",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001113",
+                    "Target": "0x010000000000110F"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_927EC694",
+            "Id": "0x01000000000015C8",
+            "Parent": "0x010000000000110F",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x0100000000000199",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Phew, that was close, but we did well, you in particular. \r\n\r\nAmos is sure to remember this, well done!",
+            "ExternalId": "",
+            "Position": {
+              "x": -225.0,
+              "y": 3675.0
+            },
+            "ZIndex": 25.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2457781908,
+            "InputPins": [
+              {
+                "Text": "gameState.babyIll == false && gameState.motherIll == false",
+                "Id": "0x01000000000015C9",
+                "Owner": "0x01000000000015C8"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000015CA",
+                "Owner": "0x01000000000015C8",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001113",
+                    "Target": "0x010000000000110F"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_C6C5D163",
+            "Id": "0x01000000000015EA",
+            "Parent": "0x0100000000001103",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x010000000000019D",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "oh, also we will want to get ahead of this thing. Go outside and read the tarot board, I've already set it up for you.",
+            "ExternalId": "",
+            "Position": {
+              "x": 2675.0,
+              "y": 1300.0
+            },
+            "ZIndex": 10.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3334852963,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000015EB",
+                "Owner": "0x01000000000015EA"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000015EC",
+                "Owner": "0x01000000000015EA",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001107",
+                    "Target": "0x0100000000001103"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_88A5865E",
+            "Id": "0x01000000000015F2",
+            "Parent": "0x0100000000001103",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x010000000000019D",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "There's a well outside if you need water for the cauldron, and remember, don't stir too much or you'll break the herbs down to nothing. \r\n\r\nWe need them to release their essence, we don't need to burn that essence.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1275.0,
+              "y": 1250.0
+            },
+            "ZIndex": 1.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2292549214,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000015F3",
+                "Owner": "0x01000000000015F2"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "gameState.act1 = false;\ngameState.act2 = true;",
+                "Id": "0x01000000000015F4",
+                "Owner": "0x01000000000015F2",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001107",
+                    "Target": "0x0100000000001103"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_9BD61962",
+            "Id": "0x010000000000160C",
+            "Parent": "0x0100000000001103",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x010000000000019D",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "What a waste! We came here for nothing, lets go and start preparing, who knows what those town idiots will do now.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1600.0,
+              "y": 3975.0
+            },
+            "ZIndex": 34.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2614499682,
+            "InputPins": [
+              {
+                "Text": "gameState.babyAlive == false && gameState.motherAlive == false",
+                "Id": "0x010000000000160D",
+                "Owner": "0x010000000000160C"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000160E",
+                "Owner": "0x010000000000160C",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001107",
+                    "Target": "0x0100000000001103"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_48886C81",
+            "Id": "0x0100000000001606",
+            "Parent": "0x0100000000001103",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x010000000000019D",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Oooh, it looks like Amos is mad, I might be able to relieve some of that stress later.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1600.0,
+              "y": 3725.0
+            },
+            "ZIndex": 25.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1216900225,
+            "InputPins": [
+              {
+                "Text": "gameState.babyAlive == false && gameState.motherIll == false",
+                "Id": "0x0100000000001607",
+                "Owner": "0x0100000000001606"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000001608",
+                "Owner": "0x0100000000001606",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001107",
+                    "Target": "0x0100000000001103"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_BA63B6F2",
+            "Id": "0x0100000000001600",
+            "Parent": "0x0100000000001103",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x010000000000019D",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Ahh well, life comes and goes, at least we saved little Luke... for later...",
+            "ExternalId": "",
+            "Position": {
+              "x": 1600.0,
+              "y": 3475.0
+            },
+            "ZIndex": 25.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3127097074,
+            "InputPins": [
+              {
+                "Text": "gameState.babyIll == false && gameState.motherAlive == false",
+                "Id": "0x0100000000001601",
+                "Owner": "0x0100000000001600"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000001602",
+                "Owner": "0x0100000000001600",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001107",
+                    "Target": "0x0100000000001103"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_8C0C5091",
+            "Id": "0x01000000000015FA",
+            "Parent": "0x0100000000001103",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x010000000000019D",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Looks like you did it little witch, well done, well done indeed.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1600.0,
+              "y": 3225.0
+            },
+            "ZIndex": 25.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2349617297,
+            "InputPins": [
+              {
+                "Text": "gameState.babyIll == false && gameState.motherIll == false",
+                "Id": "0x01000000000015FB",
+                "Owner": "0x01000000000015FA"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000015FC",
+                "Owner": "0x01000000000015FA",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001107",
+                    "Target": "0x0100000000001103"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_95E7C884",
+            "Id": "0x010000000000161F",
+            "Parent": "0x010000000000110F",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x0100000000000199",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Go on, the dreamscape awaits. Oh, I don't know if Cassandra said anything but you might want to read the tarot table first.",
+            "ExternalId": "",
+            "Position": {
+              "x": -250.0,
+              "y": 1300.0
+            },
+            "ZIndex": 99.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2514995332,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000001622",
+                "Owner": "0x010000000000161F"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000001623",
+                "Owner": "0x010000000000161F",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001113",
+                    "Target": "0x010000000000110F"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_94BF91C0",
+            "Id": "0x0100000000001669",
+            "Parent": "0x0100000000001103",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x010000000000019D",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Well done, it seems Evelyn will live, now see to her son.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1600.0,
+              "y": 2975.0
+            },
+            "ZIndex": 25.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2495582656,
+            "InputPins": [
+              {
+                "Text": "gameState.babyIll == true && gameState.motherIll == false",
+                "Id": "0x010000000000166A",
+                "Owner": "0x0100000000001669"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000166B",
+                "Owner": "0x0100000000001669",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001107",
+                    "Target": "0x0100000000001103"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_6E69E470",
+            "Id": "0x010000000000166F",
+            "Parent": "0x0100000000001103",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x010000000000019D",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Well done, it seems like Luke will be ok, now see to his mother.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1600.0,
+              "y": 2725.0
+            },
+            "ZIndex": 25.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1852433520,
+            "InputPins": [
+              {
+                "Text": "gameState.babyIll == false && gameState.motherIll == true",
+                "Id": "0x0100000000001670",
+                "Owner": "0x010000000000166F"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000001671",
+                "Owner": "0x010000000000166F",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001107",
+                    "Target": "0x0100000000001103"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_3FFF9683",
+            "Id": "0x010000000000167F",
+            "Parent": "0x010000000000110F",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x0100000000000199",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Oh, good, I hear Luke crying. I guess this means he is fine, I hope we can save his mother.",
+            "ExternalId": "",
+            "Position": {
+              "x": -225.0,
+              "y": 3175.0
+            },
+            "ZIndex": 25.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1073714819,
+            "InputPins": [
+              {
+                "Text": "gameState.babyIll == false && gameState.motherIll == true",
+                "Id": "0x0100000000001680",
+                "Owner": "0x010000000000167F"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000001681",
+                "Owner": "0x010000000000167F",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001113",
+                    "Target": "0x010000000000110F"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_EB1FB124",
+            "Id": "0x0100000000001679",
+            "Parent": "0x010000000000110F",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x0100000000000199",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "oh, what, Cassandra said Evelyn would live? Ok, good, now please help her son if you can.",
+            "ExternalId": "",
+            "Position": {
+              "x": -225.0,
+              "y": 3425.0
+            },
+            "ZIndex": 25.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3944722724,
+            "InputPins": [
+              {
+                "Text": "gameState.babyIll == true && gameState.motherIll == false",
+                "Id": "0x010000000000167A",
+                "Owner": "0x0100000000001679"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000167B",
+                "Owner": "0x0100000000001679",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001113",
+                    "Target": "0x010000000000110F"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_6D85CDEA",
+            "Id": "0x010000000000168F",
+            "Parent": "0x01000000000010F7",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x010000000000018C",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Thank you so much, Luke is breathing, please see if you can help Evelyn!",
+            "ExternalId": "",
+            "Position": {
+              "x": 1350.0,
+              "y": 925.0
+            },
+            "ZIndex": 25.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1837485546,
+            "InputPins": [
+              {
+                "Text": "gameState.babyIll == false && gameState.motherIll == true",
+                "Id": "0x0100000000001690",
+                "Owner": "0x010000000000168F"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000001691",
+                "Owner": "0x010000000000168F",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000010FB",
+                    "Target": "0x01000000000010F7"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_D5FAEE73",
+            "Id": "0x0100000000001689",
+            "Parent": "0x01000000000010F7",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x010000000000018C",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Thank god! Evelyn, my heart, she's alive. Please you must save Luke aswell!",
+            "ExternalId": "",
+            "Position": {
+              "x": 1350.0,
+              "y": 1175.0
+            },
+            "ZIndex": 25.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3589992051,
+            "InputPins": [
+              {
+                "Text": "gameState.babyIll == true && gameState.motherIll == false",
+                "Id": "0x010000000000168A",
+                "Owner": "0x0100000000001689"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000168B",
+                "Owner": "0x0100000000001689",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000010FB",
+                    "Target": "0x01000000000010F7"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_8E2694BD",
+            "Id": "0x01000000000016B5",
+            "Parent": "0x010000000000110F",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x0100000000000199",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "It looks like you only brought back the regents to save the mother, Amos won't be happy.",
+            "ExternalId": "",
+            "Position": {
+              "x": -225.0,
+              "y": 2550.0
+            },
+            "ZIndex": 136.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2384893117,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000016B8",
+                "Owner": "0x01000000000016B5"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000016B9",
+                "Owner": "0x01000000000016B5"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_5AAD237E",
+            "Id": "0x01000000000016BC",
+            "Parent": "0x010000000000110F",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x0100000000000199",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "It looks like you only brought back the regents to save Luke. \r\n\r\nIt's too bad that we cannot save Evelyn but at least her son will live on.",
+            "ExternalId": "",
+            "Position": {
+              "x": -225.0,
+              "y": 2325.0
+            },
+            "ZIndex": 138.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1521296254,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000016BF",
+                "Owner": "0x01000000000016BC"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000016C0",
+                "Owner": "0x01000000000016BC"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_FAB61089",
+            "Id": "0x01000000000016C3",
+            "Parent": "0x010000000000110F",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x0100000000000199",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "Well what are you waiting for, you have the regents to save them both!\r\n\r\nHurry up and brew the potions!",
+            "ExternalId": "",
+            "Position": {
+              "x": -225.0,
+              "y": 2775.0
+            },
+            "ZIndex": 140.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 4206235785,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000016C6",
+                "Owner": "0x01000000000016C3"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000016C7",
+                "Owner": "0x01000000000016C3"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_9B1F00EC",
+            "Id": "0x01000000000016ED",
+            "Parent": "0x010000000000110F",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x0100000000000199",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "I see you brought enough of the regents back for the mother, good, take this potion that I have prepared and strengthen it, be careful not to mess the recipe up.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1825.0,
+              "y": 1325.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2602500332,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000016EE",
+                "Owner": "0x01000000000016ED"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "playerInventory.genericHealthPots = 1;\ngameState.nyxHerbs2 = false;",
+                "Id": "0x01000000000016EF",
+                "Owner": "0x01000000000016ED",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001113",
+                    "Target": "0x010000000000110F"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_41E2F68A",
+            "Id": "0x01000000000016E7",
+            "Parent": "0x010000000000110F",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x0100000000000199",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "I see you brought enough of the regents back for the mother, good, take these two potions that I have prepared and strengthen them, be careful not to mess the recipe up.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1825.0,
+              "y": 1100.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1105393290,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000016E8",
+                "Owner": "0x01000000000016E7"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "playerInventory.genericHealthPots = 2;\ngameState.nyxHerbs4 = false;",
+                "Id": "0x01000000000016E9",
+                "Owner": "0x01000000000016E7",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001113",
+                    "Target": "0x010000000000110F"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_3954BB74",
+            "Id": "0x010000000000170B",
+            "Parent": "0x010000000000110F",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x0100000000000199",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "I see you brought enough of the regents back for both of them, good, take this potion that I have prepared and strengthen it, be careful not to mess the recipe up.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1825.0,
+              "y": 875.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 961854324,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000170C",
+                "Owner": "0x010000000000170B"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "playerInventory.genericHealthPots = 1;\ngameState.nyxHerbs2 = false;",
+                "Id": "0x010000000000170D",
+                "Owner": "0x010000000000170B",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001113",
+                    "Target": "0x010000000000110F"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_F1C5E2E3",
+            "Id": "0x0100000000001705",
+            "Parent": "0x010000000000110F",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x0100000000000199",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "I see you brought enough of the regents back for both of them, good, take these two potions that I have prepared and strengthen them, be careful not to mess the recipe up.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1825.0,
+              "y": 650.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 4056277731,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000001706",
+                "Owner": "0x0100000000001705"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "playerInventory.genericHealthPots = 2;\ngameState.nyxHerbs4 = false;",
+                "Id": "0x0100000000001707",
+                "Owner": "0x0100000000001705",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001113",
+                    "Target": "0x010000000000110F"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_12706B96",
+            "Id": "0x010000000000171E",
+            "Parent": "0x0100000000001715",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x010000000000172D",
+            "SplitHeight": 64.0,
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "What will it be?",
+            "ExternalId": "",
+            "Position": {
+              "x": 600.0,
+              "y": 575.0
+            },
+            "ZIndex": 3.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 309357462,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000171F",
+                "Owner": "0x010000000000171E"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000001720",
+                "Owner": "0x010000000000171E",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001727",
+                    "Target": "0x0100000000001715"
                   }
                 ]
               }
@@ -8543,8 +10401,8 @@
             "Text": "",
             "ExternalId": "",
             "Position": {
-              "x": -325.0,
-              "y": 1025.0
+              "x": -350.0,
+              "y": 175.0
             },
             "ZIndex": 12.0,
             "Size": {
@@ -8607,8 +10465,8 @@
             "Text": "",
             "ExternalId": "",
             "Position": {
-              "x": 1325.0,
-              "y": 900.0
+              "x": 1300.0,
+              "y": 50.0
             },
             "ZIndex": 19.0,
             "Size": {
@@ -8758,6 +10616,17 @@
                     "Label": "",
                     "TargetPin": "0x0100000000001112",
                     "Target": "0x010000000000110F"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001726",
+                    "Target": "0x0100000000001715"
                   }
                 ]
               }
@@ -8882,8 +10751,8 @@
             "Text": "",
             "ExternalId": "",
             "Position": {
-              "x": 700.0,
-              "y": 1100.0
+              "x": 675.0,
+              "y": 250.0
             },
             "ZIndex": 16.0,
             "Size": {
@@ -8916,8 +10785,8 @@
             "Text": "",
             "ExternalId": "",
             "Position": {
-              "x": 3025.0,
-              "y": 625.0
+              "x": 3000.0,
+              "y": -225.0
             },
             "ZIndex": 30.0,
             "Size": {
@@ -8961,7 +10830,7 @@
             },
             "InputPins": [
               {
-                "Text": "gameState.awake == true\n\n",
+                "Text": "",
                 "Id": "0x010000000000142A",
                 "Owner": "0x0100000000001429"
               }
@@ -9228,12 +11097,12 @@
             "TechnicalName": "Cnd_7D05B342",
             "Id": "0x01000000000013E7",
             "Parent": "0x010000000000110F",
-            "DisplayName": "nyxInventory.genericHerbAmount <= 3  ...",
+            "DisplayName": "gameState.nyxHerbs2 == true",
             "Text": "",
             "ExternalId": "",
             "Position": {
-              "x": 550.0,
-              "y": 1650.0
+              "x": 675.0,
+              "y": 2175.0
             },
             "ZIndex": 23.0,
             "Size": {
@@ -9241,7 +11110,7 @@
               "h": 100.0
             },
             "ShortId": 2097525570,
-            "Expression": "nyxInventory.genericHerbAmount <= 3 && nyxInventory.genericHerbAmount >= 2",
+            "Expression": "gameState.nyxHerbs2 == true",
             "Color": {
               "r": 0.577580452,
               "g": 0.7605245,
@@ -9256,16 +11125,16 @@
             ],
             "OutputPins": [
               {
-                "Text": "",
+                "Text": "gameState.babyCanSave = true",
                 "Id": "0x01000000000013E9",
                 "Owner": "0x01000000000013E7",
                 "Connections": [
                   {
                     "Color": {
                       "a": 1.0,
-                      "r": 0.577580452,
-                      "g": 0.7605245,
-                      "b": 0.7991027
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
                     },
                     "Label": "",
                     "TargetPin": "0x01000000000013ED",
@@ -9281,13 +11150,13 @@
                   {
                     "Color": {
                       "a": 1.0,
-                      "r": 0.577580452,
-                      "g": 0.7605245,
-                      "b": 0.7991027
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x0100000000001408",
-                    "Target": "0x0100000000001407"
+                    "TargetPin": "0x0100000000001593",
+                    "Target": "0x0100000000001592"
                   }
                 ]
               }
@@ -9297,256 +11166,202 @@
         {
           "Type": "Condition",
           "Properties": {
-            "TechnicalName": "Cnd_FCEB7205",
-            "Id": "0x01000000000013F2",
+            "TechnicalName": "Cnd_2D1DF5EB",
+            "Id": "0x01000000000016F8",
             "Parent": "0x010000000000110F",
-            "DisplayName": "gameState.motherCanSave == true",
+            "DisplayName": "gameState.nyxHerbs4 == true",
             "Text": "",
             "ExternalId": "",
             "Position": {
-              "x": -600.0,
-              "y": 1600.0
-            },
-            "ZIndex": 26.0,
-            "Size": {
-              "w": 225.0,
-              "h": 100.0
-            },
-            "ShortId": 4243288581,
-            "Expression": "gameState.motherCanSave == true",
-            "Color": {
-              "r": 0.577580452,
-              "g": 0.7605245,
-              "b": 0.7991027
-            },
-            "InputPins": [
-              {
-                "Text": "gameState.awake == true && gameState.act3 == true\n",
-                "Id": "0x01000000000013F3",
-                "Owner": "0x01000000000013F2"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x01000000000013F4",
-                "Owner": "0x01000000000013F2",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.577580452,
-                      "g": 0.7605245,
-                      "b": 0.7991027
-                    },
-                    "Label": "",
-                    "TargetPin": "0x01000000000013F8",
-                    "Target": "0x01000000000013F7"
-                  }
-                ]
-              },
-              {
-                "Text": "",
-                "Id": "0x01000000000013F5",
-                "Owner": "0x01000000000013F2",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.577580452,
-                      "g": 0.7605245,
-                      "b": 0.7991027
-                    },
-                    "Label": "",
-                    "TargetPin": "0x01000000000013FD",
-                    "Target": "0x01000000000013FC"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "Type": "Condition",
-          "Properties": {
-            "TechnicalName": "Cnd_396BCD65",
-            "Id": "0x01000000000013F7",
-            "Parent": "0x010000000000110F",
-            "DisplayName": "gameState.babyCanSave == true",
-            "Text": "",
-            "ExternalId": "",
-            "Position": {
-              "x": -125.0,
-              "y": 1500.0
-            },
-            "ZIndex": 28.0,
-            "Size": {
-              "w": 225.0,
-              "h": 100.0
-            },
-            "ShortId": 963366245,
-            "Expression": "gameState.babyCanSave == true",
-            "Color": {
-              "r": 0.577580452,
-              "g": 0.7605245,
-              "b": 0.7991027
-            },
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x01000000000013F8",
-                "Owner": "0x01000000000013F7"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x01000000000013F9",
-                "Owner": "0x01000000000013F7",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.577580452,
-                      "g": 0.7605245,
-                      "b": 0.7991027
-                    },
-                    "Label": "",
-                    "TargetPin": "0x0100000000001419",
-                    "Target": "0x0100000000001418"
-                  }
-                ]
-              },
-              {
-                "Text": "",
-                "Id": "0x01000000000013FA",
-                "Owner": "0x01000000000013F7",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.577580452,
-                      "g": 0.7605245,
-                      "b": 0.7991027
-                    },
-                    "Label": "",
-                    "TargetPin": "0x0100000000001419",
-                    "Target": "0x0100000000001418"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "Type": "Condition",
-          "Properties": {
-            "TechnicalName": "Cnd_FDF3C665",
-            "Id": "0x01000000000013FC",
-            "Parent": "0x010000000000110F",
-            "DisplayName": "gameState.babyCanSave == true",
-            "Text": "",
-            "ExternalId": "",
-            "Position": {
-              "x": -125.0,
-              "y": 1700.0
-            },
-            "ZIndex": 28.0,
-            "Size": {
-              "w": 225.0,
-              "h": 100.0
-            },
-            "ShortId": 4260611685,
-            "Expression": "gameState.babyCanSave == true",
-            "Color": {
-              "r": 0.577580452,
-              "g": 0.7605245,
-              "b": 0.7991027
-            },
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x01000000000013FD",
-                "Owner": "0x01000000000013FC"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x01000000000013FE",
-                "Owner": "0x01000000000013FC",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.577580452,
-                      "g": 0.7605245,
-                      "b": 0.7991027
-                    },
-                    "Label": "",
-                    "TargetPin": "0x0100000000001419",
-                    "Target": "0x0100000000001418"
-                  }
-                ]
-              },
-              {
-                "Text": "",
-                "Id": "0x01000000000013FF",
-                "Owner": "0x01000000000013FC",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.577580452,
-                      "g": 0.7605245,
-                      "b": 0.7991027
-                    },
-                    "Label": "",
-                    "TargetPin": "0x0100000000001402",
-                    "Target": "0x0100000000001401"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "Type": "Condition",
-          "Properties": {
-            "TechnicalName": "Cnd_BB85C9D0",
-            "Id": "0x0100000000001407",
-            "Parent": "0x010000000000110F",
-            "DisplayName": "nyxInventory.genericHerbAmount <= 1",
-            "Text": "",
-            "ExternalId": "",
-            "Position": {
-              "x": 850.0,
-              "y": 1950.0
+              "x": 344.31184828163885,
+              "y": 1536.6701621874913
             },
             "ZIndex": 23.0,
             "Size": {
               "w": 225.0,
               "h": 100.0
             },
-            "ShortId": 3146107344,
-            "Expression": "nyxInventory.genericHerbAmount <= 1",
+            "ShortId": 756938219,
+            "Expression": "gameState.nyxHerbs4 == true",
             "Color": {
-              "r": 0.577580452,
-              "g": 0.7605245,
-              "b": 0.7991027
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
             },
             "InputPins": [
               {
                 "Text": "",
-                "Id": "0x0100000000001408",
-                "Owner": "0x0100000000001407"
+                "Id": "0x01000000000016F9",
+                "Owner": "0x01000000000016F8"
               }
             ],
             "OutputPins": [
               {
+                "Text": "gameState.motherCanSave = true;\ngameState.babyCanSave = true;",
+                "Id": "0x01000000000016FA",
+                "Owner": "0x01000000000016F8",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001706",
+                    "Target": "0x0100000000001705"
+                  }
+                ]
+              },
+              {
                 "Text": "",
-                "Id": "0x0100000000001409",
-                "Owner": "0x0100000000001407",
+                "Id": "0x01000000000016FB",
+                "Owner": "0x01000000000016F8",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000016FE",
+                    "Target": "0x01000000000016FD"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Condition",
+          "Properties": {
+            "TechnicalName": "Cnd_FED88C2C",
+            "Id": "0x01000000000016DB",
+            "Parent": "0x010000000000110F",
+            "DisplayName": "gameState.nyxHerbs4 == true",
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 250.0,
+              "y": 1700.0
+            },
+            "ZIndex": 23.0,
+            "Size": {
+              "w": 225.0,
+              "h": 100.0
+            },
+            "ShortId": 4275604524,
+            "Expression": "gameState.nyxHerbs4 == true",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000016DC",
+                "Owner": "0x01000000000016DB"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "gameState.motherCanSave = true",
+                "Id": "0x01000000000016DD",
+                "Owner": "0x01000000000016DB",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000016E8",
+                    "Target": "0x01000000000016E7"
+                  }
+                ]
+              },
+              {
+                "Text": "",
+                "Id": "0x01000000000016DE",
+                "Owner": "0x01000000000016DB",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000016E1",
+                    "Target": "0x01000000000016E0"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Condition",
+          "Properties": {
+            "TechnicalName": "Cnd_1B8CB325",
+            "Id": "0x01000000000016E0",
+            "Parent": "0x010000000000110F",
+            "DisplayName": "gameState.nyxHerbs2 == true",
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 675.0,
+              "y": 2000.0
+            },
+            "ZIndex": 23.0,
+            "Size": {
+              "w": 225.0,
+              "h": 100.0
+            },
+            "ShortId": 462205733,
+            "Expression": "gameState.nyxHerbs2 == true",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000016E1",
+                "Owner": "0x01000000000016E0"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "gameState.motherCanSave = true",
+                "Id": "0x01000000000016E2",
+                "Owner": "0x01000000000016E0",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000016EE",
+                    "Target": "0x01000000000016ED"
+                  }
+                ]
+              },
+              {
+                "Text": "",
+                "Id": "0x01000000000016E3",
+                "Owner": "0x01000000000016E0",
                 "Connections": [
                   {
                     "Color": {
@@ -9560,11 +11375,78 @@
                     "Target": "0x0100000000001592"
                   }
                 ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Condition",
+          "Properties": {
+            "TechnicalName": "Cnd_79057447",
+            "Id": "0x0100000000001627",
+            "Parent": "0x010000000000110F",
+            "DisplayName": "gameState.enteredDreamscape == false",
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": -1125.0,
+              "y": 1750.0
+            },
+            "ZIndex": 102.0,
+            "Size": {
+              "w": 225.0,
+              "h": 100.0
+            },
+            "ShortId": 2030400583,
+            "Expression": "gameState.enteredDreamscape == false",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "InputPins": [
+              {
+                "Text": "gameState.awake == true && gameState.act3 == true",
+                "Id": "0x0100000000001629",
+                "Owner": "0x0100000000001627"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000162A",
+                "Owner": "0x0100000000001627",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001622",
+                    "Target": "0x010000000000161F"
+                  }
+                ]
               },
               {
                 "Text": "",
-                "Id": "0x010000000000140A",
-                "Owner": "0x0100000000001407"
+                "Id": "0x010000000000162B",
+                "Owner": "0x0100000000001627",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000016A2",
+                    "Target": "0x01000000000016A0"
+                  }
+                ]
               }
             ]
           }
@@ -9575,12 +11457,12 @@
             "TechnicalName": "Cnd_CDF5BB71",
             "Id": "0x0100000000001418",
             "Parent": "0x010000000000110F",
-            "DisplayName": "nyxInventory.genericHerbAmount >= 4",
+            "DisplayName": "gameState.nyxHerbs4 == true",
             "Text": "",
             "ExternalId": "",
             "Position": {
-              "x": 250.0,
-              "y": 1450.0
+              "x": 125.0,
+              "y": 1850.0
             },
             "ZIndex": 23.0,
             "Size": {
@@ -9588,7 +11470,7 @@
               "h": 100.0
             },
             "ShortId": 3455433585,
-            "Expression": "nyxInventory.genericHerbAmount >= 4",
+            "Expression": "gameState.nyxHerbs4 == true",
             "Color": {
               "r": 0.577580452,
               "g": 0.7605245,
@@ -9603,16 +11485,16 @@
             ],
             "OutputPins": [
               {
-                "Text": "",
+                "Text": "gameState.babyCanSave = true",
                 "Id": "0x010000000000141A",
                 "Owner": "0x0100000000001418",
                 "Connections": [
                   {
                     "Color": {
                       "a": 1.0,
-                      "r": 0.577580452,
-                      "g": 0.7605245,
-                      "b": 0.7991027
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
                     },
                     "Label": "",
                     "TargetPin": "0x0100000000001378",
@@ -9651,8 +11533,8 @@
             "Text": "",
             "ExternalId": "",
             "Position": {
-              "x": 1275.0,
-              "y": 1950.0
+              "x": 1425.0,
+              "y": 2075.0
             },
             "ZIndex": 23.0,
             "Size": {
@@ -9662,9 +11544,9 @@
             "ShortId": 2168567670,
             "Expression": "playerInventory.genericHerbAmount <= 1",
             "Color": {
-              "r": 0.5764706,
-              "g": 0.75686276,
-              "b": 0.8
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
             },
             "InputPins": [
               {
@@ -9682,9 +11564,9 @@
                   {
                     "Color": {
                       "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
                     },
                     "Label": "",
                     "TargetPin": "0x010000000000140D",
@@ -9700,13 +11582,648 @@
                   {
                     "Color": {
                       "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000159C",
+                    "Target": "0x0100000000001599"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Condition",
+          "Properties": {
+            "TechnicalName": "Cnd_00745A7B",
+            "Id": "0x010000000000162E",
+            "Parent": "0x010000000000110F",
+            "DisplayName": "playerInventory.regentA == 1 && play ...",
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": -400.0,
+              "y": 1775.0
+            },
+            "ZIndex": 104.0,
+            "Size": {
+              "w": 225.0,
+              "h": 100.0
+            },
+            "ShortId": 7625339,
+            "Expression": "playerInventory.regentA == 1 && playerInventory.regentB == 1",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000001630",
+                "Owner": "0x010000000000162E"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000001631",
+                "Owner": "0x010000000000162E",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
                       "r": 0.5764706,
                       "g": 0.75686276,
                       "b": 0.8
                     },
                     "Label": "",
-                    "TargetPin": "0x010000000000159C",
-                    "Target": "0x0100000000001599"
+                    "TargetPin": "0x01000000000016CC",
+                    "Target": "0x01000000000016CB"
+                  }
+                ]
+              },
+              {
+                "Text": "",
+                "Id": "0x0100000000001632",
+                "Owner": "0x010000000000162E",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000163B",
+                    "Target": "0x010000000000163A"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Condition",
+          "Properties": {
+            "TechnicalName": "Cnd_4AC348D7",
+            "Id": "0x010000000000163A",
+            "Parent": "0x010000000000110F",
+            "DisplayName": "playerInventory.regentC == 1 && play ...",
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 325.0,
+              "y": 2475.0
+            },
+            "ZIndex": 104.0,
+            "Size": {
+              "w": 225.0,
+              "h": 100.0
+            },
+            "ShortId": 1254312151,
+            "Expression": "playerInventory.regentC == 1 && playerInventory.regentD == 1",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000163B",
+                "Owner": "0x010000000000163A"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000163C",
+                "Owner": "0x010000000000163A",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001419",
+                    "Target": "0x0100000000001418"
+                  }
+                ]
+              },
+              {
+                "Text": "",
+                "Id": "0x010000000000163D",
+                "Owner": "0x010000000000163A",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001402",
+                    "Target": "0x0100000000001401"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Condition",
+          "Properties": {
+            "TechnicalName": "Cnd_B5F19AD3",
+            "Id": "0x0100000000001646",
+            "Parent": "0x010000000000110F",
+            "DisplayName": "playerInventory.genericHerbAmount >= 4",
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 3350.0,
+              "y": 25.0
+            },
+            "ZIndex": 112.0,
+            "Size": {
+              "w": 225.0,
+              "h": 100.0
+            },
+            "ShortId": 3052509907,
+            "Expression": "playerInventory.genericHerbAmount >= 4",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000001648",
+                "Owner": "0x0100000000001646"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000001649",
+                "Owner": "0x0100000000001646",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001659",
+                    "Target": "0x0100000000001657"
+                  }
+                ]
+              },
+              {
+                "Text": "",
+                "Id": "0x010000000000164A",
+                "Owner": "0x0100000000001646",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001652",
+                    "Target": "0x0100000000001651"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Condition",
+          "Properties": {
+            "TechnicalName": "Cnd_9B14E6C5",
+            "Id": "0x0100000000001651",
+            "Parent": "0x010000000000110F",
+            "DisplayName": "playerInventory.genericHerbAmount >= 2",
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 3750.0,
+              "y": 100.0
+            },
+            "ZIndex": 112.0,
+            "Size": {
+              "w": 225.0,
+              "h": 100.0
+            },
+            "ShortId": 2601838277,
+            "Expression": "playerInventory.genericHerbAmount >= 2",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000001652",
+                "Owner": "0x0100000000001651"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000001653",
+                "Owner": "0x0100000000001651",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000165D",
+                    "Target": "0x010000000000165C"
+                  }
+                ]
+              },
+              {
+                "Text": "",
+                "Id": "0x0100000000001654",
+                "Owner": "0x0100000000001651"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Condition",
+          "Properties": {
+            "TechnicalName": "Cnd_1B4C5370",
+            "Id": "0x01000000000016A0",
+            "Parent": "0x010000000000110F",
+            "DisplayName": "gameState.motherCanSave == false",
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": -1075.0,
+              "y": 2000.0
+            },
+            "ZIndex": 129.0,
+            "Size": {
+              "w": 225.0,
+              "h": 100.0
+            },
+            "ShortId": 457986928,
+            "Expression": "gameState.motherCanSave == false",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000016A2",
+                "Owner": "0x01000000000016A0"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000016A3",
+                "Owner": "0x01000000000016A0",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000016A8",
+                    "Target": "0x01000000000016A6"
+                  }
+                ]
+              },
+              {
+                "Text": "",
+                "Id": "0x01000000000016A4",
+                "Owner": "0x01000000000016A0",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000016B1",
+                    "Target": "0x01000000000016AF"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Condition",
+          "Properties": {
+            "TechnicalName": "Cnd_821E685E",
+            "Id": "0x01000000000016A6",
+            "Parent": "0x010000000000110F",
+            "DisplayName": "gameState.babyCanSave == false",
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": -675.0,
+              "y": 1725.0
+            },
+            "ZIndex": 131.0,
+            "Size": {
+              "w": 225.0,
+              "h": 100.0
+            },
+            "ShortId": 2183030878,
+            "Expression": "gameState.babyCanSave == false",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000016A8",
+                "Owner": "0x01000000000016A6"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000016A9",
+                "Owner": "0x01000000000016A6",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001630",
+                    "Target": "0x010000000000162E"
+                  }
+                ]
+              },
+              {
+                "Text": "",
+                "Id": "0x01000000000016AA",
+                "Owner": "0x01000000000016A6",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000016BF",
+                    "Target": "0x01000000000016BC"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Condition",
+          "Properties": {
+            "TechnicalName": "Cnd_ED50A792",
+            "Id": "0x01000000000016AF",
+            "Parent": "0x010000000000110F",
+            "DisplayName": "gameState.babyCanSave == false",
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": -625.0,
+              "y": 2225.0
+            },
+            "ZIndex": 134.0,
+            "Size": {
+              "w": 225.0,
+              "h": 100.0
+            },
+            "ShortId": 3981485970,
+            "Expression": "gameState.babyCanSave == false",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000016B1",
+                "Owner": "0x01000000000016AF"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000016B2",
+                "Owner": "0x01000000000016AF",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000016B8",
+                    "Target": "0x01000000000016B5"
+                  }
+                ]
+              },
+              {
+                "Text": "",
+                "Id": "0x01000000000016B3",
+                "Owner": "0x01000000000016AF",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000016C6",
+                    "Target": "0x01000000000016C3"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Condition",
+          "Properties": {
+            "TechnicalName": "Cnd_18881ABD",
+            "Id": "0x01000000000016CB",
+            "Parent": "0x010000000000110F",
+            "DisplayName": "playerInventory.regentC == 1 && play ...",
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": -100.0,
+              "y": 1650.0
+            },
+            "ZIndex": 104.0,
+            "Size": {
+              "w": 225.0,
+              "h": 100.0
+            },
+            "ShortId": 411572925,
+            "Expression": "playerInventory.regentC == 1 && playerInventory.regentD == 1",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000016CC",
+                "Owner": "0x01000000000016CB"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000016CD",
+                "Owner": "0x01000000000016CB",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000016F9",
+                    "Target": "0x01000000000016F8"
+                  }
+                ]
+              },
+              {
+                "Text": "",
+                "Id": "0x01000000000016CE",
+                "Owner": "0x01000000000016CB",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000016DC",
+                    "Target": "0x01000000000016DB"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Condition",
+          "Properties": {
+            "TechnicalName": "Cnd_837780F8",
+            "Id": "0x01000000000016FD",
+            "Parent": "0x010000000000110F",
+            "DisplayName": "gameState.nyxHerbs2 == true",
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 675.0,
+              "y": 1825.0
+            },
+            "ZIndex": 23.0,
+            "Size": {
+              "w": 225.0,
+              "h": 100.0
+            },
+            "ShortId": 2205647096,
+            "Expression": "gameState.nyxHerbs2 == true",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000016FE",
+                "Owner": "0x01000000000016FD"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "gameState.motherCanSave = true;\ngameState.babyCanSave = true;",
+                "Id": "0x01000000000016FF",
+                "Owner": "0x01000000000016FD",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000170C",
+                    "Target": "0x010000000000170B"
+                  }
+                ]
+              },
+              {
+                "Text": "",
+                "Id": "0x0100000000001700",
+                "Owner": "0x01000000000016FD",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000001593",
+                    "Target": "0x0100000000001592"
                   }
                 ]
               }
@@ -9815,6 +12332,114 @@
                     "Label": "",
                     "TargetPin": "0x01000000000013D6",
                     "Target": "0x01000000000013D5"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Instruction",
+          "Properties": {
+            "TechnicalName": "Ins_64ECFCE9",
+            "Id": "0x0100000000001657",
+            "Parent": "0x010000000000110F",
+            "DisplayName": "gameState.nyxHerbs4 = true;",
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 3700.0,
+              "y": -175.0
+            },
+            "ZIndex": 116.0,
+            "Size": {
+              "w": 225.0,
+              "h": 100.0
+            },
+            "ShortId": 1693252841,
+            "Expression": "gameState.nyxHerbs4 = true;\nplayerInventory.genericHerbAmount = playerInventory.genericHerbAmount - 4;",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000001659",
+                "Owner": "0x0100000000001657"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000165A",
+                "Owner": "0x0100000000001657",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000133E",
+                    "Target": "0x010000000000133D"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Instruction",
+          "Properties": {
+            "TechnicalName": "Ins_08E6EAB7",
+            "Id": "0x010000000000165C",
+            "Parent": "0x010000000000110F",
+            "DisplayName": "gameState.nyxHerbs2 = true;",
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 4050.0,
+              "y": 75.0
+            },
+            "ZIndex": 116.0,
+            "Size": {
+              "w": 225.0,
+              "h": 100.0
+            },
+            "ShortId": 149351095,
+            "Expression": "gameState.nyxHerbs2 = true;\nplayerInventory.genericHerbAmount = playerInventory.genericHerbAmount - 2;",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000165D",
+                "Owner": "0x010000000000165C"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000165E",
+                "Owner": "0x010000000000165C",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000133E",
+                    "Target": "0x010000000000133D"
                   }
                 ]
               }
@@ -10351,6 +12976,43 @@
           }
         },
         {
+          "Type": "Entity",
+          "Properties": {
+            "TechnicalName": "Ntt_790551C1",
+            "Id": "0x010000000000172D",
+            "Parent": "0x01000000000010AA",
+            "Attachments": [],
+            "DisplayName": "Trader",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 120.0,
+              "y": 120.0
+            },
+            "ZIndex": 6.0,
+            "Size": {
+              "w": 256.0,
+              "h": 196.0
+            },
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0000000000000000"
+            },
+            "ShortId": 2030391745
+          }
+        },
+        {
           "Type": "DefaultMainCharacterTemplate",
           "Properties": {
             "TechnicalName": "Ntt_01C88FBD",
@@ -10748,6 +13410,18 @@
                 "Type": "Hub"
               },
               {
+                "Id": "0x0100000000001715",
+                "TechnicalName": "Dlg_6896FB8E",
+                "Type": "Dialogue",
+                "Children": [
+                  {
+                    "Id": "0x010000000000171E",
+                    "TechnicalName": "DFr_12706B96",
+                    "Type": "DialogueFragment"
+                  }
+                ]
+              },
+              {
                 "Id": "0x010000000000111A",
                 "TechnicalName": "Dlg_591C6BFA",
                 "Type": "Dialogue",
@@ -10892,6 +13566,36 @@
                     "Type": "DialogueFragment"
                   },
                   {
+                    "Id": "0x010000000000168F",
+                    "TechnicalName": "DFr_6D85CDEA",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x0100000000001689",
+                    "TechnicalName": "DFr_D5FAEE73",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x01000000000015A2",
+                    "TechnicalName": "DFr_29B03436",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x01000000000015AA",
+                    "TechnicalName": "DFr_BFF5E2EF",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x01000000000015B0",
+                    "TechnicalName": "DFr_BA4A15BC",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x01000000000015BA",
+                    "TechnicalName": "DFr_08D3555F",
+                    "Type": "DialogueFragment"
+                  },
+                  {
                     "Id": "0x0100000000001175",
                     "TechnicalName": "DFr_B04E9C2D",
                     "Type": "DialogueFragment"
@@ -10939,6 +13643,11 @@
                     "Type": "DialogueFragment"
                   },
                   {
+                    "Id": "0x01000000000014C4",
+                    "TechnicalName": "DFr_223E8B3B",
+                    "Type": "DialogueFragment"
+                  },
+                  {
                     "Id": "0x010000000000151B",
                     "TechnicalName": "DFr_AE9F5514",
                     "Type": "DialogueFragment"
@@ -10946,11 +13655,6 @@
                   {
                     "Id": "0x0100000000001521",
                     "TechnicalName": "DFr_D273F713",
-                    "Type": "DialogueFragment"
-                  },
-                  {
-                    "Id": "0x01000000000014C4",
-                    "TechnicalName": "DFr_223E8B3B",
                     "Type": "DialogueFragment"
                   },
                   {
@@ -11071,6 +13775,11 @@
                     "Type": "Hub"
                   },
                   {
+                    "Id": "0x01000000000015F2",
+                    "TechnicalName": "DFr_88A5865E",
+                    "Type": "DialogueFragment"
+                  },
+                  {
                     "Id": "0x0100000000001272",
                     "TechnicalName": "FFr_2447B248",
                     "Type": "FlowFragment"
@@ -11088,6 +13797,36 @@
                   {
                     "Id": "0x0100000000001214",
                     "TechnicalName": "DFr_E61DA30C",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x010000000000166F",
+                    "TechnicalName": "DFr_6E69E470",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x0100000000001669",
+                    "TechnicalName": "DFr_94BF91C0",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x01000000000015FA",
+                    "TechnicalName": "DFr_8C0C5091",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x0100000000001600",
+                    "TechnicalName": "DFr_BA63B6F2",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x0100000000001606",
+                    "TechnicalName": "DFr_48886C81",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x010000000000160C",
+                    "TechnicalName": "DFr_9BD61962",
                     "Type": "DialogueFragment"
                   },
                   {
@@ -11159,6 +13898,11 @@
                     "Id": "0x0100000000001239",
                     "TechnicalName": "Jmp_48BEDD86",
                     "Type": "Jump"
+                  },
+                  {
+                    "Id": "0x01000000000015EA",
+                    "TechnicalName": "DFr_C6C5D163",
+                    "Type": "DialogueFragment"
                   }
                 ]
               },
@@ -11167,6 +13911,16 @@
                 "TechnicalName": "Dlg_34C8DC2C",
                 "Type": "Dialogue",
                 "Children": [
+                  {
+                    "Id": "0x0100000000001627",
+                    "TechnicalName": "Cnd_79057447",
+                    "Type": "Condition"
+                  },
+                  {
+                    "Id": "0x01000000000016A0",
+                    "TechnicalName": "Cnd_1B4C5370",
+                    "Type": "Condition"
+                  },
                   {
                     "Id": "0x010000000000135C",
                     "TechnicalName": "DFr_635BE7CB",
@@ -11183,8 +13937,18 @@
                     "Type": "DialogueFragment"
                   },
                   {
-                    "Id": "0x01000000000013F2",
-                    "TechnicalName": "Cnd_FCEB7205",
+                    "Id": "0x01000000000016A6",
+                    "TechnicalName": "Cnd_821E685E",
+                    "Type": "Condition"
+                  },
+                  {
+                    "Id": "0x01000000000016AF",
+                    "TechnicalName": "Cnd_ED50A792",
+                    "Type": "Condition"
+                  },
+                  {
+                    "Id": "0x010000000000162E",
+                    "TechnicalName": "Cnd_00745A7B",
                     "Type": "Condition"
                   },
                   {
@@ -11193,13 +13957,58 @@
                     "Type": "Hub"
                   },
                   {
-                    "Id": "0x01000000000013F7",
-                    "TechnicalName": "Cnd_396BCD65",
-                    "Type": "Condition"
+                    "Id": "0x010000000000161F",
+                    "TechnicalName": "DFr_95E7C884",
+                    "Type": "DialogueFragment"
                   },
                   {
-                    "Id": "0x01000000000013FC",
-                    "TechnicalName": "Cnd_FDF3C665",
+                    "Id": "0x01000000000016BC",
+                    "TechnicalName": "DFr_5AAD237E",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x01000000000016B5",
+                    "TechnicalName": "DFr_8E2694BD",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x01000000000016C3",
+                    "TechnicalName": "DFr_FAB61089",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x010000000000167F",
+                    "TechnicalName": "DFr_3FFF9683",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x0100000000001679",
+                    "TechnicalName": "DFr_EB1FB124",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x01000000000015C8",
+                    "TechnicalName": "DFr_927EC694",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x01000000000015CE",
+                    "TechnicalName": "DFr_EF487EC8",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x01000000000015D4",
+                    "TechnicalName": "DFr_36ED0FB8",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x01000000000015DA",
+                    "TechnicalName": "DFr_855790F8",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x01000000000016CB",
+                    "TechnicalName": "Cnd_18881ABD",
                     "Type": "Condition"
                   },
                   {
@@ -11218,6 +14027,11 @@
                     "Type": "Condition"
                   },
                   {
+                    "Id": "0x01000000000016DB",
+                    "TechnicalName": "Cnd_FED88C2C",
+                    "Type": "Condition"
+                  },
+                  {
                     "Id": "0x01000000000012C5",
                     "TechnicalName": "DFr_E7170C91",
                     "Type": "DialogueFragment"
@@ -11228,14 +14042,14 @@
                     "Type": "DialogueFragment"
                   },
                   {
-                    "Id": "0x01000000000013E7",
-                    "TechnicalName": "Cnd_7D05B342",
+                    "Id": "0x010000000000163A",
+                    "TechnicalName": "Cnd_4AC348D7",
                     "Type": "Condition"
                   },
                   {
-                    "Id": "0x0100000000001401",
-                    "TechnicalName": "DFr_A2931FA2",
-                    "Type": "DialogueFragment"
+                    "Id": "0x01000000000016F8",
+                    "TechnicalName": "Cnd_2D1DF5EB",
+                    "Type": "Condition"
                   },
                   {
                     "Id": "0x01000000000012CB",
@@ -11248,19 +14062,19 @@
                     "Type": "Jump"
                   },
                   {
-                    "Id": "0x0100000000001407",
-                    "TechnicalName": "Cnd_BB85C9D0",
+                    "Id": "0x01000000000016FD",
+                    "TechnicalName": "Cnd_837780F8",
                     "Type": "Condition"
                   },
                   {
-                    "Id": "0x0100000000001377",
-                    "TechnicalName": "DFr_F693E428",
-                    "Type": "DialogueFragment"
+                    "Id": "0x01000000000016E0",
+                    "TechnicalName": "Cnd_1B8CB325",
+                    "Type": "Condition"
                   },
                   {
-                    "Id": "0x01000000000013EC",
-                    "TechnicalName": "DFr_20236FAF",
-                    "Type": "DialogueFragment"
+                    "Id": "0x01000000000013E7",
+                    "TechnicalName": "Cnd_7D05B342",
+                    "Type": "Condition"
                   },
                   {
                     "Id": "0x01000000000012D1",
@@ -11268,14 +14082,19 @@
                     "Type": "DialogueFragment"
                   },
                   {
-                    "Id": "0x0100000000001592",
-                    "TechnicalName": "Cnd_8141B776",
-                    "Type": "Condition"
-                  },
-                  {
                     "Id": "0x01000000000012ED",
                     "TechnicalName": "Hub_F6489B94",
                     "Type": "Hub"
+                  },
+                  {
+                    "Id": "0x0100000000001401",
+                    "TechnicalName": "DFr_A2931FA2",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x0100000000001592",
+                    "TechnicalName": "Cnd_8141B776",
+                    "Type": "Condition"
                   },
                   {
                     "Id": "0x01000000000012E6",
@@ -11285,6 +14104,36 @@
                   {
                     "Id": "0x01000000000012F2",
                     "TechnicalName": "DFr_D2A6DD57",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x0100000000001705",
+                    "TechnicalName": "DFr_F1C5E2E3",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x010000000000170B",
+                    "TechnicalName": "DFr_3954BB74",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x01000000000016E7",
+                    "TechnicalName": "DFr_41E2F68A",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x01000000000016ED",
+                    "TechnicalName": "DFr_9B1F00EC",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x0100000000001377",
+                    "TechnicalName": "DFr_F693E428",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x01000000000013EC",
+                    "TechnicalName": "DFr_20236FAF",
                     "Type": "DialogueFragment"
                   },
                   {
@@ -11353,9 +14202,9 @@
                     "Type": "DialogueFragment"
                   },
                   {
-                    "Id": "0x010000000000133D",
-                    "TechnicalName": "DFr_6BD64893",
-                    "Type": "DialogueFragment"
+                    "Id": "0x0100000000001646",
+                    "TechnicalName": "Cnd_B5F19AD3",
+                    "Type": "Condition"
                   },
                   {
                     "Id": "0x0100000000001323",
@@ -11365,6 +14214,26 @@
                   {
                     "Id": "0x010000000000136E",
                     "TechnicalName": "DFr_C661AC5D",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x0100000000001657",
+                    "TechnicalName": "Ins_64ECFCE9",
+                    "Type": "Instruction"
+                  },
+                  {
+                    "Id": "0x0100000000001651",
+                    "TechnicalName": "Cnd_9B14E6C5",
+                    "Type": "Condition"
+                  },
+                  {
+                    "Id": "0x010000000000165C",
+                    "TechnicalName": "Ins_08E6EAB7",
+                    "Type": "Instruction"
+                  },
+                  {
+                    "Id": "0x010000000000133D",
+                    "TechnicalName": "DFr_6BD64893",
                     "Type": "DialogueFragment"
                   }
                 ]
@@ -11421,6 +14290,11 @@
               {
                 "Id": "0x0100000000000199",
                 "TechnicalName": "Ntt_CBF1B32B",
+                "Type": "Entity"
+              },
+              {
+                "Id": "0x010000000000172D",
+                "TechnicalName": "Ntt_790551C1",
                 "Type": "Entity"
               }
             ]

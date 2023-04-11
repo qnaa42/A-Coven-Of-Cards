@@ -32,10 +32,6 @@ namespace Articy.A_Coven_Of_Cards.GlobalVariables
         [HideInInspector()]
         private playerInventory mPlayerInventory = new playerInventory();
         
-        [SerializeField()]
-        [HideInInspector()]
-        private nyxInventory mNyxInventory = new nyxInventory();
-        
         #region Initialize static VariableName set
         static ArticyGlobalVariables()
         {
@@ -51,6 +47,9 @@ namespace Articy.A_Coven_Of_Cards.GlobalVariables
             variableNames.Add("gameState.act1");
             variableNames.Add("gameState.act2");
             variableNames.Add("gameState.act3");
+            variableNames.Add("gameState.nyxHerbs4");
+            variableNames.Add("gameState.nyxHerbs2");
+            variableNames.Add("gameState.enteredDreamscape");
             variableNames.Add("playerInventory.sHealthPotB");
             variableNames.Add("playerInventory.genericHealthPots");
             variableNames.Add("playerInventory.genericHerbAmount");
@@ -59,7 +58,6 @@ namespace Articy.A_Coven_Of_Cards.GlobalVariables
             variableNames.Add("playerInventory.regentB");
             variableNames.Add("playerInventory.regentC");
             variableNames.Add("playerInventory.regentD");
-            variableNames.Add("nyxInventory.genericHerbAmount");
         }
         #endregion
         
@@ -79,14 +77,6 @@ namespace Articy.A_Coven_Of_Cards.GlobalVariables
             }
         }
         
-        public nyxInventory nyxInventory
-        {
-            get
-            {
-                return mNyxInventory;
-            }
-        }
-        
         public static ArticyGlobalVariables Default
         {
             get
@@ -99,7 +89,6 @@ namespace Articy.A_Coven_Of_Cards.GlobalVariables
         {
             gameState.RegisterVariables(this);
             playerInventory.RegisterVariables(this);
-            nyxInventory.RegisterVariables(this);
         }
         
         public static ArticyGlobalVariables CreateGlobalVariablesClone()

@@ -3,27 +3,104 @@
   <component name="ChangeListManager">
     <list default="true" id="a1e62ff1-8c95-4f34-b705-2d1bd115eabc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.A Coven Of Cards/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.A Coven Of Cards/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.plastic/plastic.changes" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.plastic/plastic.wktree" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.wktree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/A Coven of Cards.articyu3d" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/A Coven of Cards.articyu3d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/ArticyGlobalVariables.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/ArticyGlobalVariables.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/ArticyScriptFragments.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/ArticyScriptFragments.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/GlobalVariablesNamespaces.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/GlobalVariablesNamespaces.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/InputPin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/InputPin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/Resources/All objects.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/Resources/All objects.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/Resources/ArticyDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/Resources/ArticyDatabase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/Resources/ArticyTypeSystem.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/Resources/ArticyTypeSystem.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/Manager Layer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/Manager Layer.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Momchil's Work in process/ArticyImporter/Content/Generated/ArticyEditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Momchil's Work in process/ArticyImporter/Content/Generated/ArticyEditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Momchil's Work in process/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Momchil's Work in process/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/SmallTree1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/SmallTree1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/SmallTree1Dry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/SmallTree1Dry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/SmallTree2Dry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/SmallTree2Dry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/SmallTree3Dry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/SmallTree3Dry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/Tree1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/Tree1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/Tree3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/Tree3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/Tree_Oak1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/Tree_Oak1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/Tree_Oak1Dry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/Tree_Oak1Dry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/Tree_Oak2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/Tree_Oak2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/Tree_Oak2Dry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/Tree_Oak2Dry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/Tree_Oak3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/Tree_Oak3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/Tree_Oak3Dry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Nature/Modular Trees/Tree_Oak3Dry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/CutedTree1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/CutedTree1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/DetileStone1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/DetileStone1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/Oak.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/Oak.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/Oak1Dry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/Oak1Dry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/Oak2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/Oak2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/Oak2Dry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/Oak2Dry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/Oak3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/Oak3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/Oak3Dry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/Oak3Dry.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/OakCut.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/OakCut.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/OakCut2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/OakCut2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/Pinetree4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/Pinetree4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/Tree1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/Tree1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/Tree2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/GreenForest/Prefabs/Tree2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/MedievalTavernPack/Material/Furniture/Chair_02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/MedievalTavernPack/Material/Furniture/Chair_02.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/bark_1_d.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/bark_1_d.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/charcoal_1_d.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/charcoal_1_d.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/fabric_3_d.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/fabric_3_d.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/fabric_bag_1_d.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/fabric_bag_1_d.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/silver.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/silver.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/stone_wall_1_d.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/stone_wall_1_d.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/wall_brick_1_d.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/wall_brick_1_d.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/wood.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/wood.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/wood_1_d.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/wood_1_d.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/wood_2_d.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/wood_2_d.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/wood_3_d.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/wood_3_d.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/wooden-boards-texture_d.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/wooden-boards-texture_d.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/wooden-boards-texture_white_d.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/wooden-boards-texture_white_d.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Prefabs/METE Prefabs/HOUSE.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Prefabs/METE Prefabs/HOUSE.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Prefabs/METE Prefabs/Storage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Prefabs/METE Prefabs/Storage.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Prefabs/UI Controller Layer/MainCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Prefabs/UI Controller Layer/MainCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/New Player.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/New Player.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Core Layer/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Core Layer/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Inventory Controller Layer/Coven of Cards item Database.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Inventory Controller Layer/Coven of Cards item Database.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Scriptable Objects/Spell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Scriptable Objects/Spell.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Base/BaseSpellManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Base/BaseSpellManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Base/Data/SpellData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Base/Data/SpellData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Air/06 - The Lovers.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Air/06 - The Lovers.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Fire/16 - The Tower.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Fire/16 - The Tower.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Fire/19 - The Sun.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Fire/19 - The Sun.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Water/07 - The Chariot.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Water/07 - The Chariot.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/SpellsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/SpellsManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/SpellsStatsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/SpellsStatsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Air/01 - The Magican.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Spells/Air/01 - The Magican.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Textures/_TerrainAutoUpgrade.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Textures/_TerrainAutoUpgrade/layer_charcoal_1_d3d3aba195e4d26ee.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Textures/_TerrainAutoUpgrade/layer_charcoal_1_d3d3aba195e4d26ee.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Textures/_TerrainAutoUpgrade/layer_dirt_1_fixed_d793646612c42751.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Textures/_TerrainAutoUpgrade/layer_dirt_1_fixed_d793646612c42751.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Textures/_TerrainAutoUpgrade/layer_grass_1_fixed_d793646612c42751.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Textures/_TerrainAutoUpgrade/layer_grass_1_fixed_d793646612c42751.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Devion Games/Inventory System/Examples/Models/Shield/Models/Materials/Shield.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Devion Games/Inventory System/Examples/Models/Shield/Models/Materials/Shield.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Devion Games/Inventory System/Examples/Particle Effects/Fire/Materials/EarthCrack.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Devion Games/Inventory System/Examples/Particle Effects/Fire/Materials/EarthCrack.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Devion Games/Inventory System/Scripts/Runtime/UI/Slot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Devion Games/Inventory System/Scripts/Runtime/UI/Slot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Terrain.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/House.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/House.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Momchil White Room.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Momchil White Room.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewLayer 1.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewLayer 1.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewLayer 2.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewLayer 2.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewLayer 3.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewLayer 3.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewLayer 4.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewLayer 4.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewLayer.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewLayer.terrainlayer.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/WhoteRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WhoteRoom.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Materials/Crate - Surface Shader Scene.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Materials/Crate - Surface Shader Scene.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade/layer_CliffCliffN3d3aba195e4d26ee.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade/layer_CliffCliffN3d3aba195e4d26ee.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade/layer_CliffDawnCliffDawnN6039ce8aaf3df5cc.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade/layer_CliffDawnCliffDawnN6039ce8aaf3df5cc.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade/layer_GrassGrass_N3d1cca0d6d0e9938.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade/layer_GrassGrass_N3d1cca0d6d0e9938.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade/layer_GrassYelloGroundN3d3aba195e4d26ee.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade/layer_GrassYelloGroundN3d3aba195e4d26ee.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade/layer_GroundBrownGroundN3ec942c0ca31c357.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade/layer_GroundBrownGroundN3ec942c0ca31c357.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade/layer_GroundGroundN3d1cca0d6d0e9938.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade/layer_GroundGroundN3d1cca0d6d0e9938.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +116,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Core Layer/Base/Data/GameStatsDefs.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Core Layer/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Debug/OnTriggerEnterStatReduce.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Enviorment Misc Layer/HouseInteriorWallController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Enviorment Misc Layer/HouseManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Scriptable Objects/ComboSpell.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Scriptable Objects/Spell.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Spells Control Layer/Base/BaseSpellManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -49,6 +128,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@5.0.6/Editor/EditorCore/ProBuilderShapeEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@5.0.6/Runtime/Core/Submesh.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/StandaloneInputModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/GridLayoutGroup.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -130,6 +210,12 @@
       <workItem from="1675508971229" duration="7257000" />
       <workItem from="1676377039201" duration="8308000" />
       <workItem from="1676550507963" duration="17057000" />
+      <workItem from="1679396915569" duration="1724000" />
+      <workItem from="1680515301711" duration="2768000" />
+      <workItem from="1680698946827" duration="1548000" />
+      <workItem from="1680702714067" duration="3811000" />
+      <workItem from="1680949415542" duration="1371000" />
+      <workItem from="1681210455238" duration="4846000" />
     </task>
     <servers />
   </component>
@@ -143,5 +229,24 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Assets/Scripts/Character Controller Layer/PlayerManager.cs</url>
+          <line>80</line>
+          <properties documentPath="E:\Design Archive\Year Three\Witch Project Unity Porject\A Coven Of Cards\Assets\Assets\Scripts\Character Controller Layer\PlayerManager.cs" initialLine="80" containingFunctionPresentation="method 'HandleCharacterInput'">
+            <startOffsets>
+              <option value="2682" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2683" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

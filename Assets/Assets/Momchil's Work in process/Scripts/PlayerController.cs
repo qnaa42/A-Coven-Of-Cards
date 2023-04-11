@@ -1,15 +1,18 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Articy.Unity;
+using Articy.A_Coven_Of_Cards.GlobalVariables;
 
 public class PlayerController : MonoBehaviour
 {
     private DialogueManager dialogueManager;
-    private ArticyObject availableDialogue;
+    public ArticyObject availableDialogue;
 
     void Start()
     {
         dialogueManager = FindObjectOfType<DialogueManager>();
+        // creates listener for the playerInventory Global namespace
+        ArticyDatabase.DefaultGlobalVariables.Notifications.AddListener("playerInventory.*", MyGameStateVariablesChanged);
     }
 
     void Update()
@@ -17,10 +20,21 @@ public class PlayerController : MonoBehaviour
         PlayerInteraction();
     }
 
+    // here we handle every variable change inside the articy "playerInventory" namespace
+    void MyGameStateVariablesChanged(string aVariableName, object aValue)
+    {
+        if (aVariableName == "playerInventory.genericHerbAmount")
+            Debug.Log("herbs changed");
+    }
 
     // All interactions and key inputs player can use
     void PlayerInteraction()
     {
+        // interacting with articy global variables
+        if (Input.GetKeyDown(KeyCode.V) )
+        {
+            ArticyGlobalVariables.Default.playerInventory.genericHerbAmount += 1;
+        }
         // Key option to start dialogue when near NPC and if there is dialogue available
         if (Input.GetKeyDown(KeyCode.LeftArrow) && availableDialogue)
         {

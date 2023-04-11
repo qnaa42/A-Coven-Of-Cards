@@ -184,7 +184,7 @@ namespace DevionGames.InventorySystem
             if (container.UseReferences)
             {
                 ObservedItem = slot.ObservedItem;
-                ObservedItem.Icon = ObservedItem.FindProperty("Secondary Sprite").objectReferenceValue as Sprite;
+                //ObservedItem.Icon = ObservedItem.FindProperty("Secondary Sprite").objectReferenceValue as Sprite;
                 
             }
         }

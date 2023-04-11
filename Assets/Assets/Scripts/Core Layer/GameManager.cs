@@ -65,7 +65,7 @@ namespace Assets.Scripts.Core_Layer
                 spellsControlManager.InitializeComboSpellList();
             }
             
-            uiManager.UpdateTarotUi();
+            //uiManager.UpdateTarotUi();
             
             
             

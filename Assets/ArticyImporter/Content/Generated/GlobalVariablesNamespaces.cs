@@ -182,6 +182,45 @@ namespace Articy.A_Coven_Of_Cards.GlobalVariables
             }
         }
         
+        // Nyx has enough for 2 health potions
+        public bool nyxHerbs4
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(11);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(11, value);
+            }
+        }
+        
+        // Nyx has enough for 1 health potion
+        public bool nyxHerbs2
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(12);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(12, value);
+            }
+        }
+        
+        // Has the player entered the dreamscape yet?
+        public bool enteredDreamscape
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(13);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(13, value);
+            }
+        }
+        
         public void RegisterVariables(BaseGlobalVariables aStorage)
         {
             _VariableStorage = aStorage;
@@ -197,6 +236,9 @@ namespace Articy.A_Coven_Of_Cards.GlobalVariables
             aStorage.RegisterVariable("gameState.act1", false);
             aStorage.RegisterVariable("gameState.act2", false);
             aStorage.RegisterVariable("gameState.act3", false);
+            aStorage.RegisterVariable("gameState.nyxHerbs4", false);
+            aStorage.RegisterVariable("gameState.nyxHerbs2", false);
+            aStorage.RegisterVariable("gameState.enteredDreamscape", false);
         }
     }
 }
@@ -327,37 +369,6 @@ namespace Articy.A_Coven_Of_Cards.GlobalVariables
             aStorage.RegisterVariable("playerInventory.regentB", 0);
             aStorage.RegisterVariable("playerInventory.regentC", 0);
             aStorage.RegisterVariable("playerInventory.regentD", 0);
-        }
-    }
-}
-namespace Articy.A_Coven_Of_Cards.GlobalVariables
-{
-    
-    
-    [Serializable()]
-    public class nyxInventory : IArticyNamespace
-    {
-        
-        [SerializeField()]
-        private BaseGlobalVariables _VariableStorage;
-        
-        // Amount of herbs Nyx has in her inventory
-        public int genericHerbAmount
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueInt32(9);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueInt32(9, value);
-            }
-        }
-        
-        public void RegisterVariables(BaseGlobalVariables aStorage)
-        {
-            _VariableStorage = aStorage;
-            aStorage.RegisterVariable("nyxInventory.genericHerbAmount", 0);
         }
     }
 }
