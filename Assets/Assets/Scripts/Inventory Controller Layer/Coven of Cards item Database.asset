@@ -55,6 +55,22 @@ MonoBehaviour:
     vector3Value: {x: 0, y: 0, z: 0}
     show: 0
     color: {r: 0.5471698, g: 0, b: 0.055039153, a: 0}
+--- !u!114 &-9105524899227358793
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
+  m_Name: FireRegent
+  m_EditorClassIdentifier: 
+  m_Parent: {fileID: 0}
+  name: FireRegent
+  m_EditorColor: {r: 0, g: 0, b: 0, a: 0}
+  m_Cooldown: 1
 --- !u!114 &-8394649975114759349
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -536,6 +552,89 @@ MonoBehaviour:
   ingredients: []
   properties: []
   currencyConversions: []
+--- !u!114 &-2806399687136474341
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
+  m_Name: Minor Potion
+  m_EditorClassIdentifier: 
+  m_Id: 6fa9a90a-fdf5-4687-8845-fa2d45d84eb7
+  m_ItemName: Minor Potion
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: fb38af54312632d47bc615bfe636f9a4, type: 3}
+  m_Prefab: {fileID: 0}
+  m_Description: 
+  m_Category: {fileID: -764841932668121760}
+  m_IsSellable: 1
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: -4231727355724343285}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: -4231727355724343285}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 0
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties:
+  - name: CraftingID
+    typeIndex: 0
+    stringValue: 04
+    intValue: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    boolValue: 0
+    objectReferenceValue: {fileID: 0}
+    vector2Value: {x: 0, y: 0}
+    vector3Value: {x: 0, y: 0, z: 0}
+    show: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+  - name: QuestItemID
+    typeIndex: 5
+    stringValue: 04
+    intValue: 2
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    boolValue: 0
+    objectReferenceValue: {fileID: 0}
+    vector2Value: {x: 0, y: 0}
+    vector3Value: {x: 0, y: 0, z: 0}
+    show: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &-2699397383798718136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
+  m_Name: QuestItems
+  m_EditorClassIdentifier: 
+  m_Parent: {fileID: 0}
+  name: QuestItems
+  m_EditorColor: {r: 0, g: 0, b: 0, a: 0}
+  m_Cooldown: 1
 --- !u!114 &-2673348459965265809
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -776,6 +875,22 @@ MonoBehaviour:
   name: None
   m_EditorColor: {r: 0, g: 0, b: 0, a: 0}
   m_Cooldown: 1
+--- !u!114 &-764841932668121760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
+  m_Name: MainRegent
+  m_EditorClassIdentifier: 
+  m_Parent: {fileID: 0}
+  name: MainRegent
+  m_EditorColor: {r: 0, g: 0, b: 0, a: 0}
+  m_Cooldown: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -810,6 +925,10 @@ MonoBehaviour:
   - {fileID: -5476857504768497501}
   - {fileID: 2282454813235582967}
   - {fileID: 5716402998819912974}
+  - {fileID: 3270395385440393978}
+  - {fileID: 1290174700902878228}
+  - {fileID: 8548308788614542455}
+  - {fileID: -2806399687136474341}
   currencies:
   - {fileID: -4231727355724343285}
   raritys: []
@@ -817,6 +936,11 @@ MonoBehaviour:
   - {fileID: -902617386625373356}
   - {fileID: 8652506896516045622}
   - {fileID: 5852377583727276087}
+  - {fileID: -2699397383798718136}
+  - {fileID: -764841932668121760}
+  - {fileID: 8364580556715960641}
+  - {fileID: -9105524899227358793}
+  - {fileID: 4213357787752355605}
   equipments:
   - {fileID: -6005395749155647822}
   - {fileID: 8971216932495605089}
@@ -1003,6 +1127,61 @@ MonoBehaviour:
     vector3Value: {x: 0, y: 0, z: 0}
     show: 0
     color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0}
+--- !u!114 &1290174700902878228
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
+  m_Name: Water
+  m_EditorClassIdentifier: 
+  m_Id: 744063ba-d2b1-4e67-b2ea-d9546dd60ae3
+  m_ItemName: Water
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: 3e4fcc84a0ac95b429c56452575f6021, type: 3}
+  m_Prefab: {fileID: 0}
+  m_Description: 
+  m_Category: {fileID: 8364580556715960641}
+  m_IsSellable: 1
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: -4231727355724343285}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: -4231727355724343285}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 0
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties:
+  - name: CraftingID
+    typeIndex: 0
+    stringValue: 02
+    intValue: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    boolValue: 0
+    objectReferenceValue: {fileID: 0}
+    vector2Value: {x: 0, y: 0}
+    vector3Value: {x: 0, y: 0, z: 0}
+    show: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &2005607810075865685
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1084,6 +1263,73 @@ MonoBehaviour:
   m_Name: Dagger 1
   m_EditorClassIdentifier: 
   name: Wand 1
+--- !u!114 &3270395385440393978
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
+  m_Name: Herb
+  m_EditorClassIdentifier: 
+  m_Id: ef80b0ee-c022-4cff-887e-0e5893304c62
+  m_ItemName: Herb
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 825313862262482097, guid: ed1162d009219214ab9e282868df2b6d, type: 3}
+  m_Prefab: {fileID: 0}
+  m_Description: 
+  m_Category: {fileID: -764841932668121760}
+  m_IsSellable: 1
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: -4231727355724343285}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: -4231727355724343285}
+  m_Stack: 1
+  m_MaxStack: 5
+  m_IsDroppable: 0
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties:
+  - name: CraftingID
+    typeIndex: 0
+    stringValue: 01
+    intValue: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    boolValue: 0
+    objectReferenceValue: {fileID: 0}
+    vector2Value: {x: 0, y: 0}
+    vector3Value: {x: 0, y: 0, z: 0}
+    show: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+  - name: QuestItemID
+    typeIndex: 5
+    stringValue: 1
+    intValue: 1
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    boolValue: 0
+    objectReferenceValue: {fileID: 0}
+    vector2Value: {x: 0, y: 0}
+    vector3Value: {x: 0, y: 0, z: 0}
+    show: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &3557794451559375563
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1153,6 +1399,22 @@ MonoBehaviour:
     vector3Value: {x: 0, y: 0, z: 0}
     show: 0
     color: {r: 0, g: 0.68235296, b: 0.07058824, a: 0}
+--- !u!114 &4213357787752355605
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
+  m_Name: CraftedItem
+  m_EditorClassIdentifier: 
+  m_Parent: {fileID: 0}
+  name: CraftedItem
+  m_EditorColor: {r: 0, g: 0, b: 0, a: 0}
+  m_Cooldown: 1
 --- !u!114 &4431714085441310945
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1617,6 +1879,22 @@ MonoBehaviour:
   m_Name: Robe 2
   m_EditorClassIdentifier: 
   name: Robe 2
+--- !u!114 &8364580556715960641
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
+  m_Name: SubRegent
+  m_EditorClassIdentifier: 
+  m_Parent: {fileID: 0}
+  name: SubRegent
+  m_EditorColor: {r: 0, g: 0, b: 0, a: 0}
+  m_Cooldown: 1
 --- !u!114 &8446573180544761795
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1660,6 +1938,61 @@ MonoBehaviour:
     modifiers: []
   ingredients: []
   properties: []
+--- !u!114 &8548308788614542455
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
+  m_Name: Coal
+  m_EditorClassIdentifier: 
+  m_Id: ccafc34d-3ea4-4eeb-a545-31898019d553
+  m_ItemName: Coal
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: b69b1ca52acfaed43b07c602653a71fd, type: 3}
+  m_Prefab: {fileID: 0}
+  m_Description: 
+  m_Category: {fileID: -9105524899227358793}
+  m_IsSellable: 1
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: -4231727355724343285}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: -4231727355724343285}
+  m_Stack: 1
+  m_MaxStack: 5
+  m_IsDroppable: 0
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties:
+  - name: CraftingID
+    typeIndex: 0
+    stringValue: 03
+    intValue: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    boolValue: 0
+    objectReferenceValue: {fileID: 0}
+    vector2Value: {x: 0, y: 0}
+    vector3Value: {x: 0, y: 0, z: 0}
+    show: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &8616596921389614869
 MonoBehaviour:
   m_ObjectHideFlags: 1

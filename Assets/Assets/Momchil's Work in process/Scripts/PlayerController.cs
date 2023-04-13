@@ -6,7 +6,7 @@ using Articy.A_Coven_Of_Cards.GlobalVariables;
 public class PlayerController : MonoBehaviour
 {
     private DialogueManager dialogueManager;
-    public ArticyObject availableDialogue;
+    private ArticyObject availableDialogue;
 
     void Start()
     {
@@ -79,5 +79,10 @@ public class PlayerController : MonoBehaviour
         {
             availableDialogue = null;
         }
+    }
+
+    public void HerbAdded()
+    {
+        ArticyGlobalVariables.Default.playerInventory.genericHerbAmount += 1;
     }
 }

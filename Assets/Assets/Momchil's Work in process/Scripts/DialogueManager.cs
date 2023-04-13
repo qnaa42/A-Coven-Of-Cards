@@ -5,6 +5,8 @@ using Articy.Unity;
 using Articy.Unity.Interfaces;
 using Articy.A_Coven_Of_Cards;
 using System;
+using Assets.Scripts.Character_Controller_Layer;
+using Assets.Scripts.Core_Layer;
 
 public class DialogueManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 {
@@ -50,7 +52,8 @@ public class DialogueManager : MonoBehaviour, IArticyFlowPlayerCallbacks
         DialogueActive = false;
         dialogueWidget.SetActive(DialogueActive);
         // Completely process current object before we end dialogue
-        flowPlayer.FinishCurrentPausedObject(); 
+        flowPlayer.FinishCurrentPausedObject();
+        GameManager.instance.playerManager.Character.dialogueFinished = true;
     }
 
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using KinematicCharacterController;
 using System;
+using Articy.Unity;
 using Assets.Scripts.Character_Controller_Layer.Base.Data;
 using Assets.Scripts.Core_Layer;
 using UnityEngine.Serialization;
@@ -63,6 +64,13 @@ namespace Assets.Scripts.Character_Controller_Layer
         [Header("Stable Movement")]
         public OrientationMethod OrientationMethod = OrientationMethod.TowardsCamera;
         
+        
+        [Header("Articy Dialogue")]
+        private DialogueManager dialogueManager;
+        private  ArticyObject availableDialogue;
+        [HideInInspector] public bool dialogueFinished = false;
+        [HideInInspector] public bool itemCollected = false;
+        
 
         [Header("Air Movement")] public float MaxAirMoveSpeed = 15f;
         public float AirAccelerationSpeed = 15f;
@@ -122,11 +130,17 @@ namespace Assets.Scripts.Character_Controller_Layer
             // Assign the characterController to the motor
             Motor.CharacterController = this;
         }
+        
+        private void Start()
+        {
+            dialogueManager = FindObjectOfType<DialogueManager>();
+            ArticyDatabase.DefaultGlobalVariables.Notifications.AddListener("playerInventory.*", MyGameStateVariablesChanged);
+        }
 
         /// <summary>
         /// Handles movement state transitions and enter/exit callbacks
         /// </summary>
-        private void TransitionToState(CharacterState newState)
+        public void TransitionToState(CharacterState newState)
         {
             var tmpInitialState = CurrentCharacterState;
             OnStateExit(tmpInitialState, newState);
@@ -217,6 +231,10 @@ namespace Assets.Scripts.Character_Controller_Layer
                 case CharacterState.InteractingWithObject:
                 {
                     _lastState = fromState;
+                    if (availableDialogue)
+                    {
+                        dialogueManager.StartDialogue(availableDialogue);
+                    }
                     break;
                 }
 
@@ -298,6 +316,9 @@ namespace Assets.Scripts.Character_Controller_Layer
                 //No Movement States
                 case CharacterState.InteractingWithObject:
                 {
+                    dialogueManager.CloseDialogueBox();
+                    dialogueFinished = false;
+                    itemCollected = false;
                     break;
                 }
                 
@@ -841,6 +862,15 @@ namespace Assets.Scripts.Character_Controller_Layer
                 //No Movement Stance
                 case CharacterState.InteractingWithObject:
                 {
+                    if (dialogueFinished)
+                    {
+                        TransitionToState(_lastState);
+                    }
+
+                    if (itemCollected)
+                    {
+                        TransitionToState(_lastState);
+                    }
                     break;
                 }
 
@@ -1121,5 +1151,30 @@ namespace Assets.Scripts.Character_Controller_Layer
         public void OnDiscreteCollisionDetected(Collider hitCollider)
         {
         }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            var articyReference = other.GetComponent<ArticyReference>();
+            if (articyReference)
+            {
+                availableDialogue = articyReference.reference.GetObject();
+            }
+        }
+        
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.GetComponent<ArticyReference>())
+            {
+                availableDialogue = null;
+            }
+        }
+        
+        void MyGameStateVariablesChanged(string aVariableName, object aValue)
+        {
+            if (aVariableName == "playerInventory.genericHerbAmount")
+                Debug.Log("herbs changed");
+        }
+        
+        
     }
 }

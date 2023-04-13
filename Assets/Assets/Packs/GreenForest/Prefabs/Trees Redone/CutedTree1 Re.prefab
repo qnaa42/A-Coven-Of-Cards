@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9052403677524885427}
   - component: {fileID: 9046395725598620375}
   - component: {fileID: 6842280164302365608}
+  - component: {fileID: -6268555710620959148}
   m_Layer: 0
   m_Name: CutedTree1 Re
   m_TagString: Untagged
@@ -97,3 +98,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.8723755, y: 4.358963, z: 13.765022}
   m_Center: {x: -0.4208603, y: 2.1794815, z: 0.34546542}
+--- !u!205 &-6268555710620959148
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9069530831327855307}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 9046395725598620375}
+  - screenRelativeHeight: 0.3
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 9046395725598620375}
+  - screenRelativeHeight: 0.01
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 9046395725598620375}
+  m_Enabled: 1

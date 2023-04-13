@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6492669567326537784}
   - component: {fileID: 6502569231415825174}
   - component: {fileID: 7290446090923876938}
+  - component: {fileID: 213584229165784572}
   m_Layer: 0
   m_Name: OakCut Re
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6492669567326537784
 MeshFilter:
@@ -97,3 +98,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.8583815, y: 1.7794032, z: 0.86152357}
   m_Center: {x: 0.00547041, y: 0.48532963, z: -0.14262506}
+--- !u!205 &213584229165784572
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6514536590102282296}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 6502569231415825174}
+  - screenRelativeHeight: 0.3
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 6502569231415825174}
+  - screenRelativeHeight: 0.01
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 6502569231415825174}
+  m_Enabled: 1

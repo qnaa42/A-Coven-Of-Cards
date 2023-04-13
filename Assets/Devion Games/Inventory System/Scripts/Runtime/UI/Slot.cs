@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using DevionGames.UIWidgets;
+using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+
+
 
 namespace DevionGames.InventorySystem
 {
@@ -188,6 +191,8 @@ namespace DevionGames.InventorySystem
                 
             }
         }
+
+        
 
         public void ClearSlot()
         {
