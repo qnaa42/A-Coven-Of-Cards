@@ -58,9 +58,21 @@ namespace Assets.Scripts.Combat_Controller_Layer
                 switch (isCombo)
                 {
                     case true:
+                        if (hit.transform.gameObject.GetComponent<EnemyLootController>())
+                        {
+                            Debug.Log("I hit enemy loot controller");
+                            var enemyLootController = hit.transform.gameObject.GetComponent<EnemyLootController>();
+                            enemyLootController.SpawnAndDestroy(hit.transform);
+                        }
                         Debug.Log("Hit object with light combo attack: " + hit.collider.gameObject.name);
                         break;
                     case false:
+                        if (hit.transform.gameObject.GetComponent<EnemyLootController>())
+                        {
+                            Debug.Log("I hit enemy loot controller");
+                            var enemyLootController = hit.transform.gameObject.GetComponent<EnemyLootController>();
+                            enemyLootController.SpawnAndDestroy(hit.transform);
+                        }
                         Debug.Log("Hit object with light attack: " + hit.collider.gameObject.name);
                         break;
                 }

@@ -37,14 +37,15 @@ public class CraftTest : MonoBehaviour
     public Slot fireRegent1;
 
     
-    private  Recipe healthPotionReciepie = new Recipe("Minor Potion", new List<string>() {"01", "01","00"}, new List<string>() {"02","00"}, "03");
-    private  Recipe healthPotionReciepie2 = new Recipe("Minor Potion", new List<string>() {"01", "01", "01"}, new List<string>() {"02"}, "03");
+    private  Recipe healthPotionReciepie = new Recipe("Minor Potion", new List<string>() {"01", "01","00"}, new List<string>() {"02","00"}, "04");
+    private  Recipe coalRecipe = new Recipe("Coal", new List<string>() {"00", "00", "00"}, new List<string>() {"00","00"}, "03");
     private List<Recipe> recipes = new List<Recipe>();
 
 
     private void Start()
     {
         recipes.Add(healthPotionReciepie);
+        recipes.Add(coalRecipe);
     }
 
     public void CraftItem()
@@ -120,12 +121,12 @@ public class CraftTest : MonoBehaviour
 
 
         foreach (var reciepie in recipes)
-        {
+        { 
+            Debug.Log("Checking" + reciepie.Name);
             if (CompareIngredients(reciepie, mainRegent, subRegent, fireRegent))
             {
+                Debug.Log("Found" + reciepie.Name);
                 var item = InventoryManager.Database.items.Find(item => item.Name == reciepie.Name);
-                Debug.Log(item);
-                Debug.Log("Recipe is correct");
                 Item instance = ScriptableObject.Instantiate(item);
                 instance.Stack = 1;
                 ItemContainer.AddItem("Cauldron Inventory", instance);

@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 8302193663162266329}
   - component: {fileID: 4942853092766268796}
   - component: {fileID: 7168743223745497526}
-  - component: {fileID: -8587094183873411989}
+  - component: {fileID: 7101235414568662009}
+  - component: {fileID: 3958257303570177129}
   m_Layer: 0
   m_Name: Thorn_C_2
   m_TagString: Untagged
@@ -84,8 +85,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-8587094183873411989
-MeshCollider:
+--- !u!205 &7101235414568662009
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8681956614858172515}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7168743223745497526}
+  - screenRelativeHeight: 0.3
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7168743223745497526}
+  - screenRelativeHeight: 0.01
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7168743223745497526}
+  m_Enabled: 1
+--- !u!65 &3958257303570177129
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,7 +122,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 325598497013490042, guid: bd86ae865074ed34cae75c9072a6d9ec, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.143605, y: 0.3832226, z: 0.2735706}
+  m_Center: {x: 0.0013636053, y: 0.13911863, z: 0.07017956}

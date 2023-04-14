@@ -23,6 +23,22 @@ public class QuestItemSlotCheck : MonoBehaviour
             {
                 ArticyGlobalVariables.Default.playerInventory.genericHealthPots += 1;
             }
+            else if ((int)slot.ObservedItem.FindProperty("QuestItemID").GetValue() == 3)
+            {
+                ArticyGlobalVariables.Default.playerInventory.regentB += 1;
+            }
+            else if ((int)slot.ObservedItem.FindProperty("QuestItemID").GetValue() == 4)
+            {
+                ArticyGlobalVariables.Default.playerInventory.regentD += 1;
+            }
+            else if ((int)slot.ObservedItem.FindProperty("QuestItemID").GetValue() == 5)
+            {
+                ArticyGlobalVariables.Default.playerInventory.regentA += 1;
+            }
+            else if ((int)slot.ObservedItem.FindProperty("QuestItemID").GetValue() == 6)
+            {
+                ArticyGlobalVariables.Default.playerInventory.regentC += 1;
+            }
         }
     }
     
@@ -38,6 +54,22 @@ public class QuestItemSlotCheck : MonoBehaviour
             else if ((int)_item.FindProperty("QuestItemID").GetValue() == 2)
             {
                 ArticyGlobalVariables.Default.playerInventory.genericHealthPots -= 1;
+            }
+            else if ((int)_item.FindProperty("QuestItemID").GetValue() == 3)
+            {
+                ArticyGlobalVariables.Default.playerInventory.regentB -= 1;
+            }
+            else if ((int)_item.FindProperty("QuestItemID").GetValue() == 4)
+            {
+                ArticyGlobalVariables.Default.playerInventory.regentD -= 1;
+            }
+            else if ((int)_item.FindProperty("QuestItemID").GetValue() == 5)
+            {
+                ArticyGlobalVariables.Default.playerInventory.regentA -= 1;
+            }
+            else if ((int)_item.FindProperty("QuestItemID").GetValue() == 6)
+            {
+                ArticyGlobalVariables.Default.playerInventory.regentC -= 1;
             }
             _item = null;
         }

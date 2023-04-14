@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 2563427549594745118}
   - component: {fileID: 1458256240441587387}
   - component: {fileID: 3735792081844863601}
-  - component: {fileID: 1198166038289917245}
+  - component: {fileID: 4099648142548211862}
+  - component: {fileID: 3998569965280599777}
   m_Layer: 0
   m_Name: Trunk_A_1
   m_TagString: Untagged
@@ -84,8 +85,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1198166038289917245
-MeshCollider:
+--- !u!205 &4099648142548211862
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2943330414145250212}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3735792081844863601}
+  - screenRelativeHeight: 0.3
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3735792081844863601}
+  - screenRelativeHeight: 0.01
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3735792081844863601}
+  m_Enabled: 1
+--- !u!65 &3998569965280599777
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,7 +122,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -679807888995789682, guid: 5140691f0e7272f4594b47b0138e86b5, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.25566763, y: 0.4923994, z: 0.27119482}
+  m_Center: {x: 0.035591595, y: 0.24505335, z: 0.015771061}

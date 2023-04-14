@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 3405363064756187090}
   - component: {fileID: 1796263622801367159}
   - component: {fileID: 4542279856181269693}
-  - component: {fileID: 487213830284563157}
+  - component: {fileID: 3124024304614738541}
+  - component: {fileID: 7425389065933939635}
   m_Layer: 0
   m_Name: Thorn_A_3
   m_TagString: Untagged
@@ -84,8 +85,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &487213830284563157
-MeshCollider:
+--- !u!65 &3124024304614738541
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,7 +95,33 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -6532709085312043359, guid: c73eff124653b2540a2ec5545e059346, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.12096572, y: 0.30885202, z: 0.4246737}
+  m_Center: {x: -0.011022449, y: 0.15327978, z: 0.14563857}
+--- !u!205 &7425389065933939635
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2596772714944886120}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4542279856181269693}
+  - screenRelativeHeight: 0.3
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4542279856181269693}
+  - screenRelativeHeight: 0.01
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4542279856181269693}
+  m_Enabled: 1

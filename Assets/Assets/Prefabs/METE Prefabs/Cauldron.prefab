@@ -36,8 +36,9 @@ Transform:
   - {fileID: 8675961562250985778}
   - {fileID: 1738993714639637253}
   - {fileID: 4147911607346404937}
+  - {fileID: 1887650440777311933}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1565306099109299265
 BoxCollider:
@@ -52,6 +53,68 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.1187143, y: 0.7087741, z: 1.9927442}
   m_Center: {x: 7.9285607, y: 0.87538266, z: 1.0004443}
+--- !u!1 &7158704997133390999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1887650440777311933}
+  - component: {fileID: 8645153930494425814}
+  m_Layer: 0
+  m_Name: Cauldron
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1887650440777311933
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7158704997133390999}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.9285607, y: 0.54, z: 0.7448418}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1565306099109299266}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8645153930494425814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7158704997133390999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e2a0650d79394740b1bdb39be00be6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delegates: []
+  useDistance: 1.2
+  triggerType: 8
+  key: 102
+  actionTemplate: {fileID: 0}
+  actions:
+  - rid: 5142976960599425040
+  m_Interruptable: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 5142976960599425040
+      type: {class: ShowWindow, ns: DevionGames.InventorySystem, asm: DevionGames.InventorySystem}
+      data:
+        m_Type: DevionGames.InventorySystem.ShowWindow
+        m_Enabled: 1
+        m_WindowName: Cauldron
+        m_DestroyWhenEmpty: 0
 --- !u!1001 &1565306098967071688
 PrefabInstance:
   m_ObjectHideFlags: 0
