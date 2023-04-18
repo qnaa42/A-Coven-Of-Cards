@@ -50,6 +50,8 @@ namespace Articy.A_Coven_Of_Cards.GlobalVariables
             variableNames.Add("gameState.nyxHerbs4");
             variableNames.Add("gameState.nyxHerbs2");
             variableNames.Add("gameState.enteredDreamscape");
+            variableNames.Add("gameState.act4");
+            variableNames.Add("gameState.act5");
             variableNames.Add("playerInventory.sHealthPotB");
             variableNames.Add("playerInventory.genericHealthPots");
             variableNames.Add("playerInventory.genericHerbAmount");

@@ -5,22 +5,157 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.A Coven Of Cards/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.A Coven Of Cards/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.plastic/plastic.changes" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.changes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.plastic/plastic.wktree" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.wktree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/Herb.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/Herb.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/HerbSpawner.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Mat's Work in Progress Asset Dumb/HerbSpawner.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/A Coven of Cards.articyu3d" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/A Coven of Cards.articyu3d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/ArticyGlobalVariables.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/ArticyGlobalVariables.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/ArticyScriptFragments.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/ArticyScriptFragments.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/GlobalVariablesNamespaces.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/GlobalVariablesNamespaces.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/InputPin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/InputPin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/Resources/All objects.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/Resources/All objects.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/Resources/ArticyDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/Resources/ArticyDatabase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/Resources/ArticyTypeSystem.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArticyImporter/Content/Generated/Resources/ArticyTypeSystem.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Momchil's Work in process/ArticyImporter/Content/Generated/ArticyEditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Momchil's Work in process/ArticyImporter/Content/Generated/ArticyEditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Prefabs/Miscellaneous/Wells/well.001.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Prefabs/Miscellaneous/Wells/well.001.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Prefabs/METE Prefabs/Cauldron.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Prefabs/METE Prefabs/Cauldron.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Prefabs/METE Prefabs/HOUSE.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Prefabs/METE Prefabs/HOUSE.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Momchil's Work in process/Prefabs/dialogueBranch.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Momchil's Work in process/Prefabs/dialogueBranch.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Momchil's Work in process/Prefabs/dialogueBranchClose.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Momchil's Work in process/Prefabs/dialogueBranchClose.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/FTT-F Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/FTT-F Demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain 0-1-0.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain 0-1-0.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain 0-2-0.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain 0-2-0.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain 0-3-0.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain 0-3-0.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain 1-1-0.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain 1-1-0.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain 1-2-0.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain 1-2-0.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain 1-3-0.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain 1-3-0.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain 2-1-0.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain 2-1-0.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain 2-2-0.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain 2-2-0.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain 2-3-0.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain 2-3-0.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Cliff_001 4K.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Cliff_001 4K.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Dirt_001 2K.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Dirt_001 2K.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Dirt_001_Mossy 2K.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Dirt_001_Mossy 2K.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Dirt_002a 1K.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Dirt_002a 1K.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT ForestGround_001 2K.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT ForestGround_001 2K.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT ForestGround_001 Grass_002 2K.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT ForestGround_001 Grass_002 2K.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Grass_002 Dirt_001 2K.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Grass_002 Dirt_001 2K.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Grass_002 Grass_001a 2K.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Grass_002 Grass_001a 2K.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Grass_002 Grass_001b 2K.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Grass_002 Grass_001b 2K.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Grass_002 Rocks_001 2K.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Grass_002 Rocks_001 2K.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Path_001 2K.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Path_001 2K.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Path_001 Abandoned_002 2K.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Path_001 Abandoned_002 2K.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Path_001 Abandoned_004 2K.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Path_001 Abandoned_004 2K.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Path_001 ForestGround_001 2K.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Path_001 ForestGround_001 2K.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Path_001 Sand_001 2K.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Path_001 Sand_001 2K.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Rocks_001 2K.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Rocks_001 2K.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Rocks_001_Mossy 2K.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Rocks_001_Mossy 2K.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Sand_001 1K.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Demo/Terrains/Terrain Layers/3DH FTT Sand_001 1K.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Documentation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Documentation/FFT-F Documentation.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Documentation/FFT-F Documentation.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Documentation/Version Log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Documentation/Version Log.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Cliff_001 512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Cliff_001 512.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Dirt_001 512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Dirt_001 512.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Dirt_001_Mossy 512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Dirt_001_Mossy 512.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Dirt_002a 512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Dirt_002a 512.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT ForestGround_001 512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT ForestGround_001 512.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT ForestGround_001 Grass_002 512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT ForestGround_001 Grass_002 512.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Grass_002 Dirt_001 512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Grass_002 Dirt_001 512.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Grass_002 Grass_001a 512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Grass_002 Grass_001a 512.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Grass_002 Grass_001b 512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Grass_002 Grass_001b 512.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Grass_002 Rocks_001 512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Grass_002 Rocks_001 512.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Path_001 512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Path_001 512.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Path_001 Abandoned_002 512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Path_001 Abandoned_002 512.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Path_001 Abandoned_004 512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Path_001 Abandoned_004 512.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Path_001 ForestGround_001 512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Path_001 ForestGround_001 512.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Path_001 Sand_001 512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Path_001 Sand_001 512.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Rocks_001 512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Rocks_001 512.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Rocks_001_Mossy 512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Rocks_001_Mossy 512.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Sand_001 512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/3D Haven/Free Fantasy Terrain Textures/Textures/512 Resolution/3DH FTT Sand_001 512.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/stone_wall_1_d.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/stone_wall_1_d.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/stone_wall_3_d.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Mega Fantasy Props Pack/Materials/stone_wall_3_d.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Rock_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Rock_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Rock_10.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Rock_10.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Rock_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Rock_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Rock_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Rock_3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Rock_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Rock_4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Rock_5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Rock_5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Rock_6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Rock_6.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Rock_7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Rock_7.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Rock_8.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Rock_8.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Rock_9.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Rock_9.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Trees/Tree_C_01/Tree_C_1_0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Trees/Tree_C_01/Tree_C_1_0.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Trees/Tree_C_02/Tree_C_2_0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Trees/Tree_C_02/Tree_C_2_0.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Trees/Tree_C_03/Tree_C_3_0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Packs/Stylized Environment Pack - YP/Prefabs/Trees/Tree_C_03/Tree_C_3_0.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Prefabs/UI Controller Layer/MainCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Prefabs/UI Controller Layer/MainCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Combat Controller Layer/CombatManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Combat Controller Layer/CombatManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Enviorment Misc Layer/PlantSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Enviorment Misc Layer/PlantSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Inventory Controller Layer/Coven of Cards item Database.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Inventory Controller Layer/Coven of Cards item Database.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Inventory Controller Layer/CraftTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Inventory Controller Layer/CraftTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Inventory Controller Layer/QuestItemSlotCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Inventory Controller Layer/QuestItemSlotCheck.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Scripts/Narrative Controller Layer/MyNarrativeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Scripts/Narrative Controller Layer/MyNarrativeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Devion Games/Inventory System/Examples/Particle Effects/ShurikenMagic/ParticleMaterials/Lights/compassStarAdd.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Devion Games/Inventory System/Examples/Particle Effects/ShurikenMagic/ParticleMaterials/Lights/compassStarAdd.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Devion Games/Inventory System/Examples/Particle Effects/ShurikenMagic/ParticleMaterials/Lights/weirdRingAdd.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Devion Games/Inventory System/Examples/Particle Effects/ShurikenMagic/ParticleMaterials/Lights/weirdRingAdd.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewLayer 1.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewLayer 1.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewLayer 2.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewLayer 2.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewLayer 3.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewLayer 3.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewLayer 4.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewLayer 4.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewLayer.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NewLayer.terrainlayer.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/House.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/House.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WhoteRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WhoteRoom.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +175,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Enviorment Misc Layer/HouseInteriorWallController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Enviorment Misc Layer/HouseManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Enviorment Misc Layer/PlantController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Inventory Controller Layer/AlembicController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Inventory Controller Layer/CraftTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Inventory Controller Layer/MyInventoryManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Inventory Controller Layer/QuestItemSlotCheck.cs" root0="FORCE_HIGHLIGHTING" />
@@ -68,18 +204,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "rider.run.widget.enabled.cache": "false",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;rider.run.widget.enabled.cache&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Users\matst\Desktop\MDX\Game Design\GAM1002\Unity\2022.1.23f1\Editor\Unity.exe" />
@@ -145,7 +281,10 @@
       <workItem from="1681210455238" duration="4859000" />
       <workItem from="1681294425665" duration="9709000" />
       <workItem from="1681395088130" duration="13931000" />
-      <workItem from="1681466323182" duration="16299000" />
+      <workItem from="1681466323182" duration="16306000" />
+      <workItem from="1681555218202" duration="4259000" />
+      <workItem from="1681824223159" duration="3144000" />
+      <workItem from="1681834620663" duration="332000" />
     </task>
     <servers />
   </component>

@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 8313634829316229349}
   - component: {fileID: 4967520146986534720}
   - component: {fileID: 7139571040499954570}
-  - component: {fileID: 8593648000687649221}
+  - component: {fileID: 4780423105075627291}
+  - component: {fileID: 6815209484662948893}
   m_Layer: 0
   m_Name: Rock_8
   m_TagString: Untagged
@@ -84,8 +85,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8593648000687649221
-MeshCollider:
+--- !u!65 &4780423105075627291
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,7 +95,33 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2878633852065847326, guid: f8a1d4c879074b04a8bc16cf4e0bcc85, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.3999729, y: 0.6167725, z: 0.81041}
+  m_Center: {x: 0.038638145, y: 0.30723992, z: -0.011129171}
+--- !u!205 &6815209484662948893
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8652583085000741471}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7139571040499954570}
+  - screenRelativeHeight: 0.3
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7139571040499954570}
+  - screenRelativeHeight: 0.01
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7139571040499954570}
+  m_Enabled: 1

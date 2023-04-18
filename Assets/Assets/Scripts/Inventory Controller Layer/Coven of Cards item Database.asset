@@ -155,7 +155,7 @@ MonoBehaviour:
   m_ItemName: Belladona Juice
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 36213be7768037e44898d0e8dbee419b, type: 3}
+  m_Icon: {fileID: 21300000, guid: 05716ead26eebfb42abd5c70b58bb05f, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: D
   m_Category: {fileID: 8364580556715960641}
@@ -635,10 +635,10 @@ MonoBehaviour:
   m_ItemName: Minor Potion
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 720936d3887635548b5eca76a7978798, type: 3}
+  m_Icon: {fileID: 21300000, guid: 4121f4530d1242d479318f974172bfac, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: 
-  m_Category: {fileID: -764841932668121760}
+  m_Category: {fileID: 951398131655091724}
   m_IsSellable: 1
   m_BuyPrice: 0
   m_CanBuyBack: 1
@@ -819,7 +819,7 @@ MonoBehaviour:
   m_ItemName: Monster Blood
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 3df3c7a773f95f5429f29f0c38bee4a1, type: 3}
+  m_Icon: {fileID: 21300000, guid: 83a1777dc08b5b247af74fe350b45571, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: A
   m_Category: {fileID: 8364580556715960641}
@@ -1025,57 +1025,6 @@ MonoBehaviour:
   name: MainRegent
   m_EditorColor: {r: 0, g: 0, b: 0, a: 0}
   m_Cooldown: 1
---- !u!114 &-417164346858895001
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6132cc3558d117f4bbad4651b2dbdba7, type: 3}
-  m_Name: Belladona Fortified Health Potion
-  m_EditorClassIdentifier: 
-  m_Id: bd845c15-ec38-4a77-911d-bfb68aa8947a
-  m_ItemName: Belladona Fortified Health Potion
-  m_UseItemNameAsDisplayName: 1
-  m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: c2e882058c776c244adf87fa24d5282f, type: 3}
-  m_Prefab: {fileID: 0}
-  m_Description: 
-  m_Category: {fileID: -902617386625373356}
-  m_IsSellable: 1
-  m_BuyPrice: 0
-  m_CanBuyBack: 1
-  m_BuyCurrency: {fileID: -4231727355724343285}
-  m_SellPrice: 0
-  m_SellCurrency: {fileID: -4231727355724343285}
-  m_Stack: 1
-  m_MaxStack: 1
-  m_IsDroppable: 1
-  m_DropSound: {fileID: 0}
-  m_OverridePrefab: {fileID: 0}
-  m_IsCraftable: 0
-  m_CraftingDuration: 2
-  m_UseCraftingSkill: 0
-  m_SkillWindow: Skills
-  m_CraftingSkill: {fileID: 0}
-  m_RemoveIngredientsWhenFailed: 0
-  m_MinCraftingSkillValue: 0
-  m_CraftingAnimatorState: Blacksmithy
-  m_CraftingModifier:
-    modifiers: []
-  ingredients: []
-  properties: []
-  m_UseCategoryCooldown: 1
-  m_Cooldown: 1
-  actions: []
-  m_OverrideEquipPrefab: {fileID: 0}
-  m_Region: []
-  references:
-    version: 2
-    RefIds: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1119,8 +1068,8 @@ MonoBehaviour:
   - {fileID: -8102040320188932762}
   - {fileID: -1541467314825512574}
   - {fileID: 2159888702226913224}
-  - {fileID: 7122375768514569866}
-  - {fileID: -417164346858895001}
+  - {fileID: 7425736320354974476}
+  - {fileID: 4359854196141793560}
   currencies:
   - {fileID: -4231727355724343285}
   raritys: []
@@ -1133,6 +1082,7 @@ MonoBehaviour:
   - {fileID: 8364580556715960641}
   - {fileID: -9105524899227358793}
   - {fileID: 4213357787752355605}
+  - {fileID: 951398131655091724}
   equipments:
   - {fileID: -6005395749155647822}
   - {fileID: 8971216932495605089}
@@ -1319,6 +1269,22 @@ MonoBehaviour:
     vector3Value: {x: 0, y: 0, z: 0}
     show: 0
     color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0}
+--- !u!114 &951398131655091724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4abab319188bac4a8515c585b13ba9d, type: 3}
+  m_Name: PotionItem
+  m_EditorClassIdentifier: 
+  m_Parent: {fileID: 0}
+  name: PotionItem
+  m_EditorColor: {r: 0, g: 0, b: 0, a: 0}
+  m_Cooldown: 1
 --- !u!114 &1290174700902878228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1335,7 +1301,7 @@ MonoBehaviour:
   m_ItemName: Water
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 5aabaadcd5e8dce4296119d032114c28, type: 3}
+  m_Icon: {fileID: 21300000, guid: c2900a8957359914fbb415a21eda8634, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: 
   m_Category: {fileID: 8364580556715960641}
@@ -1403,7 +1369,7 @@ MonoBehaviour:
   m_ItemName: NightCap
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 5343b7115bd89c64982db3f2216a0c0f, type: 3}
+  m_Icon: {fileID: 21300000, guid: b5ae148c692420741a98ae1c6b85f4a6, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: B
   m_Category: {fileID: -764841932668121760}
@@ -1470,7 +1436,7 @@ MonoBehaviour:
   m_ItemName: Monster Fur
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 6ec9366c795ac434d982aec0c7df4367, type: 3}
+  m_Icon: {fileID: 21300000, guid: 97d3846d3adae284ebdea44e1b6ccf09, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: C
   m_Category: {fileID: -764841932668121760}
@@ -1605,7 +1571,7 @@ MonoBehaviour:
   m_ItemName: Herb
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 7524ab7a7f453474dbfc0e05e8b92539, type: 3}
+  m_Icon: {fileID: 21300000, guid: d22c378a180f0c24d927a28545e80ebc, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: 
   m_Category: {fileID: -764841932668121760}
@@ -1741,6 +1707,73 @@ MonoBehaviour:
   name: CraftedItem
   m_EditorColor: {r: 0, g: 0, b: 0, a: 0}
   m_Cooldown: 1
+--- !u!114 &4359854196141793560
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
+  m_Name: Fleshy Belladona Infused Health Potion
+  m_EditorClassIdentifier: 
+  m_Id: 1da224bd-5c5d-4677-b978-70d25866b89f
+  m_ItemName: Fleshy Belladona Infused Health Potion
+  m_UseItemNameAsDisplayName: 1
+  m_DisplayName: New Item
+  m_Icon: {fileID: 21300000, guid: f7abbbb5fef2f914e87ddef0d7e25551, type: 3}
+  m_Prefab: {fileID: 0}
+  m_Description: 
+  m_Category: {fileID: 951398131655091724}
+  m_IsSellable: 1
+  m_BuyPrice: 0
+  m_CanBuyBack: 1
+  m_BuyCurrency: {fileID: -4231727355724343285}
+  m_SellPrice: 0
+  m_SellCurrency: {fileID: -4231727355724343285}
+  m_Stack: 1
+  m_MaxStack: 1
+  m_IsDroppable: 0
+  m_DropSound: {fileID: 0}
+  m_OverridePrefab: {fileID: 0}
+  m_IsCraftable: 0
+  m_CraftingDuration: 2
+  m_UseCraftingSkill: 0
+  m_SkillWindow: Skills
+  m_CraftingSkill: {fileID: 0}
+  m_RemoveIngredientsWhenFailed: 0
+  m_MinCraftingSkillValue: 0
+  m_CraftingAnimatorState: Blacksmithy
+  m_CraftingModifier:
+    modifiers: []
+  ingredients: []
+  properties:
+  - name: CraftingID
+    typeIndex: 0
+    stringValue: 11
+    intValue: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    boolValue: 0
+    objectReferenceValue: {fileID: 0}
+    vector2Value: {x: 0, y: 0}
+    vector3Value: {x: 0, y: 0, z: 0}
+    show: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+  - name: QuestItemID
+    typeIndex: 5
+    stringValue: 
+    intValue: 8
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    boolValue: 0
+    objectReferenceValue: {fileID: 0}
+    vector2Value: {x: 0, y: 0}
+    vector3Value: {x: 0, y: 0, z: 0}
+    show: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &4431714085441310945
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2085,7 +2118,7 @@ MonoBehaviour:
   m_ItemName: Wood
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 1cafe3b92468c46cca28e6fdc360f8af, type: 3}
+  m_Icon: {fileID: 21300000, guid: 06fc1a6668fef764ea55c62a5c4a9b68, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: 
   m_Category: {fileID: -9105524899227358793}
@@ -2137,7 +2170,7 @@ MonoBehaviour:
   m_Name: Athame 3
   m_EditorClassIdentifier: 
   name: Athame 3
---- !u!114 &7122375768514569866
+--- !u!114 &7425736320354974476
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2146,17 +2179,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6132cc3558d117f4bbad4651b2dbdba7, type: 3}
-  m_Name: Mushroom Infused Health Potion
+  m_Script: {fileID: 11500000, guid: e14be5e3e6cf2204293682bf65bce5dc, type: 3}
+  m_Name: Bloody Nighcap Infused Health Potion
   m_EditorClassIdentifier: 
-  m_Id: 54485f0e-2c82-432d-81a3-7afac7db9fd1
-  m_ItemName: Mushroom Infused Health Potion
+  m_Id: a10b5d66-e9bb-4488-98b6-2af111381481
+  m_ItemName: Bloody Nighcap Infused Health Potion
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: eca1954e3092f6c468c69c10d19a6413, type: 3}
+  m_Icon: {fileID: 21300000, guid: 9f2a5bc7173da754e92b7fabdebfd36d, type: 3}
   m_Prefab: {fileID: 0}
-  m_Description: B
-  m_Category: {fileID: -902617386625373356}
+  m_Description: 
+  m_Category: {fileID: 951398131655091724}
   m_IsSellable: 1
   m_BuyPrice: 0
   m_CanBuyBack: 1
@@ -2165,7 +2198,7 @@ MonoBehaviour:
   m_SellCurrency: {fileID: -4231727355724343285}
   m_Stack: 1
   m_MaxStack: 1
-  m_IsDroppable: 1
+  m_IsDroppable: 0
   m_DropSound: {fileID: 0}
   m_OverridePrefab: {fileID: 0}
   m_IsCraftable: 0
@@ -2179,15 +2212,31 @@ MonoBehaviour:
   m_CraftingModifier:
     modifiers: []
   ingredients: []
-  properties: []
-  m_UseCategoryCooldown: 1
-  m_Cooldown: 1
-  actions: []
-  m_OverrideEquipPrefab: {fileID: 0}
-  m_Region: []
-  references:
-    version: 2
-    RefIds: []
+  properties:
+  - name: CraftingID
+    typeIndex: 0
+    stringValue: 10
+    intValue: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    boolValue: 0
+    objectReferenceValue: {fileID: 0}
+    vector2Value: {x: 0, y: 0}
+    vector3Value: {x: 0, y: 0, z: 0}
+    show: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
+  - name: QuestItemID
+    typeIndex: 5
+    stringValue: 
+    intValue: 7
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    boolValue: 0
+    objectReferenceValue: {fileID: 0}
+    vector2Value: {x: 0, y: 0}
+    vector3Value: {x: 0, y: 0, z: 0}
+    show: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &7448451915011872057
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2386,7 +2435,7 @@ MonoBehaviour:
   m_ItemName: Coal
   m_UseItemNameAsDisplayName: 1
   m_DisplayName: New Item
-  m_Icon: {fileID: 21300000, guid: 1be49c88278f3495fadc5c2820626e15, type: 3}
+  m_Icon: {fileID: 21300000, guid: da9d458feb3ed3b43bb40e9140c077b2, type: 3}
   m_Prefab: {fileID: 0}
   m_Description: 
   m_Category: {fileID: -9105524899227358793}

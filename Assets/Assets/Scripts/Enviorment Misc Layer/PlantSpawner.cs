@@ -110,15 +110,15 @@ namespace Assets.Scripts.Enviorment_Misc_Layer
     
     private GameObject GetPlantPrefabBasedOnTypeAndGameState()
     {
-        if (plantType == PlantType.GeneralHerb && ArticyGlobalVariables.Default.gameState.act1)
+        if (plantType == PlantType.GeneralHerb && (ArticyGlobalVariables.Default.gameState.act1|| ArticyGlobalVariables.Default.gameState.act2 || ArticyGlobalVariables.Default.gameState.act4))
         {
             return GeneralHerbPrefab;
         }
-        else if (plantType == PlantType.Nightcap && ArticyGlobalVariables.Default.gameState.enteredDreamscape)
+        else if (plantType == PlantType.Nightcap && ArticyGlobalVariables.Default.gameState.enteredDreamscape && !ArticyGlobalVariables.Default.gameState.act1 && !ArticyGlobalVariables.Default.gameState.act2 && !ArticyGlobalVariables.Default.gameState.act4)
         {
             return NightcapPrefab;
         }
-        else if (plantType == PlantType.Belladona && ArticyGlobalVariables.Default.gameState.enteredDreamscape)
+        else if (plantType == PlantType.Belladona && ArticyGlobalVariables.Default.gameState.enteredDreamscape && !ArticyGlobalVariables.Default.gameState.act1 && !ArticyGlobalVariables.Default.gameState.act2 && !ArticyGlobalVariables.Default.gameState.act4)
         {
             return BelladonaPrefab;
         }

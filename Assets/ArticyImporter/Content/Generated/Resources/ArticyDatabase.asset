@@ -1,163 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6253740078643121931
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba7ecef1ab5b2044683f1d414aea7fcd, type: 3}
-  m_Name: ArticyScriptFragments
-  m_EditorClassIdentifier: 
---- !u!114 &-1672813562031319569
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1174674681, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: LocalizationManager
-  m_EditorClassIdentifier: 
-  OnLanguageChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  mUseLocalization: 0
-  mLanguage: en
-  mThrowOnMissingText: 0
-  mClearOnLanguageSwitch: 1
-  mExportLanguage: en
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ArticyDatabase
-  m_EditorClassIdentifier: 
-  mHierarchy: {fileID: 8855699893535524367}
-  mLocalization: {fileID: -1672813562031319569}
-  mInternalProject:
-    mName: A Coven of Cards
-    mDetailName: Tutorial Level Narrative
-    mId: ea19ebc8-e9d9-4ebe-8afc-312afcfcd317
-    mTechnicalName: A_Coven_Of_Cards
-  mImportedAssets:
-  - Assets/Images/Witch_1
-  - Assets/Images/Father
-  - Assets/Images/Mother
-  - Assets/Images/Witch_2
-  - Assets/Images/Witch_3
-  mDefaultGlobalVariables: {fileID: 4384483564197821490}
-  mScriptFragments: {fileID: -6253740078643121931}
-  mPackages:
-  - PackageName: All objects
-    PackagePath: All objects
-    mIsDefaultPackage: 1
---- !u!114 &4384483564197821490
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfb28f91d29f6544e88233bddcd9622d, type: 3}
-  m_Name: DefaultGlobalVariables
-  m_EditorClassIdentifier: 
-  BoolVariableCache:
-  - mFullQualifiedName: gameState.motherIll
-    mVar:
-      values: 01
-  - mFullQualifiedName: gameState.babyIll
-    mVar:
-      values: 01
-  - mFullQualifiedName: gameState.motherCanSave
-    mVar:
-      values: 00
-  - mFullQualifiedName: gameState.babyCanSave
-    mVar:
-      values: 00
-  - mFullQualifiedName: gameState.awake
-    mVar:
-      values: 00
-  - mFullQualifiedName: gameState.healthPotFail
-    mVar:
-      values: 00
-  - mFullQualifiedName: gameState.motherAlive
-    mVar:
-      values: 01
-  - mFullQualifiedName: gameState.babyAlive
-    mVar:
-      values: 01
-  - mFullQualifiedName: gameState.act1
-    mVar:
-      values: 00
-  - mFullQualifiedName: gameState.act2
-    mVar:
-      values: 00
-  - mFullQualifiedName: gameState.act3
-    mVar:
-      values: 00
-  - mFullQualifiedName: gameState.nyxHerbs4
-    mVar:
-      values: 00
-  - mFullQualifiedName: gameState.nyxHerbs2
-    mVar:
-      values: 00
-  - mFullQualifiedName: gameState.enteredDreamscape
-    mVar:
-      values: 00
-  IntVariableCache:
-  - mFullQualifiedName: gameState.timeInDreamscape
-    mVar:
-      values: 00000000
-  - mFullQualifiedName: playerInventory.sHealthPotB
-    mVar:
-      values: 00000000
-  - mFullQualifiedName: playerInventory.genericHealthPots
-    mVar:
-      values: 00000000
-  - mFullQualifiedName: playerInventory.genericHerbAmount
-    mVar:
-      values: 00000000
-  - mFullQualifiedName: playerInventory.sHealthPotM
-    mVar:
-      values: 00000000
-  - mFullQualifiedName: playerInventory.regentA
-    mVar:
-      values: 00000000
-  - mFullQualifiedName: playerInventory.regentB
-    mVar:
-      values: 00000000
-  - mFullQualifiedName: playerInventory.regentC
-    mVar:
-      values: 00000000
-  - mFullQualifiedName: playerInventory.regentD
-    mVar:
-      values: 00000000
-  StringVariableCache: []
-  LiveBoolVariableCache: []
-  LiveIntVariableCache: []
-  LiveStringVariableCache: []
-  isInitialized: 1
-  mGameState:
-    _VariableStorage: {fileID: 4384483564197821490}
-  mPlayerInventory:
-    _VariableStorage: {fileID: 4384483564197821490}
-  mNyxInventory:
-    _VariableStorage: {fileID: 0}
---- !u!114 &8855699893535524367
+--- !u!114 &-4874035674537758712
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -250,21 +93,21 @@ MonoBehaviour:
     technicalName: Dlg_591C6BFA
     articyType: Dialogue
     childCount: 2
-  - id: 72057594037932342
-    parent: 72057594037932314
-    technicalName: DFr_37B0D6F2
-    articyType: DialogueFragment
-    childCount: 0
   - id: 72057594037932332
     parent: 72057594037932314
     technicalName: DFr_4F38C581
+    articyType: DialogueFragment
+    childCount: 0
+  - id: 72057594037932342
+    parent: 72057594037932314
+    technicalName: DFr_37B0D6F2
     articyType: DialogueFragment
     childCount: 0
   - id: 72057594037932297
     parent: 72057594037932238
     technicalName: Dlg_9862D63D
     articyType: Dialogue
-    childCount: 17
+    childCount: 31
   - id: 72057594037932350
     parent: 72057594037932297
     technicalName: DFr_965F417F
@@ -315,6 +158,11 @@ MonoBehaviour:
     technicalName: DFr_6C580544
     articyType: DialogueFragment
     childCount: 0
+  - id: 72057594037933311
+    parent: 72057594037932297
+    technicalName: DFr_B61AD764
+    articyType: DialogueFragment
+    childCount: 0
   - id: 72057594037933001
     parent: 72057594037932297
     technicalName: DFr_7A34CEBF
@@ -323,6 +171,11 @@ MonoBehaviour:
   - id: 72057594037933300
     parent: 72057594037932297
     technicalName: Cnd_B75155AA
+    articyType: Condition
+    childCount: 0
+  - id: 72057594037933958
+    parent: 72057594037932297
+    technicalName: Cnd_35312EEC
     articyType: Condition
     childCount: 0
   - id: 72057594037933111
@@ -335,19 +188,79 @@ MonoBehaviour:
     technicalName: DFr_592A6C30
     articyType: DialogueFragment
     childCount: 0
-  - id: 72057594037933311
+  - id: 72057594037933973
     parent: 72057594037932297
-    technicalName: DFr_B61AD764
-    articyType: DialogueFragment
+    technicalName: Ins_59CDCF42
+    articyType: Instruction
+    childCount: 0
+  - id: 72057594037933885
+    parent: 72057594037932297
+    technicalName: Cnd_945FF97F
+    articyType: Condition
     childCount: 0
   - id: 72057594037933013
     parent: 72057594037932297
     technicalName: DFr_8CA69CEF
     articyType: DialogueFragment
     childCount: 0
+  - id: 72057594037933977
+    parent: 72057594037932297
+    technicalName: DFr_B29C7701
+    articyType: DialogueFragment
+    childCount: 0
+  - id: 72057594037933891
+    parent: 72057594037932297
+    technicalName: DFr_4DA704D5
+    articyType: DialogueFragment
+    childCount: 0
+  - id: 72057594037933898
+    parent: 72057594037932297
+    technicalName: DFr_A6330D78
+    articyType: DialogueFragment
+    childCount: 0
   - id: 72057594037933025
     parent: 72057594037932297
     technicalName: DFr_63915999
+    articyType: DialogueFragment
+    childCount: 0
+  - id: 72057594037933965
+    parent: 72057594037932297
+    technicalName: DFr_09566B8B
+    articyType: DialogueFragment
+    childCount: 0
+  - id: 72057594037933928
+    parent: 72057594037932297
+    technicalName: Cnd_4A6859C4
+    articyType: Condition
+    childCount: 0
+  - id: 72057594037933905
+    parent: 72057594037932297
+    technicalName: Cnd_C1C37776
+    articyType: Condition
+    childCount: 0
+  - id: 72057594037933935
+    parent: 72057594037932297
+    technicalName: Ins_ABCF1CC7
+    articyType: Instruction
+    childCount: 0
+  - id: 72057594037933916
+    parent: 72057594037932297
+    technicalName: DFr_02B0EC7F
+    articyType: DialogueFragment
+    childCount: 0
+  - id: 72057594037933910
+    parent: 72057594037932297
+    technicalName: DFr_638E988A
+    articyType: DialogueFragment
+    childCount: 0
+  - id: 72057594037933950
+    parent: 72057594037932297
+    technicalName: DFr_FE772781
+    articyType: DialogueFragment
+    childCount: 0
+  - id: 72057594037933942
+    parent: 72057594037932297
+    technicalName: DFr_CFC49502
     articyType: DialogueFragment
     childCount: 0
   - id: 72057594037932279
@@ -444,7 +357,7 @@ MonoBehaviour:
     parent: 72057594037932238
     technicalName: Dlg_0BF58A6B
     articyType: Dialogue
-    childCount: 17
+    childCount: 31
   - id: 72057594037932522
     parent: 72057594037932285
     technicalName: DFr_D328DE7B
@@ -460,19 +373,9 @@ MonoBehaviour:
     technicalName: DFr_2AE91C49
     articyType: DialogueFragment
     childCount: 0
-  - id: 72057594037933252
-    parent: 72057594037932285
-    technicalName: DFr_223E8B3B
-    articyType: DialogueFragment
-    childCount: 0
   - id: 72057594037933339
     parent: 72057594037932285
     technicalName: DFr_AE9F5514
-    articyType: DialogueFragment
-    childCount: 0
-  - id: 72057594037933345
-    parent: 72057594037932285
-    technicalName: DFr_D273F713
     articyType: DialogueFragment
     childCount: 0
   - id: 72057594037933097
@@ -480,19 +383,34 @@ MonoBehaviour:
     technicalName: Cnd_F914439F
     articyType: Condition
     childCount: 0
-  - id: 72057594037932983
-    parent: 72057594037932285
-    technicalName: DFr_7B02D800
-    articyType: DialogueFragment
-    childCount: 0
   - id: 72057594037933209
     parent: 72057594037932285
     technicalName: DFr_2EB54354
     articyType: DialogueFragment
     childCount: 0
+  - id: 72057594037933345
+    parent: 72057594037932285
+    technicalName: DFr_D273F713
+    articyType: DialogueFragment
+    childCount: 0
   - id: 72057594037932530
     parent: 72057594037932285
     technicalName: DFr_D565929F
+    articyType: DialogueFragment
+    childCount: 0
+  - id: 72057594037933252
+    parent: 72057594037932285
+    technicalName: DFr_223E8B3B
+    articyType: DialogueFragment
+    childCount: 0
+  - id: 72057594037932983
+    parent: 72057594037932285
+    technicalName: DFr_7B02D800
+    articyType: DialogueFragment
+    childCount: 0
+  - id: 72057594037933237
+    parent: 72057594037932285
+    technicalName: DFr_0C6C911B
     articyType: DialogueFragment
     childCount: 0
   - id: 72057594037932995
@@ -505,29 +423,94 @@ MonoBehaviour:
     technicalName: Cnd_0364E42B
     articyType: Condition
     childCount: 0
+  - id: 72057594037934051
+    parent: 72057594037932285
+    technicalName: Cnd_2234A108
+    articyType: Condition
+    childCount: 0
   - id: 72057594037933102
     parent: 72057594037932285
     technicalName: Ins_2AFD639F
     articyType: Instruction
+    childCount: 0
+  - id: 72057594037934034
+    parent: 72057594037932285
+    technicalName: Cnd_85DAD019
+    articyType: Condition
     childCount: 0
   - id: 72057594037933224
     parent: 72057594037932285
     technicalName: DFr_A5F88DB9
     articyType: DialogueFragment
     childCount: 0
-  - id: 72057594037933237
+  - id: 72057594037934056
     parent: 72057594037932285
-    technicalName: DFr_0C6C911B
-    articyType: DialogueFragment
+    technicalName: Ins_05351357
+    articyType: Instruction
     childCount: 0
   - id: 72057594037933007
     parent: 72057594037932285
     technicalName: DFr_514A846B
     articyType: DialogueFragment
     childCount: 0
+  - id: 72057594037934045
+    parent: 72057594037932285
+    technicalName: DFr_C50C5DC7
+    articyType: DialogueFragment
+    childCount: 0
+  - id: 72057594037934060
+    parent: 72057594037932285
+    technicalName: DFr_B8FFE4C2
+    articyType: DialogueFragment
+    childCount: 0
+  - id: 72057594037934039
+    parent: 72057594037932285
+    technicalName: DFr_C3CAAFD6
+    articyType: DialogueFragment
+    childCount: 0
+  - id: 72057594037934066
+    parent: 72057594037932285
+    technicalName: DFr_B444DAC1
+    articyType: DialogueFragment
+    childCount: 0
   - id: 72057594037933019
     parent: 72057594037932285
     technicalName: DFr_BD7E7DDB
+    articyType: DialogueFragment
+    childCount: 0
+  - id: 72057594037934003
+    parent: 72057594037932285
+    technicalName: Cnd_C0D9F032
+    articyType: Condition
+    childCount: 0
+  - id: 72057594037933986
+    parent: 72057594037932285
+    technicalName: Cnd_57C06C63
+    articyType: Condition
+    childCount: 0
+  - id: 72057594037934008
+    parent: 72057594037932285
+    technicalName: Ins_DAF1F7FF
+    articyType: Instruction
+    childCount: 0
+  - id: 72057594037933997
+    parent: 72057594037932285
+    technicalName: DFr_F222EAB6
+    articyType: DialogueFragment
+    childCount: 0
+  - id: 72057594037934012
+    parent: 72057594037932285
+    technicalName: DFr_6A1DA316
+    articyType: DialogueFragment
+    childCount: 0
+  - id: 72057594037933991
+    parent: 72057594037932285
+    technicalName: DFr_6E56AFB6
+    articyType: DialogueFragment
+    childCount: 0
+  - id: 72057594037934018
+    parent: 72057594037932285
+    technicalName: DFr_9C9C72A9
     articyType: DialogueFragment
     childCount: 0
   - id: 72057594037932291
@@ -724,7 +707,7 @@ MonoBehaviour:
     parent: 72057594037932238
     technicalName: Dlg_34C8DC2C
     articyType: Dialogue
-    childCount: 65
+    childCount: 66
   - id: 72057594037933607
     parent: 72057594037932303
     technicalName: Cnd_79057447
@@ -968,6 +951,11 @@ MonoBehaviour:
   - id: 72057594037932815
     parent: 72057594037932303
     technicalName: DFr_C1759514
+    articyType: DialogueFragment
+    childCount: 0
+  - id: 72057594037933873
+    parent: 72057594037932303
+    technicalName: DFr_FB741C81
     articyType: DialogueFragment
     childCount: 0
   - id: 72057594037933074
@@ -1395,3 +1383,164 @@ MonoBehaviour:
     technicalName: Ufo_4CCE3F27
     articyType: AssetsUserFolder
     childCount: 0
+--- !u!114 &-1672813562031319569
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1174674681, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: LocalizationManager
+  m_EditorClassIdentifier: 
+  OnLanguageChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  mUseLocalization: 0
+  mLanguage: en
+  mThrowOnMissingText: 0
+  mClearOnLanguageSwitch: 1
+  mExportLanguage: en
+--- !u!114 &-524605836984638868
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfb28f91d29f6544e88233bddcd9622d, type: 3}
+  m_Name: DefaultGlobalVariables
+  m_EditorClassIdentifier: 
+  BoolVariableCache:
+  - mFullQualifiedName: gameState.motherIll
+    mVar:
+      values: 01
+  - mFullQualifiedName: gameState.babyIll
+    mVar:
+      values: 01
+  - mFullQualifiedName: gameState.motherCanSave
+    mVar:
+      values: 00
+  - mFullQualifiedName: gameState.babyCanSave
+    mVar:
+      values: 00
+  - mFullQualifiedName: gameState.awake
+    mVar:
+      values: 00
+  - mFullQualifiedName: gameState.healthPotFail
+    mVar:
+      values: 00
+  - mFullQualifiedName: gameState.motherAlive
+    mVar:
+      values: 01
+  - mFullQualifiedName: gameState.babyAlive
+    mVar:
+      values: 01
+  - mFullQualifiedName: gameState.act1
+    mVar:
+      values: 00
+  - mFullQualifiedName: gameState.act2
+    mVar:
+      values: 00
+  - mFullQualifiedName: gameState.act3
+    mVar:
+      values: 00
+  - mFullQualifiedName: gameState.nyxHerbs4
+    mVar:
+      values: 00
+  - mFullQualifiedName: gameState.nyxHerbs2
+    mVar:
+      values: 00
+  - mFullQualifiedName: gameState.enteredDreamscape
+    mVar:
+      values: 00
+  - mFullQualifiedName: gameState.act4
+    mVar:
+      values: 00
+  - mFullQualifiedName: gameState.act5
+    mVar:
+      values: 00
+  IntVariableCache:
+  - mFullQualifiedName: gameState.timeInDreamscape
+    mVar:
+      values: 00000000
+  - mFullQualifiedName: playerInventory.sHealthPotB
+    mVar:
+      values: 00000000
+  - mFullQualifiedName: playerInventory.genericHealthPots
+    mVar:
+      values: 00000000
+  - mFullQualifiedName: playerInventory.genericHerbAmount
+    mVar:
+      values: 00000000
+  - mFullQualifiedName: playerInventory.sHealthPotM
+    mVar:
+      values: 00000000
+  - mFullQualifiedName: playerInventory.regentA
+    mVar:
+      values: 00000000
+  - mFullQualifiedName: playerInventory.regentB
+    mVar:
+      values: 00000000
+  - mFullQualifiedName: playerInventory.regentC
+    mVar:
+      values: 00000000
+  - mFullQualifiedName: playerInventory.regentD
+    mVar:
+      values: 00000000
+  StringVariableCache: []
+  LiveBoolVariableCache: []
+  LiveIntVariableCache: []
+  LiveStringVariableCache: []
+  isInitialized: 1
+  mGameState:
+    _VariableStorage: {fileID: -524605836984638868}
+  mPlayerInventory:
+    _VariableStorage: {fileID: -524605836984638868}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ArticyDatabase
+  m_EditorClassIdentifier: 
+  mHierarchy: {fileID: -4874035674537758712}
+  mLocalization: {fileID: -1672813562031319569}
+  mInternalProject:
+    mName: A Coven of Cards
+    mDetailName: Tutorial Level Narrative
+    mId: ea19ebc8-e9d9-4ebe-8afc-312afcfcd317
+    mTechnicalName: A_Coven_Of_Cards
+  mImportedAssets:
+  - Assets/Images/Witch_1
+  - Assets/Images/Father
+  - Assets/Images/Mother
+  - Assets/Images/Witch_2
+  - Assets/Images/Witch_3
+  mDefaultGlobalVariables: {fileID: -524605836984638868}
+  mScriptFragments: {fileID: 2828675634090747591}
+  mPackages:
+  - PackageName: All objects
+    PackagePath: All objects
+    mIsDefaultPackage: 1
+--- !u!114 &2828675634090747591
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba7ecef1ab5b2044683f1d414aea7fcd, type: 3}
+  m_Name: ArticyScriptFragments
+  m_EditorClassIdentifier: 

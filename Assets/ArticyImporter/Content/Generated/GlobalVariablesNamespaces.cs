@@ -221,6 +221,32 @@ namespace Articy.A_Coven_Of_Cards.GlobalVariables
             }
         }
         
+        // True when player is completing act 4
+        public bool act4
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(14);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(14, value);
+            }
+        }
+        
+        // True when playing is completing act 5
+        public bool act5
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(15);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(15, value);
+            }
+        }
+        
         public void RegisterVariables(BaseGlobalVariables aStorage)
         {
             _VariableStorage = aStorage;
@@ -239,6 +265,8 @@ namespace Articy.A_Coven_Of_Cards.GlobalVariables
             aStorage.RegisterVariable("gameState.nyxHerbs4", false);
             aStorage.RegisterVariable("gameState.nyxHerbs2", false);
             aStorage.RegisterVariable("gameState.enteredDreamscape", false);
+            aStorage.RegisterVariable("gameState.act4", false);
+            aStorage.RegisterVariable("gameState.act5", false);
         }
     }
 }
