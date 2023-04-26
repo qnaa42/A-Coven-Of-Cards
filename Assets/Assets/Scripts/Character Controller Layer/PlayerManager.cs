@@ -90,6 +90,7 @@ namespace Assets.Scripts.Character_Controller_Layer
                 RightArrowInput = Input.GetKeyDown(KeyCode.RightArrow),
                 DownArrowInput = Input.GetKeyDown(KeyCode.DownArrow),
                 SpaceInput = Input.GetKeyDown(KeyCode.Space),
+                MousePosition = Input.mousePosition,
             };
 
             // Apply inputs to character

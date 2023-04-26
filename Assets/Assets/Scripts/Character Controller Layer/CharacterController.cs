@@ -39,6 +39,7 @@ namespace Assets.Scripts.Character_Controller_Layer
         public bool UpArrowInput;
         public bool RightArrowInput;
         public bool DownArrowInput;
+        public Vector3 MousePosition;
 
         public bool SpaceInput;
     }
@@ -58,6 +59,9 @@ namespace Assets.Scripts.Character_Controller_Layer
 
     public class CharacterController : MonoBehaviour, ICharacterController
     {
+        private Vector3 _mousePosition;
+        private Camera _camera;
+        
         public KinematicCharacterMotor Motor;
         [Header("Debug Mode")] public bool DebugMode = true;
 
@@ -135,6 +139,7 @@ namespace Assets.Scripts.Character_Controller_Layer
         {
             dialogueManager = FindObjectOfType<DialogueManager>();
             ArticyDatabase.DefaultGlobalVariables.Notifications.AddListener("playerInventory.*", MyGameStateVariablesChanged);
+            _camera = Camera.main;
         }
 
         /// <summary>
@@ -441,6 +446,8 @@ namespace Assets.Scripts.Character_Controller_Layer
             }
 
             var cameraPlanarRotation = Quaternion.LookRotation(cameraPlanarDirection, Motor.CharacterUp);
+            
+            _mousePosition = inputs.MousePosition;
 
             switch (CurrentCharacterState)
             {
@@ -949,13 +956,20 @@ namespace Assets.Scripts.Character_Controller_Layer
         private void HandleInputs(Vector3 moveInputVector, Vector3 cameraPlanarDirection, Quaternion cameraPlanarRotation)
         {// Move and look inputs
             _moveInputVector = cameraPlanarRotation * moveInputVector;
-
-            _lookInputVector = OrientationMethod switch
+            Ray ray = _camera.ScreenPointToRay(_mousePosition);
+            Plane plane = new Plane(Vector3.up, transform.position);
+            if (plane.Raycast(ray, out float enter))
             {
-                OrientationMethod.TowardsCamera => cameraPlanarDirection,
-                OrientationMethod.TowardsMovement => _moveInputVector.normalized,
-                _ => _lookInputVector
-            };
+                Vector3 mouseWorldPosition = ray.GetPoint(enter);
+
+                // Look input
+                _lookInputVector = OrientationMethod switch
+                {
+                    OrientationMethod.TowardsCamera => (mouseWorldPosition - transform.position).normalized,
+                    OrientationMethod.TowardsMovement => _moveInputVector.normalized,
+                    _ => _lookInputVector
+                };
+            }
             
         }
 
